@@ -1,0 +1,5 @@
+* Procedure:
+1. Document all of the segments, choices and variables of episode 1.
+   - Show a simple visualization of the choice branching
+   - Show dependency of the presence/absence of a segment on a prior variable
+2. 

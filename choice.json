@@ -1,0 +1,42 @@
+{
+    "title": "Choice",
+    "type": "object",
+    "properties": {
+        "segment_id": {
+            "type": "integer"
+        },
+        "choices": {
+            "type": "array",
+            "title": "choices",
+            "format":"table",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "alt_id":{
+                        "type":"integer"
+                    },
+                    "choice_text":{
+                        "type":"string"
+                    },
+                    "preconditions": {
+                        "type":"array",
+                        "format":"table",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "postconditions": {
+                        "type":"array",
+                        "format":"table",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "next_segment":{
+                        "type":"integer"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "title": "Segment",
+    "type": "object",
+    "properties": {
+        "segment_type": {
+            "type": "string",
+            "enum": [
+                "choice",
+                "result",
+                "cutscene"
+            ],
+            "default": "choice"
+        },
+        "choices_id": {
+            "type": "integer"
+        },
+        "shots": {
+            "type": "array",
+            "title": "shots",
+            "format": "table",
+            "items": {
+                "type": "integer"
+            }
+        }
+    }
+}
