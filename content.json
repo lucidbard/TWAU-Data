@@ -1,0 +1,45 @@
+{
+    "title":"Episode",
+    "type":"object",
+    "properties": {
+        "variables": {
+            "type":"array",
+            "format":"table",
+            "items": {
+                "$ref":"variable.json"
+            }
+        },
+        "segments":{
+            "type":"array",
+            "title": "Segments",
+            "format": "tabs",
+            "items": {
+                "$ref": "segment.json"
+            }
+        },
+        "choice_set":{
+            "type":"array",
+            "title": "Choice Set",
+            "format": "tabs",
+            "items": {
+                "$ref":"choice.json"
+            }
+        },
+        "free_roam":{
+            "type":"array",
+            "title": "Free Roam",
+            "format": "tabs",
+            "items": {
+                "$ref":"free_roam.json"
+            }
+        },
+        "sequence":{
+            "type":"array",
+            "title":"Sequence",
+            "format":"table",
+            "items": {
+                "type":"integer"
+            }
+        }
+    }
+}

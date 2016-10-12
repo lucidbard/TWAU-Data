@@ -3,3 +3,178 @@
    - Show a simple visualization of the choice branching
    - Show dependency of the presence/absence of a segment on a prior variable
 2. 
+* Artificial Intelligence & AR / VR
+- Salesforce Vision Engineering Team
+- For events like dreamforce
+- Smaller versions throughout the middle of the year.
+
+
+- Leverage salesforce platform anyway you can
+- VR/AR space
+
+- Head mounted solutions -- great option
+- Can pick and choose whatever I think is cool
+
+Hands Free
+- Haven't gotten a chance to build 
+
+iOS
+- UDID Two Builds
+
+
+If the latest one if you can mount it at all.
+Easier for a field service person.
+Is there any kind of gesture control.
+
+
+Not really a viable solution for hand alone
+
+
+- Voice -- Done a lot with Alexa. Purely voice interface.
+- Write it all in node. Alexa skills. Don't get raw audio, get transcription.
+
+- Great job of translating it.
+- Alexa voice service.
+
+- Conference is starting to get worrisome how late it is.
+- Talking about timeline
+- A lot of other conferences coming up.
+- It might be easier to work toward the other events, and an
+  innovation lab where we can show off these one-off pieces.
+
+- Don't have a particular demo in mind.
+- Want to stick to some kind of field service
+
+  - If we could move to a hands-free version of that demo.
+  - A lot of times when we talk about the places that do need safety.
+  - Gotta have hand controls, a lot of other challenges.
+
+- AT the end of the day, we're trying to show things that customers
+  can do with our platform.
+
+- I can see the Seebright platform to be inexpensive enough to distribute to their field service agents.
+- Another UI that looks at data from your platform
+
+- Not trying to show off the Seebright, necessarily.
+
+- Reseller of some sort. Looking into a Unity SDK
+- Easy way to enable customers to build some kind of AR solution
+- Any customer that would benefit from field service
+
+- See if we could build a pretty simple demo.
+- Walkthrough driven by a backend.
+
+- I can pull together some of the assets I'm doing now.
+  - Maybe we can group up with your team. Small condense.
+
+- Even using a new Vuforia
+- VuMark
+- Sales Force demo.
+
+- Having a set of steps animated on it
+
+
+- Text
+- 
+
+;; This buffer is for text that is not saved, and for Lisp evaluation.
+;; To create a file, visit it with <f8> and enter text in its buffer.
+
+Told him very openly on Friday where we stand.
+- Was surprised we run out of money in October.
+-
+
+
+If based on our reading of
+
+- Developing examples of AR content
+- Enabling this AR universe
+The investment pitch -- have a list of experiences that we'd like to develop
+
+
+We'd like you to invest, here's 5 of them.
+
+
+You have to convince people that Seebright can produce experiences
+- Better have 5 glossy pages that have the graphic mockup.
+
+
+Talk to guys that have worked with us in the past.
+Demo with guys?
+ - Talk with Ripple developers?
+
+- We needed something that worked
+
+- Send an linkedin message to David Fox to pass on to Ingress.
+  - Choose words carefully.
+
+- Fundraising
+ - Financial Plan
+   - Meetings with Dokomo & Orange
+ - Consulting
+   - Dogitelekom
+   - Talk to Simon?
+   - Accenture
+
+- New build of Fairy Sight
+- New Brochure
+  - Update facts on Brochure
+
+- 
+In the near future -- Whipsaw
+- Pay it down to 2k per month, for 10 months or less
+
+Big outstanding bills to law firm, pay down a couple thousand every month
+
+Content side:
+
+1. 
+2. 
+3.
+- Kevin
+- Damon
+
+* Lead Developer
+
+* Builds out all of
+
+* Village Scene & Dust Collection
+
+* Talk
+- 1-3 different options of what to say
+
+* Gaze based input
+Have a system that works 
+ - Maybe while you are implementing those changes, we can send an
+   example of our cardboard interface on Android
+
+ - Brings up suboptions
+ - Look at suboptions, it'll select
+
+- View based value settings
+- Mostly in 2d
+
+* Voice
+- Built in unity
+- Voice, Gesture + Text
+
+* Core Interaction Scenes
+- Have a good experience
+- True user
+
+* AEC Hackathon
+- First to sponsor
+- Had it in city counsel chambel
+
+* Gesture recognition
+
+* Holobuilder
+- Mo and the guys will be sending them our SDK for the spread module
+
+- Google Cardboard E-Commerce demo
+- With and without the QI
+
+- Spread module
+
+* Shared this:
+- We've been talking with Hasbro

@@ -1,0 +1,79 @@
+* TODO Revise objectives and components
+** Goals
+*** What question does my encoding answer?
+- What are all of the possible traversals of the work?
+  - This requires a 
+- How can you determine "related" content for a given choice?
+
+  - Example: Query choice (C7: Colin: Tell you what I told Toad)
+  - "Colin will remember that" -- how many times do these choices
+    actually affect future content selection?
+  - Example: "Name one" -- which one would the player have named?
+    (Given positive/negative opportunities)
+
+- What significant content is present?
+  - Shots (length, sequence)
+  - Choices ()
+  - Quick Time Events (Choices, Timing, Results)
+  - Expressions (within shot)
+  - Dialogue (language, timing)
+  - Extradeigetic, non-choice-based Text
+
+*** What is an example experimental design that can be conducted?
+** Strategy
+*** Progressive Refinement
+**** Have final data structure, but don't fill in all the details
+- Example: Just have the full accounting of segments and the dialogue, but not necessarily video captures
+- Use this data to create a proposed SIG++ encoding of the first episode
+
+** Schemata (Editor) -- Instead edit the schemata as JSON with functions
+*** Supports Existing SIG 
+*** Enables SIG++ Extensions
+*** Renders Story Intention Graphs
+** Content Encoding
+ - Encoding Data Structure
+ - Analysis of Static Data
+ - Logic -- Capture All Possible Traversals
+
+ - Captures Dialogue Acts
+ - Captures Expressions, Gestures + Actions
+ - Captures all static segments
+ - Captures Representative Interactive Traversals
+   - E.g. move from a location X to a location Y and activate
+   - Variability (Shortest, Longest duration of content)
+ - Captures On Screen UI/Annotations
+   - Structured as Choices, Action Sets, and QT Event Indications
+   - Start/Stop, Type/Color, Screen Position/Attachment
+
+** SIG Annotation
+
+* TODO [#A] Reread and revise Advancement Proposal
+* TODO ICIDS Workshop Deadline (28 October 2016)
+
+* Other Workshops
+
+* Efforts
+** Verify the completeness of the proposed content schema
+- How?
+- Demonstrate a set of concrete use cases are fulfilled through the
+  schema but which are difficult or impossible otherwise.
+
+
+** Create an extensible complete implementation of SIG using JSON graph format compatible with Cytoscape.jsq
+
+** Collect the data about the first episode of the Wolf Among Us in the schema
+* Short term objectives:
+** Finalize set of features necessary to realize SIG Schemata
+1. Logical relationships:
+   1. 
+2. Verify the visualization by encoding and rendering SIG Patterns in
+   the "Pattern" schema enforcement, as opposed to strict enforcement.
+** Record all of Episode 1 of The Wolf Among Us using editor
+** What do I do with this data?
+- Calculate the distribution of traversals
+- Map Story Intention Graph ++
+** Represent SIG data structure 
+* Patterns
+** Peripeteia 
+[[./SIG-Pattern-Peripeteia.png]]
+

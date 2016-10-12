@@ -1,6 +1,7 @@
 {
-    "title": "Segment",
+    "headerTemplate": "Segment {{self.id}}",
     "type": "object",
+    "format": "grid",
     "properties": {
         "segment_type": {
             "type": "string",
@@ -11,8 +12,11 @@
             ],
             "default": "choice"
         },
-        "choices_id": {
-            "type": "integer"
+        "id": {
+            "type": "integer",
+            "options": {
+                "input_width":"40px"
+            }
         },
         "shots": {
             "type": "array",

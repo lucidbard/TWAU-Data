@@ -1,9 +1,25 @@
 {
     "title": "Choice",
     "type": "object",
+    "format": "grid",
     "properties": {
+        "choices_id": {
+            "type": "integer",
+            "options":{
+                "input_width":"30px"
+            }
+
+        },
         "segment_id": {
-            "type": "integer"
+            "type": "string",
+            "watch": {
+                "segs": "segments"
+            },
+            "enumSource": [{
+                "source":"segs",
+                "value": "{{item.id}}"
+            }]
+
         },
         "choices": {
             "type": "array",
@@ -13,7 +29,10 @@
                 "type": "object",
                 "properties": {
                     "alt_id":{
-                        "type":"integer"
+                        "type":"integer",
+                        "options":{
+                            "input_width":"30px"
+                        }
                     },
                     "choice_text":{
                         "type":"string"
@@ -21,19 +40,46 @@
                     "preconditions": {
                         "type":"array",
                         "format":"table",
+                        "headerTemplate": "{{ i1 }} - {{ self.symbol }}",
                         "items": {
-                            "type": "string"
+                            "type": "string",
+                            "watch": {
+                                "vars1": "content.variables"
+                            },
+                            "enumSource": [
+                                {
+                                "source":"vars1",
+                                "value": "{{item.symbol}}"
+                            }]
                         }
                     },
                     "postconditions": {
                         "type":"array",
                         "format":"table",
                         "items": {
-                            "type": "string"
+                            "type": "string",
+                            "watch": {
+                                "vars2": "content.variables"
+                            },
+                            "enumSource": [
+                                {
+                                "source":"vars2",
+                                "value": "{{item.symbol}}"
+                            }]
                         }
                     },
+                    "status_text":{
+                        "type":"string"
+                    },
                     "next_segment":{
-                        "type":"integer"
+                        "type":"string",
+                        "watch": {
+                            "segs": "content.segments"
+                        },
+                        "enumSource": [{
+                            "source":"segs",
+                            "value": "{{item.id}}"
+                        }]
                     }
                 }
             }

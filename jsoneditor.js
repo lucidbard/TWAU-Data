@@ -3794,7 +3794,7 @@ JSONEditor.defaults.editors.array = JSONEditor.AbstractEditor.extend({
     
     this.collapsed = false;
     this.toggle_button = this.getButton('','collapse',this.translate('button_collapse'));
-    this.title_controls.appendChild(this.toggle_button);
+    //this.title_controls.appendChild(this.toggle_button);
     var row_holder_display = self.row_holder.style.display;
     var controls_display = self.controls.style.display;
     this.toggle_button.addEventListener('click',function(e) {
