@@ -1,0 +1,154 @@
+* Title
+"Focus On Story: Using Narratological Lenses to Understand Player
+Affective Response Data in Choice-Based Interactive Narratives"
+** Abstract
+
+* Outline
+** Introduction
+Game analytics has traditionally been composed of player observation
+
+Game Telemetry has made possible data mining on actual player data,
+and is useful in research and production contexts when studying a work
+where you have access to source code.
+
+Modern cinematic narrative games have much in common with film or
+television, especially those created in the tradition of Telltale
+games.
+
+Kevin Bruner discusses using clustering techinques to understand
+player data using Telltale's telemetry.
+
+Some work on reuniting Narrative Analysis and Adventure games has been
+done
+(https://www.cp.eng.chula.ac.th/~vishnu/gameResearch/design/narrative.pdf)
+
+We propose an alternative strategy to Telltale's: analyze player
+experiences of existing released games for insights using a
+combination of traditional qualitative and quantitative methods.
+
+Our hypothesis is that by using narrative theory to sort the
+experience data, the insights of different player reactions and
+successful design examples can be gleaned from fewer samples than
+those where statistical measures are available. 
+
+There are really three things to analyze: The work itself, the
+interaction of the work and the players, and the players themselves.
+
+** Background
+- Player Emotional Experience
+  - Quantitative
+    - Physiological Measures  (GSR, HR, etc)
+    - Synthetic Telemetry data (Choice paths, content segments)
+    - Frequency of self-report measures (thinkaloud, SEI)
+  - Qualitative
+    - Self-report retrospective
+    - Questionaire (introducing questions specific to Character, Plot and Choice)
+    - Interviews
+- Narrative Theory, Story Craft & Computational Modeling of Narrative
+  - Mateas used McKee's concept of a story "beat" to operationalize a
+    theory of drama for Facade, using it to progress the dramatic
+    tension while allowing a wide range of variable paths.
+  - Finlayson worked to standardize corpus-based approaches with
+    trained annotaters to create both automated and semi-automated
+    machine understanding of story drawing from a history of success
+    of the approach in Linguistics
+  - Elson combined and improved on previous story models such as Plot
+    Units to create a descriptive schemata applied successfully to
+    detecting patterns in Aesop's Fables.
+  - Mawhorter investigated the poetics of choice in interactive
+    narratives in his dissertation work, again operationalizing and
+    developing the theory at the same time.
+** Goals and Approach
+- The primary goal was to understand the relationships between
+  player's emotional response and the narrative elements that gave
+  rise to them. A secondary goal was to map objective metrics of the
+  player experience and emotional response into the context of the
+  story itself, even as the story varies for player to player. 
+- And finally, what makes for a successful interactive narrative,
+  ignoring for the moment the role of agency, immersion and production
+  quality.
+- We anticipated that player's emotional investment in the two
+  penultimate story events would depend on their previous levels of
+  engagement with the story, as represented by both their surfacing of
+  emotional reports at certain points and by the amount they cared
+  about the outcomes of their decisions, both in respect to the values
+  represented as well as the characters themselves.
+*** Study Design
+- Chose Telltale Games' /The Wolf Among Us/ due to its critical
+  acclaim, its independence from television franchises and the genre's
+  integration of story and interaction.
+- /The Wolf Among Us/ is a story about a divided community of refugees
+  from a distant land whose identities correspond to fairy tales
+  including Beauty and the Beast and the Big Bad Wolf. In this
+  alternate reality New York, magic enables non-human Fables to pass
+  amongst mundies (what the residents call normal people).
+- Used a variety of instruments to measure player experience,
+  including Robinson's All The Feels, Pre and Post Questionaires,
+  Sensual Evaluation Instrument (SEI).
+- Goal was to collect as many measures of emotional intensity as
+  possible, physiological and non-verbal.
+- An analysis of the traversals was made to break the content into
+  scenes and beats, and to document choice options as well as
+  selections
+- Normalizing
+  - Based on dramatic vs non-dramatic segment, each player's frequency
+    of expression for each measure is normalized. This allows players
+    to be compared more directly.
+  - Further, in measures of emotional value, the different values are
+    weighted with self-report (SEI, expressions) weighted less than
+    heart rate spikes or skin conductivity spikes. Combining the two
+    into a measure without access to more fine-grained heart rate
+    variability is an open research question.
+- A subset of beats and decisions were determined to be key and were
+  selected due to their likelihood to trigger emotions or to influence
+  the player's game experience. These were pulled out for comparison
+  alongside choices and reaction datasets.
+- Time windows and scope were critical -- what length of time relative
+  to what event is of interest? Each beat was identified and then its
+  start and ending time were annotated for each player, along with
+  value(s) and character(s) involved. Individual story events were
+  marked as individual annotations.
+  - Choice Prompts -- determined that the minimum of either the time of the next choice prompt or 60 seconds
+    - Needed to classify them into dramatic vs exposition
+  - Story Events -- 90 seconds following a key event timepoint
+  - Characters -- Any time during or 30 seconds following a beat has a character involved or referenced
+  - Values -- Any time during or 30 seconds following a beat that has a tag of a value
+*** Lenses
+**** Choice
+
+By examining the sequence of key choices against the overall player
+affect, the influence of the choice on the outcome can become more
+apparent. (Players that chose path A have this profile during these
+scenes, Players that chose path B have this profile during this scene)
+
+**** Value
+As Robert McKee described, scenes turn on a value change. The values
+in /The Wolf Among Us/ are Community/Self, Death/Life and
+Justice/Loyalty. These permeate the world and are active in every
+dramatically portrayed scene. By classifying beats according to the
+values, the player's response to certain values can be measured.
+**** Character
+Certain characters may resonate more than others; Toad's plight as a
+disadvantaged member of the community may be disguised by his acrid
+air and haughty manners. Grendel's valid grievances are hidden behind
+a wall of rage and disrespect. Faith and Snow both are sympathetic and
+conflicted.
+**** Plot
+A mystery turns on information. Each detail progresses the interest,
+from the discovery of the crime to the leads going down dead
+ends. These elements define the plot and they stand out as singular
+points.
+** Results
+[More on this]
+- Emotional Map (regular boxes of each beat, alongside value and each player's emotional response during that beat)
+- Expressive profile of players (how likely are they to be detected by an affective measure, both during dramatic / QTE / non-dramatic segments)
+- Sorting players by Value preference, Character preference, and Plot
+  preference, with preference defined as a tendency to react after or in the window of each focus.
+- Choice analysis -- distribution of choices and relation of key
+  choices to the antecedent event/beats. 
+** Discussion
+- Measures provide an integrated map of intended effects and player responses
+- Variety is good despite small sample size
+- Combining measures eliminates some amount of noise, especially when normalized and grouped according to content model.
+- More work can be done on modeling story elements using a formal model such as SIG
+- Takeaway is to understand narrative forces in other games and critique their execution using such a method.

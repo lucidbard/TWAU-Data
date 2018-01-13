@@ -1,0 +1,365 @@
+\section{Introduction}
+\label{sec:orgheadline3}
+Interactive storytelling uses the capabilities of computational media
+to dynamically assemble stories based on player input and/or on an
+underlying simulation of a world. These narratives are expressed in a
+variety of immersion levels: text-based for interactive fiction and
+first-person mimetic representation for the interactive drama \emph{Facade}
+\cite{Mateas2003-ty}. A subgenre of adventure games uses cinematic
+aesthetics along with simple choices and is suitable to adapting
+techniques from analyzing linear narratives. The research program
+described in this paper examines a subgenre of interactive digital
+narratives using a computational model of narrative to analyze player
+emotional responses. \emph{The Wolf Among Us} by Telltale Games was chosen
+for its consistent story structure along with its evocative
+emotionally charged themes and critical acclaim. We believe that the
+work's complex network of character goals and their evolving
+relationships with the player would provide a good test for assessing
+the efficacy of modeling for understanding player emotional experience
+in a narrative context of opportunities and decisions. This paper
+describes our initial work on developing an annotation schema and a
+proposed methodology for developing a corpus-based approach to
+analyzing a subgenre of interactive digital narratives (IDN).
+
+\subsection{Motivation}
+\label{sec:orgheadline1}
+Interactive narratives are challenging to study with the methods used
+to study linear narratives. The variations in content prevents simple
+annotation techniques based on timecode or character position from
+being compared, and the player response is often affected by previous
+choices and the associated content. The proposed methodology builds on
+efforts within the computational narratology community focused on
+corpora and formal models. These approaches owe a debt to the original
+corpus study of Russian folk tales by Vladimir Propp
+\cite{Propp1928-pk}. More recently, Finlayson has led the charge in
+standardizing annotation approaches in narrative modeling, although
+his focus and that of his annotation environment was primarily on
+linear narratives. Finlayson concluded text is prioritized given the
+availability of tools \cite{Finlayson2013-wi}, although the only game
+logs that he cited were those of Orkin in the game EAT \& RUN
+\cite{Orkin2010-vr}. The program outlined in this paper takes a
+similar approach to linear narratives, with the addition of provisions
+for the interactive opportunities and variable content as well as the
+inclusion of player emotional reports.
+
+Many studies conducted on IDNs have opted for a more case by case
+approach based on the work, with many looking at shorter (in duration)
+experiences such as Facade \cite{Seif_El-Nasr2013-hp}, whose story
+varies heavily and so is not as suited to corpus based
+approaches. Computational analysis of contemporary \emph{interactive}
+digital narratives is still in its infancy, as no agreed methods or
+corpora are available. Current approaches to understanding player
+experience in IDN include focusing on quantitative aspects
+\cite{Marczak2013-np}, developing objective
+measures\cite{Szilas2014-fd}, using phenomenology
+\cite{Seif_El-Nasr2013-hp}, reading and interpreting the processes
+themselves (\cite{Wardrip-fruin2006-je}, hermeneutics
+\cite{Arjoranta2015-rw} and identifying design patterns
+\cite{Reed2014-qw}. None of these approaches incorporate the
+underlying narrative content and its influence on other aspects of the
+player experience and none relate experiences to a consistent model of
+narrative. A consistent model would identify shared content and
+interaction opportunities between traversals and map player subjective
+interpretation separately from more objective measures. Such a
+representation, like those enabling annotated datasets in linguistics,
+could be used to identify patterns and new relationships not apparent
+otherwise.
+
+Tanenbaum argues that we should focus on interactive narratives to
+understand their \emph{readerly pleasure} through their \emph{bounded agency}
+\cite{Tanenbaum2011-yu} rather than the more popular notion of agency
+that involves a player taking actions and seeing the results. This
+position also suggests that techniques currently being used to study
+linear narrative could be adapted to study non-linear narrative. That
+goal, of extending and adapting a model of linear narrative to
+non-linear narrative, supports the objective of better understanding
+the nature of player's experience while interacting with story content
+in an interactive narrative.
+
+What is the nature of the content that is salient to the player's
+experience in these works? Wardrip-Fruin describes computational media
+in terms of three components: data, process, and surface
+\cite{Wardrip-Fruin2009-pe}. The primary characteristic of content in
+this genre of computational media is the density of meaning shown on
+the surface but entirely interpreted by players. Works such as those
+created by Telltale Games rely heavily on hand-authored narrative
+dialogue and human performances (data) rather than generated or
+simulated content found in Emily Short and Richard Evan's Versu
+\cite{Evans2014-nk} or the model of social games at the core of Joshua
+McCoy et al's Prom Week (process). Additionally, the procedural
+complexity is limited to simple state tracking and varying the content
+shown after a particular decision point.
+
+The model of story that describes the underlying content is critical
+to associating player experience with the relevant aspects of the work
+itself. Elson created the \emph{Story Intention Graph} (or SIG) to be a
+descriptive model of that meaning, representing the mental simulation
+that naturally takes place in the minds of readers of how agents
+interact: their values, the goals they pursue and the network of
+causally linked events that make up actions taken in those
+pursuits. For the purposes of the present work, Elson's data structure
+provides a suitable structure for information about events, agents and
+affective goals using a graph representation, though others may yet
+emerge that can fill that role. This information is hypothesized to
+enable prediction, given previous player choices and responses, future
+moments where a player might experience emotion. \textbf{Emotions} are, for
+our purposes, feelings directly tied to witnessing information, making
+inferences or making decisions and are often mapped on two axes:
+valence (positive/negative) and arousal (high/low). They may or may
+not be associated with outward expressions.
+
+The remainder of this paper is organized as follows: We first define
+the specific subgenre of IDN, cinematic choice-based adventure games,
+and its suitability for this study and how we captured the salient
+information in a schema. Next, we propose a sequence of studies and
+efforts that address the goal of annotating existing interactive
+narrative playthroughs with emotional and story content, identify
+possible patterns or relationships for how the story structure and
+recorded emotions relate and use it to predict player emotional
+experiences in a new episode of the series. We describe the initial
+results of the first effort of transcribing and annotating a
+non-textual traversal of an interactive narrative for encoding with
+emotional events. Finally, we discuss direction for future work and
+conclusions.
+
+\subsection{Cinematic choice-based adventure (CCBA) games}
+\label{sec:orgheadline2}
+Telltale Game's \emph{The Wolf Among Us} (TWAU) was released in 2013 for
+multiple platforms \cite{Telltale_Games2013-hz}. The game received
+numerous positive critical reviews and is a mature work in the
+subgenre. Its story is conveyed through spoken dialogue, animated
+performance and cinematography. The game's story has even been
+translated into a comic book, the original media of the Fables series
+on which the game is based \cite{Sturges2014-ua}. This section locates
+the work in a subgenre of adventure game and identifies and justifies
+an annotation schema created for it. The game plot consists of a
+protagonist (Bigby Wolf) investigating a crime in a community of fairy
+tale inspired characters where magic is present and can disguise
+identity.
+
+The subgenre of CCAG has several primary features: the story content
+can be represented as a graph whose elements often have key order
+relationships and is for entirely bespoke. The label "cinematic
+choice-based adventure game" was because highlights the salient
+characteristics and has a specificity above existing terms such as
+interactive cinema or hypermedia. CCAG could be considered a hybrid of
+the point-and-click adventure game and interactive cinema. CCAG's
+primary mechanics involves making decisions either in exploring
+content, responding as a player-character and through time-bounded
+actions a.k.a. quick-time events (QTE). As an adventure game, it
+emphasizes a player-character and story over combat and twitch skills.
+
+Clara Fernandez-Vara describes in her dissertation how adventure games
+shape "the means by which the player restores the behavior that is
+expected by playing the game" \cite{Fernandez_Vara2009-mt}. In other
+words, in adventure games, the player takes actions that are authored
+by the game's creator rather than have those actions emerge from the
+system's behaviors. The player's choices vary the way in which that
+performance is carried out as well as whether certain key facts are
+true or omitted which color and vary the reception of a plot. Most
+decisions and actions only have an impact on the pacing or variation
+of the performance rather than major changes in the plot, though
+apparent major decisions affecting other characters do occur less
+frequently.
+
+TWAU is an episodic game: future episodes must account for selected
+previous player decisions, although these are usually limited to
+decisions that have an ontological effect on the world (including the
+memories of the characters). Other non-episodic games, such as \emph{Heavy
+Rain}\footnote{Quantic Dream, 2010}, are closely related in their mechanics and are suitable
+candidates for using the annotation methods detailed here. Episodic
+games tend to conserve content and maximizing narrative payoffs, and
+are ideally suited to annotation using a variation of SIG, as the
+player's goals and intentions are rewarded for small perturbations
+while the story remains mostly consistent.
+
+\section{Story Intention Graphs}
+\label{sec:orgheadline4}
+The Story Intention Graph (SIG) schemata were developed by David Elson
+as a set of discourse relations to represent key relationships among
+concepts such as goals, values and agents present in textual
+narratives using concepts from narrative theory and theory of mind. It
+consists of three layers: a \textbf{textual layer}, which contains relevant
+(but not exhaustive) spans of text from the source textual
+story. These are connected to a set of propositions and states mapped
+to spans of text in the text layer. in a layer that captures the
+described happenings as a \textbf{timeline layer}. Finally, there is an
+\textbf{interpretive layer}, where propositions are linked to agent goals,
+plans, and values. The textual layer in our study is initially mapped
+onto transcripts of the gameplay, but in a future version this may be
+replaced by video spans.
+
+Elson found that the SIG schemata, even without representing
+individual propositions, was more successful than alternative methods
+at identifying similarities in the stories. It is this annotator
+agreement in meaning that we are interested in, as well as the
+enforcement of the schema for actions to be associated with characters
+and end values. By encoding the values pursued by characters, we
+hypothesize that certain relationships will emerge that will predict
+potential points where players may respond emotionally.
+
+\section{Methodology and Study Design}
+\label{sec:orgheadline8}
+The proposed study requires the development of new methodology. To the
+authors' knowledge, there has been no usage of a formal model of
+narrative to annotate a pre-existing non-textual interactive digital
+narrative. This section describes the sequence of completed and
+proposed steps that enables the work to be annotated and analyzed. The
+first stage is to select and adapt a narrative model and coding schema
+that can represent relationships between events and decisions and the
+gameplay itself. The second step is to use it to annotate a set of
+"natural" traversals of players along with emotional events. The third
+step is to analyze the data (SIG + Emotional Content) with respect to
+choices and player decisions. The fourth step is to train an algorithm
+that identifies content \& decisions associated with moments of player
+emotion and predict possible future moments that could occur.  This is
+followed by another study that validates the algorithm on different
+content to assess the success of the tool.
+
+\subsection{Using a Model to Annotate Narrative Structure}
+\label{sec:orgheadline5}
+For linear media, traditional annotation approaches use spans
+locations or timecodes to associate metadata. This won't necessarily
+be useful when content can appear or not appear based on player input,
+and where timing can vary significantly.
+
+First, the narrative structure needs to be available for
+annotation. This means that content should be identifiable
+consistently across different traversals. Further, this model should
+be capable of identifying complex relationships between decisions and
+outcomes as understood by agents within the story. Given these
+requirements, the SIG schemata was selected due to its ability to map
+elements to text spans and its separation of interpretation and
+objective propositions. The following requirements for an intermediate
+format for SIG annotation emerged:
+
+\begin{enumerate}
+\item It must be in a text format, at least initially, given
+availability of SIG annotation software
+\item Be capable of representing additional traversal content, allowing
+comparison between traversals.
+\end{enumerate}
+
+We began with the scope of the first episode, focusing on what we are
+calling a "natural traversal," which is a a first encounter of a
+player to the game and story where the events and outcomes are not
+known. In order to assess the annotation method before collecting data
+from study participants, we decided to test the transcription and
+narrative annotation using an existing streamed video posted online of
+a game traversal. A video by creator-performer Felix Arvid Ulf
+Kjellberg, aka "PewDiePie", was selected \cite{Kjellberg2013-fn} based
+on its completeness as well as the presence of additional think-aloud
+by the performer. The present study will focus on individual players
+encountering a work alone. To understand the content better and to
+save time, we translated the gameplay content from the video using a
+rational reconstruction approach of the underlying model. This enabled
+us to document player input and to think about how to represent it in
+a coding schema.
+
+There are a number of tools now available to author narratives based
+on a model of lexia and links, including \emph{Ink}, \emph{Twine}, \emph{Ren'Py} and
+\emph{ChoiceScript}. These tools enable authors to create textual or visual
+narratives with various mechanisms to direct the player along
+particular paths, or traversals. One of the disadvantages of the
+popular authoring tools is a lack of a formal model of the underlying
+structures - with the idioms and convenience of syntax and relieving
+authoring burdens the primary goal. Of the possible options we
+selected \emph{Inkl} and \emph{Ink}, an open source language. Ink represents
+variables and choice structures with plain text. The method of
+transcribing is translation and reconstruction: certain opportunities
+are recurrent (and so do not dissapear once visited) while others may
+trigger transitions to new content or flip state flags. A single
+transcription won't capture all of the salient variables such as state
+flags that aren't shown, and only through multiple choicepaths can a
+more accuruate model that produces all of the traversals be
+reconstructed. Only the inter-playthrough differences are necessary
+for this work, however.
+
+\emph{Ink} has several advantages as an intermediate format: It represents
+state variables, it is simple to annotating lines and it can concisely
+represent diverging and converging traversal threads and player
+choices. This first pilot involved translating the work into ink and
+then annotating the output using Scheherazade \footnote{the reconstructed ink file from the video playthrough is here:
+[\url{http://lucidbard.com/ink/TWAU_001.ink}], the first episode's SIG
+encoding: [\url{http://lucidbard.com/ink/TWAU_001.vgl}]. \emph{Scheherazade} can
+be downloaded at [\url{http://www.cs.columbia.edu/~delson/software.shtml}].}, with the SIG
+mapped onto the transcript of the ink file produced using a javascript
+application that executes player decisions. The next step would be to
+map SIG directly onto the ink file to enable multiple traversals to
+use the same ink file.
+
+\subsection{User Study}
+\label{sec:orgheadline6}
+We are planning to conduct a user study by having between 6 and 8
+players play through episode one of TWAU . We will record the player's
+report of their emotional experience using the Sensual Evaluation
+Instrument (SEI) \cite{Laaksolahti2009-uw} as well as more traditional
+surveys and a structured interview. The SEI uses several tactilely
+differentiated objects to enable players to indicate emotional states
+and are calibrated prior to the playthrough for valence and
+arousal. These sessions and the gameplay will be recorded for
+transcribing the traversals using the method described above.
+
+We hypothesize that the study will show consistent reactions during
+moments where the tension is high, when the information revealed is
+surprising and when the player's character is emotionally
+involved. This translates to propositions in the model when a
+character goal is either actualized or not. The emotions themselves
+will vary based on a player's values as expressed through their
+decisions. For instance, the player may decide to give Faith money in
+one of the earlier scenes, indicating that the player is performing a
+softer, more generous Bigby, and is thus more likely to feel bad for
+ripping off the arm of another character later (or not ripping it off
+at all). The value at stake in both cases is justice, though a justice
+that is more broadly interpreted.
+
+\subsection{Iterations on SIG}
+\label{sec:orgheadline7}
+Based on an initial encoding of the YouTube playthrough video, we
+predict that certain patterns between previous decisions will be
+significant in identifying a player's response. These connections will
+be rely on capturing the player's responses to the decision logic of
+the genre and may require additions to the SIG schema. If SIG schema
+can be extended to incorporate video, choices and state tracking, then
+the intermediate format will not be needed. The additions will require
+a means of locating a state within a traversal, using an approach
+similar to that of Playspecs \cite{Osborn2015-gr}.
+
+In addition to extending the text layer of SIG to incorporate choice
+paths and video content, we anticipate the need for a tool to
+facilitate the annotation process that associates the video footage of
+gameplay traversals with story elements from the SIG in addition to
+the player's emotional expressions. This will also enable players to
+annotate their own gameplay, ideally.
+
+A second user study, this time focusing on the second episode of TWAU,
+will be run using the same procedure as the first, namely having
+subjects play through the game while using the SEI. The extensions to
+SIG and the original method will be applied to these traversals, and
+the resulting predictions will be evaluated for whether they identify
+potential points where players may experience emotion.
+
+\section{Toward Computational Analysis of Interactive Digital Narratives}
+\label{sec:orgheadline9}
+The primary goal of analyzing narratives with a rich modeled dataset
+is to discover insights that might lie hidden beneath the surface
+experience or which may be invisible without the full set of decisions
+represented by multiple players.  This potential to understand the
+role of story content on emotional experience motivates the work ahead
+in curating the corpora that will enable us to refine both the methods
+of evaluating and representing models of narrative as well as
+leveraging as unknown new methods to understand the player experience.
+
+We presented a description of the initial coding schema developed to
+annotate a corpus of interactive digital narrative playthroughs, and
+provided a "pre-registration" of a program of proposed efforts that
+measure emotional experiences from players of a released CCBA and plan
+to extend an existing computational model of narrative to predicting
+them. We believe that the availability of open datasets that can be
+annotated and studied will provide researchers in the field with a
+valuable resource for conducting further studies on the player
+behavior as well as test future models of narrative, ultimately
+facilitating future authoring tools designed to support creation of
+interactive digital narratives to support eliciting particular
+emotions through a combination of story architecture, interactive
+decision selection and game design.

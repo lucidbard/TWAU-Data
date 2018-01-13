@@ -1,0 +1,53 @@
+* Dimensions of Player Experience
+| Dimension        | Description                    | Potentially Supported By       |
+|------------------+--------------------------------+--------------------------------|
+| *Immersion*      | The degree to which the        | Outcomes that are believable   |
+|                  | player’s attention is focused  | given options; option coverage |
+|                  | exclusively on the game.       | of desired actions.            |
+|------------------+--------------------------------+--------------------------------|
+| *Identification* | How comfortable the player     | Options that support player    |
+|                  | feels in the role they play as | self-expression.               |
+|                  | their avatar.                  |                                |
+
+
+
+Transpor-
+tation
+The degree to which a player
+thinks in terms of the game
+world rather than the real
+world.
+Choices which force the
+player to reason from a
+character’s point of view.
+Agency Alignment of player goals with
+game affordances.
+Transparent choices where
+outcomes align with player
+goals.
+Influence Degree to which the player
+feels they influence in-game
+events (even if they do not
+control them).
+Choices where outcomes are
+divergent and impactful.
+Autonomy The player’s ability to choose
+and pursue a variety of goals
+at their own discretion.
+Choices between goals rather
+than between methods of
+pursuing a fixed goal;
+non-exclusive outcomes.
+Responsi-
+bility
+Player feelings of
+responsibility for the actions
+of their avatar.
+A mix of intentional outcomes
+that are good for and bad for
+other game characters.
+Regret Player feelings of regret for an
+in-game decision.
+Negative outcomes that
+result from tempting options
+but which are still believable.

@@ -1,0 +1,11 @@
+{
+    "title": "Shot",
+    "type": "object",
+    "format": "grid",
+    "properties": {
+        "title": "Shot",
+        "NextShot":{
+            "type":"integer"
+        }
+    }
+}

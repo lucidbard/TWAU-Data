@@ -1,0 +1,251 @@
+* Literature Review Addendum
+
+** CHI 2015
+** CHI 2016
+*** Gamer Style: Performance Factors in Gamified Simulation
+Surabhi Gupta
+Tim Coles
+Cedric Dumas
+Simon J. McBride
+DanaKai Bradford
+
+*** “Don’t Whip Me With Your Games”: Investigating “Bottom-Up” Gamification
+Pascal Lessel
+Maximilian Altmeyer
+Marc Müller
+Christian Wolff
+Antonio Krüger
+
+*** Designing Brutal Multiplayer Video Games
+Joe Marshall
+Conor Linehan
+Adrian Hazzard
+
+*** Fostering Intrinsic Motivation through Avatar Identification in Digital Games
+Max V. Birk
+Cheralyn Atkins
+Jason T. Bowey
+Regan L. Mandryk
+
+*** Negative Emotion, Positive Experience?: Emotionally Moving Moments in Digital Games
+Julia Ayumi Bopp
+Elisa D. Mekler
+Klaus Opwis
+
+*** The Mimesis Effect: The Effect of Roles on Player Choice in Interactive Narrative Role-Playing Games
+Ignacio X. Domínguez
+Rogelio E. Cardona-Rivera
+James K. Vance
+David L. Roberts
+
+*** Designing Closeness to Increase Gamers’ Performance
+Lucas Colusso
+Gary Hsieh
+Sean A. Munson
+
+*** Contextual Autonomy Support in Video Game Play: A Grounded Theory
+Sebastian Deterding
+
+*** Sensation: Measuring the Effects of a Human-to-Human Social Touch Based Controller on the Player Experience
+Mert Canat
+Mustafa Ozan Tezcan
+Celalettin Yurdakul
+Eran Tiza
+Buğra Can Sefercik
+Idil Bostan
+Oğuz Turan Buruk
+Tilbe Göksun
+Oğuzhan Özcan
+
+*** Designing Engaging Games Using Bayesian Optimization
+Mohammad M. Khajah
+Brett D. Roads
+Robert V. Lindsey
+Yun-En Liu
+Michael C. Mozer
+
+*** Operationalising and Evaluating Sub-Optimal and Optimal Play Experiences through Challenge-Skill Manipulation
+Madison Klarkowski
+Daniel Johnson
+Peta Wyeth
+Mitchell McEwan
+Cody Phillips
+Simon Smith
+
+*** How to Present Game Difficulty Choices?: Exploring the Impact on Player Experience
+Jan D. Smeddinck
+Regan L. Mandryk
+Max V. Birk
+Kathrin M. Gerling
+Dietrich Barsilowski
+Rainer Malaka
+
+*** Peak-End Effects on Player Experience in Casual Games
+Carl Gutwin
+Christianne Rooke
+Andy Cockburn
+Regan L. Mandryk
+Benjamin Lafreniere
+
+** CHI 2017
+*** 1028 Is Difficulty Overrated? The Effects of Choice, Novelty and Suspense on Intrinsic Motivation in Educational Games
+J. Derek Lomas, University of California, San Diego
+& Carnegie Mellon University
+Kenneth Koedinger, Nirmal Patel, Sharan Shodhan,
+Nikhil Poonwala, Jodi L. Forlizzi, Carnegie Mellon
+University
+*** 1040 Why is This Happening to Me? How Player Attribution can Broaden our Understanding of Player Experience
+Ansgar E. Depping, Regan L. Mandryk, University of Sakatchewan
+*** 1544 Understanding Gaming Perceptions and Experiences in a Women’s College Community
+Orit Shaer, Lauren Westendorf, Nicholas A. Knouf,
+Wellesley College
+Claudia Pederson, Wichita State University
+*** 1352 Designing Game-Based Myoelectric Prosthesis
+Training
+Aaron Tabor, Scott Bateman, Erik Scheme, University
+of New Brunswick
+David R. Flatla, University of Dundee
+Kathrin Gerling, University of Lincoln
+*** 1530 Don’t Talk Dirty to Me: How Sexist Beliefs Affect Experience in Sexist Games
+Jason T. Bowey, Ansgar E. Depping, Regan L. Mandryk,
+University of Saskatchewan
+*** 1571 Expanding Video Game Live-Streams with Enhanced Communication Channels: A Case Study
+Pascal Lessel, Saarland Informatics Campus
+Alexander Vielhauer, Saarland University
+Antonio Krüger, Saarland Informatics Campus
+*** 2782 We Play We Learn: Exploring the Value of Digital Educational Games in Rural Egypt
+Shaimaa Lazem, Hussein Aly Jad, City for Scientific
+Research and Technological Applications
+*** 4045 Effects of Sharing Physiological States of Players in a Collaborative Virtual Reality Gameplay
+Arindam Dey, Thammathip Piumsomboon, University
+of South Australia
+Youngho Lee, Mokpo National University
+Mark Billinghurst, University of South Australia
+*** 4863 The Game of Performing Play: Understanding Streaming as Cultural Production
+Anthony J. Pellicone, University of Maryland
+June Ahn, New York University
+
+*** 4887 Mastery Learning of Second Language through Asynchronous Modeling of Native Speakers in a Collaborative Mobile Game
+Xiangmin Fan, Wencan Luo, Jingtao Wang, University
+of Pittsburgh
+*** 5109 Testing Incremental Difficulty Design in Platformer Games
+Rina R. Wehbe, Elisa D. Mekler, Mike Schaekermann,
+Edward Lank, Lennart E. Nacke, University of Waterloo
+*** 5087 A Good Reason to Die: How Avatar Death and High Challenges Enable Positive Experiences
+Serge Petralito, Florian Brühlmann, University of Basel
+Glena Iten, Elisa D. Mekler, University of Waterloo
+Klaus Opwis, University of Basel
+*** 5114 EngageMeter: A System for Implicit Audience Engagement Sensing Using Electroencephalography
+Mariam Hassib, LMU Munich & University of Stuttgart
+Stefan Schneegass, University of Stuttgart
+Philipp Eiglsperger, LMU Munich
+Niels Henze, Albrecht Schmidt, University of Stuttgart
+Florian Alt, LMU Munich
+*** 5117 Can I Think of Something Else when Using a BCI? Cognitive Demand of an SSVEP-based BCI
+Andéol Evain, Université de Rennes 1
+Ferran Argelaguet, Nicolas Roussel, Inria
+Géry Casiez, Université de Lille
+Anatole Lécuyer, Inria
+
+*** 5123 “Not another Z piece!” Adaptive Difficulty in TETRIS
+Katharina Spiel, Vienna University of Technology &
+Bauhaus-Universität Weimar
+Sven Bertel, Bauhaus-Universität Weimar
+Fares Kayali, Vienna University of Technology
+
+* 
+Dear John Murray,
+
+
+Thank you for your recent poster submission to Foundations of Digital Games 2017. We are pleased to tell you that your poster submission 151: Proposal for Analyzing Player Emotions In An Interactive Narrative Using Story Intention Graphs has been accepted as a POSTER publication for the conference. We received 31 poster submissions, out of which we accepted 24.
+
+We urge you to take reviewers comments seriously when you prepare the final revision. The deadline for submitting the camera-ready version of your paper is *June 26, 2017*. A separate email with camera-ready instructions will be sent out shortly.
+
+The required format for posters is 4 pages max in the ACM extended abstract format. You can find templates in the FDG¡¦17 website. Please note that we use the format in portrait (vertical) layout,  NOT the one with landscape (horizontal) layout.
+
+
+We look forward to seeing you in June!
+
+
+Jichen Zhu & Miguel Sicart
+Program Co-Chairs
+
+
+----------------------- REVIEW 1 ---------------------
+PAPER: 151
+TITLE: Proposal for Analyzing Player Emotions In An Interactive Narrative Using Story Intention Graphs
+AUTHORS: John Murray, Michael Mateas and Noah Wardrip-Fruin
+
+Overall evaluation: -2 (reject)
+Relevance to FDG: 5 (excellent)
+Originality and Significance: 1 (no contribution)
+Use of related work: 4 (good)
+Presentation: 2 (poor)
+
+----------- Detailed Review -----------
+This paper seems to have been put together very quickly and was difficult for me to follow with sentences such as: "Such a scaffold would comparison of the content between traversals to be compared automatically [...]" or "[Interactive narratives] present a constantly moving target for analysis as each traversal (a term introduced by to describe a specific playthrough) still in their infancy".
+
+To my understanding, the paper's point is to announce a research project intending to apply story intention graphs (SIG) annotation to works of interactive narrative and link these graphs to user emotions. This research would be an innovative extension of SIG analysis to interactive narrative.
+
+Beyond announcing a project, this paper could have offered some contribution if it explained better the method the authors developed to annotate interactive narratives in a useful way, but all I could gather was that they used tools called Ink and Scheherazade. It is also quite obscure how "emotions" will be assessed and how they will meaningfully be mapped to the structural analysis. Apparently, they will use the "sensory evaluation instrument" which in the bibliography is named "sensual evaluation instrument"... which is it?
+
+In other words, this sounds like interesting future research but this paper in itself is difficult to read and offers very little.
+
+
+----------------------- REVIEW 2 ---------------------
+PAPER: 151
+TITLE: Proposal for Analyzing Player Emotions In An Interactive Narrative Using Story Intention Graphs
+AUTHORS: John Murray, Michael Mateas and Noah Wardrip-Fruin
+
+Overall evaluation: 0 (borderline paper)
+Relevance to FDG: 5 (excellent)
+Originality and Significance: 3 (some contribution)
+Use of related work: 3 (fair)
+Presentation: 3 (fair)
+
+----------- Detailed Review -----------
+This paper presents a proposal for a set of studies exploring the development of a extended version of Elson¡¦s Story Intention Graph as a means of annotating interactive narratives and then predicting where within the story players will experience emotional responses.
+
+An initial comment - the abstract is extremely long, and provides a level of detail not really appropriate for a 4-page extended abstract. It would help if the abstract could be trimmed to a few sentences - this would both help the reader to know what exactly the focus of the poster paper is, and also help the authors to determine that focus themselves.
+
+Following the abstract, the paper begins by providing an overview of the research area, and stating the specific focus on ¡§cinematic choice-based adventure games¡¨. This is followed by a detailed discussion of the motivation behind the work. This is fairly clear. However, there are a number of editing issues that make this section hard to follow. For example, in the first paragraph of section 1.1, the sentence fragment ¡§Such a scaffold would comparison of the content between traversals to be compared automatically and would enable subjective elements of an interpretation to be made explicit.¡¨ is hard to understand. There is also some discussion of previous work that is not properly cited, such as Tanenbuam¡¦s concept of ¡§readerly pleasure¡¨ [1].
+
+Having argued that it would be useful to develop computational models of interactive narratives that can be mapped onto a corpus of actual IDN works, the paper then defines the subset of interactive narratives that the current work will address, which the authors term ¡§Cinematic Choice-Based Adventure Games¡¨. This section does a good job of motivating the specific focus on these types of works, arguing for their suitability for annotation using SIG.
+
+The paper then introduces SIG, and describes the proposed study design. The overall plan for the study is clear. There are, however, some aspects that are not very well justified. It is not clear, for example, why it was necessary to create an ¡§intermediate format¡¨ between the game and SIG. Given the fact that this work has already been largely completed, it would have been helpful if the authors had included more information on the experience of creating the intermediate format and annotating this intermediate format using SIG. My immediate reaction is that the result of this process does not necessarily correspond to the actual experience of playing The Wolf Among Us, making it questionable whether the resulting annotations would actually be able to predict future player responses, given that there are likely to be inaccuracies in the version of the game captured by the intermediate format.
+
+The rest of the paper sketches out much more briefly the rest of the proposed research, ending with some proposed contributions.
+
+Overall, the paper presents some interesting and promising preliminary work. However, it is not clear to me that presenting the entirety of the work at this early stage is the best way to get the concepts across. It may have been better to briefly sketch the larger research program, and then report in more detail on the work that has been completed (the use of the SIG model to annotate narrative structure, section 3.1). This would allow the issues related to this stage of the research to be discussed in detail, and help to motivate the rest of the work. Despite this, I do feel that this work is worth sharing with the FDG community.
+
+--
+
+References
+
+1.Joshua Tanenbaum. 2011. Being in the story: readerly pleasure, acting theory, and performing a role. In International Conference on Interactive Digital Storytelling, 55¡V66. Retrieved May 31, 2017 from http://link.springer.com/chapter/10.1007/978-3-642-25289-1_7
+
+
+----------------------- REVIEW 3 ---------------------
+PAPER: 151
+TITLE: Proposal for Analyzing Player Emotions In An Interactive Narrative Using Story Intention Graphs
+AUTHORS: John Murray, Michael Mateas and Noah Wardrip-Fruin
+
+Overall evaluation: 2 (accept)
+Relevance to FDG: 4 (good)
+Originality and Significance: 3 (some contribution)
+Use of related work: 4 (good)
+Presentation: 4 (good)
+
+----------- Detailed Review -----------
+The proposal for analyzing player emotions using story intention graphs is a well-considered and appropriately scoped study. By focusing on what they call CCBA games, the author(s) pick a reasonable set of artifacts to study using the existing models of Story Intention Graphs interpreted through the Sensual Evaluation Instrument. While I'm not knowledgable about this method of evaluation beyond cursory familiarity, it appears an appropriate choice.
+
+I would suggest that the authors find an alternative initial validation source beyond PewDiePie because the performative aspects of his videos would likely exaggerate his reactions and produce skewed results. I recognize that this is work that is already done but it would be worth looking at a less popular playthrough to compare results.
+
+
+
+
+\copyrightyear{2017} 
+\acmYear{2017} 
+\setcopyright{rightsretained} 
+\acmConference{FDG'17}{August 14-17, 2017}{Hyannis, MA, USA}\acmDOI{10.1145/3102071.3106367}
+\acmISBN{978-1-4503-5319-9/17/08}

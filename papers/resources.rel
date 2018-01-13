@@ -1,0 +1,24 @@
+;; RefTeX parse info file
+;; File: /Users/lucid/Dropbox/TWAU-data/papers/resources.org
+;; User: lucid (John Murray)
+
+(set reftex-docstruct-symbol '(
+
+
+(xr nil "\\\\\\\\\\\\")
+
+(index-tags)
+
+(is-multi nil)
+
+(bibview-cache)
+
+(master-dir . "/Users/lucid/Dropbox/TWAU-data/papers/")
+
+(label-numbers)
+
+(bof "/Users/lucid/Dropbox/TWAU-data/papers/resources.org")
+
+(eof "/Users/lucid/Dropbox/TWAU-data/papers/resources.org")
+))
+

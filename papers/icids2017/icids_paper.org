@@ -1,0 +1,28 @@
+#+BIBLIOGRAPHY:  ../../../library
+#+TITLE: 
+
+* Title
+
+* Body
+** Introduction
+
+*** Motivation
+*** Cinematic choice-based adventure (CCBA) games
+
+** Conclusion
+
+* Footnotes
+
+[fn:3] That is, stories which consist of characters and not the broader sense sometimes used which could incorporate movies or comics
+[fn:2] Dontnod Entertainment, 2015
+[fn:8] labeled deterministic, even though these works could branch and
+Chris Crawford sense of instantial \cite{Crawford1982} could just as
+well apply
+[fn:9] This is influenced by Michael Mateas' concept of "content
+selection architectures" as a useful way to describe how various types
+of content and the configuration of the systems that organize them can
+be compared. \cite{Mateas2015}
+[fn:6] Quantic Dream, 2010
+[fn:1] One recent Telltale Games work, Minecraft, uses a sandbox-style
+creation game based on voxels as its basis, which departs from
+previous works that use either comics or television.

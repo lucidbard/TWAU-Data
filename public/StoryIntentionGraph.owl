@@ -1,0 +1,547 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#"
+     xml:base="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:StoryIntentionGraph="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph/1.0.0"/>
+        <owl:versionInfo xml:lang="en">This is the original Story Intention Graph schemata by David Elson translated into OWL by John Murray</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Agent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Agent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#P"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#a -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#a">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#P"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#B"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#G"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Links a Proposition node to an Interpretive Proposition, Goal or Belief node when the reader infers that the latter becomes actualized because of the former.</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actualizes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#ac -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#ac">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#P"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#B"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#G"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indicates intention by the agent of a Proposition node to actualize an Interpretive Proposition, Goal or Belief node</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attempt to cause</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#ap -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#ap">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#P"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#B"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#G"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indicates intention by the agent of a Proposition node to prevent/cease an Interpretive Proposition, Goal or Belief node.</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attempt to prevent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#ba -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#ba">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#P"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#S"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connects a Proposition to its temporal initiation State</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Begins at</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#c -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#c">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#P"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#B"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#G"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Links a Proposition node to an Interpretive Proposition, Goal or Belief node when the reader infers that the latter becomes prevented/ceased because of the former.</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ceases</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#d -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#d">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#p"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#B"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#G"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#A"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A negative affectual impact of an Interpretive Proposition, Goal or Belief node (traversing to Affect)</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damages</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#e -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#e">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#S"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#S"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connects State nodes referring to the same moment in two Timelines</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equivalent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#ea -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#ea">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#P"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#S"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connects a Proposition to its temporal termination State</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ends at</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#ia -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#ia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#TE"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#P"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interpreted as</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#im -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#im">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#P"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#B"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#G"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implication by a Proposition node of an Interpretive Proposition, Goal or Belief node</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Implies</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#in">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#S"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#T"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#p -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#p">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#B"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#G"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#A"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A positive affectual impact of an Interpretive Proposition, Goal or Belief node (traversing to A)</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provides for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#pa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#pa">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#pf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#B"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#G"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#B"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#G"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Link between one Interpretive Proposition, Goal or Belief node and another that is necessary for its prevention/cessation</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Precondition against</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#pf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#pf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#B"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#G"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#B"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#G"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Link between one Interpretive Proposition, Goal or Belief node and another that is necessary for its actualization</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Precondition for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#r -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#r">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#T"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#P"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connects a Timeline to a P or I node that incorporates it modally</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Referenced by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#te_f -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#te_f">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#TE"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#TE"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ordering of text spans in a discourse</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Text Follows</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#ti_f -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#ti_f">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#S"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#S"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A continuum of states in the story-world in a single modality</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Timeline Follows</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#wc -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#wc">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#B"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#G"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#B"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#G"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Link between one Interpretive Proposition, Goal or Belief node and another that is sufficient for its actualization</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Would cause</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#wp -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#wp">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#B"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#G"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#B"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#G"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Link between one Interpretive Proposition, Goal or Belief node and another that is sufficient for its prevention/cessation</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Would prevent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#hasIndex -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#hasIndex">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#S"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#hasPropositionContent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#hasPropositionContent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#P"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#hasSpanBegin -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#hasSpanBegin">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#TE"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#hasSpanEnd -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#hasSpanEnd">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#TE"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#hasStoryText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#hasStoryText">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#hasSourceText"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#A -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#A">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Interpretive_Layer"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Affect</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#B -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#B">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Interpretive_Layer"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Belief</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Character -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Character"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#G -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#G">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Interpretive_Layer"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#I">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Interpretive_Layer"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interpretive Proposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Interpretive_Layer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Interpretive_Layer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#P -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#P">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Timeline_Layer"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#S -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#S">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Timeline_Layer"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#T -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#T">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Timeline_Layer"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Timeline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#TE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#TE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Textual_Layer"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Continuous span of surface discourse</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Text</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Textual_Layer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Textual_Layer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Timeline_Layer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Timeline_Layer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#hasSourceText -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#hasSourceText"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Span1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Span1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#TE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Span2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Span2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#TE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Span3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#Span3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#TE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#State1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#State1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#S"/>
+        <hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">0</hasIndex>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#State2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#State2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#S"/>
+        <ti_f rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#State1"/>
+        <hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</hasIndex>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#State3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#State3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#S"/>
+        <ti_f rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#State2"/>
+        <hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</hasIndex>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#WilyLion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#WilyLion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lucid/ontologies/2018/0/StoryIntentionGraph#hasSourceText"/>
+        <hasStoryText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Lion watched a fat Bull feeding in a meadow, and his mouth watered when he thought of the royal feast he would make, but he did not dare to attack him, for he was afraid of his sharp horns.
+Hunger, however, presently compelled him to do something: and as the use of force did not promise success, he determined to resort to artifice.
+Going up to the Bull in friendly fashion, he said to him, “I cannot help saying how much I admire your magnificent figure. What a fine head! What powerful shoulders and thighs! But, my dear friend, what in the world makes you wear those ugly horns? You must find them as awkward as they are unsightly. Believe me, you would do much better without them.”
+The Bull was foolish enough to be persuaded by this flattery to have his horns cut off; and, having now lost his only means of defense, fell an easy prey to the Lion.</hasStoryText>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

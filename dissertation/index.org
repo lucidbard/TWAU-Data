@@ -1,0 +1,120 @@
+* Meta :noexport:
+** [[brain:~/Dropbox/org/brain/Dissertation.org][Brain]]
+** TODO Construct outline and plan wordcounts
+** TODO Copy/Map over proposal content
+** TODO Create source system
+* Introduction
+:PROPERTIES:
+:ID:       qum5hdo0euh0
+:END:
+** P :no_title:
+Why do we need stories?
+
+cite:Mateas2002-dw
+
+cite:Elson2012-pi
+
+** P :no_title:
+Stories encode complex experiential information in a way that not only
+allows for communication, but also for living. They combine dynamic,
+interesting situations with characters that are relatable and worth
+getting to know. They capture the types of emotions that we don't
+ordinarily get to experience in everyday life. The art of writing a
+good story is to find the balance of finding true observations about
+how humans live and connecting them together. We don't always have all
+the information, we often are attached to outcomes, we take risks, we
+make mistakes.
+** P :no_title:
+Existing models of story understanding pursue the "content" of stories
+as if there were a simple model for how they exist in our
+heads. Stories are not modeled, however, in the head of a reader. They
+are lived, and then the results are more or less memorable. A
+character's actions accumulate over time and over key sceenes to
+become predictable. We come to know the characters in stories /in the
+very same way/ as we have come to know people in our own lives.
+** P :no_title:
+What role do computers have to play in story? Computers can be
+collaborators or research assistants; they can be actors or
+directors. They can create stories using some of the same creative
+algorithms that writers do.
+** P :no_title:
+What can computers not do?
+** P :no_title:
+They cannot predict, given a story, how a person will react. They
+cannot tease apart the meaning from a passage. They cannot create a
+moment that resonates in the way that a lifetime of witnessing human
+events and people can.
+** P :no_title:
+And that seems pretty obvious, given that writers spend years watching
+people and building various models of behavior and personality.
+** P :no_title:
+The act of witnessing a story is one of the most human activities in
+existence, and one still far out of reach of current computers.
+** P :no_title:
+But our approaches to what is "computable" are beginning to shift. AI
+has begun with a clean, mathematical model of meaning that translates
+into planning, into ontologies and into a simpler model of how
+information is accumulated and shared (schemas, scripts, etc). Today,
+various neural network approaches are increasingly becoming capable of
+tranining themselves on datasets in both supervised and unsupervised
+methods. These systems are still far from being capable of reading
+stories, and the research community has yet to realize exactly how
+important it is to both have the capabliity of telling a story and to
+make use of this most fundamental capacity to understand humans.
+** P :no_title:
+Stories are a lens into the human experience. This dissertation sets
+out to rectify at least part of the two major trends of ai research
+through the problem of stories. One, the statistical and data driven
+approach of machine learning, and two, the logical representations of
+meaning present in ontologies, diagrams and other innovations in
+symbolic reasoning.
+** P :no_title:
+To do this, we'll attack a harder problem than story understanding as
+it has yet been tackled, that of textual understanding. We'll develop
+a theory of meaning co-creation in the tradition of reader response
+using a case study of a choice-based cinematic adventure game that has
+rich layers of authored and interpreted information. We'll also
+likewise treat the player's experience as a primary source of insight
+into the meaning of the work. Using the data including video recording
+and phyisological signals from the experience itself and from the
+player's raw moment-to-moment understanding and reaction we will begin
+asking questions about what the right questions are.
+** P :no_title:
+** Meta :noexport:
+*** TODO Lengthen
+*** Resources
+*** Notes
+* Story Understanding and The Semantic Gap
+:PROPERTIES:
+:ID:       aiq2scg0iuh0
+:END:
+
+* Extending Story Intention Graphs
+:PROPERTIES:
+:ID:       5nijtcg0iuh0
+:END:
+
+* Study Design & Data Collection
+:PROPERTIES:
+:ID:       ry6jvcg0iuh0
+:END:
+
+* Analytical Methodologies
+:PROPERTIES:
+:ID:       5mx9xcg0iuh0
+:END:
+
+* Conclusions
+:PROPERTIES:
+:ID:       k5ekycg0iuh0
+:END:
+
+* References
+\bibliographystyle{plain}
+bibliography:/Users/lucid/Dropbox/bibliography/references.bib
+
+* Export Configuration
+#+INCLUDE: "header.org"
+#+STARTUP: overview
+#+TITLE: Analyzing Interactive Narratives using Computational Models and Player Response Data
+                                                                                                                :noexport:ARCHIVE:

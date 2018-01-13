@@ -1,0 +1,163 @@
+* Poster Feedback
+:PROPERTIES:
+:ID:       zmq4v160wmh0@seebright.com
+:END:
+** [0/7] ISSUES
+*** TODO Explained better the method the authors developed to annotate interactive narratives in a useful way
+*** TODO Review for consistent usage of SEI and defend its use better against other measures.
+ - Discuss what it measures and summarize its usage in other works.
+*** TODO It is also quite obscure how "emotions" will be assessed and how they will meaningfully be mapped to the structural analysis. 
+*** TODO There is also some discussion of previous work that is not properly cited, such as Tanenbuam’s concept of “readerly pleasure” [1].
+*** TODO It may have been better to briefly sketch the larger research program
+and then report in more detail on the work that has been
+completed (the use of the SIG model to annotate narrative structure,
+section 3.1). This would allow the issues related to this stage of the
+research to be discussed in detail, and help to motivate the rest of
+the work.
+*** TODO Questionable whether the resulting annotations would be able to accurately predict future player reactions
+My immediate reaction is that the result of this process does not
+necessarily correspond to the actual experience of playing The Wolf
+Among Us, making it questionable whether the resulting annotations
+would actually be able to predict future player responses, given that
+there are likely to be inaccuracies in the version of the game
+captured by the intermediate format.
+*** TODO Alternative initial validation source to compare with (Not just PewDiePie)
+*** TODO Schema applied to PewDiePie + INK file
+*** Keylogger for each session -- how long and how much was pressed. Service?
+
+** REVIEW 1
+*** Review Header
+Overall evaluation: -2 (reject)
+Relevance to FDG: 5 (excellent)
+Originality and Significance: 1 (no contribution)
+Use of related work: 4 (good)
+Presentation: 2 (poor)
+*** ----------- Detailed Review -----------
+
+This paper seems to have been put together very quickly and was
+difficult for me to follow with sentences such as: "Such a scaffold
+would comparison of the content between traversals to be compared
+automatically [...]" or "[Interactive narratives] present a constantly
+moving target for analysis as each traversal (a term introduced by to
+describe a specific playthrough) still in their infancy".
+
+To my understanding, the paper's point is to announce a research
+project intending to apply story intention graphs (SIG) annotation to
+works of interactive narrative and link these graphs to user
+emotions. This research would be an innovative extension of SIG
+analysis to interactive narrative.
+
+Beyond announcing a project, this paper could have offered some
+contribution if it explained better the method the authors developed
+to annotate interactive narratives in a useful way, but all I could
+gather was that they used tools called Ink and Scheherazade. It is
+also quite obscure how "emotions" will be assessed and how they will
+meaningfully be mapped to the structural analysis. 
+
+Apparently, they will use the "sensory evaluation instrument" which in
+the bibliography is named "sensual evaluation instrument"... which is
+it?
+
+In other words, this sounds like interesting future research but this
+paper in itself is difficult to read and offers very little.
+** REVIEW 2
+*** Overall evaluation: 0 (borderline paper)
+**** Header
+Relevance to FDG: 5 (excellent)
+Originality and Significance: 3 (some contribution)
+Use of related work: 3 (fair)
+Presentation: 3 (fair)
+**** ----------- Detailed Review -----------
+This paper presents a proposal for a set of studies exploring the
+development of a extended version of Elson’s Story Intention Graph as
+a means of annotating interactive narratives and then predicting where
+within the story players will experience emotional responses.
+
+An initial comment - the abstract is extremely long, and provides a
+level of detail not really appropriate for a 4-page extended
+abstract. It would help if the abstract could be trimmed to a few
+sentences - this would both help the reader to know what exactly the
+focus of the poster paper is, and also help the authors to determine
+that focus themselves.
+
+Following the abstract, the paper begins by providing an overview of
+the research area, and stating the specific focus on “cinematic
+choice-based adventure games”. This is followed by a detailed
+discussion of the motivation behind the work. This is fairly
+clear. However, there are a number of editing issues that make this
+section hard to follow. For example, in the first paragraph of section
+1.1, the sentence fragment “Such a scaffold would comparison of the
+content between traversals to be compared automatically and would
+enable subjective elements of an interpretation to be made explicit.”
+is hard to understand. There is also some discussion of previous work
+that is not properly cited, such as Tanenbuam’s concept of “readerly
+pleasure” [1].
+
+Having argued that it would be useful to develop computational models
+of interactive narratives that can be mapped onto a corpus of actual
+IDN works, the paper then defines the subset of interactive narratives
+that the current work will address, which the authors term “Cinematic
+Choice-Based Adventure Games”. This section does a good job of
+motivating the specific focus on these types of works, arguing for
+their suitability for annotation using SIG.
+
+The paper then introduces SIG, and describes the proposed study
+design. The overall plan for the study is clear. There are, however,
+some aspects that are not very well justified. It is not clear, for
+example, why it was necessary to create an “intermediate format”
+between the game and SIG. Given the fact that this work has already
+been largely completed, it would have been helpful if the authors had
+included more information on the experience of creating the
+intermediate format and annotating this intermediate format using
+SIG. My immediate reaction is that the result of this process does not
+necessarily correspond to the actual experience of playing The Wolf
+Among Us, making it questionable whether the resulting annotations
+would actually be able to predict future player responses, given that
+there are likely to be inaccuracies in the version of the game
+captured by the intermediate format.
+
+The rest of the paper sketches out much more briefly the rest of the
+proposed research, ending with some proposed contributions.
+
+Overall, the paper presents some interesting and promising preliminary
+work. However, it is not clear to me that presenting the entirety of
+the work at this early stage is the best way to get the concepts
+across. It may have been better to briefly sketch the larger research
+program, and then report in more detail on the work that has been
+completed (the use of the SIG model to annotate narrative structure,
+section 3.1). This would allow the issues related to this stage of the
+research to be discussed in detail, and help to motivate the rest of
+the work. Despite this, I do feel that this work is worth sharing with
+the FDG community.
+
+--
+
+References
+
+1.Joshua Tanenbaum. 2011. Being in the story: readerly pleasure, acting theory, and performing a role. In International Conference on Interactive Digital Storytelling, 55–66. Retrieved May 31, 2017 from http://link.springer.com/chapter/10.1007/978-3-642-25289-1_7
+** REVIEW 3
+*** Header
+PAPER: 151
+TITLE: Proposal for Analyzing Player Emotions In An Interactive Narrative Using Story Intention Graphs
+AUTHORS: John Murray, Michael Mateas and Noah Wardrip-Fruin
+
+Overall evaluation: 2 (accept)
+Relevance to FDG: 4 (good)
+Originality and Significance: 3 (some contribution)
+Use of related work: 4 (good)
+Presentation: 4 (good)
+*** ----------- Detailed Review -----------
+The proposal for analyzing player emotions using story intention
+graphs is a well-considered and appropriately scoped study. By
+focusing on what they call CCBA games, the author(s) pick a reasonable
+set of artifacts to study using the existing models of Story Intention
+Graphs interpreted through the Sensual Evaluation Instrument. While
+I'm not knowledgable about this method of evaluation beyond cursory
+familiarity, it appears an appropriate choice.
+
+I would suggest that the authors find an alternative initial
+validation source beyond PewDiePie because the performative aspects of
+his videos would likely exaggerate his reactions and produce skewed
+results. I recognize that this is work that is already done but it
+would be worth looking at a less popular playthrough to compare
+results.

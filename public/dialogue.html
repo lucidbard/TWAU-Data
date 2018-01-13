@@ -1,0 +1,23 @@
+<html>
+<head>
+        <script src="/jquery-1.12.0.min.js"></script>
+        <script>
+        var jsonData;
+        var dialogueData;
+        $.getJSON("dialogue/1", function(data){
+            jsonData = data;
+            console.log(data);
+            console.log(JSON.stringify(data));
+            for (var key in jsonData) {
+                if(Object.prototype.hasOwnProperty.call(jsonData[key], 'Annotation')) {
+                $("#dialogue").append("<p>"+key+":" + jsonData[key].Category+": "+jsonData[key].Annotation+"<p>");
+                }
+            }
+        });
+        </script>
+</head>
+<body>
+<div id="dialogue"></div>
+</body>
+</html>
+    

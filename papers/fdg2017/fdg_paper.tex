@@ -1,0 +1,593 @@
+\section{Introduction}
+\label{sec:orgheadline2}
+Interactive storytelling uses the capabilties of computational media
+to dynamically assemble stories based on player input and/or on an
+underlying simulation of a world. These narratives can be in any of a
+variety of immersion levels: text-based were popularized as the genre
+of interactive fiction, whereas the interactive drama \emph{Facade}
+\cite{Mateas2005} uses conventions from theater and simulates a
+mimetic illusion of a world where characters act and react as agents
+with audible natural language in continuous time and space. Regardless
+of immersion level, narrative is an important vehicle for
+communicating experiences. The present study uses computational models
+of narrative to encode a particular storygame, \emph{The Wolf Among Us} by
+Telltale games. It was selected due to its nuanced narrative and
+critical acclaim, as well as the thriving fanbase. We hypothesized
+that the work's intertwining character goals and complicated
+relationships with each other and the player would provide an ideal
+testing ground for assessing the value of the techniques on
+understanding the specific ways in which a specific work negotiated
+interactivity and choice within a fictional universe and with a
+defined cast. The goal of this paper is to begin the work of applying
+formal models to nontrivial works and to embrace the ambiguity,
+complexity and nuance in the surface and in the attention to the
+narrative simulation taking place.
+
+This work builds on the ongoing efforts within the computational
+narratology community, especially those focused on corpuses and formal
+models. Modern structural approaches such as those taken by many
+narrative generators owe a debt to the original corpus study of
+Russian folk tales by Vladimir Propp \cite{Propp1928}.  Noah
+Wardrip-Fruin describes computational media in terms of three
+components: data, process and surface \cite{Wardrip-Fruin2009a}. Works
+such as Telltale Games relies heavily on the narrative and less on
+process than simulation intensive works such as the dynamic social
+practices simulated in Emily Short and Richard Evan's \emph{Versu}
+\cite{Evans2014} or the social games that make up McCoy et al's \emph{Prom
+Week} \cite{McCoy2014a}. David Elson intended the \emph{Story Intention
+Graph} to be a descriptive model of meaning, representing the mental
+simulation that naturally takes place of agents, their pursuit of
+goals and resulting causally linked events that make up those
+pursuits.
+
+This paper is organized as follows: First, we define the specific
+subgenre of cinematic choice-based adventure games and its suitability
+for applying computational models of narrative. We then review the
+related efforts in computational narratology and game studies. Next,
+we describe in detail the selected methodology of preparing a complex
+artifact for encoding along with a discussion of the trade-offs
+made. We then review the results of the encoding effort with a focus
+on lessons learned. Finally, we discuss direction for future work and
+conclusions.
+
+\subsection{Commercially succesful choice-based narrative games}
+\label{sec:orgheadline1}
+
+Telltale Game's \emph{The Wolf Among Us} was released in 2013 for multiple
+platforms. The game received numerous positive critical reviews and
+represents a mature example of this subgenre. Its story content is
+conveyed through a combination of dialogue, performance of the
+characters and cinematography. The game has even been translated into
+a comic book, the original media that of the \emph{Fables} series on which
+the game is based \cite{Sturges2014}. This document locates the work
+in a subgenre of adventure game, and further places it on two axes.
+
+It is useful to locate the specific space that the subgenre of
+cinematic choice-based adventure games occupies: where story content
+is coded to be presented to the player in a very specific order and
+under very specific conditions and where virtually no unexpected
+sequence of content occurs.\footnote{This is influenced by Michael Mateas' concept of "content
+selection architectures" as a useful way to describe how various types
+of content and the configuration of the systems that organize them can
+be compared. \cite{Mateas2015}} The label "cinematic choice-based
+adventure game" was chosen not because it is the popular name used for
+this subgenre of adventure games, which could be considered a hybrid
+of the point-and-click adventure game and interactive movie, but
+rather for how it highlights the primary mechanics (making choices)
+and the primary representational mode (cinematic) as well as including
+the historical genre of adventure games which is distinguished by
+distinct authored player-character(s) and an emphasis on story.
+
+The adventure game genre is often put in opposition to genres which
+promote more player freedom, such as in Massively Multiplayer Role
+Playing Games (MMORPGs) or Open World RPGs which allow players to
+create and develop their own character. Clara Fernandez-Vara describes
+in her dissertation how adventure games shape "the means by which the
+player restores the behavior that is expected by playing the game"
+\cite{ClaraFernandez-Vara2009}. In other words, in adventure games,
+the player takes actions that are authored by the game's creator
+rather than have those actions emerge from the system's behaviors. The
+player's choices vary the way in which that performance is carried out
+as well as certain key facts that make up the plot. Most decisions and
+actions only have an impact on the pacing or variation of the
+performance rather than ontological changes in the plot, such as the
+timing for choosing menu options or choosing two options that have the
+same outcome but which have apparent different descriptive text. Some
+choices result in content which provides the player satisfaction later
+in the game, labeled the "payoff" in this document.
+
+\emph{The Wolf Among Us} is episodic: future episodes must account for
+selected previous player decisions, although these are usually limited
+to decisions that have an ontological effect on the world (including
+the memories of the characters). Episodic storygames have limited
+replay value due to the amount of content that is necessarily
+conserved. Other non-episodic games, such as \emph{Heavy Rain},\footnote{Quantic Dream, 2010} are
+closely related in their operational logics and their suitability for
+discovering content relationships using the motheds detailed here.
+
+Games in this subgenre conserve content and maximizing narrative
+payoffs among all possible traversals, this subgenre is ideally suited
+to annotation using SIG, as the player's goals and intentions are
+rewarded for small perturbations while the story remains relatively
+consistent.
+
+\section{Related Works}
+\label{sec:orgheadline3}
+Narrative can be understood as a phenomena that arises from the
+coordination of inherent mental abilities, including the ability to
+understand the interaction of agents, their goals, and beliefs and the
+sequence of causally related events they are involved in. There is a
+long history of its study in the field of narratology. 
+
+Interactive Narratives has traversed many traditional silos, offering
+both a theoretical challenge to traditional definitions of narratology
+and complicating the definitions of game with extra-ludic
+meaning. Game critics have developed theory to describe the effects
+and goals of study for computational media, including Janet Murray
+with \emph{Hamlet on the Holodeck} and Noah Wardrip-Fruin's assessment of
+rhetorical strategies employed in procedural works in \emph{Expressive
+Processing}\cite{Wardrip-Fruin2009}. Espen Aarseth attempts to
+delineate a topology of "ludo-narrative works" and avoids the terms
+games \cite{Aarseth2012}. He proposes the dimensions of WORLD,
+OBJECTs, AGENTS and EVENTS as ways of plotting and understanding such
+works. This locates the subgenre of interest toward the narrative
+pole, with the typical adventure game treatment of objects but more
+restrictive use of WORLD and EVENTS.
+
+Locating the work in these dimensions does not provide insight into
+how to go about critiquing the work's narrative choices in the context
+of the use of objects or in the presence of multiple possible
+stories. The concept of a world which has topographical significance
+is less important than a world which as significance as a
+signifier. For example, the extent to which Bigby is able to traverse
+the tenement building and his kitchen is far less significant than the
+characterization of class they embue or the desires of the
+player-character communicated through the affordances of the
+environment. A character summoned to deal with a disturbance
+eventually must go upstairs to meet it.
+
+In the field of Computational Narratology, Mark Finlaysen conducted a
+study of the use of corpuses that observes that text is prioritized
+given the availability of tools \cite{Finlayson2013}, although the
+only game logs that he cited were those of Orkin in the game EAT \& RUN
+\cite{Orkin2010}. 
+
+The literature does not, however, provide an example of a corpus of a
+modern interactive narrative game in a format suitable for annotation,
+nor does it detail an effort to map an existing model of computational
+narratives onto a pre-existing long-form interactive digital
+narrative work.
+
+\section{Story Intention Graphs}
+\label{sec:orgheadline4}
+The lack of contemporary narrative games as sources of study is driven
+home in the proliferation of works that both look at and generate
+stories of the complexity of Aesop's fables, including the \emph{DramaBank}
+developed as part of the assessment of Elson's annotation tool
+\emph{Scheherazade} and the Story Intention Graph. Elson sought to validate
+the SIG's potential for discovering analogies amongst stories and
+Aesop's fables provided a reasonable length and complexity to do
+so. Elson includes in the DramaBank a single extended work, \emph{Beowulf},
+that was encoded by a single annotator, but the limited representation
+of complexity is one of the goals of the present approach. As
+Finlaysen laments, "it is easier to use [an existing] corpus than
+build another one."  \cite{Finlayson2013}
+
+The Story Intention Graph (SIG) schemata was developed by David Elson
+as a set of discourse relations to represent key relationships among
+concepts such as goals, values and agents present in textual
+narratives using concepts from narrative theory. It consists of three
+layers: a \textbf{textual layer}, which contains relevant (but not
+exhaustive) spans of text from the source textual story. These are
+connected to a set of propositions and states in a layer that captures
+the described happenings as a \textbf{timeline layer}. Finally, there is an
+\textbf{interpretive layer}, where propositions are linked to agent goals,
+plans and values. 
+
+Elson found that the SIG schemata, even without representing
+individual propositions, was more successful than alternative methods
+at identifying similarities in the stories.
+
+We focus our attention on a subgenre of cinematic choice-based
+adventure games. These games are relatively hand-authored and rely on
+a series of choices dramatically presented to players. They represent
+is an opportunity to understand story and interactivity in a genre
+that can be made constrained so as to be tractable for computational
+narratology approaches.
+
+This subgenre is an example of a branching narrative, the most common
+way of reading and executing non-linear stories. There are a number of
+tools now available to create narratives based on a model of lexia and
+links, including Ink, Twine, Ren'Py and ChoiceScript. These tools
+enable authors to create textual or visual narratives with various
+mechanisms to direct the player along particular paths, or traversals.
+\section{Methodology}
+\label{sec:orgheadline5}
+This section describes the steps taken to conform the work into a
+format that can be annotated, and to do so in a way that enables
+additional work to expand that form without having to redo previous
+work. 
+
+\emph{The Wolf Among Us} has not been subject to this type of analysis, as
+it is both a commercially available work, it is interactive, and it is
+not textual. As a result, some of the terminology and methods
+developed for interactive fiction needs to be expanded to account for
+the effects that are achieved through the dramatic mode and for the
+study of existing interactive narratives in a non-textual medium.
+
+The following requirements for an intermediate format emerged:
+\begin{enumerate}
+\item It be in a text format, given availability of SIG annotation software
+\item Accumulate additional traversals without redoing work, allowing
+comparison different traversals and to associate SIG annotations
+with the source content rather than the rendered content.
+\end{enumerate}
+
+Conducting a rational reconstruction of a game of the size of \emph{The
+Wolf Among Us} is challenging. The initial approach is reconstruct the
+logic of a single playthrough as if it were a multi-linear
+narrative in a scripting language. This has the disadvantage of potentially missing
+relationships between content. Many times the exact point at which a
+branch merges with the content from other branches is an indication of
+a kernel as opposed to a satellite of meaning, using Seymour Chatman's
+terminology that positions kernels as essential parts of a story and
+satellites as optional\cite{Chatman1980}.
+
+The highest granularity was applied to the first scene, involving
+Bigby's first encounter with a Fable, Mr. Toad. In it, the protagonist
+and viewpoint character, Bigby Wolf, is called to deal with a
+disturbance by a landlord of a tenement building. After arriving,
+Bigby discovers the landlord has been disobeying a community rule
+about concealing his true identity. 
+
+The density of the initial scene reflects both the interest of the
+work as well as its challenge, as the concepts of glamor, class,
+shame, and justice are all brought into a simple exchange in the first
+few minutes of the game. The scene revolves around both communicating
+the nature of the law and the relationship of Mr. Toad to the
+community as a person requiring a burdensome cost of a "glamour", or
+an enchanted object that can disguise one Fable as another. This
+concept is used both to provide plot twists, when a Fable is glamored
+to appear as one of the primary characters and appears dead, as well
+as used to drive the active theories present in the fan community
+about the potential for certain characters to have been glamoured as
+others at key moments in the story. 
+
+After the time-consuming modeling of propositions within the first
+scene, we decided to heed Elson's results that stated that most of the
+success in finding analogies occurred with just interpretive layers
+and that propositions resulted in overlapping meaning and low
+inter-annotator agreement\cite{Elson2012}. Instead we focused on the
+interpretation layer for the following two granularities. The burden
+of annotation was described in both Elson's dissertation and
+Finlayson's survey and it motivated the creation of both \emph{Scheherazade}
+and Finlayson's \emph{Story Workbench} tool for annotating layers onto
+textual stories\cite{Finlayson2011}.
+
+The next level of granularity was to capture an entire episode using a
+"natural traversal." This was made possible by existing playthroughs
+recorded by fans and some by professional streamers. A YouTube video
+was selected \cite{wolfamongusstream} based on its completeness as
+well as the presence of additional commentary by the player. The
+creator-performer was Felix Arvid Ulf Kjellberg, better known as
+"PewDiePie". This playthrough video served as the source for a
+rational reconstruction of the underlying model in textual format. 
+
+Why is it that a transcript would not do? For a single transcription,
+a single transcript of the events that took place could potentially
+suffice, including listing choices. However, the next phase will
+involve recording additional traversal paths and to further delineate
+relationships of content. Without a model of how the content is
+rendered, two separate traversals may look too dissimilar to one
+another to be able to compare, and the annotation task would scale
+with the number of traversals rather than have some effort conserved
+with each additional annotation. These and the ability to tabulate
+various metadata led to a selection of a format that would both serve
+as a plain-text transcription for the annotiation tool as well as
+serve as a basis for expanding the transcription to incorporate
+additional content from other traversal paths. 
+
+Inkl released an open source version of their narrative scripting
+language, \emph{Ink}. \emph{Ink} met all of the criteria, although its exact syntax can vary
+significantly and thus offers challenges for certain types of
+annotation. The same language was used in the scripting of 80
+days\cite{InklLtd.2014}. 
+
+Ink provided the following advantages as a representational format to
+meet the second requirement:
+
+\begin{itemize}
+\item It is capable of representing simple state variables (whether a
+certain choice had been visited/selected and conditionals based on
+that). This is used in the transcription.
+\begin{itemize}
+\item Provide simple means of applying metadata such as whether a line is
+dialogue or description, and which character was involved.
+\item Simplified notation of converging threads and player choices, used
+extensively in the logic of this subgenre.
+\item Easy-to-read text format source code for using existing SIG
+modeling tool, \emph{Scheherazade}.
+\end{itemize}
+\end{itemize}
+
+The third level of granularity was applied to the work as a whole, and
+represents the overall narrative as modeled using the interpretive
+levels of the Story Intention Graph. A similar approach was applied by
+a student to Beowulf, taking approximately 15 hours. This effort was
+done using a scene-by-scene summary of the same YouTube seriese as the
+second level of granularity. The plot summaries from the
+fan-maintanied Fables Wiki (\cite{fableswiki}) had sufficient core
+story elements for a first encoding and used them as textual sources
+in the \emph{Scheherazade} tool. One advantage of using the fan-created plot
+summaries was how alternative paths were explicitly detailed, though
+this ontological variation introduced its own complications that are
+detailed in the next section.
+
+
+\section{Preliminary Results}
+\label{sec:orgheadline13}
+This section describes the initial results of applying the methodolgy,
+and documents the problems and insights that arose. There are two main
+areas where the encoding most benefitted: the delineation of the
+various "fan theories" as to the ultimate explanation behind the
+events, and a greater appreciation for the means with which the
+authors have realized variabliity while keeping the total amount of
+content reasonable.
+
+The resulting ink file transcription from the first episode traversal
+can be found here: \url{http://lucidbard.com/ink/TWAU_001.ink}, while the
+two SIG encodings can be found \url{http://lucidbard.com/ink/TWAU_001.vgl}
+and \url{http://lucidbard.com/ink/TWAU_002.vgl}. David Elson's Scheherazade
+v0.33 can be downloaded at
+\url{http://www.cs.columbia.edu/~delson/software.shtml}.
+
+\subsection{Encoding a Story Intention Graph}
+\label{sec:orgheadline6}
+When starting out, our first impulse was to encode every possible
+detail of the dialogue exchanges. This often includes subtelty as in
+any well written dialogue, using a third topic to communicate feelings
+and status. One example of these sophisticated exchanges is in the
+first epsiode when Bigby encounters Grendel outside of the business
+office:
+
+\begin{verbatim}
+GRENDEL: What're you-- blind?
+GRENDEL: What? You don't see there's a line? 
+GRENDEL: I been standing here a half hour already. 
+GRENDEL: You get to just walk in?
+GRENDEL approaches BIGBY
+GRENDEL: Must be nice being the Sheriff... 
+GRENDEL: Do whatever the fuck you like.
+- I don't have time for this.
+- I'm cutting the line.
+- [I work here.]
+BIGBY: I work here.
+GRENDEL: And what great work you do, Sheriff.
+BIGBY: Hmm... that didn't feel very genuine.
+BIGBY goes inside the office while GRENDEL looks on
+ as the door shuts behind him.
+GRENDEL: Fucker...
+\end{verbatim}
+
+This exchange is intended to communicate the privilege of the Sheriff,
+as well as the distinction between the haves and have nots of the
+community. The literal meaning is quite meaningless -- Grendel knows
+that Bigby is Sheriff, as well as why he can enter the office. But he
+still wants to air his feelings. It is also difficult to model what is
+not said, such as in the next segment where Snow White and Bigby spend
+a significant amount of time working on a murder case without a single
+word exchanged about those waiting outside. In this case, also, the
+goal of Grendel is unclear -- we don't know why Grendel is at the
+business office, or why he is trying to antagonize Bigby. David Elson
+designed the Story Intention Graph encourage a connection from every
+action to a "core story goal" or value such as ego or health, but in
+the nuanced and often ambiguos world of \emph{The Wolf Among Us}, such
+intentions are not even clear after the final curtain.
+
+\subsection{Text from Visual}
+\label{sec:orgheadline7}
+Many times the term text is applied to visual works in to describe the
+accessibility and the coherence of the work. \emph{The Wolf Among Us} is
+not the same work in a textual transcript than it is as a mimetic
+video game. By performing a transcription of the content, including
+the manner, props, and as much meaning as possible, it became
+increasingly clear just how large a role performance played in the
+conveyance of meaning in the work, and how utterly insufficient Story
+Intention Graphs were to this nonverbal level of meaning.
+
+When Colin gives Bigby a look after being asked to get out of the
+chair, the underlying motivation is clear. But that motivation is
+difficult to transcribe, or even to put into words. The familiarity is
+an emotional state that colors the entirety of the interactions, but
+the emotion that is present in those moments is not a simple state to
+be started and stopped in the encoding of Story Intention Graphs.
+
+This difficulty would equally well apply to encoding other non-textual
+works. A given expression can be a lossy way to communicate, and often
+times that message isn't required to understand a character's desires
+or meaning. 
+
+One potential solution that we had examined before was to retain all
+of the non-textual information in the encoded format. This would
+enable annotators full access to the expressions, the vocal
+performance and the cinematography of the original. The burden of
+assembling all of the video traversals, however, is very large and
+still requires textual encoding for various natural language tools to
+be able to act on or assist in the encoding process.
+
+\subsection{Interpreting Content in \emph{The Wolf Among Us}}
+\label{sec:orgheadline12}
+Mawhorter goes into detail on different idioms of choices that covers
+a broad swath of possible situations. Choice is used in varying
+aesthetic and functional ways throughout \emph{The Wolf Among Us}. This
+section describes the various ways that the choices function within
+the work, informed by the different granularities and the insights
+gleaned both by the rational reconstruction and encoding. 
+
+Several decisions that define Telltale's style also have impact on the
+choices above and beyond their literal meaning and status as choice as
+described below. One of them is the fact that most decisions are
+timed. This provides the player with a limited window of opportunity
+to make a decision, and also limits the total decision space as a
+result of requiring the player to read and understand all of the
+available decisions. Rarely are there more than 4, and more often in
+critical cases there are only two options. When reviewing a textual version of the work, th
+
+Another decision made by the creators is to strongly signal to the
+player the results of decisions after them through text. This text is
+often referred to by the most famous occurence from Telltale's popular
+series \emph{The Walking Dead}: "Clementine will remember that". Telltale
+CEO Kevin Bruner, a keynote at ICIDS 2017, asserts that the text has
+absolutely no correspondence with any simulation of mental models
+within the game. Instead, they are purely designed to heighten the
+illusion of agents considering and reacting to decisions that the
+player has made. This addresses one of the shortcomings that Mateas
+and Stern observed in the interactive drama \emph{Facade}\cite{Mateas2005},
+where players were unable to track the state of the system through
+purely naturalistic signals such as expressions and dialogue. The
+reactions signaled are often more emotional than ontological, whether
+in terms of representing a damaged relationship with Snow White over
+brutalizing Mr. Toad or the appreciation for a kind gesture. These
+responses become their own reward and heighten the already prevalent
+feedback the game provides to social actions.
+
+\subsubsection{Finding Character Between the Choices}
+\label{sec:orgheadline8}
+Several choice responses provide additional conversation turns where
+the player-character performs actions after a player-designated choice
+that are contrary to a player's intention, but which serve to ground
+the character even in spite of player intentions. An example is in the
+scene with Collin, when the player is presented with the following
+choices (in INK format, where each choice is shown preceded by a '-'):
+
+\begin{verbatim}
+COLIN: I mean, look at your hands.
+COLIN: Who'd you get in a fight with? 
+COLIN: A Fable, right? I'm sure you're not going
+       around punching Mundy's.
+
+- [My job]
+    BIGBY: I was doing by job, believe it or not.
+    COLIN: Your job is to beat the shit out of fables?
+    BIGBY: Sometimes I take them to The Farm.
+    COLIN: Fuck you.
+- [Not my fault]
+- [Don't need advice]
+- [...]
+BIGBY: You think my job is easy? 
+BIGBY: You try to keep a bunch of Fables from 
+       killing each other. 
+BIGBY: How do you think this all works?
+\end{verbatim}
+
+The response expected from Colin's followup to the initial response of
+"My Job" is much harsher than one would expect, and further reflects a
+deeper conflict in the protagonist toward his dual role of protector
+and antagonist.
+
+\subsubsection{Goals and Events}
+\label{sec:orgheadline9}
+The vast majority of speech acts, from a pragmatic perspective, do not
+differ significantly from choice set to choice set. The narrative as
+modeled is constructed mostly from the actions of others, and the
+actions the protagonist, Bigby, takes of his own accord. Marie-Laure
+Ryan describes two types of immersion that pertain to this type of
+plot: "emotional immersion" for the sympathy with characters richly
+described and acted, and "epistemological immersion" for the types of
+questions that drive a mystery \cite{Ryan2009a}. The game provides a
+set of clues along the way, but these clues are not gates to a next
+piece of context. Identifying character goals is not part of the scene
+where an investigation is conducted in Mr. Toad's apartment. Instead,
+the entire focus of the player is on uncovering evidence of foul play,
+and not questioning the motives behind it.
+
+\subsubsection{Social Choices}
+\label{sec:orgheadline10}
+From each episode, between 6 and 8 decisions are tabulated and
+presented to the player along with their own decision. One example of
+this is whether the player gave Faith money at the beginning of the
+episode. The fact that the player gave Faith money only impacts
+whether the player is able to pay for a drink at the Trip Trap later
+on in the epsiode, but most chose to give Faith money. One of the
+stated reasons that the streamer provided to the anticipated
+objections of his audience was that if the character asking for money
+had been a poor man, then the results would not have been the
+same. This motivation reveals that without knowing why a player made a
+choice, it is easy to make false assumptions about their play style or
+their character.
+
+\subsubsection{[\ldots{}]}
+\label{sec:orgheadline11}
+
+One of the hard fast rules of Telltale games is the omnipresent silent
+choice. It appears to serve three primary functions within \emph{The Wolf
+Among Us}:
+
+\begin{enumerate}
+\item Often silence or a non-answer can elicit a more interesting
+projection on the part of the conversation partner.
+\item It allows players slop room for making a decision while keeping the
+narrative going.
+\item In the case of certain decisions, it allows the player an option to
+opt out. One example is the decision of who to name as a primary
+suspect.
+\end{enumerate}
+
+Ambiguity is always present in life. In modeling the dialogue choices
+using Story Intention Graphs, the triple dot silence was the source of
+the most agony. Not only was the ontological status of the text in
+question, but the possible motivations varied with every single
+player. Without a means of specifying multiple motivations that are
+distinct, the system was unable to represent the null speech act. In
+one case the silence resulted in a firm insult where the streamer had
+not intended one. When a choice surprises a player, how is that
+encoded? Does the player need to have a separate entity status, apart
+from the protagonist? And does this even stop at the player -- does
+the authorial goals deserve treatment as a mind reading on the part of
+the player?
+
+Story Intention Graphs provide a means of mapping out clear intentions
+of agents and even interpretations of what happened, but one of the
+fundamental tasks of game design is to anticipate multiple player
+types and to understand how their motivations interact with the
+possibilities in front of them. In the Wolf Among Us, violent options
+are presented regardless of how nice the player has been before,
+enabling people to change their mind, but also preventing genuine
+character change.
+
+\section{Future Work}
+\label{sec:orgheadline14}
+The primary goal of guiding narrative criticism with computational
+models of narrative is to discover insights that might lie hidden
+beneath the surface experience, but which underlies authorial
+decisions. This paper's results motivates the work ahead in creating
+the datasets to refine both the models of narrative as well as use
+them in improving the experience of authoring complex, interactive
+narratives.
+
+Collecting a set of real-world traversals of a single interactive
+fiction work would enable a variety of studies of emotion and
+narrative to be done. Telltale has recently described some aspects of
+its telemetry collection and the fact that the traversals serve as a
+means of fingerprinting a particular character a player has
+experienced. In Telltale's first season of \emph{Batman}, this is more
+overtly described to the player at the end as a set of dimensions on
+which your choices left a trail.
+
+The next step is to collect additional natural traversals and
+associated information about "why" decisions were made. These will
+provide insight into just which aspects of the story were understood
+and how different players experience even the same sequence of content
+significantly differently based on their own personalities. Because of
+the timing and the inability to see everything, we hypothesize that
+the rationales will be as revealing as modeling the underlying
+narrative motivations of the characters themselves.
+\section{Conclusion}
+\label{sec:orgheadline15}
+This paper documents lessons learned from encoding portions of a
+commercial choice-based narrative using existing computational models
+designed for text-based narratives. We believe that the availability
+of sources that can be annotated and studied will open the way for
+improvements in assessment of narrative experiences as well as
+improvements in authoring tools designed to support creation of
+interactive digital narratives..

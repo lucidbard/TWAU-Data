@@ -1,0 +1,398 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{00}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{{\tt DOI:}\penalty0{#1}\ }
+  \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
+
+\bibitem{Aarseth2012-ol}
+{Espen Aarseth}. 2012.
+\newblock \showarticletitle{A narrative theory of games}. In {\em Proceedings
+  of the International Conference on the Foundations of Digital Games}. ACM,
+  New York, New York, USA, 129--133.
+\newblock
+
+
+\bibitem{Bae2008-js}
+{Byung-Chull Bae} {and} {R~Michael Young}. 2008.
+\newblock \showarticletitle{A Use of Flashback and Foreshadowing for Surprise
+  Arousal in Narrative Using a {Plan-Based} Approach}. In {\em {ICIDS} '08
+  Proceedings of the 1st Joint International Conference on Interactive Digital
+  Storytelling: Interactive Storytelling} {\em (Lecture Notes in Computer
+  Science)}, {Ulrike Spierling} {and} {Nicolas Szilas} (Eds.), Vol. 5334.
+  Springer Berlin Heidelberg, Berlin, Heidelberg, 156--167.
+\newblock
+
+
+\bibitem{Bae2014-au}
+{Byung-Chull Bae} {and} {R~Michael Young}. 2014.
+\newblock \showarticletitle{A Computational Model of Narrative Generation for
+  Surprise Arousal}.
+\newblock {\em IEEE Trans. Comput. Intell. AI Games\/} {6}, 2 (June 2014),
+  131--143.
+\newblock
+
+
+\bibitem{Cataldi_undated-sf}
+{Mario Cataldi}, {Rossana Damiano}, {Vincenzo Lombardo}, {and} {Antonio Pizzo}.
+\newblock \showarticletitle{Representing Dramatic Features of Stories through
+  an Ontological Model}.
+\newblock  (????).
+\newblock
+
+
+\bibitem{Chatman1980-rl}
+{Seymour~Benjamin Chatman}. 1980.
+\newblock {\em Story and Discourse: Narrative Structure in Fiction and Film}.
+\newblock Cornell University Press.
+\newblock
+
+
+\bibitem{Cheong2007-ts}
+{Yun~Gyung Cheong}. 2007.
+\newblock {\em A Computational Model of Narrative Generation for Suspense}.
+\newblock Ph.D. Dissertation. Raleigh, North Carolina.
+\newblock
+
+
+\bibitem{Drachen2015-hn}
+{Anders Drachen}. 2015.
+\newblock \showarticletitle{Behavioral Telemetry in Games User Research}.
+\newblock In {\em Game User Experience Evaluation}. Springer, Cham, 135--165.
+\newblock
+
+
+\bibitem{Elson2012-xn}
+{David~K Elson}. 2012.
+\newblock \showarticletitle{{DramaBank}: Annotating Agency in Narrative
+  Discourse}.
+\newblock {\em Proceedings of the Eight International Conference on Language
+  Resources and Evaluation (LREC'12)\/} (2012), 2813--2819.
+\newblock
+
+
+\bibitem{Finlayson2011-tw}
+{Mark~Alan Finlayson}. 2011.
+\newblock \showarticletitle{The Story Workbench: An Extensible {Semi-Automatic}
+  Text Annotation Tool}.
+\newblock {\em Proceedings of the 4th Workshop on Intelligent Narrative
+  Technologies (INT4)\/} (2011), 21--24.
+\newblock
+
+
+\bibitem{Finlayson2013-wi}
+{Mark~Alan Finlayson}. 2013.
+\newblock \showarticletitle{A Survey of Corpora in Computational and Cognitive
+  Narrative Science}.
+\newblock {\em Sprache und Datenverarbeitung (International Journal for
+  Language Data Processing)\/} {37}, 1-2 (2013), 113--141.
+\newblock
+
+
+\bibitem{Herman2013-ab}
+{David Herman}. 2013.
+\newblock {\em Storytelling and the Sciences of Mind}.
+\newblock MIT Press. 428 pages.
+\newblock
+
+
+\bibitem{Isbister2006-sc}
+{Katherine Isbister}, {Kia H{\"o}{\"o}k}, {Michael Sharp}, {and}
+  {Laakso{\~n}ahti Jarmo}. 2006.
+\newblock \showarticletitle{The Sensual Evaluation Instrument: Developing an
+  Affective Evaluation Tool}. In {\em {CHI} 2006 Proceedings}. 1163--1172.
+\newblock
+
+
+\bibitem{Jennett2008-qs}
+{Charlene Jennett}, {Anna~L Cox}, {Paul Cairns}, {Samira Dhoparee}, {Andrew
+  Epps}, {Tim Tijs}, {and} {Alison Walton}. 2008.
+\newblock \showarticletitle{Measuring and defining the experience of immersion
+  in games}.
+\newblock {\em International journal of human-computer studies\/} {66}, 9
+  (1~Sept. 2008), 641--661.
+\newblock
+\showISSN{1071-5819}
+\showDOI{%
+\url{http://dx.doi.org/10.1016/j.ijhcs.2008.04.004}}
+
+
+\bibitem{Johnson2015-sd}
+{Daniel Johnson}, {Lennart~E Nacke}, {and} {Peta Wyeth}. 2015.
+\newblock \showarticletitle{All about that Base: Differing Player Experiences
+  in Video Game Genres and the Unique Case of {MOBA} Games}. In {\em
+  Proceedings of the 33rd Annual {ACM} Conference on Human Factors in Computing
+  Systems}. ACM, 2265--2274.
+\newblock
+
+
+\bibitem{Laaksolahti2009-uw}
+{Jarmo Laaksolahti}, {Katherine Isbister}, {and} {Kristina H{\"o}{\"o}k}. 2009.
+\newblock \showarticletitle{Using the \textit{Sensual Evaluation Instrument}}.
+\newblock {\em Digital Creativity\/} {20}, 3 (2009), 165--175.
+\newblock
+
+
+\bibitem{Lang2005-xi}
+{{LANG}} {and} {P J}. 2005.
+\newblock \showarticletitle{International affective picture system ({IAPS}) :
+  Digitized photographs, instruction manual and affective ratings}.
+\newblock {\em Tech. Rep. NAVTRADEVCEN\/} (2005).
+\newblock
+
+
+\bibitem{Macgregor2015-do}
+{Jody Macgregor}. 2015.
+\newblock Telltale's choices aren't about plot, but something more significant.
+\newblock
+  \url{http://www.pcgamer.com/telltales-choices-arent-about-plot-but-something-more-significant/}.
+    (2015).
+\newblock
+
+
+\bibitem{Mallon2005-ck}
+{Bride Mallon} {and} {Brian Webb}. 2005.
+\newblock \showarticletitle{Stand Up and Take Your Place: Identifying Narrative
+  Elements in Narrative Adventure and Role-play Games}.
+\newblock {\em Comput. Entertain.\/} {3}, 1 (Jan. 2005), 6--6.
+\newblock
+
+
+\bibitem{Mandryk2006-sd}
+{Regan~L Mandryk}, {Kori~M Inkpen}, {and} {Thomas~W Calvert}. 2006.
+\newblock \showarticletitle{Using psychophysiological techniques to measure
+  user experience with entertainment technologies}.
+\newblock {\em Behav. Inf. Technol.\/} {25}, 2 (2006), 141--158.
+\newblock
+
+
+\bibitem{Marczak2012-bs}
+{Rapha{\"e}l Marczak}, {Jasper van Vught}, {Lennart~E Nacke}, {and} {Gareth
+  Schott}. 2012.
+\newblock \showarticletitle{{Feedback-Based} Gameplay Metrics: Measuring Player
+  Experience via Automatic Visual Analysis}.
+\newblock {\em Proceedings of The 8th Australasian Conference on Interactive
+  Entertainment Playing the System - IE '12\/} (2012), 1--10.
+\newblock
+
+
+\bibitem{Mateas2002-in}
+{M Mateas} {and} {A Stern}. 2002.
+\newblock {\em Architecture, authorial idioms and early observations of the
+  interactive drama Facade}.
+\newblock Citeseer.
+\newblock
+
+
+\bibitem{Mateas2003-ty}
+{M Mateas} {and} {A Stern}. 2003.
+\newblock \showarticletitle{Integrating plot, character and natural language
+  processing in the interactive drama Fa{\c c}ade}. In {\em Proceedings of the
+  1st International Conference on Technologies for Interactive Digital
+  Storytelling and Entertainment ({TIDSE-03})}.
+\newblock
+
+
+\bibitem{Mawhorter2013-ym}
+{Peter Mawhorter}. 2013.
+\newblock {\em Generating Branching Narratives}.
+\newblock Ph.D. Dissertation. University of California, Santa Cruz.
+\newblock
+
+
+\bibitem{Mawhorter2016-cx}
+{Peter~Andrew Mawhorter}. 2016.
+\newblock {\em Artificial Intelligence as a Tool for Understanding Narrative
+  Choices}.
+\newblock Ph.D. Dissertation. University of California, Santa Cruz.
+\newblock
+
+
+\bibitem{Mckee1997-ed}
+{Robert Mckee}. 1997.
+\newblock {\em Story: Substance, Structure, Style and The Principles of
+  Screenwriting\/} (kindle ed.).
+\newblock It Books.
+\newblock
+
+
+\bibitem{Mckee2016-vm}
+{Robert Mckee}. 2016.
+\newblock {\em Dialogue: The Art of Verbal Action for Page, Stage, and
+  Screen\/} (kindle ed.).
+\newblock Twelve.
+\newblock
+
+
+\bibitem{Mehta2007-gn}
+{Manish Mehta}, {Steven Dow}, {Michael Mateas}, {and} {Blair MacIntyre}. 2007.
+\newblock \showarticletitle{Evaluating a conversation-centered interactive
+  drama}.
+\newblock {\em Proceedings of the 6th international joint conference on
+  Autonomous agents and multiagent systems - AAMAS '07\/} (2007), 1.
+\newblock
+
+
+\bibitem{Murtagh2014-wl}
+{Fionn Murtagh} {and} {Adam Ganz}. 2014.
+\newblock \showarticletitle{Pattern Recognition in Narrative: Tracking
+  Emotional Expression in Context}.
+\newblock  (14~May 2014).
+\newblock
+
+
+\bibitem{Nay2017-nt}
+{Jeff~L Nay} {and} {Jos{\'e}~P Zagal}. 2017.
+\newblock \showarticletitle{Meaning without consequence: virtue ethics and
+  inconsequential choices in games}. In {\em Proceedings of the 12th
+  International Conference on the Foundations of Digital Games}. ACM, 14.
+\newblock
+
+
+\bibitem{Parker2013-el}
+{Laura Parker}. 2013.
+\newblock Telltale and the Value of Episodic Content.
+\newblock
+  \url{https://www.gamespot.com/articles/telltale-and-the-value-of-episodic-content/1100-6405527/}.
+    (18~March 2013).
+\newblock
+\newblock
+\shownote{Accessed: 2017-9-14.}
+
+
+\bibitem{Qin2009-xm}
+{Hua Qin}, {Pei-Luen Patrick~Rau}, {and} {Gavriel Salvendy}. 2009.
+\newblock \showarticletitle{Measuring Player Immersion in the Computer Game
+  Narrative}.
+\newblock {\em International Journal of Human--Computer Interaction\/} {25}, 2
+  (10~Feb. 2009), 107--133.
+\newblock
+
+
+\bibitem{Roberts2009-km}
+{D~L Roberts}, {H Narayanan}, {and} {C~L Isbell}. 2009.
+\newblock \showarticletitle{Learning to Influence Emotional Responses for
+  Interactive Storytelling}.
+\newblock {\em AAAI Spring Symposium:\/} (2009).
+\newblock
+
+
+\bibitem{Robinson2016-qr}
+{Raquel Robinson}, {Katherine Isbister}, {and} {Zachary Rubin}. 2016.
+\newblock \showarticletitle{All the Feels: Introducing Biometric Data to Online
+  Gameplay Streams}. In {\em Proceedings of the 2016 Annual Symposium on
+  {Computer-Human} Interaction in Play Companion Extended Abstracts} {\em (CHI
+  PLAY Companion '16)}. ACM, New York, NY, USA, 261--267.
+\newblock
+
+
+\bibitem{Rowe_undated-cl}
+{Jonathan~P Rowe}, {Scott~W Mcquiggan}, {and} {James~C Lester}.
+\newblock \showarticletitle{Narrative Presence in Intelligent Learning
+  Environments}.
+\newblock {\em Elements\/} (????).
+\newblock
+
+
+\bibitem{Rowe2009-pv}
+{Jonathan~P Rowe}, {Bradford~W Mott}, {Scott~W McQuiggan}, {Jennifer~L
+  Robison}, {Sunyoung Lee}, {and} {James~C Lester}. 2009.
+\newblock \showarticletitle{{CRYSTAL} {ISLAND} : A {Narrative-Centered}
+  Learning Environment for Eighth Grade Microbiology}. In {\em Proceedings of
+  the {AIED'09} Workshop on Intelligent Educational Games}. Brighton, UK,
+  11--20.
+\newblock
+
+
+\bibitem{Salter2017-mp}
+{Anastasia Salter}. 2017.
+\newblock {\em Jane Jensen: Gabriel Knight, Adventure Games, Hidden Objects}.
+\newblock Bloomsbury Publishing USA.
+\newblock
+
+
+\bibitem{Sanchez2012-cz}
+{Jos{\'e} Luis~Gonz{\'a}lez S{\'a}nchez}, {Francisco Luis~Guti{\'e}rrez Vela},
+  {Francisco~Montero Simarro}, {and} {Natalia Padilla-Zea}. 2012.
+\newblock \showarticletitle{Playability: analysing user experience in video
+  games}.
+\newblock {\em Behav. Inf. Technol.\/} {31}, 10 (1~Oct. 2012), 1033--1054.
+\newblock
+
+
+\bibitem{Seif_El-Nasr2013-hp}
+{Magy Seif El-Nasr}, {David Milam}, {and} {Tony Maygoli}. 2013.
+\newblock \showarticletitle{Experiencing interactive narrative: A qualitative
+  analysis of Facade}.
+\newblock {\em Entertain. Comput.\/} {4}, 1 (2013), 39--52.
+\newblock
+
+
+\bibitem{Szilas2010-tg}
+{N Szilas}. 2010.
+\newblock \showarticletitle{Requirements for computational models of
+  interactive narrative}. In {\em Computational Models of Narrative. Papers
+  from the 2010 {AAAI} Fall Symposium}, {Mark Finlayson} (Ed.). aaai.org.
+\newblock
+
+
+\bibitem{Szilas2014-fd}
+{Nicolas Szilas} {and} {Ioanna Ilea}. 2014.
+\newblock \showarticletitle{Objective Metrics for Interactive Narrative}.
+\newblock {\em The Seventh International Conference on Interactive Digital
+  Storytelling (ICIDS 2014)\/} (2014), 91--102.
+\newblock
+
+
+\bibitem{Tan2014-xr}
+{Chek~Tien Tan}, {Tuck~Wah Leong}, {and} {Songjia Shen}. 2014.
+\newblock \showarticletitle{Combining think-aloud and physiological data to
+  understand video game experiences}. In {\em Proceedings of the {SIGCHI}
+  Conference on Human Factors in Computing Systems}. ACM, 381--390.
+\newblock
+
+
+\bibitem{Telltale_Games2013-hz}
+{{Telltale Games}}. 2013.
+\newblock The Wolf Among Us.
+\newblock   (2013).
+\newblock
+
+
+\bibitem{Wallentin2011-mq}
+{Mikkel Wallentin}, {Andreas~H{\o}jlund Nielsen}, {Peter Vuust}, {Anders Dohn},
+  {Andreas Roepstorff}, {and} {Torben~Ellegaard Lund}. 2011.
+\newblock \showarticletitle{Amygdala and heart rate variability responses from
+  listening to emotionally intense parts of a story}.
+\newblock {\em Neuroimage\/} {58}, 3 (1~Oct. 2011), 963--973.
+\newblock
+
+
+\end{thebibliography}

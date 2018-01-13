@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE help [
+		<!ELEMENT schSavedStory (sourceStory?, visibleStatesSet, storyPoints)>
+		<!ELEMENT sourceStory (#PCDATA)>
+		<!ELEMENT visibleStatesSet (visibleStates+)>
+		<!ELEMENT visibleStates (#PCDATA)>
+		<!ELEMENT storyPoints (storyPoint*)>
+		<!ELEMENT storyPoint (#PCDATA)>
+]>
+<schSavedStory configKey="835742799" UID="A100" sourceStoryID="Story From File">
+	<visibleStatesSet>
+		<visibleStates timelineID="reality">#StateTimeType.Present;-1.0, #StateTimeType.Present;0.0, #StateTimeType.Present;0.5, #StateTimeType.Present;1.0, #StateTimeType.Present;2.0, #StateTimeType.Present;3.0, #StateTimeType.Present;4.0, #StateTimeType.Present;5.0, #StateTimeType.Present;6.0, #StateTimeType.Present;7.0, #StateTimeType.Present;8.0, #StateTimeType.Present;9.0, #StateTimeType.Present;9.5, #StateTimeType.Present;10.0, #StateTimeType.Present;10.5, #StateTimeType.Present;11.0, #StateTimeType.Present;11.75, #StateTimeType.Present;12.0, #StateTimeType.Present;12.5, #StateTimeType.Present;13.0, #StateTimeType.Present;14.0, #StateTimeType.Present;15.0, #StateTimeType.Present;15.5, #StateTimeType.Present;15.75, #StateTimeType.Present;15.875, #StateTimeType.Present;15.9375, #StateTimeType.Present;15.96875, #StateTimeType.Present;16.0</visibleStates>
+	</visibleStatesSet>
+	<storyPoints>
+		<storyPoint><![CDATA[defineNoun(=reality=, """<noun9845589:beast_2>"(CharacterGender.Male)"", NULL);]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, """<noun1639765:frog_2>"(CharacterGender.Male)"", "Mr Toad");]]></storyPoint>
+		<storyPoint><![CDATA[redefineNoun(=reality=, "anon_noun9845589:beast_2(CharacterGender.Male)_1", "Bigby", """<noun9845589:beast_2>"(CharacterGender.Male)"");]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, """<noun1639765:frog_2>"(CharacterGender.Male)"", "TJ");]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, """<noun10790384:woodsman_2>"(CharacterGender.Male)"", "The Woodsman");]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, """<noun10485440:prostitute>"(CharacterGender.Female)"", "Faith");]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, """<GENERIC>"(CharacterGender.Neutral, """<noun9483738:imaginary being>"(CharacterGender.Neutral)"")"", NULL);]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, """<noun10788852:woman>"(CharacterGender.Female)"", "Beauty");]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, """<noun15388:animal_3>"(CharacterGender.Male)"", "Beast");]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, @@@<noun4409384:tenement>@()@@, @Toads Apartment Buildinrg@);]]></storyPoint>
+		<storyPoint><![CDATA[redefineNoun(=reality=, @Toads Apartment Buildinrg@, @Toads Apartment Building@, @@@<noun4409384:tenement>@()@@);]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, @@@<noun2726681:apartment building>@()@@, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[redefineNoun(=reality=, @anon_noun2726681:apartment building()_1@, @The Woodlands@, @@@<noun2726681:apartment building>@()@@);]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, @@@<noun2715513:anteroom_6>@()@@, @Woodlands Lobby@);]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, @@@<noun3265754:efficiency apartment>@()@@, @Bigbys Apartment@);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;0.0==>#StateTimeType.Present;1.0, **5:actionAssert:verb791134_summon_something_summons_something("Mr Toad", "Bigby")**, span19-75, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;0.0==>#StateTimeType.Present;1.0, **5:actionAssert:verb1770501_disturb_something_disturbs("The Woodsman")**, span76-135, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;1.0==>#StateTimeType.Present;2.0, **5:actionAssert:verb824066_admonish_something_admonishes_something("Bigby", "Mr Toad")**, span136-186, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;2.0==>#StateTimeType.Present;3.0, **5:actionAssert:verb2169702_hear_something_hears_something("Bigby", "The Woodsman")**, span352-375, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;3.0==>#StateTimeType.Present;4.0, **5:actionAssert:verb2129289_see_something_sees_some_proposition("Bigby", {#StateTimeType.Present;2.0==>#StateTimeType.Present;3.0: **5:actionAssert:verb2169702_hear_something_hears_something("Bigby", "The Woodsman")**})**, span376-427, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[reassignTransitionsAroundState(=reality=, #StateTimeType.Present;3.0, #StateTimeType.Present;3.5, true);]]></storyPoint>
+		<storyPoint><![CDATA[reassignTransition(=reality=, #StateTimeType.Present;3.5==>#StateTimeType.Present;4.0, #StateTimeType.Present;3.0==>#StateTimeType.Present;4.0);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;3.0==>#StateTimeType.Present;4.0, **5:actionAssert:verb1405044_hit_something_hits_something("The Woodsman", "Faith")**, span403-427, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[redefineAction(=reality=, {#StateTimeType.Present;3.0==>#StateTimeType.Present;4.0: **5:actionAssert:verb2129289_see_something_sees_some_proposition("Bigby", {#StateTimeType.Present;2.0==>#StateTimeType.Present;3.0: **5:actionAssert:verb2169702_hear_something_hears_something("Bigby", "The Woodsman")**})**}, **5:actionAssert:verb2129289_see_something_sees_some_proposition("Bigby", {#StateTimeType.Present;3.0==>#StateTimeType.Present;4.0: **5:actionAssert:verb1405044_hit_something_hits_something("The Woodsman", "Faith")**})**);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;4.0==>#StateTimeType.Present;5.0, **5:actionAssert:verb1090335_fight_something_fights_with_something("The Woodsman", Preposition.With, "Bigby")**, span428-507, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, $$$<noun2958343:car>$()$$, $Toads Car$);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;5.0==>#StateTimeType.Present;6.0, **5:actionAssert:verb258857_damage_something_damages_something("Bigby", $Toads Car$)**, span582-610, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;6.0==>#StateTimeType.Present;7.0, **5:actionAssert:verb2266920_save_something_saves_something("Faith", "Bigby")**, span688-765, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;7.0==>#StateTimeType.Present;8.0, **5:actionAssert:verb892315_thank_something_thanks_something("Bigby", "Faith")**, span795-821, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, $$$<noun13386614:cash>$()$$, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;8.0==>#StateTimeType.Present;9.0, **5:actionAssert:verb2235842_give_something_gives_something_to_something("Bigby", $anon_noun13386614:cash()_1$, Preposition.To, "Faith")**, span933-954, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;8.0==>#StateTimeType.Present;9.0, **-5:actionAssert:verb2235842_give_something_gives_something_to_something("Bigby", $anon_noun13386614:cash()_1$, Preposition.To, "Faith")**, span961-984, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[redefineNoun(=reality=, "Beauty", "Beauty", """<noun10613996:smasher_15>"(CharacterGender.Female)"");]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;9.0==>#StateTimeType.Present;10.0, **5:actionAssert:verb613683_leave_something_leaves_something("Beauty", @The Woodlands@)**, span1288-1324, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignModifier(=reality=, {#StateTimeType.Present;9.0==>#StateTimeType.Present;10.0: **5:actionAssert:verb613683_leave_something_leaves_something("Beauty", @The Woodlands@)**}, ^^secretively()^^, ModifierScope.Entire, span1314-1324);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;9.0==>#StateTimeType.Present;10.0, **5:actionAssert:verb752493_ask_something_asks_something_some_proposition("Beauty", "Bigby", **-5:actionImperative:verb720961_tell_something_tells_something_some_proposition("Bigby", "Beast", {#StateTimeType.Present;9.0==>#StateTimeType.Present;10.0: **5:actionAssert:verb613683_leave_something_leaves_something("Beauty", @The Woodlands@)**})**)**, span1329-1386, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;10.0==>#StateTimeType.Present;11.0, **5:actionAssert:verb720961_tell_something_tells_something_some_proposition("Bigby", "Beast", {#StateTimeType.Present;9.0==>#StateTimeType.Present;10.0: **5:actionAssert:verb613683_leave_something_leaves_something("Beauty", @The Woodlands@)**})**, span1508-1522, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[reassignTransitionsAroundState(=reality=, #StateTimeType.Present;10.0, #StateTimeType.Present;10.5, true);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;10.0==>#StateTimeType.Present;10.5, **5:actionAssert:verb752493_ask_something_asks_something_some_proposition("Beast", "Bigby", **5:actionImperative:verb2129289_see_something_sees_something("Bigby", "Beauty")**)**, span1448-1478, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;10.5==>#StateTimeType.Present;11.0, **-5:actionAssert:verb720961_tell_something_tells_something_some_proposition("Bigby", "Beast", {#StateTimeType.Present;9.0==>#StateTimeType.Present;10.0: **5:actionAssert:verb613683_leave_something_leaves_something("Beauty", @The Woodlands@)**})**, span1523-1541, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, |||<noun13925550:silence>|()||, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;10.5==>#StateTimeType.Present;11.0, **5:actionAssert:verb815686_reply_something_replies_something_to_something("Bigby", |anon_noun13925550:silence()_1|, Preposition.To, "Beast")**, span1561-1592, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, """<noun11307082:Snow>"(CharacterGender.Neutral)"", NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;11.0==>#StateTimeType.Present;12.0, **5:actionAssert:verb2143283_reveal_something_reveals_some_proposition("anon_noun11307082:Snow(CharacterGender.Neutral)_1", {#StateTimeType.Present;10.5==>#StateTimeType.Present;11.0: **5:actionAssert:verb720961_tell_something_tells_something_some_proposition("Bigby", "Beast", {#StateTimeType.Present;9.0==>#StateTimeType.Present;10.0: **5:actionAssert:verb613683_leave_something_leaves_something("Beauty", @The Woodlands@)**})**})**, span2204-2266, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[reassignTransitionsAroundState(=reality=, #StateTimeType.Present;11.0, #StateTimeType.Present;11.5, true);]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, """<noun10231087:killer>"(CharacterGender.Neutral)"", NULL);]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, """<noun10752480:victim>"(CharacterGender.Female)"", NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;11.0==>#StateTimeType.Present;11.5, **5:actionAssert:verb1323958_kill_something_kills_something("anon_noun10231087:killer(CharacterGender.Neutral)_1", "anon_noun10752480:victim(CharacterGender.Female)_1")**, span2221-2266, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[reassignTransitionsAroundState(=reality=, #StateTimeType.Present;11.5, #StateTimeType.Present;11.75, true);]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, @@@<noun3120198:court_4>@()@@, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[redefineNoun(=reality=, @anon_noun3120198:court_4()_1@, NULL, @@@<noun3120198:court_4>@()@@);]]></storyPoint>
+		<storyPoint><![CDATA[redefineNoun(=reality=, @anon_noun3120198:court_4()_1@, @Woodlands Courtyard@, @@@<noun3120198:court_4>@()@@);]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, $$$<prop the part of something>$($$$<noun5539138:human head>$()$$, "anon_noun10752480:victim(CharacterGender.Female)_1")$$, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, """<noun7846:person>"(CharacterGender.Neutral)"", "Placer of Head");]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;11.5==>#StateTimeType.Present;11.75, **5:actionAssert:verb1494310_place_something_places_something_something("Placer of Head", $anon_prop the part of something(noun5539138:human head(), anon_noun10752480:victim(CharacterGender.Female)_1)_1$, @Woodlands Courtyard@)**, span2271-2324, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[setSourceTextSpan(=reality=, {#StateTimeType.Present;11.75==>#StateTimeType.Present;12.0: **5:actionAssert:verb2143283_reveal_something_reveals_some_proposition("anon_noun11307082:Snow(CharacterGender.Neutral)_1", {#StateTimeType.Present;10.5==>#StateTimeType.Present;11.0: **5:actionAssert:verb720961_tell_something_tells_something_some_proposition("Bigby", "Beast", {#StateTimeType.Present;9.0==>#StateTimeType.Present;10.0: **5:actionAssert:verb613683_leave_something_leaves_something("Beauty", @The Woodlands@)**})**})**}, span2271-2324);]]></storyPoint>
+		<storyPoint><![CDATA[redefineAction(=reality=, {#StateTimeType.Present;11.75==>#StateTimeType.Present;12.0: **5:actionAssert:verb2143283_reveal_something_reveals_some_proposition("anon_noun11307082:Snow(CharacterGender.Neutral)_1", {#StateTimeType.Present;10.5==>#StateTimeType.Present;11.0: **5:actionAssert:verb720961_tell_something_tells_something_some_proposition("Bigby", "Beast", {#StateTimeType.Present;9.0==>#StateTimeType.Present;10.0: **5:actionAssert:verb613683_leave_something_leaves_something("Beauty", @The Woodlands@)**})**})**}, **5:actionAssert:verb2143283_reveal_something_reveals_some_proposition("anon_noun11307082:Snow(CharacterGender.Neutral)_1", {#StateTimeType.Present;11.5==>#StateTimeType.Present;11.75: **5:actionAssert:verb1494310_place_something_places_something_something("Placer of Head", $anon_prop the part of something(noun5539138:human head(), anon_noun10752480:victim(CharacterGender.Female)_1)_1$, @Woodlands Courtyard@)**})**);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;11.0==>#StateTimeType.Present;11.5, **5:actionAssert:conditionBegins([[5:conditionAssert:charIsChar("Faith", "anon_noun10752480:victim(CharacterGender.Female)_1")]])**, span2221-2266, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, """<noun7846:person>"(CharacterGender.Female)"", "Donkey Girl");]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, """<GROUP>"(CharacterGender.Neutral, """<Root Level>"(CharacterGender.Neutral)"", ("Bigby", "anon_noun11307082:Snow(CharacterGender.Neutral)_1"))"", "Snow and Bigby");]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;12.0==>#StateTimeType.Present;13.0, **5:actionAssert:verb598954_learn_something_learns_some_proposition("Snow and Bigby", {#StateTimeType.Present;11.0==>#StateTimeType.Present;11.5:[[5:conditionAssert:charIsChar("Faith", "anon_noun10752480:victim(CharacterGender.Female)_1")]]})**, span2367-2438, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;-1.0==>#StateTimeType.Present;0.0, **5:actionAssert:conditionBegins([[5:conditionAssert:charIsChar("Donkey Girl", "Faith")]])**, span2386-2438, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[redefineAction(=reality=, {#StateTimeType.Present;12.0==>#StateTimeType.Present;13.0: **5:actionAssert:verb598954_learn_something_learns_some_proposition("Snow and Bigby", {#StateTimeType.Present;11.0==>#StateTimeType.Present;11.5:[[5:conditionAssert:charIsChar("Faith", "anon_noun10752480:victim(CharacterGender.Female)_1")]]})**}, **5:actionAssert:verb598954_learn_something_learns_some_proposition("Snow and Bigby", {#StateTimeType.Present;-1.0==>#StateTimeType.Present;0.0:[[5:conditionAssert:charIsChar("Donkey Girl", "Faith")]]})**);]]></storyPoint>
+		<storyPoint><![CDATA[reassignTransitionsAroundState(=reality=, #StateTimeType.Present;12.0, #StateTimeType.Present;12.5, true);]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, """<noun10472799:prince>"(CharacterGender.Male)"", "Lawrence");]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, """<noun9821253:attacker_3>"(CharacterGender.Neutral)"", "Assailant");]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;12.0==>#StateTimeType.Present;12.5, **5:actionAssert:verb1119169_attack_something_attacks_something("Assailant", "Lawrence")**, span2478-2499, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;13.0==>#StateTimeType.Present;14.0, **5:actionAssert:verb721437_discover_something_discovers_some_proposition("Bigby", {#StateTimeType.Present;12.0==>#StateTimeType.Present;12.5: **5:actionAssert:verb1119169_attack_something_attacks_something("Assailant", "Lawrence")**})**, span2439-2535, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;0.0==>#StateTimeType.Present;1.0, **5:actionAssert:conditionBegins([[5:conditionAssert:married#adj02852920.3("Placer of Head")]])**, span2465-2477, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[reassignAction(=reality=, {#StateTimeType.Present;0.0==>#StateTimeType.Present;1.0: **5:actionAssert:conditionBegins([[5:conditionAssert:married#adj02852920.3("Placer of Head")]])**}, #StateTimeType.Present;-1.0==>#StateTimeType.Present;0.0);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;-1.0==>#StateTimeType.Unbounded;*, **5:actionAssert:verb2488834_marry_something_marries_something("Donkey Girl", "Lawrence")**, span2469-2487, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;12.5==>#StateTimeType.Present;13.0, **5:actionAssert:verb721437_discover_something_discovers_some_proposition("Snow and Bigby", {#StateTimeType.Present;-1.0==>#StateTimeType.Unbounded;*: **5:actionAssert:verb2488834_marry_something_marries_something("Donkey Girl", "Lawrence")**})**, span2450-2487, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[reassignTransitionsAroundState(=reality=, #StateTimeType.Present;0.0, #StateTimeType.Present;0.5, true);]]></storyPoint>
+		<storyPoint><![CDATA[reassignAction(=reality=, {#StateTimeType.Present;-1.0==>#StateTimeType.Unbounded;*: **5:actionAssert:verb2488834_marry_something_marries_something("Donkey Girl", "Lawrence")**}, #StateTimeType.Present;0.0==>#StateTimeType.Unbounded;*);]]></storyPoint>
+		<storyPoint><![CDATA[reassignAction(=reality=, {#StateTimeType.Present;0.0==>#StateTimeType.Unbounded;*: **5:actionAssert:verb2488834_marry_something_marries_something("Donkey Girl", "Lawrence")**}, #StateTimeType.Present;0.0==>#StateTimeType.Present;0.5);]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, """<noun10213652:intruder>"(CharacterGender.Neutral)"", NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;14.0==>#StateTimeType.Present;15.0, **5:actionAssert:verb1319049_rummage_something_rummages_intooverthrough_something("anon_noun10213652:intruder(CharacterGender.Neutral)_1", Preposition.Through, @Bigbys Apartment@)**, span2612-2658, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;14.0==>#StateTimeType.Present;15.0, **5:actionAssert:verb789448_phone_something_phones_to_something_some_proposition("Mr Toad", Preposition.To, "Bigby", {#StateTimeType.Present;14.0==>#StateTimeType.Present;15.0: **5:actionAssert:verb1319049_rummage_something_rummages_intooverthrough_something("anon_noun10213652:intruder(CharacterGender.Neutral)_1", Preposition.Through, @Bigbys Apartment@)**})**, span2571-2658, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;15.0==>#StateTimeType.Present;16.0, **5:actionAssert:verb1835496_travel_something_travels_something("Snow and Bigby", @Toads Apartment Building@)**, span2710-2734, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[reassignTransitionsAroundState(=reality=, #StateTimeType.Present;15.0, #StateTimeType.Present;15.5, true);]]></storyPoint>
+		<storyPoint><![CDATA[defineNoun(=reality=, @@@<noun4351550:suite>@()@@, @Lawrences Apartment@);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;15.0==>#StateTimeType.Present;15.5, **5:actionAssert:verb1835496_travel_something_travels_something("Snow and Bigby", @Lawrences Apartment@)**, span2738-2768, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[reassignTransitionsAroundState(=reality=, #StateTimeType.Present;15.5, #StateTimeType.Present;15.75, true);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;12.0==>#StateTimeType.Present;12.5, **5:actionAssert:verb1137138_shoot_something_shoots_something("Assailant", "Lawrence")**, span2877-2891, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;15.5==>#StateTimeType.Present;15.75, **5:actionAssert:verb721437_discover_something_discovers_some_proposition("Snow and Bigby", {#StateTimeType.Present;12.0==>#StateTimeType.Present;12.5: **5:actionAssert:verb1137138_shoot_something_shoots_something("Assailant", "Lawrence")**})**, span2770-2891, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[reassignTransitionsAroundState(=reality=, #StateTimeType.Present;15.75, #StateTimeType.Present;15.875, true);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;15.75==>#StateTimeType.Present;15.875, **5:actionAssert:verb632931_theorize_something_theorizes_about_some_proposition("Bigby", Preposition.About, [[5:conditionGerund:charIsChar("Lawrence", "Assailant")]])**, span2934-2979, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[reassignTransitionsAroundState(=reality=, #StateTimeType.Present;15.875, #StateTimeType.Present;15.9375, true);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;-1.0==>#StateTimeType.Present;0.0, **5:actionAssert:conditionBegins([[5:conditionAssert:alive#adj00041488.1("Donkey Girl")]])**, NULL, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;-1.0==>#StateTimeType.Present;0.0, **5:actionAssert:conditionBegins([[5:conditionAssert:alive#adj00041488.1("Lawrence")]])**, NULL, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[reassignTransitionsAroundState(=reality=, #StateTimeType.Present;9.0, #StateTimeType.Present;9.5, true);]]></storyPoint>
+		<storyPoint><![CDATA[reassignAction(=reality=, {#StateTimeType.Present;11.0==>#StateTimeType.Present;11.5: **5:actionAssert:conditionBegins([[5:conditionAssert:charIsChar("Faith", "anon_noun10752480:victim(CharacterGender.Female)_1")]])**}, #StateTimeType.Present;9.0==>#StateTimeType.Present;9.5);]]></storyPoint>
+		<storyPoint><![CDATA[reassignAction(=reality=, {#StateTimeType.Present;11.0==>#StateTimeType.Present;11.5: **5:actionAssert:verb1323958_kill_something_kills_something("anon_noun10231087:killer(CharacterGender.Neutral)_1", "anon_noun10752480:victim(CharacterGender.Female)_1")**}, #StateTimeType.Present;9.0==>#StateTimeType.Present;9.5);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;9.0==>#StateTimeType.Present;9.5, **5:actionAssert:conditionEnds({#StateTimeType.Present;-1.0==>#StateTimeType.Present;0.0:[[5:conditionAssert:alive#adj00041488.1("Donkey Girl")]]})**, NULL, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[reassignTransition(=reality=, #StateTimeType.Present;11.5==>#StateTimeType.Present;11.75, #StateTimeType.Present;11.0==>#StateTimeType.Present;11.75);]]></storyPoint>
+		<storyPoint><![CDATA[assignAction(=reality=, #StateTimeType.Present;15.875==>#StateTimeType.Present;15.9375, **5:actionAssert:verb721437_discover_something_discovers_some_proposition("Snow and Bigby", {#StateTimeType.Present;-1.0==>#StateTimeType.Present;0.0:[[5:conditionAssert:alive#adj00041488.1("Lawrence")]]})**, span2980-3037, NULL);]]></storyPoint>
+		<storyPoint><![CDATA[reassignTransitionsAroundState(=reality=, #StateTimeType.Present;15.9375, #StateTimeType.Present;15.96875, true);]]></storyPoint>
+	</storyPoints>
+</schSavedStory>
+
+---SOURCE STORY BELOW---
+* Episode 1: Faith
+Bigby has been summoned to the Tenement Building by Toad due to a
+massive commotion going on in the apartment above. The player has a
+choice on how hard to be on Toad. It will effect how Toad and Bigby's
+relationship is, considering it is already tense.
+
+Bigby then proceeds to the apartment above. He gains access to the
+room where he hears angry yelling. He will then encounter the Woodsman
+hitting a girl. Bigby and the Woodsman, no matter what choice will
+engage into an intense fight which will end with both of them falling
+from the high-story building and Bigby landing on Toad's car. However,
+Woodsman will reveal to still be alive, as Fables are hard to
+kill. He, however, is then struck by an axe on his head by the girl he
+was hitting. He then goes unconscious and Bigby will thank the
+girl. The girl then asks Bigby if she could have the money the
+Woodsman owed her. The player is then given a choice, to give her the
+money or to not give her the money.
+
+If the player chooses to give her the money, Bigby will give her money
+and she will thank him before leaving.
+
+If the player chooses not to give her the money, Bigby won't give her
+the money and will be a bit sad. She will then leave.
+
+Bigby will then go to Woodland Apartments where he will encounter
+Beauty leaving somewhere, secretive, and she will ask him to promise
+not to say anything to Beast. Bigby can either do so or not and will
+then encounter Beast. Beast will ask where Beauty is and the player
+has a choice, to tell Beast, keep your promise, stay out of it, or
+close the elevator door on him.
+
+If the player chooses to tell Beast about Beauty, Beast will thank you
+for telling him and will chase after her.
+
+If the player chooses to not tell Beast about Beauty, Beast will
+apologize for bothering you and leaves.
+
+If the player chooses to stay out of it, Beast will question what you
+mean by that, but Bigby ignores him and he leaves.
+
+If the player stays silent and closes the elevator door on Beast,
+Beast will react surprised and will scream to wait.
+
+After a brief interaction with Colin, a couch-surfing pig crashing in
+his apartment, Bigby gets some shut-eye, only to be interrupted by
+Snow White. She reveals that the girl the Woodsman was hitting was
+killed, and her severed head was left in the Woodlands courtyard. They
+return to the Business Office, where they find out that the girl was
+named Faith, from the Fable Donkeyskin. Bigby also discovers that her
+husband, Lawrence, is injured, possibly fatally, in his apartment. As
+he and Snow are about to leave, he receives a call from Toad saying
+that someone is searching the Woodsman's apartment. The player is then
+given another choice to whether go to Toad's place first or Prince
+Lawrence's house first.
+
+If Bigby chooses to visit Lawrence's apartment first, he and Snow
+arrive to find him seemingly dead from a gunshot wound. After
+searching the apartment for a time, he concludes that Lawrence
+committed suicide. However, he soon wakes up, revealing himself to be
+alive. Bigby is given the option to reveal his wife's death to him,
+tell him she's missing, lie about her fate, or stay silent and prompt
+Snow to deliver the bad news herself. At that point, someone knocks on
+the door and begins picking the lock. Bigby and Snow hide in a closet
+while the prince plays dead. Eventually, Lawrence either pulls a gun
+on the intruder or tries to commit suicide again, succeeding if Bigby
+doesn't stop him. Bigby then chases the man out through the streets,
+soon cornerning in a back alley. He reveals himself to be Tweedledee,
+a private investigator looking into Faith's death for an
+employer. Bigby moves to arrest him, but is knocked unconscious by
+Tweedledum, who snuck up behind him. He is awakened much later by
+Snow, who informs him that the brothers fled the scene soon
+after. They then get a taxi to Toad's apartment.
+
+If Bigby goes to Lawrence's apartment second, the prince dies from his
+injuries and they find Tweedledee hiding in the closet.
+
+Toad's place plays out similarly regardless of whether it's visited
+first or second. Upon arrival, Bigby and Snow hear TJ crying and Toad
+comforting him. However, Toad acts like nothing has happened. The
+sheriff sees signs of damage and forced entry and Bigby finally gets
+Toad to crack and tell him what happened. Toad tells Bigby that one of
+the Tweedles had pressured him to keep quiet as they were searching
+for something the Woodsman was believed to own. If he is visited
+second, Toad also mentioned that the thug strongarmed TJ. Toad then
+gives the sheriff Faith's coat, which was left in the apartment. Bigby
+finds a letter to Lawrence in it, which reads "I'm sorry." He and Snow
+then exit the apartment.
+
+Bigby, having no choices left, goes to find the Woodsman at the Trip
+Trap bar to see if he has any role in the murder. During the taxi ride
+there, Snow expresses doubts about her ability to help citizens of
+Fabletown. Bigby encourages her to keep at it, and they part ways when
+they arrive at the bar, with Snow going off to continue the
+investigation elsewhere. Bigby enters the bar and finds Holly and
+Gren, who claim to have never seen the Woodsman. However, Woody soon
+comes out of the bathroom. Bigby questions him about Faith's death,
+but Woody claims that he had nothing to do with it. Gren then
+confronts the sheriff about not caring enough about the Fables not
+living in the Woodlands, and ditches his glamour to fight him. While
+initially gaining the upper hand, Bigby soon transforms into his half
+wolf form and trounces Gren. He eventually is given the option to rip
+his arm off, to the horror of Woody and Holly.
+
+Bigby then moves to arrest Woody. However, Tweedledee then enters the
+bar looking for information about Faith. Upon seeing Bigby, he
+attempts to run, as does the Woodsman. Bigby then has to choose who to
+arrest. Whoever is picked is then marched back to the Woodlands for
+interrogation. As they arrive at the Woodlands, Bigby notices mundy
+police lights. He chains his arrest to a street lamp and approaches
+the apartments, which are cordoned off and surrounded by NYPD officers
+and cars. Bigby enters the crime scene and walks up to the doorstep,
+where a group of officers is gathered. He is shocked and horrified to
+discover what is apparently Snow's severed head, and the episode ends.
+* Episode 2: Smoke & Mirrors
+The episode starts with Bigby being questioned by a female detective
+named Kelsey Brannigan. Bigby is reluctant to answer her
+questions. Suddenly, the detective and police officers in the room
+pass out, and it is shown that Crane had used a memory-wipe spell to
+let Bigby out.
+
+Crane and Bigby are in a car and talk. Depending on the player's
+choice, Bigby can praise or criticize Crane's actions. They arrive at
+the Woodlands to see Tweedle Dee or the Woodsman, depending on your
+choice in episode one. Bluebeard is seen cleaning his knife, and Crane
+tells Bluebeard to let Bigby talk to them (Dee or Woody). Depending on
+the players actions, Tweedledee or The Woodsman will provide
+information about Snow or Faith. Also, if the player chooses for Bigby
+to be "too nice" about his actions, Bluebeard will start punching the
+hostage (Tweedledee or Woody), and then begin fighting with
+Bigby. Snow White walks into the room, asking what's going on. The
+beginning credits start.
+
+Snow White reveals she was not dead, and that someone else had been
+using glamour to look like her. Snow and Bigby talk to TJ, who said
+that he had found the body while swimming. They talk to TJ for a bit
+and gain some information. After, Snow and Bigby examine the body of
+the victim. It is revealed that she had been using a black market
+glamour, and that she was given instructions. One of the instructions
+was to wear the same perfume that Snow wears. A sample of Snow's hair
+and a photograph of her were also found in one of her pockets. The
+glamour wears off, and it is revealed that it is a troll. The troll is
+identified as Lily, Holly the bartender's sister.
+
+The player is given the choice to allow Snow to go to the bar with
+Bigby. When they/Bigby arrive at the bar, Jack is giving snarky
+remarks and the player is given the choice to kick him out or to let
+him stay. Bigby tells Holly about Lily's death, and Holly reveals that
+Lily was a prostitute who worked at The Pudding & Pie.
+
+Bigby arrives at the Pudding and Pie to ask Georgie, the club owner,
+questions. Georgie is very cocky, and the player is allowed to destroy
+items such as his TV or cigarette machine to get him
+talking. Ultimately, Bigby finds a hole in the ground in which Georgie
+had hidden a book and some money. The book lists the name of each of
+the worker's clients and the room number in which they would
+stay. Lily's last entry was to Mr. Smith in room 207. He then goes to
+the Open Arms Hotel, and is suprised to find that Beauty works
+there. Beauty helps Bigby, and leads him to room 207. As Beauty uses
+her key to open the door, she finds out that it doesn't work. Beast
+appears, and believes that Beauty had been cheating on him with
+Bigby. Bigby and Beast begin to fight, and they crash into the door
+of 207. They stop fighting, and find that there was blood and flowers
+all over the bed. It is then revealed that this is where Holly's
+sister died, and that Mr. Smith has an obsession with Snow White. He
+had asked Holly's sister to wear Glamour to look like Snow
+White. Bigby finds an envelope with three photos; one photo of Snow on
+a bridge, one of Snow and Bigby during the previous winter, and one of
+the glamoured Lily on the bed with Ichabod Crane looking over her
+body. It is then revealed that Mr. Smith is Crane. Crane is looking
+through the Magic Mirror, seeing Bigby and Beauty. He picks up the
+magic lamp and throws it at the mirror, breaking it and ending the
+episode.
+* Episode 3: A Crooked Mile
+The episode picks up exactly where its predecessor left off; Bigby has
+discovered that Crane is the murderer; a photo of him in bed with a
+murdered woman glamoured to look like Snow was found. He sees Beauty
+and Beast off to arrive at Lily's funeral, where Holly, Grendel,
+Prince Lawrence (determinant), Vivian and Nerissa are all
+attending. He can choose to interrupt Snow's eulogy to explain the
+situation or wait for her. Eventually, Snow returns to the funeral and
+asks Bigby to wait at a distance.
+
+Whilst he is awaiting, the Tweedles Dum and Dee arrive with shotguns
+in Bigby's back. They warn Bigby that they will shoot him and the
+funeral up unless Bigby stops searching for Crane. Infuriated at the
+sight of the interrupting Tweedles, Holly and Grendel unglamour
+themselves into their true forms, causing a shootout to occur. Bigby,
+Holly and Grendel are all wounded in the shooting (and Snow will be
+too if the player is inactive during the QTE's). The Tweedles manage
+to flee as the intro to the game plays.
+
+Then, Bigby is patched up by Doctor Swineheart in the Business Office.
+Holly and Grendel were wounded in the shooting and returned to the
+Trip Trap. Snow remarks that all the unknowns regarding the murder
+case are frustrating her. Unfortunately, Crane shattered the Magic
+Mirror with the Magic Lamp making him impossible to locate; Bufkin
+tries to piece it back together but Crane has apparently took a
+shard. Crane also seems to be interested in a particular magic object,
+but since its page was torn out of the book, Bigby and Snow can't
+determine what it is. At this point Bluebeard comes in, enraged at how
+Crane has disappeared and that the office is lacking any official
+representatives.
+
+Bufkin remarks that he overheard Crane mention that he is going to see
+a black market witch at 2:00am, but that is only a few short hours
+away. Bigby, Snow and Bluebeard determine that there are three
+possible leads to investigate; the Tweedles Office, Crane's apartment,
+or the Trip Trap to look for Lily's things (since Lily would have been
+getting her "Snow" glamours from a witch too). The player now must
+decide which of the three locations to go. Additionally, Bluebeard
+will go to Crane's apartment (or if Bigby goes there he will go to the
+Tweedles office).
+
+If he goes to Crane's apartment, then he eventually he finds Jack
+there, trying to flee Crane's bedroom with an assortment of his
+valuable belongings. Jack tells Bigby that the name of the witch Crane
+is visiting is Aunty Greenleaf, and Bigby can accept or reject Jack's
+offer: in exchange for this info, Bigby would not trouble Jack for his
+presence. Either way, Snow White comes in as Bigby must now decide to
+go to the Trip Trap or the Tweedles.
+
+If he first goes to the Tweedles' Office, he finds Flycatcher there
+working as a janitor. He eventually finds, in a secret room, an
+address book that has the initials (A.G.) of the witch Crane was
+using, but cannot determine her initials. He will also choose to offer
+Flycatcher a job at the Woodlands again.
+
+If he goes to to the Tweedles Office after Crane's apartment, he will
+find a beaten Flycatcher there and default to the Trip Trap bar. If he
+goes to Crane's apartment after the Tweedles Office, he will find out
+from Bufkin that Bluebeard has burned many objects (perhaps the ones
+he would've caught Jack stealing), and defaults to the Trip Trap. The
+scene at the Trip Trap seems to be essentially the same regardless of
+order however.
+
+At the Trip Trap, Bigby re-meets Grendel and the Woodsman. He, whilst
+conversing with a sleeping Holly, will find Holly's things also
+pointing him to Aunty Greenleaf. He will still need to search the
+other locations if this is his first decision.
+
+(Bigby will find the witch, Aunty Greenleaf, and her address
+regardless of which order Bigby visits the locations in).
+
+Eventually, Bigby and Snow are pointed to Aunty Greenleaf. They enter
+her apartment to find a very young girl, apparently Greenleaf's
+daughter. After opening a Glamour Tube that the girl pleas Bigby to
+not open, the girl is unglamoured revealing her to be Greenleaf. She
+is initially un-cooperative in regards to Crane's location, but she
+cracks down and immediately tells that he was heading to the Pudding
+and Pie when Snow orders her magical tree burned to ashes since the
+tree was being used to make illegal glamours. The player chooses if
+Bigby burns the tree.
+
+Bigby and Snow go to the Pudding N Pie to confront Crane; after
+walking through Georgie who says into the phone "we have a problem",
+they find Crane grabbing Nerissa. It is revealed that Crane had been
+attempting to use the Ring of Dispel he bought from Greenleaf to
+pierce the speech-impediment Nerissa's ribbons put on her (the ribbons
+keep her from speaking about her job), but as Greenleaf told Bigby and
+Snow earlier, the ring is no longer magical. Unable to obtain the
+information, Crane is unable to use the girls to acquit himself, and
+if Bigby brings up the discovered photo of him and Lily, Crane will
+confess his love to Snow (who will reply stating that Crane doesn't
+love her). Snow announces that she doesn't believe Crane is the killer
+(though it is known that he embezzled from Fabletown). Crane is then
+marched out of the club by Bigby and Snow.
+
+As the three exit the club, they find themselves cornered into the
+alleyway by cars; Bloody Mary and the shotgun-weilding Tweedles'
+brothers emerge on behalf of who they call the "Crooked Man". After
+Mary fails to persuade Bigby to hand over Crane, the Tweedles rapidly
+shoot at Bigby until Bigby transforms into his massive, terrifying
+werewolf form. He charges and effortlessly overpowers them both, and
+the player is given the choice of killing or sparing Dum. However,
+Bloody Mary incapacitates Bigby with a silver bullet, a werewolf's
+weakness. He is knocked down, and is nearly killed by the Woodsman's
+axe (somehow in her possession); Snow intervenes and surrenders
+Crane. Mary, as the Crooked Man's hand is seen waving for Mary to
+return, stomps on Bigby's arm inflicting a compound fracture and walks
+away with Crane as Bigby is left incapacitated.
+* Episode 4: In Sheep's Clothing
+In a nightmare sequence, Bigby is about to be axed to death by Bloody
+Mary; he violently awakes to find himself being operated on by Doctor
+Swineheart, with Colin and Snow watching. The Silver Bullet Mary shot
+Bigby with in the previous episode is Bigby's key weakness requiring
+an important healing practice. Eventually, Swineheart finishes. Bigby
+will then have to defend himself for Dum's brutal murder (if he was
+killed last episode) to Snow. Snow then remarks that she, as the new
+Deputy Mayor, will start doing things by the book, meaning unglamoured
+Fables must be sent to The Farm. Bigby will have to decide whether or
+not Colin must go. Snow is called, and tells Bigby that Bufkin told
+her that Nerissa has requested to meet Bigby.
+
+Nerissa and Bigby speak at the latter's office, though Bigby is unable
+to derive much useful information since the ribbons on Nerissa's neck
+impede her from discussing anything directly. Snow arrives and tells
+Bigby that Beauty and Beast called, and Nerissa subtly tries to tell
+Bigby that he should pursue this lead. At their apartment, Beauty
+acknowledges to have taken out a loan from the Crooked Man at The
+Lucky Pawn run by the Jersey Devil, whilst Beast acknowledges having
+been doing work as a courier at the butcher shop, The Cut Above --
+though he suspects it is illegal merchandise and not meat in the
+packages he delivers. Beast also mentions having seen Bloody Mary at
+the shop before. Bigby must now decide whether or not to go to the Cut
+Above or the Pawn Shop first; he will automatically go to the second
+location after the first.
+
+When Bigby visits the butcher shop, he finds a timid man Johann there;
+he is quiet and puts on a facade of innocence, though Bigby soon
+realizes that in reality, the back room of his business is being used
+as an illegal black market factory by the Crooked Man's crew. No sign
+of Bloody Mary is here. Additionally, if this was the first location
+Bigby visits, he will find a long list of clients on the chalkboard --
+but the list will have been erased if Bigby visits the butcher shop
+second. Bigby can either be brutal or peaceful with Johann.
+
+When he visits The Lucky Pawn, he finds Jack there working the
+register; soon enough, the Jersey Devil (arguing intensely with the
+Woodsman) enters. After a brief scuffle between the three, Jersey
+unglamours into his true form and battles Bigby. Bigby incapacitates
+him, with the help of the Woodsman, who he seems to make up
+with. Jersey tells Bigby that the door to the Crooked Man's house
+alternates in location. If Bigby visited this shop first, he will find
+Jack arguing with Toad, and will have some time to look around the
+shop before the scuffle occurs.
+
+(Bigby will find the stolen Magic Mirror shard at the second location
+he visits).
+
+Returning to the Business Office to find Bluebeard arguing with Snow
+who is also arguing with Toad, Bigby also decides whether or not Toad
+should leave for the farm. Either way, Bufkin is able to repair the
+Magic Mirror. When Snow asks for Crane, it shows Bloody Mary ordering
+Crane to flee to Paris and not attract Fabletown's attention as she
+breaks off the magic mirror's vision. When Bigby asks for the Crooked
+Man, the mirror reveals a door in an unfamiliar location before the
+door relocates to another area. Knowing the location of the relocated
+door and that the door will relocate again soon, Bigby rushes out to
+catch it before it moves again -- though Snow warns him to return the
+Crooked Man back alive and not executed.
+
+Bigby arrives and enters the door teleporting him to the Crooked Lair,
+where he finds Tiny Tim acting as the bodyguard. He enters the main
+lounge room -- he finds Dee, Dum (Determinant), Jersey Devil, Georgie
+and Vivian all in the room, with the Crooked Man present as the
+leader. Bigby decides how to initially react to the Crooked Man as the
+episode ends.
+* Episode 5: Cry Wolf
+Picking up right after the last episode, Bigby stands before the
+Crooked Man and his crew consisting of Dum (if he was spared) and Dee,
+Georgie Porgie and Vivian, and the Jersey Devil. Bigby can either be
+rude and threatening to The Crooked Man or accept his hospitality. The
+henchman are nervous about Bigby's presence, and Bigby observes the
+Crooked Man's use of scare tactics to enforce his rule. When Bigby
+brings up the murders, he can either ask The Crooked Man outright who
+did it, or take a guess at the culprit himself. In the end, it is
+Georgie who killed Faith and Lily. The Crooked Man hands Georgie over
+to Bigby, infuriating Georgie. The rest of the crew, save for Vivian,
+tell Georgie to leave with Bigby as The Crooked Man commanded. At this
+point, Bigby can either try to grab Georgie or The Crooked Man, or
+announce that he's "not going anywhere". Whatever his actions, Bloody
+Mary teleports to the room through a nearby mirror and attacks Bigby,
+resulting in a full-on brawl between Bigby and the henchmen. Bigby
+defeats them one by one, mortally wounding Georgie and one of the
+Tweedle brothers. As Bigby is fighting, a portal opens up in the back
+of the room which The Crooked Man and Mary leave through. Once the
+others are defeated, Bigby chases after The Crooked Man. The fate of
+the surviving Tweedle(s) and the Jersey Devil are left unknown.
+
+As Bigby chases the survivors outside, he witnesses Georgie and Vivian
+escaping in their own vehicle. As he chases after them, he transforms
+into his werewolf form, giving him immense strength and
+speed. Eventually, Bigby will catch up to both vehicles: the limo
+containing The Crooked Man and Mary, and the car containing Georgie
+and Vivian. Bigby must then choose which vehicle to jump onto and
+pursue.
+
+If he chooses Georgie and Vivian's car, Vivian will try to slow down
+the car to shake him off. He falls off the car, but continues to give
+chase, eventually following them to the Pudding & Pie. When Bigby
+arrives, he has the option of threatening or beating on the fatally
+wounded Georgie. Vivian comes to Georgie's defense, but is interrupted
+by Georgie, who tells Bigby that The Crooked Man give him the order to
+kill Faith and Lily and that Vivian is the original Girl with the
+Ribbon, whose curse was applied to the other girls at the club in
+order to keep them from talking. Georgie dares Bigby to take Vivan?s
+ribbon off, as removing the ribbon and killing her is the only way to
+free the other girls from the curse. Regardless of Bigby's actions,
+Vivian decides to do it herself, saying that she can?t pretend to not
+care anymore. Once she pulls off her ribbon, her head comes off and
+she dies. Georgie cries out in grief, and crawls over to her to sit by
+her side as he dies. He tells Bigby that the Crooked Man is hiding in
+Sheppard Metalworks. He then asks Bigby to put him out of his
+misery. Bigby can either kill him quickly or leave him there to
+suffer.
+
+If he chooses the Crooked Man's limo, Bloody Mary will slow down the
+limo to shake him off easily until he is knocked out, after which she
+drives off and escapes. After that, Bigby wakes up in his human form
+and runs to the Pudding & Pie. There, he finds the decapitated body of
+Vivian and a wounded Georgie right next to her. Bigby angrily asks
+what happened, and Georgie tells him that Vivian killed herself, and
+explains that she is the original "Girl with the Ribbon", and that she
+felt responsible for the deaths of Faith and Lily. He goes on to
+explain that he killed the girls because they were planning on
+escaping, and that the Crooked Man told him to take care of it. He
+tells Bigby that The Crooked Man is hiding in Sheppard Metalworks. He
+then asks Bigby to put him out of his misery. Bigby can either kill
+him quickly or leave him there to suffer.
+
+Once Bigby arrives at Sheppard Metalworks, he hears Bloody Mary
+mocking him, and sees photos plastered about of him, Faith, Nerissa,
+and Snow. Walking through the factory, he discovers a room containing
+materials for producing silver bullets, where he is suddenly attacked
+by Bloody Mary. The Crooked Man appears and says that he has business
+to attend to, leaving Bloody Mary to deal with Bigby. They both start
+to fight, but Mary gives chase and Bigby follows her out of the room.
+
+Mary attacks Bigby repeatedly from the shadows, darting between the
+many reflective metal surfaces within the factory. Eventually, she
+emerges and confronts him directly in her true form. Bigby transforms
+into his lycanthropic state, as he tries to fight off hundreds of
+copies of Mary that she continually produces. As the copies overpower
+him and pin him to the ground, ruthlessly stabbing him with the shards
+of glass in their skin, Bigby transforms into his true wolf form,
+immediately gaining the upper hand. After tearing apart and destroying
+numerous copies, he uses his "Huff and Puff" ability to blow away and
+destroy all of the copies, leaving only the real Bloody Mary. Jumping
+down on him from above, she pulls a glass shard out of her head and
+attempts to stab him, but Bigby catches her in his jaws and shatters
+her into pieces, killing her.
+
+After dealing with Bloody Mary, Bigby arrives at the room where The
+Crooked Man had been watching his fight with Mary. The Crooked Man
+points a revolver at Bigby loaded with six silver bullets, firing one
+if Bigby attempts any sudden or threatening movements. He asks to be
+brought back to Fabletown for a proper trial, so he may defend himself
+in front of the community. Bigby can either cuff him or kill him on
+the spot by choking him to death.
+
+If Bigby chooses to bring him back alive, he takes the Crooked Man to
+the Witching Well chamber, where Snow, Bluebeard, Beauty, Beast,
+Johann, Aunty Greenleaf, Lawrence (if alive), Holly and Grendel are
+waiting. When Bigby arrives, everyone seems surprised that he made it,
+and Snow congratulates him. The crowd will start calling for the
+Crooked Man's execution, but Snow intervenes, saying that the Crooked
+Man deserves a trial and chance to speak. The Crooked Man then reveals
+to the crowd that Georgie was the murderer, and that he had nothing to
+do with the murders of Faith and Lily. He goes on to discuss the ways
+in which he has helped the people of Fabletown when the government did
+not, and criticizes the harsh actions taken by Bigby and Snow White
+during their investigations. Depending on the players actions, various
+characters will bring up the ways in which the duo harmed them, such
+as burning Greenleaf's tree or tearing off Grendel's arm. Snow White
+then admits that she has made her share of mistakes, but that
+everything she does is for the better of Fabletown. Bigby chimes in,
+reminding the crowd that he and Snow have been working incessantly to
+protect Fabletown because they truly care about their fellow fables,
+unlike the Crooked Man and his ruthless manipulation. As the crowd
+begins to turn on him, The Crooked Man contests that if he is
+responsible for Georgie killing Faith and Lily because Georgie was
+working for him at the time, then Snow is to blame for Bigby?s
+actions, like killing Tweedle Dum or assaulting The Woodsman/Tweedle
+Dee during the interrogation. He establishes that there is no evidence
+that he ordered the girls dead, until Nerissa appears and, now able to
+talk since Vivian's death, retorts that she and five other girls were
+in the room when he gave the order. The Crooked Man denies this, but
+the crowd is convinced by Nerissa's testimony. While everyone debates
+over the proper sentence for his crimes, The Crooked Man grabs Bigby
+with his handcuffs and drags him toward the Witching Well. Bigby
+breaks his hold and holds him over the well. Everyone decides to leave
+the sentence up to him, and Bigby can either throw him down the well,
+rip his head off, or imprison him.
+
+If the Crooked Man was killed by Bigby at the foundry, Bigby arrives
+at the Witching Well chamber with his corpse, to everyone's shock and
+surprise. Snow White is outraged at Bigby's actions, but Grendel and
+Holly do not seem to mind that The Crooked Man was killed, and
+Bluebeard and Lawrence (if alive) also support Bigby's decision. Snow
+says that Bigby didn't do justice, and that she cannot defend Bigby if
+he keeps killing suspects. The crowd then starts to turn against Bigby
+and Snow, accusing them of being incapable of running Fabletown,
+saying that even Crane would be preferable. Bigby can choose to either
+stay and listen or leave abruptly. If he leaves, then Bigby will
+berate the community for criticizing him after the effort he went
+through to kill The Crooked Man, throwing his corpse down the witching
+well and walking away. If he stays, Nerissa comes in and explains how
+she and the other girls were prisoners at Georgie's club, and that it
+was The Crooked Man who coerced Georgie into ordering their deaths. As
+their names are cleared in front of the community, Bigby and Snow are
+accepted as the revolutionized Fabletown government, and the Crooked
+Man's corpse is thrown down the Witching Well.
+
+Later on, Bigby is seen going to the Business office, where a big line
+of fables waits outside. Snows tells Bigby that Flycatcher forgot his
+keys and she gives them to Bigby. If Bigby chose to imprison The
+Crooked Man, Aunty Greenleaf comes by and shows Bigby the result of
+her work, having transformed him into a crow and imprisoned him in a
+cage. She gives the cage to Bigby to take to the farm. Also, if Bigby
+decided not to send Colin to the Farm, he will appear with some beers
+heading to Bigby's apartment.
+
+Once in the street, Bigby sees Toad and TJ in the truck to the Farm,
+regardless of the player's previous choices. Bigby gives Flycatcher
+the keys and puts the crow in the truck, and TJ asks Bigby to give
+Snow a gift: one of the beetles from his collections that she said she
+really liked. Bigby can either accept the gift or say that he is too
+busy. Bigby can then comfort TJ by saying that the Farm won?t be so
+bad. If Bigby decided to send Colin to the Farm, he is seen in the
+front seat of the truck, and asks for a cigarette. Bigby can either
+give him one, the whole pack, or nothing.
+
+After the truck leaves for the farm, Nerissa comes to say goodbye to
+Bigby, who notices she is still wearing her ribbon. She tells him that
+she can't bring herself to simply forget everything that transpired,
+and then reveals that she had not been entirely truthful with him
+about the deaths of Faith and Lily. She goes on to tell Bigby that
+she, Faith, and Lily had a plan to escape from the Pudding & Pie, but
+Faith compromised things when she stole the picture of Crane and
+Lily. Knowing this could lead to serious trouble with The Crooked Man,
+Nerissa revealed the photo and Faith's plan to Georgie. She admits
+that she never heard The Crooked Man directly order the deaths of the
+girls, as she only heard him tell Georgie to "take care" of things
+(which, despite different wording, she still believes to have implied
+killing them). Bigby is frustrated by the fact that she lied, but she
+assures him that The Crooked Man needed to pay for his crimes, and
+that Bigby and Snow are better for the town, despite what others might
+say. Nerissa then admits that she was the one who put the girls' heads
+on the doorsteps of the Woodlands to get Bigby?s attention.
+
+Before leaving, she comments that Bigby is not as bad everyone says he
+is. Suddenly, Bigby recalls that Faith said the exact same before her
+death, and several past conversations regarding Faith, Nerissa, and
+the use of glamours play out in Bigby's head, raising the possibility
+that Nerissa might actually be a glamoured Faith (or that the Faith
+seen in Episode 1 was in fact glamoured Nerissa). In light of this
+epiphany, Bigby can then decide to either chase after her or let her
+go, though either option will eventually cut out to a black screen,
+leaving open the possibility for a The Wolf Among Us sequel.

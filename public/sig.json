@@ -1,0 +1,86 @@
+{
+    "type":"object",
+    "properties": {
+        "nodes": {
+            "type":"array",
+            "format":"table",
+            "items": {
+                "type":"object",
+                "properties":{
+                    "type":{
+                        "type":"string",
+                        "watch": {
+                            "nodes": "sig_schema.nodeTypes"
+                        },
+                        "enumSource": [{
+                            "source":"nodes",
+                            "value": "{{item}}",
+                            "title": "{{item.name}}"
+                        }]
+                    },
+                    "properties":{
+                        "type":"array",
+                        "items":{
+                            "type":"string"
+                        }
+                    }
+                }
+            }
+        },
+        "links": {
+            "type":"array",
+            "format":"table",
+            "items": {
+                "type":"object",
+                "properties":{
+                    "source":{
+                        "type":"string",
+                        "watch": {
+                            "nodes": "sig.nodes"
+                        },
+                        "enumSource": [{
+                            "source":"nodes",
+                            "value": "{{item}}",
+                            "title": "{{item.type}} - {{il}}"
+                            
+                        }],
+                        "template": "{{symbol}}"
+                    },
+                    "target":{
+                        "type":"string",
+                        "watch": {
+                            "nodes": "sig.nodes"
+                        },
+                        "enumSource": [{
+                            "source":"nodes",
+                            "value": "{{item}}",
+                            "title": "{{item.type}} - {{il}}"
+                        }],
+                        "template": "{{symbol}} - {{il}}"
+                    },
+                    "left": {
+                        "type":"boolean"
+                    },
+                    "right": {
+                        "type":"boolean"
+                    },
+                    "link_type": {
+                        "type":"string",
+                        "watch": {
+                            "nodes": "sig_schema.linkTypes"
+                        },
+                        "enumSource": [{
+                            "source":"nodes",
+                            "value": "{{item}}",
+                            "title": "{{item.type.symbol}} {{item.type.name}} - {{il}}"
+                        }],
+                        "template": "{{item.symbol}} - {{il}}"
+                    },
+                    "id": {
+                        "type":"integer"
+                    }
+                }
+            }
+        }
+    }
+}

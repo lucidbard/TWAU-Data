@@ -1,0 +1,271 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{00}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{{\tt DOI:}\penalty0{#1}\ }
+  \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Arjoranta}{Arjoranta}{2015}]%
+        {Arjoranta2015-rw}
+\bibfield{author}{\bibinfo{person}{Jonne Arjoranta}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \bibinfo{title}{Real-time hermeneutics : meaning-making in
+  ludonarrative digital games}.
+\newblock   (\bibinfo{year}{2015}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Elson}{Elson}{2012}]%
+        {Elson2012-pi}
+\bibfield{author}{\bibinfo{person}{David~K Elson}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock {\em \bibinfo{title}{Modeling Narrative Discourse}}.
+\newblock \bibinfo{thesistype}{Ph.D. Dissertation}. \bibinfo{school}{Columbia
+  University}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Evans and Short}{Evans and Short}{2014}]%
+        {Evans2014-nk}
+\bibfield{author}{\bibinfo{person}{Richard Evans} {and} \bibinfo{person}{Emily
+  Short}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{{Versu---A} Simulationist Storytelling System}.
+\newblock \bibinfo{journal}{{\em IEEE Trans. Comput. Intell. AI Games\/}}
+  \bibinfo{volume}{6}, \bibinfo{number}{2} (\bibinfo{date}{June}
+  \bibinfo{year}{2014}), \bibinfo{pages}{113--130}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Fern{\'a}ndez~Vara}{Fern{\'a}ndez~Vara}{2009}]%
+        {Fernandez_Vara2009-mt}
+\bibfield{author}{\bibinfo{person}{Clara Fern{\'a}ndez~Vara}.}
+  \bibinfo{year}{2009}\natexlab{}.
+\newblock {\em \bibinfo{title}{Integrating Story Into Simulation Through
+  Performance}}.
+\newblock \bibinfo{thesistype}{Ph.D. Dissertation}. \bibinfo{school}{Georgia
+  Institute of Technology}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Finlayson}{Finlayson}{2013}]%
+        {Finlayson2013-wi}
+\bibfield{author}{\bibinfo{person}{Mark~Alan Finlayson}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{A Survey of Corpora in Computational and Cognitive
+  Narrative Science}.
+\newblock \bibinfo{journal}{{\em Sprache und Datenverarbeitung (International
+  Journal for Language Data Processing)\/}} \bibinfo{volume}{37},
+  \bibinfo{number}{1-2} (\bibinfo{year}{2013}), \bibinfo{pages}{113--141}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Isbister, H{\"o}{\"o}k, Sharp, and
+  Jarmo}{Isbister et~al\mbox{.}}{2006}]%
+        {Isbister2006-sc}
+\bibfield{author}{\bibinfo{person}{Katherine Isbister}, \bibinfo{person}{Kia
+  H{\"o}{\"o}k}, \bibinfo{person}{Michael Sharp}, {and}
+  \bibinfo{person}{Laakso{\~n}ahti Jarmo}.} \bibinfo{year}{2006}\natexlab{}.
+\newblock \showarticletitle{The Sensual Evaluation Instrument: Developing an
+  Affective Evaluation Tool}. In \bibinfo{booktitle}{{\em {CHI} 2006
+  Proceedings}}. \bibinfo{pages}{1163--1172}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kjellberg}{Kjellberg}{2013}]%
+        {Kjellberg2013-fn}
+\bibfield{author}{\bibinfo{person}{Felix Arvid~Ulf Kjellberg}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \bibinfo{title}{The Wolf Among Us}.
+\newblock
+  \bibinfo{howpublished}{\url{https://www.youtube.com/playlist?list=PLYH8WvNV1YEmYe_pKdwLxBrdpi2M-G5ni}}.
+    (\bibinfo{year}{2013}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Laaksolahti, Isbister, and
+  H{\"o}{\"o}k}{Laaksolahti et~al\mbox{.}}{2009}]%
+        {Laaksolahti2009-uw}
+\bibfield{author}{\bibinfo{person}{Jarmo Laaksolahti},
+  \bibinfo{person}{Katherine Isbister}, {and} \bibinfo{person}{Kristina
+  H{\"o}{\"o}k}.} \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{Using the \textit{Sensual Evaluation Instrument}}.
+\newblock \bibinfo{journal}{{\em Digital Creativity\/}} \bibinfo{volume}{20},
+  \bibinfo{number}{3} (\bibinfo{year}{2009}), \bibinfo{pages}{165--175}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Marczak, Schott, Hanna, and Rouas}{Marczak
+  et~al\mbox{.}}{2013}]%
+        {Marczak2013-np}
+\bibfield{author}{\bibinfo{person}{Raphael Marczak}, \bibinfo{person}{Gareth
+  Schott}, \bibinfo{person}{Pierre Hanna}, {and} \bibinfo{person}{Jean-Luc
+  Rouas}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Feedback-based gameplay metrics}. In
+  \bibinfo{booktitle}{{\em {FDG} Foundations of Digital Games}}.
+  \bibinfo{address}{Greece}, \bibinfo{pages}{71--78}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Mateas and Stern}{Mateas and Stern}{2003}]%
+        {Mateas2003-ty}
+\bibfield{author}{\bibinfo{person}{M Mateas} {and} \bibinfo{person}{A Stern}.}
+  \bibinfo{year}{2003}\natexlab{}.
+\newblock \showarticletitle{Integrating plot, character and natural language
+  processing in the interactive drama Fa{\c c}ade}. In \bibinfo{booktitle}{{\em
+  Proceedings of the 1st International Conference on Technologies for
+  Interactive Digital Storytelling and Entertainment ({TIDSE-03})}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Orkin, Smith, Reckman, and Roy}{Orkin
+  et~al\mbox{.}}{2010}]%
+        {Orkin2010-vr}
+\bibfield{author}{\bibinfo{person}{Jeff Orkin}, \bibinfo{person}{Tynan Smith},
+  \bibinfo{person}{Hilke Reckman}, {and} \bibinfo{person}{Deb Roy}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Semi-automatic task recognition for interactive
+  narratives with {EAT} \& {RUN}}. \bibinfo{publisher}{ACM},
+  \bibinfo{address}{Monterey, California}, \bibinfo{pages}{1--8}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Osborn, Samuel, Mateas, and
+  Wardrip-Fruin}{Osborn et~al\mbox{.}}{2015}]%
+        {Osborn2015-gr}
+\bibfield{author}{\bibinfo{person}{Joseph~C Osborn}, \bibinfo{person}{Ben
+  Samuel}, \bibinfo{person}{Michael Mateas}, {and} \bibinfo{person}{Noah
+  Wardrip-Fruin}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Playspecs: Regular Expressions for Game Play
+  Traces}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Propp}{Propp}{1928}]%
+        {Propp1928-pk}
+\bibfield{author}{\bibinfo{person}{Vlad{\'\i}mir Propp}.}
+  \bibinfo{year}{1928}\natexlab{}.
+\newblock \showarticletitle{Morphology of the Folk Tale}.
+\newblock \bibinfo{journal}{{\em Folklore\/}} (\bibinfo{year}{1928}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Reed, Wardrip-Fruin, and Mateas}{Reed
+  et~al\mbox{.}}{2014}]%
+        {Reed2014-qw}
+\bibfield{author}{\bibinfo{person}{Aaron Reed}, \bibinfo{person}{Noah
+  Wardrip-Fruin}, {and} \bibinfo{person}{Michael Mateas}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{The Eurekon Design Pattern in Expressive
+  Storygames}. In \bibinfo{booktitle}{{\em Intelligent Narrative Technologies
+  7}}. \bibinfo{pages}{52--55}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Seif El-Nasr, Milam, and Maygoli}{Seif El-Nasr
+  et~al\mbox{.}}{2013}]%
+        {Seif_El-Nasr2013-hp}
+\bibfield{author}{\bibinfo{person}{Magy Seif El-Nasr}, \bibinfo{person}{David
+  Milam}, {and} \bibinfo{person}{Tony Maygoli}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Experiencing interactive narrative: A qualitative
+  analysis of Facade}.
+\newblock \bibinfo{journal}{{\em Entertain. Comput.\/}} \bibinfo{volume}{4},
+  \bibinfo{number}{1} (\bibinfo{year}{2013}), \bibinfo{pages}{39--52}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Sturges and Justus}{Sturges and
+  Justus}{2014}]%
+        {Sturges2014-ua}
+\bibfield{author}{\bibinfo{person}{Matthew Sturges} {and} \bibinfo{person}{Dave
+  Justus}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \bibinfo{title}{The Wolf Among Us}.
+\newblock   (\bibinfo{year}{2014}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Szilas and Ilea}{Szilas and Ilea}{2014}]%
+        {Szilas2014-fd}
+\bibfield{author}{\bibinfo{person}{Nicolas Szilas} {and}
+  \bibinfo{person}{Ioanna Ilea}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Objective Metrics for Interactive Narrative}.
+\newblock \bibinfo{journal}{{\em The Seventh International Conference on
+  Interactive Digital Storytelling (ICIDS 2014)\/}} (\bibinfo{year}{2014}),
+  \bibinfo{pages}{91--102}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Tanenbaum}{Tanenbaum}{2011}]%
+        {Tanenbaum2011-yu}
+\bibfield{author}{\bibinfo{person}{Joshua Tanenbaum}.}
+  \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Being in the Story: Readerly Pleasure, Acting
+  Theory, and Performing a Role}. In \bibinfo{booktitle}{{\em Interactive
+  Storytelling}}. \bibinfo{publisher}{Springer, Berlin, Heidelberg},
+  \bibinfo{pages}{55--66}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{{Telltale Games}}{{Telltale Games}}{2013}]%
+        {Telltale_Games2013-hz}
+\bibfield{author}{\bibinfo{person}{{Telltale Games}}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \bibinfo{title}{The Wolf Among Us}.
+\newblock   (\bibinfo{year}{2013}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Wardrip-fruin}{Wardrip-fruin}{2006}]%
+        {Wardrip-fruin2006-je}
+\bibfield{author}{\bibinfo{person}{Noah Wardrip-fruin}.}
+  \bibinfo{year}{2006}\natexlab{}.
+\newblock \showarticletitle{Expressive Processing: On {Process-Intensive}
+  Literature and Digital Media}.
+\newblock  \bibinfo{number}{May} (\bibinfo{year}{2006}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Wardrip-Fruin}{Wardrip-Fruin}{2009}]%
+        {Wardrip-Fruin2009-pe}
+\bibfield{author}{\bibinfo{person}{Noah Wardrip-Fruin}.}
+  \bibinfo{year}{2009}\natexlab{}.
+\newblock \bibinfo{booktitle}{{\em Expressive Processing: Digital Fictions,
+  Computer Games, and Software Studies}}.
+\newblock \bibinfo{publisher}{The MIT Press}. 441 pages.
+\newblock
+
+
+\end{thebibliography}

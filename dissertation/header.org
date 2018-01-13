@@ -1,0 +1,9 @@
+#+LaTeX_HEADER: \usepackage{mathptmx}
+#+LaTeX_HEADER: \usepackage{pifont}
+#+LaTeX_HEADER: \usepackage[margin=0.7in]{geometry}
+#+LaTeX_HEADER: \newcommand{\point}[1]{\noindent \textbf{#1}}
+#+LaTeX_HEADER: \usepackage{hyperref}
+#+LaTeX_HEADER: \usepackage{csquotes}
+#+LaTeX_HEADER: \usepackage[mla]{ellipsis}
+#+LaTeX_HEADER: \parindent = 0em
+#+LaTeX_HEADER: \setlength\parskip{.5\baselineskip}

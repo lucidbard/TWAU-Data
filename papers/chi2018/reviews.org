@@ -1,0 +1,297 @@
+Address criticisms with straightforward revisions
+
+* (New) Literary Review 
+** Gaming
+*** Boredom, engagement and anxiety as indicators for adaptation to difficulty in games
+This paper proposes an approach based on emotion recognition to maintain engagement of players in a game by modulating the game difficulty. Physiological and questionnaire data were gathered from 20 players during and after playing a Tetris game at different difficulty levels. Both physiological and self-report analyses lead to the conclusion that playing at different levels gave rise to different emotional states and that playing at the same level of difficulty several times elicits boredom. Emotion assessment from physiological signals was performed using a SVM (Support Vector Machine). An accuracy of 53.33% was obtained on the discrimination of three emotional classes, namely boredom, anxiety, engagement.
+***  Mining multimodal sequential patterns: a case study on affect detection
+Héctor P. Martínez
+Georgios N. Yannakakis
+
+Temporal data from multimodal interaction such as speech and bio-signals cannot be easily analysed without a preprocessing phase through which some key characteristics of the signals are extracted. Typically, standard statistical signal features such as average values are calculated prior to the analysis and, subsequently, are presented either to a multimodal fusion mechanism or a computational model of the interaction. This paper proposes a feature extraction methodology which is based on frequent sequence mining within and across multiple modalities of user input. The proposed method is applied for the fusion of physiological signals and gameplay information in a game survey dataset. The obtained sequences are analysed and used as predictors of user affect resulting in computational models of equal or higher accuracy compared to the models built on standard statistical features.
+
+***  Zone of Impulse: physiological data enhanced gaming
+Zone of Impulse is a fast-paced multiplayer action game, playable on mobile devices. By wearing sensors on the chest and palm the player's emotional state is integrated into gameplay. The processed physiological signals provide the basis for adaptation of several game elements. This creates a more personalized gaming experience and provides additional input modalities to an otherwise "casual" game.
+
+***  Biofeedback game design: using direct and indirect physiological control to enhance game interaction
+CHI 2011
+Lennart Erik Nacke
+Michael Kalyn
+Calvin Lough
+Regan Lee Mandryk
+
+Prior work on physiological game interaction has focused on dynamically adapting games using physiological sensors. In this paper, we propose a classification of direct and indirect physiological sensor input to augment traditional game control. To find out which sensors work best for which game mechanics, we conducted a mixed-methods study using different sensor mappings. Our results show participants have a preference for direct physiological control in games. This has two major design implications for physiologically controlled games: (1) Direct physiological sensors should be mapped intuitively to reflect an action in the virtual world; (2) Indirect physiological input is best used as a dramatic device in games to influence features altering the game world.
+
+***  [[chrome-extension://bomfdkbfpdhijjbeoicnfhjbdhncfhig/view.html?mp=fhvGsV3K][GamEMO: how physiological signals show your emotions and enhance your game experience]]
+Chanel Guillaume
+Kalogianni Konstantina
+Pun Thierry
+
+The proposed demonstration is an automatic emotion assessment installation used for game's dynamic difficulty adjustment. The goal of the system is to maintain the player of the game in a state of entertainment and engagement where his/her skills match the difficulty level of the game. The player's physiological signals are recorded while playing a Tetris game and signal processing, feature extraction and classification techniques are applied to the signals in order to detect when the player is anxious or bored. The level of the Tetris game is then adjusted according to the player's detected emotional state. The demonstration will also serve as an experimental protocol to test the player's experience through their interaction with the proposed platform.
+
+** Non-Gaming
+*** Content/Media
+**** TODO Dynamic Time Warping of Multimodal Signals for Detecting Highlights in Movies
+:PROPERTIES:
+:year:     2014
+:END:
+Affective computing has strong ties with literature and film studies, e.g. text sentiment analysis, affective tagging of movies. In this work we report on recent findings towards identifying highlights in movies on the basis of the synchronization of physiological and behavioral signals of people.  The proposed architecture is utilizing dynamic time warping for measuring the distance among the multimodal signals of pairs of spectators. The reported results suggest that this distance can be indicative for the dynamics and existence of aesthetic moments in movies.
+**** The Secret Language of Our Body: Affect and Personality Recognition Using Physiological Signals
+Julia Wache
+
+We present a novel framework for decoding individuals' emotional state and personality traits based on physiological responses to affective movie clips. During watching 36 video clips we used measures of Electrocardiogram (ECG), Galvanic Skin Response (GSR), facial-Electroencephalogram (EEG) and facial emotional responses to decode i) the emotional state of partcipants and ii) their Big Five personality traits extending previous work that had connected either explicit (user ratings) with some implicit (physiological) affective responses or one of them with selected personality traits.
+
+We make the first dataset comprising both affective and personality information publicly available for further research and we further explore different methods and implementations for automated emotion and personality detection for future applications.
+*** Input
+**** Galvanic skin response-derived bookmarking of an audio stream
+We demonstrate a novel interaction paradigm driven by implicit, low-attention user control, accomplished by monitoring a user's physiological state. We have designed and prototyped this interaction for a first use case of bookmarking an audio stream, to holistically explore the implicit interaction concept. A listener's galvanic skin conductance (GSR) is monitored for orienting responses (ORs) to external interruptions; our research prototype then automatically bookmarks the media such that the user can attend to the interruption, then resume listening from the point heshe is interrupted.
+**** Physiological Signal-Driven Virtual Reality in Social Spaces 
+Virtual   and   augmented   reality   are   becoming   the   new medium  that  transcend  the  way  we  interact  with  virtual content, paving the way for many immersive and interactive forms  of  applications.  The  main  purpose  of  my  research  is to  create  a  seamless  combination  of  physiological  sensing with  virtual  reality  to  provide  users  with  a  new  layer  of input   modality  or  as  a   form  of  implicit  feedback.  To achieve   this,   my   research   focuses  in   novel   augmented reality (AR) and virtual reality (VR) based application for a multi-user,  multi-view,  multi-modal  system  augmented  by physiological  sensing  methods  towards an increased public and social acceptance. 
+*** Classification
+
+**  Activity recognition exploiting classifier level fusion of acceleration and physiological signals
+We investigate how to effectively combine physiological signals with acceleration signals to conduct activity recognition task. Firstly, features are extracted from acceleration and physiological signals, including heart rate variability (HRV). Secondly, classifier level fusion is utilized to combine the models built by acceleration and physiological features separately. Experiment results show that activity recognition task can benefit from HRV features, and classifier level fusion has its superiority over feature level fusion.
+
+**  Exploring Peripheral Physiology as a Predictor of Perceived Relevance in Information Retrieval
+Peripheral physiological signals, as obtained using electrodermal activity and facial electromyography over the corrugator supercilii muscle, are explored as indicators of perceived relevance in information retrieval tasks. An experiment with 40 participants is reported, in which these physiological signals are recorded while participants perform information retrieval tasks. Appropriate feature engineering is defined, and the feature space is explored. The results indicate that features in the window of 4 to 6 seconds after the relevance judgment for electrodermal activity, and from 1 second before to 2 seconds after the relevance judgment for corrugator supercilii activity, are associated with the users' perceived relevance of information items. A classifier verified the predictive power of the features and showed up to 14% improvement predicting relevance. Our research can help the design of intelligent user interfaces for information retrieval that can detect the user's perceived relevance from physiological signals and complement or replace conventional relevance feedback.
+
+**  Representation & Interpretation of Biosensing
+My work explores interactions with physiological signals in daily life. I develop alternative representations of these signals and study experiences and interpretations around these artifacts, leveraging material properties to create new associations and interpretations. Through broadening the design space around biosensing, I probe what relationships with physiological data might mean for our social relationships and sense of self.
+
+**  Real time heart rate and breathing detection using commercial motion sensors
+In this demo, we present a contactless breathing and heart rate sensing system that continuously and unobtrusively tracks physiological signals using commercial off-the-shelf radar modules. Our system provides a single sensor solution to track physical and physiological variables including coarse body movements as well as subtle and fine-grained chest movements due to breathing and heartbeat.  Continuous tracking of these physiological variables especially, throughout the night can be used for sleep stage mining.
+**  On Line - affective state reporting device: a tool for evaluating affective state inference systems
+The monitoring of human affective state is a key part of developing responsive and naturally behaving human-robot interaction systems. However, evaluation and calibration of physiologically monitored affective state data is typically done using offline questionnaires and user reports. In this paper we investigate the use of an online-device for collecting real-time user reports of affective state during interaction with a robot. These reports are compared to both previous survey reports taken after the interaction, and the affective states estimated by an inference system. The aim is to evaluate and characterize the physiological signal-based inference system and determine which factors significantly influence its performance. This analysis will be used in future work, to fine tune the affective estimations by identifying what kind of variations in physiological signals precede or accompany the variations in reported affective states.
+**  A tool for mental workload evaluation and adaptation
+AH '13 Proceedings of the 4th Augmented Human International Conference
+Inês Oliveira	University Lusófona, Lisbon, Portugal
+Nuno Guimarães	ISCTE-University Institute of Lisbon, Lisbon, Portugal
+
+This paper studies the use of mental workload patterns measured from electroencephalographic (EEG) signals in the adaptation of reading activities. Mental workload is associated with the feeling of (dis) comfort of users, based on the assumption that a higher mental workload involves a greater discomfort.
+
+There is increasing interest in the use of physiological signals for the design of interactive systems, reinforcing the link between the application behavior and the user's emotional and mental states.
+
+Reading processes are pervasive in visual user interfaces. Previous work has integrated EEG signals in prototypical applications, designed to analyze reading tasks, and tried to identify the most relevant features for discriminating reading and non-reading mental states. In this paper we address the possibility of adjusting the reading conditions to the user's mental state.
+
+We start by analyzing the correlation between the mental workload and the variation of some relevant HCI textual aspects, such as text size. Then we developed applications that analyze the user's mental workload and adjust the speed of text presentation to the user's mental load. The experiments have been performed in a conventional HCI lab, with non clinical EEG equipment and setup. This is an explicit and design condition, as it targets ecological reading situations.
+
+**  Control your game-self: effects of controller type on enjoyment, motivation, and personality in game
+CHI '13 Proceedings of the SIGCHI Conference on Human Factors in Computing Systems
+Max Birk
+Regan L. Mandryk
+
+Whether they are made to entertain you, or to educate you, good video games engage you. Significant research has tried to understand engagement in games by measuring player experience (PX). Traditionally, PX evaluation has focused on the enjoyment of game, or the motivation of players; these factors no doubt contribute to engagement, but do decisions regarding play environment (e.g., the choice of game controller) affect the player more deeply than that? We apply self-determination theory (specifically satisfaction of needs and self-discrepancy represented using the five factors model of personality) to explain PX in an experiment with controller type as the manipulation. Our study shows that there are a number of effects of controller on PX and in-game player personality. These findings provide both a lens with which to view controller effects in games and a guide for controller choice in the design of new games. Our research demonstrates that including self-characteristics assessment in the PX evaluation toolbox is valuable and useful for understanding player experience.
+
+**  Instantaneous and Robust Eye-Activity Based Task Analysis
+Task analysis using eye-activity has previously been used for estimating cognitive load on a per-task basis. However, since pupil size is a continuous physiological signal, eye-based classification accuracy of cognitive load can be improved by considering cognitive load at a higher temporal resolution and incorporating models of the interactions between the task-evoked pupillary response (TEPR) and other pupillary responses such as the Pupillary Light Reflex into the classification model. In this work, methods of using eye-activity as a measure of continuous mental load will be investigated. Subsequently pupil light reflex models will be incorporated into task analysis to investigate the possibility of enhancing the reliability of cognitive load estimation in varied lighting conditions. This will culminate in the development and evaluation of a classification system which measures rapidly changing cognitive load. Task analysis of this calibre will enable interfaces in wearable optical devices to be constantly aware of the user's mental state and control information flow to prevent information overload and interruptions.
+
+**  Developing instantaneous eye-activity based task analysis
+Task analysis using eye-tracking has previously been used for estimating cognitive load on a per-task basis. However, since pupil size is a continuous physiological signal, eye-based classification accuracy of cognitive load can be improved by analysing cognitive load at a finer temporal resolution and incorporating models of the interactions between the task-evoked pupillary response (TEPR) and other pupillary responses such as the pupillary light reflex into the classification model.
+
+The possibility of characterising within-task transient behaviour of eye-activity to accurately measure continuous cognitive load will be investigated in this research. Subsequently pupil light reflex models will be incorporated into task analysis to investigate means of enhancing the reliability of cognitive load estimation in varied lighting conditions. This will culminate in the development and evaluation of a classification system which measures rapidly changing cognitive load. Task analysis of this calibre will augment the functionality of interfaces in wearable optical devices, for example by enabling them to control information flow to prevent information overload and interruptions.
+
+**  Interfacing information in affective user studies
+UbiComp '14 Adjunct Proceedings of the 2014 ACM International Joint Conference on Pervasive and Ubiquitous Computing: Adjunct Publication
+
+Kyeong-An Kwon
+Dvijesh Shastri
+Ioannis Pavlidis
+
+In affective user studies, visual interfacing of data has received little attention. Such interfaces can support qualitative understanding, conveying insight about static and temporally evolving information; static information is exemplified by demographic data, while temporally evolving information is exemplified by physiological signals. In this paper we present User Portrait - an abstraction and visualization method that condenses the essence of a study's data in a single figure. It is an inverted pyramid design, where the information abstraction is communicated on the top view, while the details are displayed on a need-to-know basis. The method has been applied to a longitudinal study of student affect vs. exam performance, effectively visualizing its voluminous data set.
+
+**  Distributed multisensory signals acquisition and analysis in dyadic interactions
+Ashish Tawari
+Cuong Tran
+Anup Doshi
+Thorsten Zander
+Mohan Trivedi
+
+Human-machine interaction could be enhanced by providing information about the user's state, allowing for automated adaption of the system. Such context-aware system, however, should be able to deal with spontaneous and subtle user behavior. The artificial intelligence behind such systems, hence, also needs to deal with spontaneous behavior data for training as well as evaluation. Although harder to collect and annotate, spontaneous behavior data are preferable to posed as they are representative of real world behavior. Towards this end, we have designed a distributed testbed for multisensory signals acquisition while facilitating spontaneous interactions. We recorded audio-visual as well as physiological signals from 6 pairs of subjects while they were playing a bluffing dice game against each other. In this paper, we introduce the collected database and provide our preliminary results of bluff detection based on spatio-temporal face image signal analysis.
+
+**  Dynamic difficulty using brain metrics of workload
+Daniel Afergan	Tufts University, Medford, MA, USA
+Evan M. Peck	Tufts University, Medford, MA, USA
+Erin T. Solovey	Drexel University, Philadelphia, PA, USA
+Andrew Jenkins	Tufts University, Medford, MA, USA
+Samuel W. Hincks	Tufts University, Medford, MA, USA
+Eli T. Brown	Tufts University, Medford, MA, USA
+Remco Chang	Tufts University, Medford, MA, USA
+Robert J.K. Jacob	Tufts University, Medford, MA, USA
+
+Dynamic difficulty adjustments can be used in human-computer systems in order to improve user engagement and performance. In this paper, we use functional near-infrared spectroscopy (fNIRS) to obtain passive brain sensing data and detect extended periods of boredom or overload. From these physiological signals, we can adapt a simulation in order to optimize workload in real-time, which allows the system to better fit the task to the user from moment to moment. To demonstrate this idea, we ran a laboratory study in which participants performed path planning for multiple unmanned aerial vehicles (UAVs) in a simulation. Based on their state, we varied the difficulty of the task by adding or removing UAVs and found that we were able to decrease error by 35% over a baseline condition. Our results show that we can use fNIRS brain sensing to detect task difficulty in real-time and construct an interface that improves user performance through dynamic difficulty adjustment.
+**  Power me Up!: an interactive and physiological perspective on videogames' temporary bonus rewards
+The videogame industry has suffered significant modifications in the last years, broadening its horizons towards a more casual market. This market expansion not only brings new opportunities from an interaction point-of-view, but also new challenges with the inclusion of users who are not accustomed to these games. This paper presents part of an ongoing study which aims at providing a better understanding of player behavior both from an interactive and a physiological standpoint. The experiment addressed here assesses how the presence of two different types of bonuses, commonly found in videogames, are capable of altering certain user interaction patterns and how these affect a subset of their physiological signals. Results are accompanied with statistical tests which reinforce the empirical data.
+**  Predicting user action from skin conductance
+László Laufer
+Bottyán Németh
+
+There are many studies focusing on enhancing physiological data in user interfaces. On one hand biofeedback games are using skin conductance and heart rate data to reflect the emotional state of the user, on the other hand BCI research tries to conclude user intentions from EEG signals.
+
+In our research we are collecting usual biofeedback data but process it with complex algorithms similarly to the BCI methodologies. This way we are able to conclude more complex user states than relaxation or anxiety.
+
+In our experiments we asked users to play with a simple arcade game, while we were recording physiological data. We were training artificial neural networks to learn the time of user action from the physiological signals. The networks were capable of detecting and also predicting user action 2 seconds before it was carried out.
+**  Freaky: performing hybrid human-machine emotion
+Lucian Leahu	Mobile Life @ KTH, Stockholm, Sweden
+Phoebe Sengers	Cornell University, Ithaca, NY, USA
+
+This paper explores the possibility of using statistical classification of physiological signals into emotion categories as a resource for open-ended human interpretation of emotion. Typically, design studies for affect assume either that it is possible for computers to objectively identify users' emotions, or that emotion is completely subjective and thus rely solely on human interpretation. By drawing on the feminist concept of performativity, we explain how to conceive of computational representations and human actors as co-constructing emotions. Through a case study of Freaky, a system that uses such models of emotion to sup-port human interpretation, we demonstrate how machine learning models of affect can be constructed and incorporated in systems designed for open-ended user interpretation of affect. Qualitative results from a user deployment show that a performative approach to modeling emotion is possible. We thus demonstrate the potential of performative theories to be generative of new computational and design practices that support hybrid human-machine enactments of emotion.
+**  Using brain-computer interfaces for implicit input
+Daniel Afergan
+
+Passive brain-computer interfaces, in which implicit input is derived from a user's changing brain activity without conscious effort from the user, may be one of the most promising applications of brain-computer interfaces because they can improve user performance without additional effort on the user's part. I seek to use physiological signals that correlate to particular brain states in order to adapt an interface while the user behaves normally. My research aims to develop strategies to adapt the interface to the user and the user's cognitive state using functional near-infrared spectroscopy (fNIRS), a non-invasive, lightweight brain-sensing technique. While passive brain-computer interfaces are currently being developed and researchers have shown their utility, there has been little effort to develop a framework or hierarchy for adaptation strategies.
+**  Pulse and vital sign measurement in mixed reality using a HoloLens
+Daniel McDuff
+Christophe Hurter
+Mar Gonzalez-Franco
+
+Cardiography, quantitative measurement of the functioning of the heart, traditionally requires customized obtrusive contact sensors. Using new methods photoplethysmography and ballistocardiography signals can be captured using ubiquitous sensors, such as webcams and accelerometers. However, these signals are not visible to the unaided eye. We present Cardiolens - a mixed reality system that enables real-time, hands-free measurement and visualization of blood flow and vital signs from multiple people. The system combines a front-facing webcam, imaging ballistocardiography, and remote imaging photoplethysmography methods for recovering pulse signals. A heads up display allows users to view their own heart rate whenever they are wearing the device and the heart rate and heart rate variability of another person simply by looking at them. Cardiolens provides the wearer with a new way to understand physiological signals and has applications in human-computer interaction and in the study of social psychology.
+**  Use of brain computer interface to drive: preliminary results
+Deanna Hood
+Damian Joseph
+Andry Rakotonirainy
+Sridha Sridharan
+Clinton Fookes
+
+This paper reports on the implementation of a non-invasive electroencephalography-based brain-computer interface to control functions of a car in a driving simulator. The system is comprised of a Cleveland Medical Devices BioRadio 150 physiological signal recorder, a MATLAB-based BCI and an OKTAL SCANeR advanced driving experience simulator.
+
+The system utilizes steady-state visual-evoked potentials for the BCI paradigm, elicited by frequency-modulated high-power LEDs and recorded with the electrode placement of Oz-Fz with Fz as ground. A three-class online brain-computer interface was developed and interfaced with an advanced driving simulator to control functions of the car, including acceleration and steering.
+
+The findings are mainly exploratory but provide an indication of the feasibility and challenges of brain-controlled on-road cars for the future, in addition to a safe, simulated BCI driving environment to use as a foundation for research into overcoming these challenges.
+**  Sensors Know Which Photos Are Memorable
+CHI EA '17 Proceedings of the 2017 CHI Conference Extended Abstracts
+on Human Factors in Computing Systems
+
+Soyoung Kim
+Kalenzi Asio Evelyn Patra
+Auk Kim
+Kun-Pyo Lee
+Aviv Segev
+Uichin Lee
+
+The goal of this study is to determine if physiological signals are salient in the detection of memorable personal photos. We begin by collecting physiological sensor data as well as memorability and emotion ratings for photos. We then build a mixed model to evaluate the predictive power of physiological variables on memorability and emotion by examining whether or not the photographer's data is useful for predicting the ratings of the photographer or the ratings of the subjects in the photos. Our results suggest that heart rate and GSR (galvanic skin response) data are the major predictors of memorability for photographers, and that the sensor signals are not particularly useful for predicting memorability ratings of subjects in the photos.
+**  Ifelt: accessing movies through our emotions
+Eva Oliveira
+Pedro Martins
+Teresa Chambel
+
+Films are by excellence the form of art that exploits our affective, perceptual and intellectual activity. Technological developments and the trends for media convergence are turning video into a dominant and pervasive medium and online video is becoming a growing entertainment activity on the web and iTV. The improvement of new techniques for gathering emotional information about videos, both through content analysis or user implicit feedback through user physiological signals, is revealing an unfolding of new ways for exploring emotional information in videos, films or TV series, and brings out new perspectives to personalize user information. We present iFelt - an interactive web video application to classify, access, explore and visualize movies based on their emotional characteristics. In this work, we explore the design and evaluate different ways to access, browse and visualize movies and their contents.
+* Non-Relevant
+* (Secondary Sources)
+** DONE Heart rate variability: origins, methods, and interpretive caveats
+*** Abstract
+CLOSED: [2017-11-21 Tue 19:57]
+1997
+Berntson, G G; Bigger Jr, J T; Eckberg, D L; Grossman, P; Kaufmann, P G; Malik, M; Nagaraja, H N; Porges, S W; Saul, J P; Stone, P H; van der Molen, M W
+
+Components of heart rate variability have attracted considerable attention in pyschology and medicine and have become important dependent measures in pyschophysiology and behavioral medicine. Quantification and interpretation of heart rate variability, however, remain complex issues and are fraught with pitfalls. The present report (a) examines the physiological origins and mechanisms of heart rate variability, (b) considers quantitative approaches to measurement, and (c) highlights important caveats in the interpretation of heart rate variability. Summary guidelines for research in this area are outlined, and suggestions and prospects for future developments are considered.
+** (BOOK) [[https://global.oup.com/academic/product/a-philosophy-of-mass-art-9780198742371?cc=us&lang=en&#][A Philosophy of Mass Art]]
+Noël Carroll
+
+We live in a world surrounded by mass art. Movies, TV, pulp literature, comics, rock music--both broadcast and recorded--surround us everywhere. Yet despite the fact that for the majority of people mass art supplies the primary source of aesthetic experience, the area has been neglected entirely by analytical philosophers of art. 
+
+In this pathbreaking new book, a leading philosopher of art provides an accessible and wide-ranging look at the topic. Noel Carroll shows why philosophers have previously resisted and/or misunderstood mass art and he develops frameworks for understanding the relation of mass art to the emotions, morality, and ideology. He also discusses the major theories of such pivotal figures as Collingwood, Adorno, Benjamin, McCluhan, and Fiske. Mixing conceptual analysis with many vivid examples, Carroll forges the first significant attempt at a philosophy of mass art, concluding that there are strong grounds for approaching mass art in the same fashion as high art.
+
+
+* Rebuttal Draft
+Thank you your time and for the excellent and insightful reviews. We appreciate the summarization and agree that the paper as submitted would benefit from clarification around purpose and particularly framing the primary contribution as methodological. To that end, removing extraneous claims that do not directly address the research question and explicitly detailing the research question would be necessary. The research questions we investigated is 
+
+1. Are there measureable relationships between narrative content and objective measures of player emotional engagement? 
+2. Can narrative content provide a means to map variations in player experience?
+
+The title itself could be better worded to convey both these research questions and the methodological contribution, as the current title is vague and perhaps overreaching in its use of the word "understanding".
+
+We agree that the literature review could be improved by positioning the work within the context of non-narrative game studies that pursue similar outcomes, and include a section below that would replace sections that focus too much on linear narrative. 
+
+Below are details about the proposed changes that we hope will assist in evaluating whether these changes can be completed in the necessary timeframe.
+
+** Clarity of Purpose
+With the research questions above, the primary purpose is to extract more insight from fewer datapoints. Purely quantitative approaches may be possible for companies such as Telltale for released works, but big data is not as available during the early design stages of narrative works. Instead, focus groups can used more effectively and the results assessed more objectively in light of narrative design decisions.
+  
+** Context
+This work is very much positioned within the game experience assessment and measures of engagement line of research, rather than within related work in media studies. We'd like to ammend the literature review to reflect this by providing a better overview of the state of the art in game experience assessment and how it fails when addressing game design decisions for narrative games. 
+
+** Rationale
+- Why is the study needed?
+  - Effects of shorter narrative experiences may be easier to conduct, but they eliminate typical narrative game length works which span from one to two hours. There are no published studies that investigate narrative games longer than 20 minutes.
+- Why was the study designed as it was?
+We'd like to add a section that clarifies several decisions, including the number of subjects, as well as the rationale behind the choice of narrative features:
+- The study was limited by our need to hand-annotate features to fewer subjects, especially with each subject's video footage running longer than an hour and a half.
+- We believed that the quantitative data per subject was sufficient to do analysis on that subject's performance in a variety of situations. (intra-subject analysis)
+- We also realized that the study was preliminary and would likely require both automation and additional measures. Indeed, the labor required for annotation will likely be alleviated by using sensors in the future that would mark points where events occur, and further the software used for conducting the study can be simplified and potentially distributed outside of a controlled lab setting. We are also working on a detailed comparison of the different methods used in the study as a distinct contribution.
+
+- Key decisions made:
+  - Beats
+Beats present a means to "quantize" data according to content. They are more granular than scenes, and we believe they are sufficiently defined to be relatively unambiguous to human annotators. They are also often used by designers to frame and to organize dramatic narrative content, and so would be relevant to a design team employing these methods.
+  - Values
+Based on our background as storywriters and our work in narrative systems, we believe that value represents a fruitful level of abstraction to compare different parts of a story. The types of stories that are within scope are often driven by strong values presented and enacted by the protagonist, as is the case in dramatic television writing.   
+  - Characters
+A traditional opposition to plot, character presents another means for gestalt reactions and impressions (based on appearance, based on minute behaviors and based on performance) for the players to respond and differentiate their reactions. 
+
+We intended to seek out ways to differentiate players in meaningful ways, so these lenses provided a means to both appeal to the intended audience's understanding while seeking explanation behind why certain works achieve wide appeal despite individual differences.
+** 
+
+If given the opportunity to revise, we would certainly correct any typos, incorrect or incomplete references. We believe the approach represents both a valuable contribution and a promising method for research-aware industry practitioners to approach user studies and also lays out several clear research trajectories to build upon either by further evaluating other narrative structures, or further delineating positive and negative affect and player personality variations.
+
+* Rebuttal Issues Addressed
+** Clarity of Purpose
+- Research goals are unclear
+*** Stronger rationale for why studies (like the ones the authors implemented) are needed
+- 
+** Contextualize better
+"More detailed contextualization of the current study's position in relation to similar projects"
+
+- Really think the table summary of the story and main characters is a good idea to orient the reader.
+
+- Suggest changes to literature review that trims elements from ludology vs narratology debate
+
+** Lack of focus
+"R1 and R3 note that the authors can’t seem to settle on what sort of paper they want to present, which results in a lack of focus that seems too incomplete or disjointed to accept (R3)"
+- Remove statements that pertain to understanding or that highlight the results as anything other than promising preliminary results of a hybrid methodology.
+** Why was the study designed as it was?
+"Why were seven participants selected? (R1) Why was the theoretical, narrative-focused lens and/or frameworks used as the foundation for the study? (R3) /More thorough rationale for the study framing and design is needed./"
+** Actionable design implications and next steps for future designer/researcher are unclear.
+- Draft a statement that replaces the analysis section content.
+** Strength of work's contribution
+*** 
+*** 
+
+
+** Unsupported statements
+- Easily fixed (identify the statements and their corrections)
+** 
+
+MR: carefully consider the reviewers’ points related to current structure of the paper, how the research goals for the study can be clarified and contrasted more effectively against prior work, and how the contribution can be strengthened.
+
+* Questions
+- There have been empirical reader response studies of stories in media psychology and in commercial tv production (e.g., at Netflix) as the authors mentioned. How is this work significantly different other than including player choices?
+
+* Criticism
+- 1AC: "they have several reservations about the clarity of purpose and strength of the work’s contribution as currently presented."
+- whether the expected revisions can be tackled effectively enough for the work to live up to its potential in this round of CHI papers.
+- 1AC: "research goals are unclear"
+  - failure to explicitly recognize and unambiguously state the kind of paper it is, which is about prototyping and piloting a new methodology, rather than providing a set of recommendations to designers on how to create emotionally engaging interactive narratives based on generalizable or transferable findings that follow from the application of that methodology.
+  - "First, it is unclear to me what is the research goal in this paper."
+- the two design recommendations don’t seem supported by the foregoing analysis (i.e., this reader couldn’t see a clear connection between the data analysis and the design recommendations, in part because the authors don’t provide detailed information about overall patterns found in the data).
+- Moreover, the lack of any discussion about sample size (why seven human subjects? Can we meaningfully extrapolate from that number?) raises questions about validity.
+- However, the paper is difficult to follow. There are a couple of missing references, missing section references and typos in the paper.
+- Second, the literature review section is by and large disconnected from the rest of the paper. It would be helpful for the *authors to contextualize this paper with related projects.*
+- The paper spends a substantial portion introducing different narrative constructs (e.g., beats, values), but it’s not always clear why the authors decided these frameworks and lenses are the most useful ones for their purpose.
+- Finally, it is unclear what the readers can learn from the analysis of the data.
+
+* Suggestions for Improvement
+- Thus this paper to my mind is ultimately about *illustrating the general contours of a new methodology* and demonstrating its promise. 
+  - The methodology’s fledgling status, however, means that not all the kinks have been worked out in terms of how to meaningfully align data and story features, much less systematically interpret it.
+  - Thus my central recommendation to the authors is to *explicitly reframe the paper along purely methodological lines*, with additional revisions undertaken that are concomitant to that.
+- I’d encourage the authors to create a graphic, diagram, table, or some other representation of the study design, which is highly compelling, but also quite complex and hard to grasp at a gestalt level.
+- I’d also suggest including a table of dramatis personae with a short gloss of each of the major characters, which would make it easier to follow the subsequent discussion related to plot and character (right now, references to characters such as Colin or Faith don’t do a good job of anchoring and supporting the discussion because their names are air-dropped into the text).
+- It would be helpful to explain why it would be a useful thing to the CHI community (e.g., so that we can build a theory on what an ideal trajectory of certain aspects in a story is?)
+-  All reviewers would like stronger rationale for why studies (like the one the authors implemented) are needed (R2), and more detailed contextualization of the current study’s position in relation to similar projects (R1). 
+- In addition, R2 points out that the authors make several statements in the literature review and discussion that are currently unsupported by prior work or evidence from their analysis (e.g., how was the model tested on new input experiences?), and that the authors’ bold claim that emotional response is ‘the core of interactive media and story’ is likely overstating without additional evidence/support.
+
+* Issues
+- There are definitely luminaries who would argue that the ludology vs.
+  narratology debate is not resolved, to be fair.  Just because Espen says
+  something, does not make it a closed question, to be fair.
+
+* Objectives:
+ - 

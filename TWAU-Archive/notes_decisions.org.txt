@@ -1,0 +1,238 @@
+* [0/187] Playthrough. 113 decisions made (x omitted as single-choice actions)
+** 1: Enough Excuses, Toad
+** 0: I don't make the rules
+** 3: ...
+** 1: Why's he so pissed?
+** 0: Matchbook
+** 0: Phone
+** 1: Knock
+** 2: Alright, why'd you hit her?
+** 0: This is your last warning.
+** 1: Be nice or I'll make you wait outside.
+** 2: What are you doing here?
+** 1. What happened?
+** 1. Why was he hitting you? 
+** 2. [Throw him out]
+** 2: Get off the street.
+** 0: Thanks
+** 0: Let her
+** 1: Light her cigarette
+** 0: I'm trying to help you
+** 2: He hit you
+** 1: Wish I could help
+** 1: That's harsh.
+** 0: Door
+** 0: SIGN: Look At
+** 0: Door: ENTER
+** 0: Don't make me come over there
+** 1: Why did you hide?
+** 0: I promise
+** 0: Look at armor
+** 1: Talk to guard
+** 2: Mail: Look at
+** 2: Mail: Check
+** 5: Elevator Button
+** 5: Walk in Elevator
+** 3: ...
+** 0: REFRIGERATOR: Open
+** 0: Walk out of kitchen
+** 1: Bluebeard Folder: look at
+** 1: Chinese Food: Look at
+** 2: Colin: Talk to
+** 2: Colin: Use
+** 1: There's only the one.
+** 0: Don't be dramatic.
+** 1: [Take a sip]
+** 0: Better to be feared...
+** 0: My Job
+** 0: There was a girl...
+** 0: Give Colin a Drink
+** 0: Apartment Door: Open
+** 0: What happened?
+** 0: Jacket: Grab
+** 3: ...
+** 0: Who found her?
+** 0: Mouth: Examine
+** 0: Mouth: Remove item
+** 0: Neck: Examine
+** 0: Head: Examine
+** 1: Leave.
+** 1: This is a message
+** 0: The placement of the head.
+** 2: Just wait a little.
+** 2: I work here.
+** 0: It's my fault.
+** 3: ...
+** 0: Fuck you.
+** 2: What's the wine about?
+** 0: I'm fine.
+** 0: Lamp: Look at
+** 2: Magic Mirror: Talk To
+** 0: Woodsman
+** 2: Snow
+** 3: Bufkin
+** 1: I don't know her name...
+** 3: Exit
+** 5: Tarrot Cards: Use
+** 6: Book of Fables: Examine
+** 4: Red Riding Hood
+** 2: Woodsman
+** 2: Wolf
+** 1: Snow White
+** 4: Dwarves
+** 4: Beauty
+** 4: Beast
+** 4: Three pigs
+** 1: DONKEYSKIN_FATHER
+** 0: Back out
+** 7: Book of Symbols: Examine
+** 0: Symbol: Examine
+** 0: Turn page left.
+** 1: Turn page right.
+** 1: Turn page right.
+** 1: Ring Symbol: Examine
+** 2: Can't rule him out.
+** 2: Magic Mirror: Talk To
+** 2: Faith
+** 1: Prince Lawrence
+** 0: Faith's Father
+** 3: Exit
+** 2: What do you want?
+** 0: Offic Door: Use
+** 0: TOAD's APARTMENT
+** 3: ...
+** 0: Toad's apartment: Enter
+** 0: I saw someone
+** 0: Somebody was in your building.
+** 0: Smashed Lamp: Examine
+** 2: [Walk Downstairs]
+** 1: Stain: Examine
+** 2: Window: Open
+** 0: Window: Examine
+** 1: Fireplace Poker: Pick up
+** 0: I thought you cut your hand.
+** 1: I think someone was attacked.
+** 1: Upstairs
+** 3: Busted Latch: Examine
+** 1: Then why'd you climb in through the window?
+** 2: [Walk downstairs]
+** 0: Dust Ring: Examine
+** 1: The broken lamp was here.
+** 2: The power outlet.
+** 1: When you tell me the truth.
+** 0: You lied, Toad
+** 0: What was he looking for?
+** 0: Mysterious Object: Pick Up
+** 1: It belongs to Lawrence.
+** 0: Let's focus on what we saw in the mirror. 
+** 0: Door: Use
+** 1: Door: Open
+** 0: Lawrence: Use
+** 1: Stay with me, man!
+** 0: Walk to Kitchen
+** 0: Sink: Use
+** 1: Exit back to apartment
+** 1: Lawrence: Use
+** 1: Who did this to you?
+** 0: Yes
+** 1: Knife: Look At
+** 1: Bullet Hole: Examine 
+** 1: Blood: Look At
+** 1: Panel: Look At
+** 1: Panel: Pull
+** 1: Note: Look At
+** 1: Picture: Look At
+** 2: Bullet Hole: Use
+** 2: Lawrence: Examine
+** 0: Gun: Examine
+** 0: Shell Casing: Look At
+** 0: Gun: Pick Up
+** 0: PillS: Examine
+** 0: Fan: Use
+** 0: [Back Out]
+** 2: Book Case: Touch
+** 2: Panel: Open
+** 1: 3C
+** 1: Closet: Examine
+** 0: Why did you run?
+** 0: Then who did?
+** 1: What were you doing back there?
+** 1: Where did they go?
+** 3: Bluebeard
+** 2: Good Job
+** 0: Go ahead.
+** 0: You're doing your best.
+** 2: Always.
+** 0: Woodsman
+** 1: You're your own woman.
+** 0: Gren: Talk To
+** 1: Would a drink help you remember?
+** 0: Pickled Eggs: Examine
+** 0: Cigarette Machine: Examine
+** 0: Cigarette Machine: Buy
+** 0: Bar Stool: Sit Down and Talk
+** 0: Only one next to you.
+** 1: No.
+** 2: Harboring a fugitive could cost you.
+** 0: Saved your beer.
+** 1: That makes two of us.
+** 2: Don't fuck with me...
+** 3: ...
+** 1: So this was a robbery?
+** 0: I already know this story.
+** 0: Lap Dog? Really?
+** 2: [Hit him]
+** 0: [Tear off his arm]
+** 1: [Pay for the drink]
+** 1: He started it.
+** 0: DEE
+
+* Characters
+** Bigby Wolf
+** Doctor Swineheart
+** Faith
+** Crane
+** Nerissa
+** Woodsman
+** Toad
+** Toad's Son
+** Georgie
+* Scenes
+** Apartment w/ Toad
+- Toad -> Protect his apartment, Not get taken to Farm
+- Bigby -> Enforce the rule about Glamour, stop the disturbance
+** Apartment w/ Woodsman
+- Woodsman -> Protect his ego
+- Faith -> ???
+- Bigby -> Stop Woodsman from hurting Faith, find out why
+
+** Outside w/ Faith
+Faith -> Get money
+Faith -> Revenge on Woodsman (success -> axe, take money)
+Bigby -> Get statement on event (fail)
+
+** Beauty
+Beauty -> Not be seen leaving
+Bigby -> ???
+
+** Beast
+Beast -> Find out where Beauty went
+Bigby -> Honor promise to Beauty
+
+** Collin
+Collin -> Have a drink
+Bigby -> Sleep
+
+** Snow
+Snow (Deputy Mayor) -> Keep disturbance quiet
+Bigby -> Find out what is going on
+
+** Discovery of head
+
+* Goals
+- Bigby wants to keep Fabletown safe
+- Bigby wants to keep his job
+- Bigby wants to 
+- Woodsman goal is to be known.
+- 
+ [[Fairmont Chicago Millennium Park]] 

@@ -1,0 +1,49 @@
+* Title
+
+* Abstract
+
+* Introduction
+Interactive narratives engage us with both participation and with traditional storytelling mechanics. We are interested in analyzing the relationship between player behavior, player affect and decision making as it relates to the key narrative content in such works. 
+
+Key to the success of such games are the combination of "good" storytelling and meaningful engagement opportunities that take the work beyond traditional linear story media such as cinema. 
+
+This meaning is achieved through allowing players to express their feelings through the player-character's actions and responses.
+
+The following paper describes combining several methods and techniques to explore player affective response to a particular interactive narrative. 
+
+We conducted a study where 7 players played through the entirety of the first episode of The Wolf Among Us. Of the 7 study participants, 5 were not previously aware of the Fables universe. Of those that were, some of the results were potentially affected by their knowledge of the universe and its characters, including that of Faith and Snow. 
+
+* Related Work
+** Narrative
+- Computational Analysis (
+- Craft
+** Interactive Narrative
+- Choice Poetics
+- Operational Logics
+* Main Section
+** Study Setup
+** Methodology
+*** Video Annotation
+- Recorded use of SEI
+- Recorded each choice point, along with the chosen option
+- Recorded timestamp of key 
+*** Choice Analysis
+* Results
+
+* Discussion
+
+Three story-focused lenses with which to analyze the dataset of player experience:
+
+Value-driven Engagement
+- Players will demonstrate more affect following a scene that involves a value they are interested in
+  - The value pairs that the story exemplifies are Life/Death, Justice/Ego, Duty/Faithfulness
+
+Character-driven Engagement
+- Players will demonstrate more engagement when characters are affected (for good or il)
+  - The characters that most engage the player are Faith, Woodsman, Dee, Toad and Snow.
+
+Plot-driven Engagement
+- Players will be more engaged when key plot points are revealed
+  - The key plot points are in the mystery genre: Crime committed,
+    Suspects identified, Mysterious Characters, Decisions made (which
+    house to visit), 

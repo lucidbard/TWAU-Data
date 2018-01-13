@@ -1,0 +1,40 @@
+{
+    "title": "Free roam",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "opportunities": {
+            "type": "array",
+            "title": "opportunities",
+            "format": "table",
+            "items": {
+                "type": "object",
+                "properties":{
+                    "text":{
+                        "type":"string"
+                    },
+                    "actions":{
+                        "type":"array",
+                        "format":"table",
+                        "items": {
+                            "type":"object",
+                            "properties":{
+                                "action_type":{
+                                    "type":"string"
+                                },
+                                "segment":{
+                                    "type":"integer"
+                                },
+                                "postcondition":{
+                                    "type":"string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

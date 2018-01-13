@@ -1,0 +1,56 @@
+
+Narrative Structure
+
+Ludological Structure
+
+Some segments are exploratory or "exposition" in narrative terms. These are moments where information is delivered, such as backstory or ludic elements such as picking up a matchbook.
+
+Intersection Points: Delivery of key story information, Participation in key beats.
+
+A *kernel choice* is one where the player has meaningfully different outcomes in some decisions rather than others. These are identical between playthroughs for each player, and usually don't vary.
+
+There are exceptions -- A Kernel Choice for Wolf and Toad's relationships is predicated on Wolf's performance in the "Investigation Game" segment.
+
+First or Second: Toad vs Lawrence
+
+Telltale picked these decisions:
+* Did you give Faith your money?
+- Did not give her money - 15.4%
+- Gave her money - 84.6%
+* Did you tell Beast the truth about Beauty?
+- Tried to stay out of it - 22.1%
+- Told Beast the truth - 14.9%
+- (Silent): Let the door slam in his face
+- Lied to Beast - 59.6%
+* Where did you decide to go first?
+- Toad's apartment - 69.4%
+- Prince Lawrence's apartment - 30.6%
+
+* What happened to Prince Lawrence?
+Prevented Lawrence's Death
+*Did not prevent Lawrence's Death*
+He died by his own hand
+* Who is your prime suspect?
+- Prince Lawrence - 4%
+- Woodsman - 17%
+- Tweedle Dee and Tweedle Dum - 15%
+- Bluebeard - 13%
+- Georgie - 22%
+- Said nothing to Snow - 29%
+
+* Who did you arrest?
+- Tweedle Dee - 68.5%
+- Woodsman - 31.5%
+
+* Pull off Grendel's arm
+
+
+* 1
+- Familiar with Fables -- read comics
+- Know a lot of small Fables -- she is the pretty common Fable who if you untie the ribbon, her head falls off.
+* 2
+* 3
+* 4
+* 5
+* 6
+* 7

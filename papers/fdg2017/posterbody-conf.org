@@ -1,0 +1,118 @@
+#+TITLE:  Using Computational Narratology to Analyze Content in Cinematic Choice-Based Adventure Games
+#+SUBTITLE: PhD Advancement Proposal
+#+BIBLIOGRAPHY: ../bibtex/library
+* Story Control Logics
+:PROPERTIES:
+:ID:       tx6har00e8h0@seebright.com
+:END:
+
+Noah Wardrip-Fruin introduced the analytical concept of operational
+logics \cite{Wardrip-fruin} to describe the synergistic relationship
+of abstract process and representational goals. He did so in the
+context of understanding the relationships between surface, process
+and data in the work leading up to the book /Expressive Processing/,
+and described some of the key insights there \cite{Wardrip-Fruin2009}.
+The concept was later formalized and further defined in collaboration
+with Michael Mateas in \cite{Mateas2009b}:
+
+#+BEGIN_QUOTE
+An operational logic defines an authoring (representational)
+strategy, supported by abstract processes or lower-level logics, for
+specifying the behaviors a system must exhibit in order to be
+understood as representing a specified domain to a specified
+audience. \cite{Mateas2009b}
+#+END_QUOTE
+
+Operational logics can be used to precisely model and analyze how an
+author communicates through a set of abstract processes and
+representations an underlying "domain" with an audience. This
+proposal's surface content model depends on the slipperiness of the
+domain of human affairs that is narrative, and how at the same time
+operational logics "determine the state evolution of a system," how
+they specify an abstract model of the underlying system, "with how
+they are understood at a human level," through the proposed encoding
+\cite{Mateas2009b}. Some examples of operational logics that are
+proposed by Wardrip-Fruin include collision logics and dialogue tree
+logics, which reflect certain strategies to manage the content and the
+actual experience of engaging with it \cite{Wardrip-Fruin2009}. As
+long as a particular logic is maintained throughout a work, and that
+logic reflects a systematic application of an underlying process, it
+can be fruitfully analyzed as an operational logic. In this section,
+the operational logics targeted are principally those that control and
+represent the branching of the story and not necessarily logics that
+pertain to any underlying simulation of the story domain. In this way,
+they are not that much different than dialogue tree logics or the use
+of quest flags, and the proposed SIG extension takes advantage of that
+simplicity. The main difference is that the strategy of reflecting the
+choices through interfaces are tied to an underlying time-based
+performance that is critical to the pacing of the dramatic work.
+
+The encoding of the surface representation depends on a model of the
+underlying operations that each of the proposed story control
+logics. These logics occupy the intersection between (graphical)
+interface logics and performance logics, as they provide the player
+with options tied to an underlying content selection architecture as
+well as afford the player a set of performance options that either
+determine or enact the choices.
+
+The state evolution and representational strategy of cinematic
+choice-based adventure games is represented by modeling the following
+*story control logics*:
+
+| Operational Logic Name       | Description                                                 |
+|------------------------------+-------------------------------------------------------------|
+| *1* /Response Selection/     | Language-based menus that reflect player-character options. |
+| *2* /Object-Verb Selections/ | Verb-selection for object or character.                     |
+| *3* /Inventory/              | Objects that either reflect ongoing or past plots           |
+| *4* /Quick-time/             | Affordances that require enactment to proceed               |
+| *5* /"Payoff" Signaling/     | Text that indicates (truthfully or not) underlying state    |
+|                              |                                                             |
+
+There are other operational logics at work, such as collision logics
+and camera control logics, but these don't affect the story structure
+as defined by the SIG. The four above operational logics cover every
+relevant non-linear control mechanism and corresponding
+representation. These logics must be reflected in a surface model in
+order to represent the possible variations. Because of the importance
+of these control logics in determining the surface structure, we will
+review each in the following sections.
+
+** Response Selection
+Response selection is so named because it how a player selects the
+next actions or intent of the character. Like most adventure games,
+the character itself actually carries out the action or dialogue, and
+even sometimes the way a particular choice plays out may differ from
+what was anticipated. The underlying operation is simply one of
+selecting the content to be played.
+
+** Object-Verb Selection
+This logic is a variant on the response selection, except that it
+plays the character interacting with an object instead of interacting
+with a character and often has physical actions instead of dialogue
+options. An example is either knocking or kicking down a door, or
+picking up an object.
+
+** Inventory Logics
+In this logic, the main function is as a flag to whether certain
+content choices are available. Secondarily, it is a reminder of
+important plot threads.
+** Quick-time
+This represents the enactment of the player of a particular situation
+the character is in, often through repeated button presses or through
+a quick decision in a heated moment. Failing these may result in
+replaying from a checkpoint, so most do not branch the story.
+** "Payoff" signaling
+
+This is one of the more complex logics that may not determine
+underlying state at all, but rather simply shaping player expectations
+of how their decision affected agents. It is because of this
+expectation that it needs to be represented as a distinct logic in the
+surface story content, and because it is consistently applied in a way
+that would suggest an underlying model is being affected.
+
+The complexity of navigating the surface content defined by these
+logics and the recorded gameplay motivates the creation of a "story
+browser" tool to aid analyzing the distribution and patterns that the
+content takes. This tool is discussed further in section
+[[id:pc99b2h0i8h0@seebright.com]].
+

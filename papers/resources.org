@@ -1,0 +1,2375 @@
+* Gameography
+** The Wolf Among Us
+* Systems
+* Paper Index
+** FDG 2017 Poster
+** ICIDS 
+
+** ICIDS 2017 Full Paper
+
+*** Last Year Reviews
+The paper proposes a formal coding of the "surface content" for
+interactive narratives. While any effort towards a shared
+formalization of interactive narrative is laudable, we found that the
+paper lacked clarity and had a too restricted theoretical background.
+
+First, the concept of "operational logic", as it is used in the paper
+is fuzzy. It is not to say that this theory is invalid, but normally,
+a theoretical framework should help reading. We feel that it is not
+the case here.
+
+Second, the paper moves from "operational logic" to "story logic",
+without properly explaining what the latter means.
+
+Third, 5 examples of story control logic are provided. It is unclear
+if they are all 5 into one game design, or if an author would choose
+among them. Regarding the first one, it seems under-developed, because
+it does not include the fact that the choices may be presented in
+different ways (either the explicit sentence that will be uttered, or
+a global intention, for example). The description of the Inventory
+Logics is unclear: what is the link between objects in inventories and
+tracking certain content choices?
+
+Fourth, the use of timecodes is confusing. It is said that "the
+gameplay footage cannot be simply mapped to traditional timecodes."
+but the timecodes are still used in the shots and segments. What does
+it refer to? To the timecodes of a specific traversal? Maybe it should
+just be mentioned explicitly.
+
+Fifth, preconditions are mentioned, but not used in the schemas. In
+addition, if precondition are included, are we still talking about
+"surface content"? At the end, what is "surface content"?
+
+Sixth, the authors roughly refer to Mateas and Wardrip-fruin work, but
+as far as choice-based adventure games are concerned, we are dealing
+with hypermedia. A lot of research has been done in this field,
+including in terms of coding (e.g. Amsterdam Hypermedia Model). I
+would encourage authors to step back and look in other but similar
+research areas, in other continents also.
+
+Seventh, SIGs are mentioned a few times (for example "There are other
+operational logics at work, such as collision logics and camera
+control logics, but these don't affect the story structure as defined
+by the SIG."), as if they were a full part of the theoretical
+framework, but they are not introduced in that way.
+
+Eights, from a methodological point of view, a first research question
+is raised, then, in the evaluation part, a revised one is proposed and
+finally, some examples of questions are proposed. It looks like the
+authors are "improvising" their methodology. The research goal and
+questions should be presented beforehand, and the evaluation should
+derive naturally from them (maybe easier to write than do).
+
+To summarize, there is an interesting intention behind this research,
+but the research goals should be clarified, and the scope of
+references enlarged.
+
+*** 
+This paper proposes a representation for the "surface story content"
+in a cinematic choice-based adventure game. It additionally shows a
+tool for browsing these representations, and proposes an evaluation
+strategy.
+
+While it seems the top-level goal of the paper is reasonable, it is
+ extremely unclear to me what the paper contributes. The author
+ presents a set of json-like data structures for encoding the "surface
+ structure" of the game.  It is unclear to me what this approach
+ brings to the table beyond existing approaches for representing the
+ unfolding of interactive narrative games: indeed, there is no review
+ of the prior literature in this area. But surface structure is never
+ clearly defined, and the correspondence between the five necessary
+ operational logics and the json structures is not outlined.  The tool
+ is not explained in any detail or depth, so it is unclear what its
+ capabilities are; it is even unclear if the tool was created by the
+ author. The amount of work required to actually annotate a game using
+ this tool is not explained, and it is also not explained how the
+ author would ensure that all possible choices and paths would be
+ followed: some games will have choices that p!  resent randomly or
+ only under certain circumstances. The proposed evaluation seems to be
+ just a list of questions, with no clear outline of what answers would
+ indicate a successful evaluation.
+
+Minor:
+-abstract: capture --> captures
+-first sentence: Telltale Games --> Telltale Games'
+-shouldn't the sections be numbered? Section numbering appears to begin on page 8
+-first sentence of second section: Telltale Game's --> Telltale Games'
+-last sentence, first para, 2nd section: "...the original media that of..." --> strike "that"?
+-Operational logic table: erroneous forward slashes?
+-the references are a disaster; the urls need to be removed
+*** 
+This paper describes the initial stages of a project whose goal is to
+document the surface structure of multiple "traversals" of an
+interactive game (the wolf among us).  This game is chose because it
+is representative of the larger class of cinematic, branching
+narrative games.
+
+WHile the topic is certainly original and interesting, I have found
+the writing and the structure of the paper very confusing. The problem
+statement is summarized in a single sentence which is unfortunately
+not really comprehensible.  Indeed, it uses terms which are later
+defined.
+
+The paper makes frequent references to David Elson's story intention
+graphs (SIG) but they are not motivated at all.
+
+Sections and paragraphs are not numbered until the last two pages.
+
+Code examples are not explained or commented (what language is bing
+used ?).
+
+The research question is revised at the end, which further increased
+my confusion.
+
+As a result, I was not able to make any sense of this submission and I
+suggest that it needs to be rewritten entirely.
+*** CFP
+TOPIC AREAS
+
+ICIDS welcomes contributions from a large range of fields and
+disciplines related to interactive storytelling. We encourage original
+contributions in the forms of research papers, position papers,
+posters and demonstrations, presenting new scientific results,
+innovative theories, novel technological implementations, case studies
+and creative artistic projects in the field of Interactive Digital
+Storytelling and its possible applications in different domains. We
+particularly welcome research on topics in the following five areas:
+**** BRAVE NEW IDEAS
+We invite papers that explore highly innovative ideas and/or paradigm
+shifts in conventional theory and practice of interactive
+storytelling. 
+
+We seek to draw attention to methods that differ from the state of the
+art in practice or theory and demonstrate potential for changed ways
+of thinking. These papers may not be “complete” in the “traditional”
+manner in the sense that it may not be possible to have experimental
+results comparing other related efforts or that they may not have
+large, publicly available data sets to be used for performance
+comparison.
+
+The aim is to establish a roadmap for the next 5 years as a community
+guideline for the development of the field.
+
+**** THEORETICAL FOUNDATIONS
+
+- The role of the user/reader in interactive storytelling
+
+- The role of the author/designer in interactive storytelling
+
+- Computable narrative models inspired by cognitive science,
+  narratology, drama studies, and related disciplines
+- Theories and aesthetics of interactive storytelling
+
+- Narratology for interactive media
+
+- Disciplinary analysis of interactive storytelling research
+
+**** ANALYSES AND EVALUATION OF SYSTEMS
+
+Methods/Frameworks for testing user experience in interactive storytelling
+Methods/Frameworks for testing story development
+Normative evaluation of interactive storytelling applications
+Case studies, post-mortems and best practices
+**** STORYTELLING TECHNOLOGIES
+
+- Artificial intelligence for story generation and storytelling
+- Authoring modes and tools for interactive digital storytelling, including collaborative authoring
+- Story/world generation and experience management
+- Drama management for interactive narratives
+- Computational understanding, analysis, and summarization of narratives, including natural language processing and computer vision
+- Interactive cinema and television
+- Virtual characters and virtual humans
+- Synthetic actors
+- Novel interaction techniques for storytelling (e.g. sensor or context based input)
+- Novel feedback technologies for narrative environments (e.g. haptics, smell, taste)
+- Non-verbal interactive stories
+- Human-computer interaction with narrative technologies
+- User modeling and narrative user interfaces
+- Augmented and Mixed Reality storytelling systems
+- Media, VR and game technologies for interactive storytelling
+- Narrative-related affect and emotion
+- Narrative presence and engagement in virtual environments
+- Narrative-related affect and emotion
+- Computational creativity in narrative systems
+- Narrative discourse generation
+- Narrative knowledge representation, reasoning, and acquisition
+**** USAGE SCENARIOS AND APPLICATIONS
+- Collaborative storytelling environments and multi-user systems
+- Social, ubiquitous and mobile storytelling
+- Big data and storytelling
+- Interactive narratives in digital games
+- Interactive cinema and television
+- Interactive storyworlds
+- Interactive non-fiction and interactive documentaries
+- Interactive narratives as tools for learning in teaching, e-learning, training and edutainment
+- Interactive narratives used in health, rehabilitation and exercise
+- Interactive storytelling in roleplay, larps, theatre and improvisation
+- Interactive narrative in the real world (live installations)
+- Interactive narratives in museums
+*** The Richness All Around Us: Analyzing Contemporary Commercial Interactive Stories
+- Traditional Approaches
+  - Experimentation
+  - Application to "Toy Domains"
+
+- "Narrative Content Complexity"
+  - Take notion of 
+  - 
+- 
+
+
+*** The Story So Far: Analyzing Efforts and Objectives in Modeling Interactive Stories
+**** 
+Analyze the effort from four perspectives: Methods, goals, change over
+time, and subjects. 
+- Incorporation of player studies.
+
+*** A Survey and Analysis of Research on Modeling Interactive Storytelling and Player Experience 
+- Katherine Isbister
+Methodology
+- Select conferences to consider
+  - INT, CMN, ICIDS, FDG, DIGRA
+- Collect titles. 
+
+Scope: This paper seeks to analyze the efforts across multiple
+communities to define and advance descriptive computational models of
+existing interactive stories. It argues that a plurality of theories
+is in fact healthy and outlines deficiencies observed within the
+research output in the gap between theory and practice.
+
+What survey papers exist Survey Paper
+
+*** Player Modeling
+*** Emotion / Affect
+*** Planning as applied Story Understanding
+*** Interactive & Non-interactive Narrative Modeling
+
+** INT 2017 Short/Full Paper
+** CHI 2018 Full Paper 1
+** CHI 2018 Full Paper 2
+* Corpora
+** DramaBank 
+** Drammar?
+
+A Taxonomy of Interactive Narrative Logics
+
+* Annotated Paperography
+What works contribute which elements? How are they related
+(Methodologically, Research Goals, Motivations, Contributions)
+** Inbox
+*** Representing Ontological Features of Stories Through an Ontological Model
+*** Multimedia tool suite for the visualization of drama heritage metadata
+*** Coupling conceptual modeling and rules for the annotation of dramatic media.
+*** [[chrome-extension://bomfdkbfpdhijjbeoicnfhjbdhncfhig/view.html?mp=y31fyNs4][The Amsterdam hypermedia model: adding time and context to the Dexter model]]
+*** [[id:zzg484x0anh0@seebright.com][Predicting reader response in narrative]]
+*** [[id:bbl8oot0anh0@seebright.com][Where’s the Story? Forms of Interactive Narrative in Current Digital Games and Other Digital Forms]]
+*** [[id:hcm7vxt0anh0@seebright.com][Genres, Structures and Strategies in Interactive Digital Narratives – Analyzing a Body of Works Created in ASAPS]]
+*** [[id:dv3f3tb19nh0@seebright.com][A Call for Emotion Modeling in Interactive Storytelling*]]
+*** Finding Stories in 1,784,532 Events: Scaling Up Computational Models of Narrative
+Marieke van Erp, Antske Fokkens, and Piek Vossen
+**** Abstract
+Information professionals face the challenge of making sense of an
+ever increasing amount of information. Storylines can provide a useful
+way to present relevant information because they reveal explanatory
+relations between events. In this position paper, we present and
+discuss the four main challenges that make it difficult to get to
+these stories and our first ideas on how to start resolving them.
+*** Representing Dramatic Features of Stories through an Ontological Model
+Mario Cataldi, Rossana Damiano, Vincenzo Lombardo, and Antonio Pizzo
+**** Abstract 
+In this paper we present a novel ontology-based model for the
+representation of the dramatic features of narrative media (video,
+text, audio, etc.), focused on the notions of the character’s
+motivated actions.  We describe the theoretical background, composed
+of narratological theories and rational agent theories, that support
+the proposed ontological formalization. We sketch the ontology and an
+encoding example.
+*** Role of Shot Length in Characterizing Tempo and Dramatic Story Sections in Motion Pictures
+*** An Annotated Corpus of Film Dialogue for Learning and Characterizing Character Style
+*** Integrating Commonsense Knowledge into the Semantic Annotation of Narrative Media Objects
+Mario Cataldi1, Rossana Damiano1, Vincenzo Lombardo1, Antonio Pizzo, and Dario Sergi
+**** Abstract
+In this paper we present an innovative approach for semantic
+annotation of narrative media objects (video, text, audio, etc.) that
+integrates vast commonsense ontological knowledge to a novel
+ontologybased model of narrative, Drammar (focused on the dramatic
+concepts of ‘character’ and ‘action’), to permit the annotation of
+their narrative features.
+
+We also describe the annotation workflow and propose a general
+architecture that guides the annotation process and permits
+annotation-based reasoning and search operations. We finally
+illustrate the proposed annotation model through real examples.
+
+Keywords: media annotation, narrative annotation, ontology 
+*** NOVEL APPROACH TO DETERMINING TEMPO AND DRAMATIC STORY SECTIONS IN MOTION PICTURES
+Brett Adamst, Chitra Dora$, Svetha Venkatesht 
+**** Abstract
+This paper presents an original computational approach to extraction
+of movie tempo for deriving story sections and events that convey high
+level semantics of stories portrayed in motion pictures, thus enabling
+better video annotation and interpretation systems. This approach,
+inspired by the existing cinematic conventions known as film grammar,
+uses the attributes of motion and shot length to define and compute a
+novel continuous measure of tempo of a movie. Tempo flow plots are
+derived for several full-length motion pictures and edge detection is
+performed to extract dramatic story sections and events occumng in the
+movie, underlined by their unique tempo. The results confirm reliable
+detection of actual distinct tempo changes and serve as useful index
+into the dramatic development and narration of the story in motion
+pictures.
+*** Semantic annotation of narrative media objects.
+Vincenzo Lombardo · Rossana Damiano
+**** Abstract
+This paper addresses the annotation of the narrative features of media objects.
+Based on a relevant narratological and computational background, we introduce
+an ontology–based model called Drammar, an annotation schema for the narrative
+features of media objects based on Drammar and a software tool, Cinematic, for annotating
+these objects and validating the annotation. Annotated media objects can also
+be automatically edited into sequences, with the twofold goal of testing the validity of
+the annotation – through the reconstruction of the baseline sequence – and exploring
+the possibility of alternative sequences.
+The software tool encodes both the narrative model and the annotation itself in
+ontological format, and relies on external ontologies for representing world knowledge
+and limit the arbitrariness of the annotation.
+The paper opens the way to the design of a general annotation schema for narrative
+multimedia with the long–term goal of building large corpora of annotated video material
+and of bridging the gap between the low–level signal analysis and the high–level
+semantic representation of the narrative content of the media objects.
+Finally, the paper illustrates a few projects elaborated with the Drammar annotation
+and the Cinematic tool, with purposes of artistic research and cross–media
+analysis, that provide an empirical validation of the annotation process.
+*** An intelligent tool for narrative-based video annotation and editing
+Vincenzo Lombardo
+Rossana Damiano
+**** Abstract
+Recently, there has been much development in the annotation and
+automatic editing of video segments. The major issue has been the
+re-use of segments through a number of different editing
+processes. However, the annotation of the story progression through
+video segments has not received much attention. This paper presents an
+intelligent tool for narrativebased annotation and editing of video
+segments.  The annotation schema relies on a formal theory for the
+annotation of story structure in video segments and on a juxtaposition
+engine for the automatic editing. The method has been implemented in a
+software programme that has been employed, in the re-use perspective,
+for artistic applications and, in the analysis perspective, for
+cross-medial comparison of stories.  
+Keywords
+H.5.1 Multimedia Information Systems, 
+H.5.2 User Interfaces, 
+H.5.2.iInteraction styles
+
+** Model Papers (Exceptional papers)
+*** Survey/Theory
+** Dissertations
+*** Modeling Narrative Discourse
+*** Narrative Encoding for Computational Reasoning and Adaptation
+** Story Understanding
+** Video/Hypermedia Annotation
+** Player Experience Assessment
+*** The sensual evaluation instrument: Developing a trans-cultural self-report measure of affect
+Katherine Isbistera,!, Kia Ho¨o¨kb, Jarmo Laaksolahtib, Michael Sharpa
+**** Abstract
+In this paper we describe the development and testing of a tool for self-assessment of affect while interacting with computer systems,
+meant to be used in many cultures. We discuss our research approach within the context of existing cultural, affective and HCI theory,
+and describe testing of its effectiveness in the US and Sweden.
+
+** Player Modeling
+** Computational Models of Narrative
+** Visualizing Narrative
+** Choices & Interactive Narratives
+** Interactive Cinema
+* Annotated Population
+- Who is doing what?
+- Where were they when they did the work depicted in the paper?
+- What other publications were documented on that effort?
+- Where were they at which points?
+- Who are they and who did they work work?
+- What have they studied?
+** Most Important
+*** David Elson
+*** Vincenzo Lombardo
+*** [[https://users.cs.fiu.edu/~markaf/][Mark A. Finlayson]]
+[[file:images/maf.jpg][file:images/maf.jpg]]
+*** Inderjeet Mani
+- [[id:zzg484x0anh0@seebright.com][Predicting reader response in narrative]]
+*** Hartmut Koenitz
+
+** Pablo Gervs
+** Deniz Yuret
+** Floris Bex
+** Steve Corman
+** Barbara Dancygier
+** Hasan Davalcu
+** David Elson
+** Matthew Fay
+** Andrew Gordon
+** Benedikt Lwe
+** Livia Polanyi
+** Emmett Tomai
+** Bart Verheij
+** Patrick Winston
+** R. Michael Young
+** Jan Christoph Meister
+* Annotated Theses
+** Modeling Interactive Narratives
+* Annotated Venugraphy
+  - What are accepted:
+   - Methodologies
+   - Motivations
+   - Evaluations
+Methodology:
+1. Starting from the earliest conference year, add the conference and
+   papers to each.
+2. Add abstracts.
+3. If a paper is relevant, add to paperpile.
+4. Scan references in paper for relevant key papers or venues.
+5. Repeat
+** 2000 International Symposium on Multimedia Information Processing: conference proceedings
+
+** Hypertext
+*** 1997
+**** [[https://www.interaction-design.org/literature/conference/proceedings-of-acm-hypertext-87-conference][Program]]
+***** KMS: A Distributed Hypermedia System for Managing Knowledge in Organizations. 
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 1-20.
+Akscyn, Robert, McCracken, Donald, Yoder, Elise (1987): 
+***** Comprehending Non-Linear Text: The Role of Discourse Cues and Reading Strategies. 
+Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 109-120.
+Charney, Davida (1987): 
+***** The Notes Program: A Hypertext Application for Writing from Source Texts.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 121-141.
+Neuwirth, Christine, Kaufer, David S., Chimera, Rick, Gillespie, Terilyn (1987): 
+***** Hypertext and the New Oxford English Dictionary.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 143-153.
+Raymond, Darrell R., Tompa, Frank Wm. (1987): 
+***** Content Oriented Relations between Text Units - A Structural Model for Hypertexts.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 155-174.
+Hammwohner, Rainer, Thiel, Ulrich (1987): 
+***** SuperBook: An Automatic Tool for Information Exploration - Hypertext?.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 175-188.
+Remde, Joel R., Gomez, Louis M., Landauer, Thomas K. (1987): 
+***** User Interface Design for the Hyperties Electronic Encyclopedia.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 189-194.
+Shneiderman, Ben (1987): 
+***** A Hypertext Writing Environment and its Cognitive Basis.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 195-214.
+Smith, John B., Weiss, Stephen, Ferguson, Gordon J. (1987): 
+***** HAM: A General-Purpose Hypertext Abstract Machine.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 21-32.
+Campbell, Brad, Goodman, Joseph M. (1987): 
+***** Constraint-Based Hypertext for Argumentation.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 215-245.
+Smolensky, Paul, Bell, Brigham, Fox, Barbara, King, Roger, Lewis, Clayton H. (1987): 
+***** gIBIS: A Hypertext Tool for Team Design Deliberation.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 247-251.
+Conklin, Jeff, Begeman, Michael L. (1987): 
+***** Exploring Representation Problems Using Hypertext.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 253-268.
+Marshall, Catherine C. (1987): 
+***** Thoth-II: Hypertext with Explicit Semantics.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 269-289.
+Collier, George (1987): 
+***** The Architecture of Static Hypertexts.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 291-306.
+Oren, Tim (1987): 
+***** Document Examiner: Delivery Interface for Hypertext Documents.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 307-323.
+Walker, Janet H. (1987): 
+***** The Hype in Hypertext: A Critique.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 325-330.
+Raskin, Jef (1987): 
+***** Turning Ideas into Products: The Guide System.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 33-40.
+Brown, Peter J. (1987): 
+***** Relationally Encoded Links and the Rhetoric of Hypertext.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 331-343.
+Landow, George P. (1987): 
+***** Reflections on NoteCards: Seven Issues for the Next Generation of Hypermedia Systems.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 345-365.
+Halasz, Frank (1987): 
+***** Developing and Distributing Hypertext Tools: Legal Inputs and Parameters.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 367-374.
+Jones III, Henry W. (1987): 
+***** Abstraction Mechanisms in Hypertext.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 375-395.
+Garg, Pankaj K. (1987): 
+***** Manipulating Source Code in DynamicDesign.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 397-408.
+Bigelow, James, Riley, Victor (1987): 
+***** On Designing Intelligent Hypertext Systems for Information Management in Software Engineer.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 409-432.
+Garg, Pankaj K., Scacchi, Walt (1987): 
+***** Hypertext and Creative Writing.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 41-50.
+Bolter, Jay David, Joyce, Michael (1987): 
+***** From the Old to the New: Integrating Hypertext into Traditional Scholarship.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 51-55.
+Crane, Gregory (1987): 
+***** Searching for Information in a Hypertext Medical Handbook.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 57-66.
+Frisse, Mark E. (1987): 
+***** Hypertext and Pluralism: From Lineal to Non-Lineal Thinking.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 67-88.
+Beeman, William, Anderson, Kenneth M., Bader, Gail, Larkin, James, McClard, Anne, McQuillan, Patrick, Shields, Mark (1987): 
+***** Hypertext Habitats: Experiences of Writers in NoteCards.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. 89-108.
+Trigg, Randall H., Irish, Peggy M. (1987): 
+***** All for One and One for All.
+In: Weiss, Stephen, Schwartz, Mayer (eds.) Proceedings of ACM Hypertext 87 Conference November 13-15, 1987, Chapel Hill, North Carolina. pp. v-vii.
+Nelson, Theodor H. (1987): 
+*** 1999
+**** Program
+***** Scripted Documents: A Hypermedia Path Mechanism.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 1-14.
+Zellweger, Polle T. (1989): 
+***** JANUS: Integrating Hypertext with a Knowledge-Based Design Environment.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 105-117.
+Fischer, Gerhard, McCall, Raymond, Morch, Anders (1989): 
+***** Towards an Integrated Maintenance Advisor.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 119-127.
+Hayes, Phil, Pepper, Jeff (1989): 
+***** Distributed Hypertext for Collaborative Research: The Virtual Notebook System.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 129-135.
+Shipman III, Frank M., Chaney, R. Jesse, Gorry, G. Anthony (1989): 
+***** Sun's Link Service: A Protocol for Open Linking.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 137-146.
+Pearl, Amy (1989): 
+***** A Visual Representation for Knowledge Structures.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 147-158.
+Travers, Michael (1989): 
+***** Guided Tours and On-Line Presentations: How Authors Make Existing Hypertext Intelligible f.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 15-26.
+Marshall, Catherine C., Irish, Peggy M. (1989): 
+***** Using Hypertext in a Law Firm.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 159-167.
+Yoder, Elise, Wettach, Thomas C. (1989): 
+***** Hypertext Challenges in the Auditing Domain.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 169-180.
+DeYoung, Laura (1989): 
+***** Computational Hypertext in Biological Modelling.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 181-197.
+Schnase, John L., Leggett, John (1989): 
+***** Information Retrieval from Hypertext: Update on the Dynamic Medical Handbook Project.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 199-212.
+Frisse, Mark E., Cousins, Steve (1989): 
+***** A Retrieval Model for Incorporating Hypertext Links.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 213-224.
+Croft, W. Bruce, Turtle, Howard (1989): 
+***** The Use of Cluster Hierarchies in Hypertext Information Retrieval.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 225-237.
+Crouch, Donald B., Crouch, Carolyn J., Andreas, Glenn (1989): 
+***** The Matters that Really Matter for Hypertext Usability.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 239-248.
+Nielsen, Jakob (1989): 
+***** Expanding the Notion of Links.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 249-257.
+DeRose, Steven J. (1989): 
+***** Hypertext and "the Hyperreal".
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 259-267.
+Moulthrop, Stuart (1989): 
+***** Expressing Structural Hypertext Queries in GraphLog.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 269-292.
+Consens, Mariano P., Mendelzon, Alberto O. (1989): 
+***** Programmable Browsing Semantics in Trellis.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 27-42.
+Furuta, Richard, Stotts, P. David (1989): 
+***** VISAR: A System for Inference and Navigation in Hypertext.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 293-304.
+Clitherow, Peter, Riecken, Doug, Muller, Michael J. (1989): 
+***** What To Do When There's Too Much Information.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 305-318.
+Lesk, Michael E. (1989): 
+***** The Role of External Representations in the Writing Process: Implications for the Design o.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 319-341.
+Neuwirth, Christine, Kaufer, David S. (1989): 
+***** From Ideas and Arguments to Hyperdocuments: Travelling through Activity Spaces.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 343-364.
+Streitz, Norbert A., Hannemann, Jorg, Thuring, Manfred (1989): 
+***** InterNote: Extending a Hypermedia Framework to Support Annotative Collaboration.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 365-378.
+Catlin, Timothy, Bush, Paulette, Yankelovich, Nicole (1989): 
+***** Interchanging Hypertexts.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 379-381.
+Akscyn, Robert, Halasz, Frank, Oren, Tim, Riley, Victor, Welch, Lawrence (1989): 
+***** Hypertext, Narrative, and Consciousness.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 383-384.
+Joyce, Michael, Kaplan, Nancy, McDaid, John, Moulthrop, Stuart (1989): 
+***** Lessons Learned from the ACM Hypertext on Hypertext Project.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 385-386.
+Rous, Bernard, Shneiderman, Ben, Yankelovich, Nicole, Yoder, Elise (1989): 
+***** Indexing and Hypertext.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 387-390.
+Bernstein, Mark, Critz, James, Mulvany, Nancy, Simpson, Rosemary M., Leunen, Mary-Claire van (1989): 
+***** Expert Systems and Hypertext.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 391-392.
+Bieber, Michael, Feiner, Steven K., Frisse, Mark, Hayes, Phil, Peper, Gerri, Scacchi, Walt (1989): 
+***** Hypertext and Higher Education: A Reality Check.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 393.
+Ehrmann, Stephen C., Erde, Steven, Morrell, Kenneth, Weissman, Ronald F. E. (1989): 
+***** Hypertext and Software Engineering.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 395-396.
+Balzer, Robert, Begeman, Michael L., Garg, Pankaj K., Schwartz, Mayer, Shneiderman, Ben (1989): 
+***** Cognitive Aspects of Designing Hypertext Systems.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 397.
+Baird, Pat, Egan, Dennis E., Kintsch, Walter, Smith, John, Streitz, Norbert A. (1989): 
+***** Confessions -- What's Wrong with Our Systems.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 399.
+Halasz, Frank, McCracken, Donald, Meyrowitz, Norman, Pearl, Amy, Shneiderman, Ben (1989): 
+***** Hypermedia Topologies and User Navigation.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 43-50.
+Parunak, H. Van Dyke (1989): 
+***** Design Issues for Multi-Document Hypertexts.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 51-60.
+Glushko, Robert J. (1989): 
+***** Asynchronous Design/Evaluation Methods for Hypertext Technology Development.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 61-81.
+Perlman, Gary (1989): 
+***** Towards a Design Language for Representing Hypermedia Cues.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 83-92.
+Evenson, Shelley, Rheinfrank, John, Wulff, Wendie (1989): 
+***** Facilitating the Development of Representations in Hypertext with IDE.
+In: Halasz, Frank, Meyrowitz, Norman (eds.) Proceedings of ACM Hypertext 89 Conference November 5-8, 1989, Pittsburgh, Pennsylvania. pp. 93-104.
+Jordan, Daniel S., Russell, Daniel M., Jensen, Anne-Marie S., Rogers, Russell A. (1989): 
+**** 
+** ICVS
+*** 2001
+**** TODO [[https://link-springer-com.oca.ucsc.edu/book/10.1007%252F3-540-45420-9][Program]]
+***** New Techniques
+****** Under Construction in Europe: Virtual and Mixed Reality for a Rich Media Experience
+Eric Badiqué
+****** Generation of True 3D Films
+Jean-Christophe Nebel
+****** Spatial Sound Enhancing Virtual Story Telling
+David Murphy, Ian Pitt
+****** The VISIONS Project
+Olivier Balet, Paul Kafno, Fred Jordan, Tony Polichroniadis
+****** Programming Agent with Purposes: Application to Autonomous Shooting in Virtual Environment
+Pierre-Alexandre Favier, Pierre De Loor, Jacques Tisseau
+****** Interactive Immersive Transfiction
+Alok Nandi, Xavier Marichal
+***** Authoring Tools
+****** Interactive Storytelling: People, Stories, and Games
+Andrew Glassner
+****** An Authoring Tool for Intelligent Educational Games
+Massimo Zancanaro, Alessandro Cappelletti, Claudio Signorini, Carlo Strapparava
+****** Generation and Implementation of Mixed-Reality, Narrative Performances Involving Robotic Actors
+Nikitas M. Sgouros, Sophia Kousidou
+***** A New Form of Narration
+****** Film and the Development of Interactive Narrative
+Andy Clarke, Grethe Mitchell
+****** Virtual Storytelling as Narrative Potential: Towards an Ecology of Narrative
+Clive Fencott
+****** Adaptive Narrative: How Autonomous Agents, Hollywood, and Multiprocessing Operating Systems Can Live Happily Ever After
+Jay Douglas, Jonathan Gratch
+***** Virtual Characters
+****** Learning in Character: Building Autonomous Animated Characters That Learn What They Ought to Learn
+Bruce M. Blumberg
+****** Real Characters in Virtual Stories
+Isabel Machado, Ana Paiva, Paul Brna
+****** Real-Time Character Animation Using Multi-layered Scripts and Spacetime Optimization
+Eric Menou, Vincent Bonnafous, Jean-Pierre Jessel, René Caubet
+****** Characters in Search of an Author: AI-Based Virtual Storytelling
+Marc Cavazza, Fred Charles, Steven J. Mead
+****** Virtual Agents’ Self-Perception in Story Telling
+Eric Maffre, Jacques Tisseau, Marc Parenthoёn
+***** Applications
+****** Reflections from a Hobby Horse
+Paul Kafno
+****** DocToon© — A Mediator in the Hospital of the XXIst Century
+Benoît Labaye, Nadia Guérin, Sébastien Dohogne
+** ICIDS
+*** 1st 2008 
+**** [[https://link-springer-com.oca.ucsc.edu/book/10.1007%252F978-3-540-89454-4][Program]]
+***** Future Perspectives on Interactive Digital Storytelling (Keynotes)
+****** Embracing the Combinatorial Explosion: A Brief Prescription for Interactive Story R&D
+Andrew Stern
+****** Interactive Narrative, Plot Types, and Interpersonal Relations
+Marie-Laure Ryan
+****** The IRIS Network of Excellence: Integrating Research in Interactive Storytelling
+Marc Cavazza, Stéphane Donikian, Marc Christie, Ulrike Spierling, Nicolas Szilas, Peter Vorderer et al.
+***** Interactive Storytelling Applications
+****** Mobile Urban Drama – Setting the Stage with Location Based Technologies
+Frank Allan Hansen, Karen Johanne Kortbek, Kaj Grønbæk
+****** Say Anything: A Massively Collaborative Open Domain Story Writing Companion
+Reid Swanson, Andrew S. Gordon
+****** Locating Drama: A Demonstration of Location-Aware Audio Drama
+Nye Parry, Helen Bendon, Stephen Boyd Davis, Magnus Moar
+****** Lies and Seductions
+Petri Lankoski, Tommi Horttana
+****** Animation-Based Interactive Storytelling System
+Kaoru Sumi
+****** Dear Esther: An Interactive Ghost Story Built Using the Source Engine
+Dan Pinchbeck
+****** Walking the Edit – A Research Project of the Master Cinema Network in Switzerland
+Ulrich Fischer
+***** Virtual Characters and Agents
+****** 3D Immersion in Virtual Agents Education
+Cyril Brom, Jakub Gemrot, Ondřej Burkert, Rudolf Kadlec, Michal Bída
+****** Exploring Non-verbal Behavior Models for Believable Characters
+Magy Seif El-Nasr, Huaxin Wei
+****** Revisiting Character-Based Affective Storytelling under a Narrative BDI Framework
+Federico Peinado, Marc Cavazza, David Pizzi
+****** VirtualActor: Endowing Virtual Characters with a Repertoire for Acting
+Ido A. Iurgel
+****** Steps towards a Generic Interface between Interactive Storytelling Applications and Character Animation Engines
+Sebastian A. Weiß, Florian Berger, Alexander Marbach, Wolfgang Müller
+***** User Experience and Dramatic Immersion
+****** Looking at the Interactive Narrative Experience through the Eyes of the Participants
+David Milam, Magy Seif El-Nasr, Ron Wakkary
+****** Play and Narration as Patterns of Meaning Construction: Theoretical Foundation and Empirical Evaluation of the User Experience of Interactive Films
+Regina Friess
+****** Trying to Get Trapped in the Past – Exploring the Illusion of Presence in Virtual Drama
+Georg Struck, Ralf Böse, Ulrike Spierling
+****** The Functions of Music in Interactive Media
+Axel Berndt, Knut Hartmann
+****** Adaptive Musical Expression from Automatic Realtime Orchestration and Performance
+Axel Berndt, Holger Theisel
+***** Architectures for Story Generation
+****** Narrative Generation for Suspense: Modeling and Evaluation
+Yun-Gyung Cheong, R. Michael Young
+****** A Use of Flashback and Foreshadowing for Surprise Arousal in Narrative Using a Plan-Based Approach
+Byung-Chull Bae, R. Michael Young
+****** Story Planning with Vignettes: Toward Overcoming the Content Production Bottleneck
+Mark O. Riedl, Neha Sugandh
+****** Schemas in Directed Emergent Drama
+Maria Arinbjarnar, Daniel Kudenko
+****** Developing a Drama Management Architecture for Interactive Fiction Games
+Santiago Ontañón, Abhishek Jain, Manish Mehta, Ashwin Ram
+****** Planning and Interaction Levels for TV Storytelling
+Angelo E. M. Ciarlini, Marcelo M. Camanho, Thiago R. Dória, Antonio L. Furtado, Cesar T. Pozzer, Bruno Feijó
+****** Exploiting Structure and Conventions of Movie Scripts for Information Retrieval and Text Mining
+Arnav Jhala
+****** Generation of Dilemma-Based Narratives: Method and Turing Test Evaluation
+Heather Barber, Daniel Kudenko
+***** Models for Drama Management and Interacting with Stories
+****** Emergent Stories Facilitated
+Rui Figueiredo, Antonio Brisson, Ruth Aylett, Ana Paiva
+****** Making Stories Player-Specific: Delayed Authoring in Interactive Storytelling
+David Thue, Vadim Bulitko, Marcia Spetch
+****** Verbal Communication of Story Facilitators in Multi-player Role-Playing Games
+Anders Tychsen, Thea Brolund, Michael Hitchens
+****** Improvisation and Performance as Models for Interacting with Stories
+Joshua Tanenbaum, Karen Tanenbaum
+****** Let’s Pretend I Had a Sword
+Ivo Swartjes, Edze Kruizinga, Mariët Theune
+****** On the Use of Computational Models of Influence for Managing Interactive Virtual Experiences
+David L. Roberts, Charles Isbell, Mark Riedl, Ian Bogost, Merrick L. Furst
+***** Authoring and Creation of Interactive Narratives
+****** Purposeful Authoring for Emergent Narrative
+Sandy Louchart, Ivo Swartjes, Michael Kriegel, Ruth Aylett
+****** From Debugging to Authoring: Adapting Productivity Tools to Narrative Content Description
+David Pizzi, Marc Cavazza
+****** PRISM: A Framework for Authoring Interactive Narratives
+Yun-Gyung Cheong, Yeo-Jin Kim, Wook-Hee Min, Eok-Soo Shim, Jin-Young Kim
+****** Tales for the Many: Process and Authorial Control in Multi-player Role-Playing Games
+Anders Tychsen
+****** An Intelligent Plot-Centric Interface for Mastering Computer Role-Playing Games
+Carlos León, Federico Peinado, Álvaro Navarro, Héctor Cortiguera
+****** StoryTec: A Digital Storytelling Platform for the Authoring and Experiencing of Interactive and Non-linear Stories
+Stefan Göbel, Luca Salvatore, Robert Arthur Konrad, Florian Mehm
+****** Workshop: Impro Theatre
+Dagmar Dörger, Martin Geisler
+****** Workshop: Pen-and-Paper Role-Playing
+Florian Berger, Alexander Marbach
+****** Workshop and Panel: The Authoring Process in Interactive Storytelling
+Ulrike Spierling, Ido Iurgel
+*** 2nd 2009
+*** 3rd 2010
+**** [[https://link-springer-com.oca.ucsc.edu/book/10.1007%252F978-3-642-16638-9#toc][Program]]
+**** Keynotes
+***** The Authoring Challenge in Interactive Storytelling
+Michael Mateas
+***** From a Winter’s Night to a Dragon Age
+Alex Whittaker
+***** Designing Social Worlds - On Intrigue and Interaction in Live Action Role Playing Games (LARPS)
+Carl Heath
+**** Characters and Decision Making
+***** MIST: An Interactive Storytelling System with Variable Character Behavior
+Richard Paul, Darryl Charles, Michael McNeill, David McSherry
+***** Importance of Well-Motivated Characters in Interactive Narratives: An Empirical Evaluation
+Mei Si, Stacy Marsella, David Pynadath
+***** “I Want to Slay That Dragon!” - Influencing Choice in Interactive Storytelling
+Rui Figueiredo, Ana Paiva
+**** Story Evaluation and Analysis
+***** Measuring User Responses to Interactive Stories: Towards a Standardized Assessment Tool
+Ivar E. Vermeulen, Christian Roth, Peter Vorderer, Christoph Klimmt
+***** One Tool-Many Paradigm: Creativity and Regularity in Youngsters’ Hyperstories
+Franca Garzotto, Eliana Herrero, Fernando Salgueiro
+***** Exploring Narrative Interpretation and Adaptation for Interactive Story Creation
+Ulrike Spierling, Steve Hoffmann
+***** Narrative Annotation and Editing of Video
+Vincenzo Lombardo, Rossana Damiano
+**** Story Generation
+***** A Story to Go, Please
+Frank Nack, Abdallah El Ali, Philo van Kemenade, Jan Overgoor, Bastiaan van der Weij
+***** Threading Facts into a Collective Narrative World
+Silvia Likavec, Ilaria Lombardi, Alberto Nantiat, Claudia Picardi, Daniele Theseider Dupré
+***** Learning Story Marketing through Practical Experience of Story Creation System
+Kaoru Sumi
+***** Enhancing Real-Time Sports Commentary Generation with Dramatic Narrative Devices
+Martin Rhodes, Simon Coupland, Tracy Cruickshank
+***** Zuzie: Collaborative Storytelling Based on Multiple Compositions
+Yoshiyuki Nakamura, Maiko Kobayakawa, Chisato Takami, Yuta Tsuruga, Hidekazu Kubota, Masahiro Hamasaki et al.
+***** An Interactive Documentary Manifesto
+Andre Almeida, Heitor Alvelos
+**** Arts and Humanities
+***** Rhetorics of the Interactive 3D Installation “Virtuelle Mauer/ReConstructing the Wall”
+Tamiko Thiel, Teresa Reuter
+***** From Physical to Non-material Art – Design Choices of the Digital Artist
+Teemu Korpilahti
+***** The iLand of Madeira Location Aware Multimedia Stories
+Mara Dionisio, Valentina Nisi, Jos P. van Leeuwen
+**** Narrative Theories and Modelling
+***** Modeling of Interactive Storytelling and Validation of Scenario by Means of Linear Logic
+Kim Dung Dang, Ronan Champagnat, Michel Augeraud
+***** An Analysis of Narrative Moves in Improvisational Theatre
+Allan Baumer, Brian Magerko
+***** Towards a Theoretical Framework for Interactive Digital Narrative
+Hartmut Koenitz
+**** Systems
+***** A Data-Driven Case-Based Reasoning Approach to Interactive Storytelling
+Reid Swanson, Andrew S. Gordon
+***** Something’s Gotta Give - Towards Distributed Autonomous Story Appraisal in Improv
+António Brisson, Ana Paiva
+***** A Simple Intensity-Based Drama Manager
+Christopher Ramsley, Matthew Fugere, Randi Pawson, Charles Rich, Dean O’Donnell
+**** Applications
+***** Player Agency and the Relevance of Decisions
+David Thue, Vadim Bulitko, Marcia Spetch, Trevon Romanuik
+***** Interactive Storytelling in Academic Teaching
+Wolfgang Heiden, Matthias Räder, Eric Fassbender
+***** Teaching English as a Second Language Utilizing Authoring Tools for Interactive Digital Storytelling
+Wolfgang Müller, Ido Iurgel, Nuno Otero, Ute Massler
+**** Posters
+***** Textual vs. Graphical Interaction in an Interactive Fiction Game
+Manish Mehta, Andrea Corradini, Santiago Ontañón, Peter Juel Henrichsen
+Motivations for Rereading in Interactive Stories: A Preliminary Investigation
+***** The Haiti Earthquake Experience: A Case Study
+Michael Gibson, President Zapdramatic
+***** First Person Victim: Developing a 3D Interactive Dramatic Experience
+Henrik Schoenau-Fog, Luis Emilio Bruni, Faysal Fuad Khalil, Jawid Faizi
+***** Combining Explicit and Implicit Interaction Modes with Virtual Characters in Public Spaces
+Pedro Ribeiro, Tiago Silva, Rui José, Ido Iurgel
+***** Louis, Mr. Dog and Rabbit: Metalepsis in Interactive Narrative
+Stuart Jones
+Automated Storytelling in Sports: A Rich Domain to Be Explored
+Greg Lee, Vadim Bulitko
+Pages 252-255
+PDF
+Level-of-Detail Stories as a Virtual Museum of a Movie
+Eliška Pätoprstá, Elena Šikudová, Andrej Ferko
+Pages 256-259
+PDF
+Establishing Communication Channels for Digital Storytelling Applications
+David Oyarzun, María del Puy Carretero, Andoni Mujika, Aitor Arrieta
+Pages 260-263
+PDF
+Agency and the Art of Interactive Digital Storytelling
+Noam Knoller
+Pages 264-267
+PDF
+Realism and Virtuality: Carmageddon as Contemporary Simulacrum Model
+Katarina Peović Vuković
+Pages 268-270
+*** 5th 2012
+**** [[https://link-springer-com.oca.ucsc.edu/book/10.1007%252F978-3-642-34851-8?page=1#toc][Program]]
+***** Theory and Aesthetics
+****** Suspending Virtual Disbelief: A Perspective on Narrative Coherence
+Karhulahti, Veli-Matti
+****** Four Quantitative Metrics Describing Narrative Conflict
+Ware, Stephen G. (et al.)
+****** The Expressive Space of IDS-as-Art
+Knoller, Noam
+****** Aporia – Exploring Continuation Desire in a Game Focused on Environmental Storytelling
+Bevensee, Sebastian Hurup (et al.)
+***** Authoring Tools and Applications
+****** Digital Interactive Narrative Tools for Facilitating Communication with Children during Counseling: A Case for Audiology
+Baceviciute, Sarune (et al.)
+****** Who Poisoned Hugh? - The STAR Framework: Integrating Learning Objectives with Storytelling
+Molnar, Andreea (et al.)
+****** Structural Writing, a Design Principle for Interactive Drama
+Szilas, Nicolas (et al.)
+****** Genres, Structures and Strategies in Interactive Digital Narratives – Analyzing a Body of Works Created in ASAPS
+:PROPERTIES:
+:ID:       hcm7vxt0anh0@seebright.com
+:END:
+Koenitz, Hartmut (et al.)
+***** Evaluation and User Experience Reports
+****** Project Aporia – An Exploration of Narrative Understanding of Environmental Storytelling in an Open World Scenario
+Bevensee, Sebastian Hurup (et al.)
+****** Coffee Tables and Cryo Chambers: A Comparison of User Experience and Diegetic Time between Traditional and Virtual Environment-Based Roleplaying Game Scenarios
+Temte, Bjoern Flindt (et al.)
+****** Achieving the Illusion of Agency
+Fendt, Matthew William (et al.)
+****** Designing an Interdisciplinary User Evaluation for the Riu Computational Narrative System
+Zhu, Jichen
+***** Virtual Characters and Agents
+****** Distributed Drama Management: Beyond Double Appraisal in Emergent Narrative
+Weallans, Allan (et al.)
+****** Backstory Authoring for Affective Agents
+Rank, Stefan (et al.)
+****** Emotional Appraisal of Moral Dilemma in Characters
+Battaglino, Cristina (et al.)
+****** Laugh To Me! Implementing Emotional Escalation on Autonomous Agents for Creating a Comic Sketch
+Carvalho, André (et al.)
+***** New Storytelling Modes
+****** 3D Simulated Interactive Drama for Teenagers Coping with a Traumatic Brain Injury in a Parent
+Habonneau, Nicolas (et al.)
+****** Interactive Video Stories from User Generated Content: A School Concert Use Case
+Frantzis, Michael (et al.)
+****** Exploring Body Language as Narrative Interface
+Álvarez, Nahum (et al.)
+****** Reading Again for the First Time: A Model of Rereading in Interactive Stories
+Mitchell, Alex (et al.)
+***** Workshops
+****** Where’s the Story? Forms of Interactive Narrative in Current Digital Games and Other Digital Forms
+:PROPERTIES:
+:ID:       bbl8oot0anh0@seebright.com
+:END:
+Koenitz, Hartmut (et al.)
+****** Sharing Interactive Digital Storytelling Technologies II
+Szilas, Nicolas (et al.)
+****** Nordic Roleplaying Games – The Narrative Approach: A Practical Introduction
+Temte, Bjoern Flindt (et al.)
+*** 6th 2013
+**** [[https://link-springer-com.oca.ucsc.edu/book/10.1007%252F978-3-319-02756-2][Program]]
+***** Modeling Foreshadowing in Narrative Comprehension for Sentimental Readers
+Bae, Byung-Chull (et al.)
+***** Narrative Intelligibility and Closure in Interactive Systems
+Bruni, Luis Emilio (et al.)
+***** On Games and Links: Extending the Vocabulary of Agency and Immersion in Interactive Narratives
+Mason, Stacey
+***** The Visual Construction of Narrative Space in Video Games
+Is̨ığan, Altuğ
+***** Video Game Mise-En-Scene Remediation of Cinematic Codes in Video Games
+Girina, Ivan
+***** Mapping the Evolving Space of Interactive Digital Narrative - From Artifacts to Categorizations
+Koenitz, Hartmut (et al.)
+***** Conceptualizing Productive Interactivity in Emergent Narratives
+Bevensee, Sebastian Hurup (et al.)
+***** Suitability of Modelling Context for Use within Emergent Narrative
+Truesdale, John (et al.)
+***** Production and Delivery of Interactive Narratives Based on Video Snippets
+Müller, Wolfgang (et al.)
+***** Telling Stories on the Go: Lessons from a Mobile Thematic Storytelling System
+Mitchell, Alex (et al.)
+***** Towards Automatic Story Clustering for Interactive Narrative Authoring
+Bída, Michal (et al.)
+***** Breaking Points ― A Continuously Developing Interactive Digital Narrative
+Koenitz, Hartmut (et al.)
+***** The Role of Gender and Age on User Preferences in Narrative Experiences
+Garber-Barron, Michael (et al.)
+***** Constructing and Connecting Storylines to Tell Museum Stories
+Mulholland, Paul (et al.)
+***** Night Shifts – An Interactive Documentary for the iPad
+Zimper, M. (et al.)
+***** SimDate3D – Level Two
+Bída, Michal (et al.)
+***** Acting, Playing, or Talking about the Story: An Annotation Scheme for Communication during Interactive Digital Storytelling
+Theune, Mariët (et al.)
+***** Performative Authoring: Nurturing Storytelling in Children through Imaginative Enactment
+Chu, Sharon Lynn (et al.)
+***** Player Perspectives to Unexplained Agency-Related Incoherence
+Pirtola, Miika (et al.)
+***** Breaching Interactive Storytelling’s Implicit Agreement: A Content Analysis of Fac̨ade User Behaviors
+Roth, Christian (et al.)
+***** Satire, Propaganda, Play, Storytelling. Notes on Critical Interactive Digital Narratives
+Ferri, Gabriele
+***** Silent Hill 2 and the Curious Case of Invisible Agency
+S̨engün, Sercan
+***** The Elements of a Narrative Environment
+Grinder-Hansen, Arne (et al.)
+***** Generating Different Story Tellings from Semantic Representations of Narrative
+Rishes, Elena (et al.)
+***** Theoretical Considerations towards Authoring Emergent Narrative
+Suttie, Neil (et al.)
+***** Generating Stories with Morals
+Sarlej, Margaret (et al.)
+***** Metrics for Character Believability in Interactive Narrative
+Gomes, Paulo (et al.)
+***** Fully-Automatic Interactive Story Design from Film Scripts
+Munishkina, Larissa (et al.)
+***** Storytelling and the Use of Social Media in Digital Art Installations
+Jorge, Clinton (et al.)
+***** Faceless Patrons – An Augmented Installation Exploring 419-Fictional Narratives
+Zingerle, Andreas (et al.)
+***** Minun Helsinkin
+Oikarinen-Jabai, Helena
+***** Re: Dakar Arts Festival - Exploring Transmedia Storytelling Methods to Document an Internet Scam
+Zingerle, Andreas (et al.)
+***** Building Narrative Connections among Media Objects in Cultural Heritage Repositories
+Lieto, Antonio (et al.)
+***** StoryJam: Supporting Collective Storytelling with Game Mechanics
+Zhu, Yujie (et al.)
+*** 7th 2014
+**** [[https://link-springer-com.oca.ucsc.edu/book/10.1007%252F978-3-319-12337-0][Program]]
+***** Storytelling with Adjustable Narrator Styles and Sentiments
+Li, Boyang (et al.)
+***** Combinatorial Dialogue Authoring
+Ryan, James Owen (et al.)
+***** Diegetization: An Approach for Narrative Scaffolding in Open-World Simulations for Training
+Carpentier, Kevin (et al.)
+***** Authoring Personalized Interactive Museum Stories
+Vayanou, Maria (et al.)
+***** An Authoring Tool for Movies in the Style of Heider and Simmel
+Gordon, Andrew S. (et al.)
+***** Exploring Performative Authoring as a Story Creation Approach for Children
+Chu, Sharon Lynn (et al.)
+***** Interweaving Story Coherence and Player Creativity through Story-Making Games
+Eladhari, Mirjam P. (et al.)
+***** Remain Anonymous, Create Characters and Backup Stories: Online Tools Used in Internet Crime Narratives
+Zingerle, Andreas
+***** Objective Metrics for Interactive Narrative
+Szilas, Nicolas (et al.)
+***** The PC3 Framework: A Formal Lens for Analyzing Interactive Narratives across Media Forms
+Magerko, Brian
+***** Storytelling Artifacts
+Krainert, Toke
+***** Toward a Hermeneutic Narratology of Interactive Digital Storytelling
+Chen, Fanfan
+***** Five Theses for Interactive Digital Narrative
+Koenitz, Hartmut
+***** Interactive Cinema: Engagement and Interaction
+Vosmeer, Mirjam (et al.)
+***** Fleeing the Operator: The User Experience and Participation in Marble Hornets (2009-2014)
+Hartley, Devin
+***** Mapping Trends in Interactive Non-fiction through the Lenses of Interactive Documentary
+Gifreu-Castells, Arnau
+***** Narrative Cognition in Interactive Systems: Suspense-Surprise and the P300 ERP Component
+Bruni, Luis Emilio (et al.)
+***** Ontology–Based Visualization of Characters’ Intentions
+Lombardo, Vincenzo (et al.)
+***** Interactive Storytelling in a Mixed Reality Environment: How Does Sound Design and Users’ Preknowledge of the Background Story Influence the User Experience?
+Nakevska, Marija (et al.)
+***** Structuring Location-Aware Interactive Narratives for Mobile Augmented Reality
+Spierling, Ulrike (et al.)
+***** Fictional Realities: Augmenting Location-Based Stories through Interaction with Pervasive Displays
+Yang, Xiao Emila (et al.)
+***** Comparison of Narrative Comprehension between Players and Spectators in a Story-Driven Game
+Anthony, Miki Nørgaard (et al.)
+***** Moral Values in Narrative Characters: An Experiment in the Generation of Moral Emotions
+Battaglino, Cristina (et al.)
+***** Three Is a Magic Number: Virtual Cameras for Dynamic Triadic Game Dialogue
+Xue, Bingjie (et al.)
+***** AR as Digital Ekphrasis: The Example of Borsuk and Bouse’s Between Page and Screen
+Fletcher, Robert P.
+***** Appraisal of Emotions from Resources
+Manavalan, Yathirajan Brammadesam (et al.)
+***** A Little Goat Builds the World – An Interactive Children Story for Tablets
+Kamysz, Kamil (et al.)
+***** CHESS: Personalized Storytelling Experiences in Museums
+Katifori, Akrivi (et al.)
+***** Unfinished Business – A Transmedia Project
+Hertwig, Ana Carolina Silveira
+***** A Storytelling Game with Metaphor
+Reckweg Kuni, Andreas Magnus (et al.)
+***** K-Sketch: Digital Storytelling with Animation Sketches
+Davis, Richard C. (et al.)
+***** Telling Stories via the Gameplay Reflecting a Player Character’s Inner States
+Wache, Achim (et al.)
+*** 8th 2015 
+This book constitutes the refereed proceedings of the 8th
+InternationalConference on Interactive Digital Storytelling, ICIDS
+2015, held in Copenhagen, Denmark, in November/December 2015.
+
+The 18 revised full papers and 13 short papers presented together with
+9posters, 9 workshop descriptions, and 3 demonstration papers were
+carefully reviewed and selected from 80 submissions. The papers are
+organized in topical sections ontheoretical and design foundations,
+technical advances, analyses and evaluation systems, and current and
+future usage scenarios and applications.
+**** [[http://www.springer.com/us/book/9783319270357][Program]]
+***** Touchscreen Poetry: Analyzing Gestural Digital Poems
+Ferri, Gabriele
+***** Open Design Challenges for Interactive Emergent Narrative
+Ryan, James Owen (et al.)
+***** Reflective Rereading and the SimCity Effect in Interactive Stories
+Mitchell, Alex
+***** Tensions of Plot in Interactive Digital Storytelling
+Daiute, Colette
+***** Design Approaches for Interactive Digital Narrative
+Koenitz, Hartmut
+***** Adaptive Storyworlds
+Schoenau-Fog, Henrik
+***** The Moody Mask Model
+Larsen, Bjarke Alexander (et al.)
+***** Creative Help: A Story Writing Assistant
+Roemmele, Melissa (et al.)
+***** Remember That Time? Telling Interesting Stories from Past Interactions
+Behrooz, Morteza (et al.)
+***** Hybrid Books for Interactive Digital Storytelling: Connecting Story Entities and Emotions to Smart Environments
+Ghaem Sigarchian, Hajar (et al.)
+***** Automatic Annotation of Characters’ Emotions in Stories
+Lombardo, Vincenzo (et al.)
+***** Authoring Background Character Responses to Foreground Characters
+Geraci, Fernando (et al.)
+***** Using a Controlled Natural Language for Specifying the Narratives of Serious Games
+Broeckhoven, Frederik (et al.)
+***** Tracery: An Author-Focused Generative Text Tool
+Compton, Kate (et al.)
+***** A Semantic Foundation for Mixed-Initiative Computational Storytelling
+Kybartas, Ben (et al.)
+***** Revisiting Computational Models of Creative Storytelling Based on Imaginative Recall
+Harmon, Sarah (et al.)
+***** Narrative Review Process: Getting Useful Feedback on Your Story
+Dankoff, Jonathan (et al.)
+***** Connecting the Dots: Quantifying the Narrative Experience in Interactive Media
+Hannesson, Hákon Jarl (et al.)
+***** Interaction in Surround Video: The Effect of Auditory Feedback on Enjoyment
+Vosmeer, Mirjam (et al.)
+***** Mise-en-scène: Playful Interactive Mechanics to Enhance Children’s Digital Books
+Al Aamri, Fatma (et al.)
+***** Story Immersion in a Gesture-Based Audio-Only Game
+Wu, Wenjie (et al.)
+***** Generating Side Quests from Building Blocks
+Hromada, Tomáš (et al.)
+***** Towards Measuring Consistency Across Transmedial Narratives
+Barbara, Jonathan
+***** Evaluation of Yasmine’s Adventures: Exploring the Socio-Cultural Potential of Location Aware Multimedia Stories
+Dionisio, Mara (et al.)
+***** What Makes a Successful Emergent Narrative: The Case of Crusader Kings II
+Lucat, Bertrand (et al.)
+***** New Dimensions in Testimony: Digitally Preserving a Holocaust Survivor’s Interactive Storytelling
+Traum, David (et al.)
+***** Urban Games and Storification
+Schmidt, Paul (et al.)
+***** Novel Dramatic and Ludic Tensions Arising from Mixed Reality Performance as Exemplified in Better Than Life
+Donald, Nicky (et al.)
+***** Social Media Fiction
+Piredda, Francesca (et al.)
+***** Film Education for Primary-School Students
+Friess, Regina (et al.)
+***** Enabling Instrumental Interaction Through Electronics Making: Effects on Children’s Storytelling
+Chu, Sharon Lynn (et al.)
+***** Students as Game Designers: Learning by Creating Game Narratives in the Classroom
+Oygardslia, Kristine
+***** How Cognitive Niche Construction Shapes Storytelling?
+Estefani, Thales (et al.)
+***** Target BACRIM: Blurring Fact and Fiction to Create an Interactive Documentary Game
+Charles, Mathew (et al.)
+***** Connecting Cat - A Transmedia Learning Project
+Rodrigues, Patrícia (et al.)
+***** Collaborative Storytelling in Unity3D
+Ramey, Lynn (et al.)
+***** Tell a Story About Anything
+Si, Mei
+***** Investigating Narrative Modelling for Digital Games
+Truesdale, John (et al.)
+***** Telling Non-linear Stories with Interval Temporal Logic
+Thompson, Matt (et al.)
+***** Opportunities for Integration in Interactive Storytelling
+Thue, David (et al.)
+***** The Quality System - An Attempt to Increase Cohesiveness Between Quest Givers and Quest Types
+Buss, Daniel Brogaard (et al.)
+***** No Reflection - An Interactive Narrative
+Mortensen, Katharina B.
+***** Bird Attack: Interactive Story with Variable Focalization
+Prehn, Irmelin Henriette C. (et al.)
+*** 9th 2016 
+**** [[http://www.springer.com/us/book/9783319482781][Program]]
+***** Analyses and Evaluation of Systems
+****** IVRUX: A Tool for Analyzing Immersive Narratives in Virtual Reality
+Paulo Bala, Mara Dionisio, Valentina Nisi, and Nuno Nunes
+****** M2D: Monolog to Dialog Generation for Conversational Story Telling 
+Kevin K. Bowden, Grace I. Lin, Lena I. Reed, Jean E. Fox Tree, and Marilyn A. Walker
+****** Exit 53: Physiological Data for Improving Non-player Character Interaction 
+Joseph Jalbert and Stefan Rank
+***** Brave New Ideas
+****** Narrative Game Mechanics
+Teun Dubbelman
+****** An Integrated and Iterative Research Direction for Interactive Digital Narrative 
+Hartmut Koenitz, Teun Dubbelman, Noam Knoller, and Christian Roth
+
+This paper outlines a roadmap for interactive narrative research that
+integrates disparate parts while focusing on identifying and
+experimentally verifying IDN design conventions and on developing a
+pedagogy to further the development of a professional discipline of
+IDN creators. This effort connects several key areas, in which the
+authors have worked before and which are now brought together. These
+include a specific theory, an approach towards interactive narrative
+design and its evaluation, an expanded understanding of the
+manifestations constituting the field, the pedagogy of educating
+creators of IDN artifacts and a perspective on the cultural
+significance of these creative expressions as tools to represent
+complexity.
+******* References
+Bolter, J.D., Joyce, M.: Hypertext and creative writing. In: Proceedings of Hypertext 1987 the ACM Conference on Hypertext, pp. 41–50. ACM, New York (1987)
+Google Scholar
+2.
+Brooks, K.M.: Metalinear Cinematic Narrative: Theory, Process, and Tool (Ph.D. Diss). MIT Media Lab., Boston (1999)
+Google Scholar
+3.
+Iurgel, I.: From another point of view: art-E-fact. In: Göbel, S., Spierling, U., Hoffmann, A., Iurgel, I., Schneider, O., Dechau, J., Feix, A. (eds.) TIDSE 2004. LNCS, vol. 3105, pp. 26–35. Springer, Heidelberg (2004)
+CrossRefGoogle Scholar
+4.
+Cavazza, M.O., Charles, F., Mead, S.J.: Developing re-usable interactive storytelling technologies. In: Jacquart, R. (ed.) Building the Information Society. IFIP, pp. 39–44. Kluwer, Norwell (2004)
+CrossRefGoogle Scholar
+5.
+Donikian, S., Portugal, J.-N.: Writing interactive fiction scenarii with DraMachina. In: Göbel, S., Spierling, U., Hoffmann, A., Iurgel, I., Schneider, O., Dechau, J., Feix, A. (eds.) TIDSE 2004. LNCS, vol. 3105, pp. 101–112. Springer, Heidelberg (2004)
+CrossRefGoogle Scholar
+6.
+Robertson, J., Nicholson, K.: Adventure Author: a learning environment to support creative design. In: Bekker, T., et al. (eds.) Proceedings of the 6th International Conference on Interaction Design and Children, IDC 2007, pp. 37–44. ACM, New York (2007)
+Google Scholar
+7.
+Weiss, S., Müller, W., Spierling, U., Steimle, F.: Scenejo: An interactive storytelling platform. In: Subsol, G. (ed.) ICVS-VirtStory 2005. LNCS, vol. 3805, pp. 77–80. Springer, Heidelberg (2005)
+CrossRefGoogle Scholar
+8.
+Thomas, J.M., Young, R.M.: Elicitation and Application of Narrative Constraints Through Mixed-Initiative Planning. In: Proceedings of the ICAPS 2006, Cumbria, UK (2006)
+Google Scholar
+9.
+Medler, B., Magerko, B.: Scribe: A General Tool for Authoring Interactive Drama. In: Göbel, S., Malkewitz, R., Iurgel, I. (eds.) TIDSE 2006. LNCS, vol. 4326, pp. 139–150. Springer, Heidelberg (2006)
+CrossRefGoogle Scholar
+10.
+Balet, O.: INSCAPE An authoring platform for interactive storytelling. In: Cavazza, M., Donikian, S. (eds.) ICVS-VirtStory 2007. LNCS, vol. 4871, pp. 176–177. Springer, Heidelberg (2007)
+CrossRefGoogle Scholar
+11.
+Kriegel, M., Aylett, R., Dias, J., Paiva, A.: An authoring tool for an emergent narrative storytelling system. In: AAAI Fall Symposium on Intelligent Narrative Technologies, Arlington, USA (2007)
+Google Scholar
+12.
+Bouchardon, S., Clément, J., Réty, J.-H., Szilas, N., Angé, C.: Rencontre: an experimental tool for digital literature. In: Proceedings of the Conference Electronic Literature in Europe, Bergen University, Bergen, Norway, September 11-13 (2008)
+Google Scholar
+13.
+Skorupski, J., Jayapalan, L., Marquez, S., Mateas, M.: Wide Ruled: A Friendly Interface to Author-Goal Based Story Generation. In: Cavazza, M., Donikian, S. (eds.) ICVS-VirtStory 2007. LNCS, vol. 4871, pp. 26–37. Springer, Heidelberg (2007)
+CrossRefGoogle Scholar
+14.
+Nelson, G.: Inform: Authoring tool for interactive fiction [Software]. Available online from (2007), http://inform7.com/
+15.
+Korsakow (2010), [Software] Available from http://www.korsakow.org
+16.
+Tallyn, E., Benford, S.: Applying narrative theory to the process of authoring interactive narrative (Inscape project deliverable D3.1.1) (2005)
+Google Scholar
+17.
+Logan, B., Benford, S., Koleva, B.: New narrative techniques for persistent storytelling experiences (Inscape project deliverable D3.1.1) (2005)
+Google Scholar
+18.
+Brooks, K.M.: Metalinear Cinematic Narrative: Theory, Process, and Tool (Ph.D. Diss). MIT Media Lab., Boston (1999)
+Google Scholar
+19.
+Laurel, B., Strickland, R., Tow, R.: Placeholder: Landscape and narrative in virtual environments. Computer Graphics 28 (1994)
+Google Scholar
+20.
+Koenitz, H.: Towards a Theoretical Framework for Interactive Digital Narrative. In: Aylett, R., Lim, M.Y., Louchart, S., Petta, P., Riedl, M. (eds.) ICIDS 2010. LNCS, vol. 6432, pp. 176–185. Springer, Heidelberg (2010)
+CrossRefGoogle Scholar
+21.
+Mateas, M., Stern, A.: Façade: An Experiment in Building a Fully-Realized Interactive Drama. In: Game Developer’s Conference: Game Design Track (2003)
+Google Scholar
+22.
+ASAPS project website (2011), http://advancedstories.net
+23.
+IOQuake3 [Open Source 3D Game Engine] (n.d.), http://ioquake3.org/
+24.
+A.L.I.C.E [Online Chatterbot Service], http://www.alicebot.org/about.html (n.d.)
+25.
+Cleverbot [Online Chatterbot Service], http://cleverbot.com/ (n. d.)
+26.
+OpenCyc [project website], http://www.opencyc.org/ (n.d.)
+27.
+W3C [Standard Organization website], http://www.w3.org/
+28.
+Szilas, N., Boggini, T., Axelrad, M., Petta, P., Rank, S.: Specification of an Open Architecture for Interactive Storytelling. In: André, E. (ed.) ICIDS 2011. LNCS, vol. 7069, pp. 330–333. Springer, Heidelberg (2011)
+****** The Narrative Quality of Game Mechanics
+Bjarke Alexander Larsen and Henrik Schoenau-Fog
+****** Improvisational Computational Storytelling in Open Worlds 
+Lara J. Martin, Brent Harrison, and Mark O. Riedl
+****** GeoPoetry: Designing Location-Based Combinatorial Electronic Literature Soundtracks for Roadtrips 
+Jordan Rickman and Joshua Tanenbaum
+****** Media of Attraction: A Media Archeology Approach to Panoramas, Kinematography, Mixed Reality and Beyond 
+Rebecca Rouse
+****** Bad News: An Experiment in Computationally Assisted Performance 
+Ben Samuel, James Ryan, Adam J. Summerville, Michael Mateas,
+and Noah Wardrip-Fruin
+***** Intelligent Narrative Technologies
+****** A Formative Study Evaluating the Perception of Personality Traits for Planning-Based Narrative Generation 
+Julio César Bahamón and R. Michael Young
+****** Asking Hypothetical Questions About Stories Using QUEST 
+Rachelyn Farrell, Scott Robertson, and Stephen G. Ware
+****** Predicting User Choices in Interactive Narratives Using Indexter’s Pairwise Event Salience Hypothesis 
+Rachelyn Farrell and Stephen G. Ware
+****** An Active Analysis and Crowd Sourced Approach to Social Training 
+Dan Feng, Elin Carstensdottir, Sharon Marie Carnicke,
+Magy Seif El-Nasr, and Stacy Marsella
+****** Generating Abstract Comics 
+Chris Martens and Rogelio E. Cardona-Rivera
+****** A Rules-Based System for Adapting and Transforming Existing Narratives
+Jo Mazeika
+****** Evaluating Accessible Graphical Interfaces for Building Story Worlds 
+Steven Poulakos, Mubbasir Kapadia, Guido M. Maiga, Fabio Zünd,
+Markus Gross, and Robert W. Sumner
+****** Reading Between the Lines: Using Plot Graphs to Draw Inferences from Stories 
+Christopher Purdy and Mark O. Riedl
+****** Using BDI to Model Players Behaviour in an Interactive Fiction Game 
+Jessica Rivera-Villicana, Fabio Zambetta, James Harland, and Marsha Berry
+****** Expressionist: An Authoring Tool for In-Game Text Generation 
+James Ryan, Ethan Seither, Michael Mateas, and Noah Wardrip-Fruin
+****** Recognizing Coherent Narrative Blog Content 
+James Ryan and Reid Swanson
+****** Intertwined Storylines with Anchor Points 
+Mei Si, Zev Battad, and Craig Carlson
+****** Delayed Roles with Authorable Continuity in Plan-Based Interactive Storytelling 
+David Thue, Stephan Schiffel, Ragnar Adolf Árnason, Ingibergur Sindri Stefnisson, and Birgir Steinarsson
+****** Decomposing Drama Management in Educational Interactive Narrative:
+A Modular Reinforcement Learning Approach
+Pengcheng Wang, Jonathan Rowe, Bradford Mott, and James Lester
+***** Theoretical Foundations 
+****** Bringing Authoritative Models to Computational Drama (Encoding Knebel’s Action Analysis)
+Giacomo Albert, Antonio Pizzo, Vincenzo Lombardo, Rossana Damiano,
+and Carmi Terzulli
+******* References
+1.  Benedetti, J.: Stanislavski and the Actor. Methuen Publishing, London (1998)
+2.  Bergamo, A.: Introduzione. In: Bergamo, A. (ed.) L’analisi della piece e del ruolomediante l’azione, pp. 1–28. Ubulibri, Milano (2009)
+3.  Carlson, M.: Theories of the Theatre : A Historical and Critical Survey from theGreeks to the Present. Cornell University Press, Ithaca (1984)
+4.  Carnicke, S.M.: Stanislavsky in Focus. Routledge, Abingdon-on-Thames (2009)
+5.  Dukore, B.F.: Dramatic Theory and Criticism: Greeks to Grotowski. Holt, Rinehartand Winston, New York (1974)
+6.  Elson, D.K.: Dramabank: annotating agency in narrative discourse. In: Proceedingsof the Eighth International Conference on Language Resources and Evaluation(LREC 2012), Istanbul, Turkey (2012)
+7.  Gorchakov, N.: Stanislavski Directs. Minerva, New York (1968)
+8.  Gordon, M.: The Stanislavsky Technique. Applause, Russia (1987)
+9.  Gordon, M.: Stanislavsky in America: An Actor’s Workbook. Routledge, Abingdon-on-Thames (2010)
+10.  Knebel, M.: Vsja zizn’. VTO (1967) Bringing Authoritative Models to Computational Drama297
+11.  Knebel, M.: L’analyse par l’action du pi`ece et du rˆole. Actes Sud-Papiers (2006)
+12.  Knebel, M.: Le verbe dans l’art de l’acteur. Actes Sud-Papiers (2006)
+13.  Knebel, M.: L’analisi della pi`ece e del ruolo mediante l’azione. Ubulibri, Milano(2009)
+14.  Lombardo, V., Battaglino, C., Pizzo, A., Damiano, R., Lieto, A.: Coupling con-ceptual modeling and rules for the annotation of dramatic media. Semant. Web J.6(5), 503–534 (2015)
+15.  Lombardo, V., Pizzo, A.: Digital heritage and avatars of stories. In: Proceedingsof the 1st International Workshop on Collaborative Annotations in Shared Envi-ronment: Metadata, Vocabularies and Techniques in Digital Humanities, pp. 1–8.ACM (2013)
+16.  Lombardo, V., Pizzo, A.: Ontologies for the metadata annotation of stories. In:Digital Heritage. ACM, Marseille (2013)
+17.  Lombardo, V., Pizzo, A.: Multimedia tool suite for visualization of drama her-itage metadata. Multimedia Tools Appl. Spec. Issue Multimedia Cult. Heritage75, 3901–3932 (2014)
+18.  Lombardo, V., Pizzo, A.: Ontology–based visualization of characters’ intentions.In: Mitchell, A., Fern ́andez-Vara, C., Thue, D. (eds.) ICIDS 2014. LNCS, vol. 8832,pp. 176–187. Springer, Heidelberg (2014). doi:10.1007/978-3-319-12337-018
+19.  Lombardo, V., Pizzo, A., Damiano, R.: Safeguarding and accessing drama as intan-gible cultural heritage. ACM J. Comput. Cult. Heritage9(1), 5:1–5:26 (2016)
+20.  Lombardo, V., Pizzo, A., Damiano, R.: WikiDrammar (2016).https://www.di.unito.it/wikidrammar
+21.  Mateas, M.: A neo-aristotelian theory of interactive drama (2000)
+22.  Merlin, B.: Konstantin Stanislavsky. Routledge, Abingdon-on-Thames (2003)
+23.  Mitter, S.: System of Rehearsal. Routledge, Abingdon-on-Thames (1992)
+24.  Peinado, F., Cavazza, M., Pizzi, D.: Revisiting character-based affective story-telling  under  a  narrative  BDI  framework.  In:  Spierling,  U.,  Szilas,  N.  (eds.)ICIDS 2008. LNCS, vol. 5334, pp. 83–88. Springer, Heidelberg (2008). doi:10.1007/978-3-540-89454-413
+25.  Peinado, F., Gerv ́as, P.: Evaluation of automatic generation of basic stories. NewGener. Comput.24(3), 289–302 (2006)
+26.  Pizzo, A.: Neodrammatico Digitale. Accademia University Press, Torino (2013)
+27.  Pogodin, N.: Kremlin chimes. In: Three Soviet Plays, pp. 7–89. Foreign LanguagesPublishing House (1961)
+28.  Smith, L., Akagawa, N.: Intangible Heritage. Taylor & Francis, Abingdon (2008)
+29.  Stanislavsky, K.: An Actor’s Work: A Student’s Diary. Routledge, Abingdon-on-Thames (2008)
+30.  Stanislavsky, K.: An Actor’s Work on a Role. Routledge, Abingdon-on-Thames(2010)
+31.  Stanislavsky, K., Hapgood, E.: An Actor’s Handbook: An Alphabetical Arrange-ment of Concise Statements on Aspects of Acting. A Theatre Arts book. Routledge,Abingdon-on-Thames (1963)
+32.  Szilas, N.: Idtension: a narrative engine for interactive drama. In: Proceedings ofthe 1st International Conference on Technologies for Interactive Digital Storytellingand Entertainment (TIDSE 2003), Darmstadt, Germany (2003)
+33.  Szondi, P.: Theory of the moderna drama parts i-ii. boundary 211(3), 191–230(1983)34.  Toporkov, V.: Stanislavski in Rehearsal. Routledge, Abingdon-on-Thames (2004)35.  Vecco, M.: A definition of cultural heritage: from the tangible to the intangible. J.Cult. Heritage11(3), 321–324 (2010)
+****** Strong Concepts for Designing Non-verbal Interactions in Mixed Reality Narratives
+Joshua A. Fisher
+****** Can You Read Me that Story Again? The Role of the Transcript as Transitional Object in Interactive Storytelling for Children
+María Goicoechea and Mark C. Marino
+****** The Character as Subjective Interface
+Jonathan Lessard and Dominic Arsenault
+****** Right, Left, High, Low Narrative Strategies for Non–linear Storytelling 
+Sylke Rene Meyer
+****** Qualifying and Quantifying Interestingness in Dramatic Situations
+Nicolas Szilas, Sergio Estupiñán, and Urs Richle
+******* Cited Conferences
+******** AIIDE
+******** CMN
+******** Proceedings of theEigth International Conference on Language Resources and Evaluation
+******** Semant. Web.6(5)
+
+******* References
+1. Aesop: Aesop’s Fables. Wordsworth Classics (1994)
+2. Barber, H., Kudenko, D.: Dynamic generation of dilemma-based interactive narratives. In:Proceedings  of  Third  Conference  on  Artificial  Intelligence  and  Interactive  DigitalEntertainment–AIIDE, pp. 2–7. AAAI Press, Menlo Park, CA (2007)
+3. Battaglino, C., Damiano, R., Torino, U.: A character model with moral emotions :preliminary evaluation. In: Finlayson, M.A., Meister, J.C., Bruneau, E.G. (eds.) 5thWorkshop on Computational Models of Narrative (CMN 2014), pp. 24–41. OASICS (2014)
+4. Elson, D.K.: Detecting story analogies from annotations of time, action and agency. In:LREC 2012 Workshop on Computational Models of Narrative, pp. 91–99 (2012)
+5. Elson, D.K.: DramaBank: annotating agency in narrative discourse. In: Proceedings of theEigth International Conference on Language Resources and Evaluation (LREC), pp. 2813–2819 (2012)346N. Szilas et al.
+6. Henry, O.: The Gift of the Magi.http://www.eastoftheweb.com/short-stories/UBooks/GifMag.shtml
+7. Lavandier, Y.: La Dramaturgie. Le clown et l’enfant, Cergy (1997)
+8. Lehnert, W.: Plot units and narrative summarization. Cogn. Sci.5(4), 293–331 (1981)
+9. Levi-Strauss, C.: Anthropologie Structurale. Plon, Paris (1958)
+10. Lombardo, V., Battaglino, C., Pizzo, A., Damiano, R., Lieto, A.: Coupling conceptual modeling and rules for the annotation of dramatic media. Semant. Web.6(5), 503–534(2015)
+11. McKee, R.: Story: Substance, Structure, Style, and the Principles of Screenwriting. HarperCollins, New York (1997)
+12. Nichols, B.: Ideology and the Image. Indiana University Press, Bloomington (1981)
+13. Nünning, A., Sommer, R.: Diegetic and mimetic narrativity: some further steps towards a narratology of drama. In: Pier, J., Landa, J.Á.G. (eds.) Theorizing Narrativity, vol. 12,pp. 331–354. Walter de Gruyter, Berlin, New York (2008)
+14. Pavis, P.: Dictionary of the Theatre: Terms, Concepts and Analysis, trans. Christine Shantz. University of Toronto Press, Toronto, Buffalo (1998)
+15. Polti, G.: Les Trente-six Situations Dramatiques. Mercure de France, Paris (1903)
+16. Russel, S.J., Norvig, P.: Artificial Intelligence: A Modern Approach. Prentice Hall,Englewood Cliffs (1995)
+17. Sgouros, N.: Dynamic generation, management and resolution of interactive plots. Artif.Intell.107(1), 29–62 (1999)
+18. Souriau, E.: Les Deux Cent Mille Situations Dramatiques. Flammarion, Paris (1950)
+19. Struck, H.-G.: Telling stories knowing nothing: tackling the lack of common senseknowledge in story generation systems. In: Subsol, G. (ed.) ICVS 2005. LNCS, vol. 3805,pp. 189–198. Springer, Heidelberg (2005). doi:10.1007/11590361_22
+20. Szilas, N.: A computational model of an intelligent narrator for interactive narratives. Appl.Artif. Intell.21(8), 753–801 (2007)
+21. Szilas, N.: IDtension: a narrative engine for Interactive Drama. In: Göbel, S., Braun, N.,Spierling, U., Dechau, J., Diener, H. (eds.) Proceedings of the Technologies for InteractiveDigital Storytelling and Entertainment (TIDSE) Conference, pp. 187–203. Fraunhofer IRB,Darmstadt (2003)
+22. Szilas, N.: Modeling and representing dramatic situations as paradoxical structures. In:Digital Scholarship in the Humanities (2016)
+23. Szilas, N.: Structural models for Interactive Drama. In: 2nd International Conference onComputational Semiotics for Games and New Media (COSIGN) (2002)
+24. Vale, E.: The Technique of Screenplay Writing. Grosset & Dunlap, New York (1973)
+25. Ware, S.G., Young, R.M.: CPOCL: a narrative planner supporting conflict. In: Proceedingsof the Seventh AAAI Conference on Artificial Intelligence and Interactive DigitalEntertainment, pp. 97–102. AAAI Press, Palo Alto, CA (2011)
+***** 
+***** Posters
+****** Towards Procedural Game Story Creation via Designing Story Cubes
+Byung-Chull Bae, Gapyuel Seo, and Yun-Gyung Cheong
+****** Phylactery: An Authoring Platform for Object Stories
+Charu Chaudhari and Joshua Tanenbaum
+****** What is Shared? - A Pedagogical Perspective on Interactive Digital Narrative and Literary Narrative
+Colette Daiute and Hartmut Koenitz
+****** A Reflexive Approach in Learning Through Uchronia
+Mélody Laurent, Nicolas Szilas, Domitile Lourdeaux,
+and Serge Bouchardon
+****** Interactive Chart of Story Characters’ Intentions
+Vincenzo Lombardo, Antonio Pizzo, Rossana Damiano, Carmi Terzulli,
+and Giacomo Albert
+****** Location Location Location: Experiences of Authoring an Interactive Location-Based Narrative
+David E. Millard and Charlie Hargood
+****** Using Theme to Author Hypertext Fiction
+Alex Mitchell
+****** Towards a Model-Learning Approach to Interactive Narrative Intelligence for Opportunistic Storytelling
+Emmett Tomai and Luis Lopez
+****** Art-Bots: Toward Chat-Based Conversational Experiences in Museums
+Stavros Vassos, Eirini Malliaraki, Federica dal Falco,
+Jessica Di Maggio, Manlio Massimetti, Maria Giulia Nocentini,
+and Angela Testa
+*** 
+*** 1: 2009 https://paperpile.com/view/f8050105-392f-00c1-b5c7-6ba7f4799863
+**** Participants:
+J. Keyser (MIT), 
+I. Horswill (Northwestern), 
+M. Young (North Carolina State University), 
+B. Verheij (Groningen), 
+M. Cox (DARPA), 
+S. Narayanan (ICSI and Berkeley), 
+T. Lyons (AFOSR), 
+L. Jackson (Naval Postgraduate School); 
+H. Lieberman (MIT), 
+K. Forbus (Northwestern), 
+M. Finlayson (MIT), 
+E. Mueller (IBM), 
+P. Winston (MIT), 
+N. Asher (Texas), 
+J. Hobbs (USC ISI), 
+V. Subrahmanian (Maryland); 
+N. Cohn (Tufts)
+R. Jackendoff (Tufts)
+P. Gervás (U. Complutense Madrid)
+W. Richards (MIT),
+R. Swanson (USC ICT)
+E. Tomai (Pan American)
+M. Seifter
+*** 
+*** 4: 2013 http://narrative.csail.mit.edu/cmn13
+**** 
+**** Illustrative Topics and Questions
+- What cognitive competencies underlie narrative, and how may they be studied?
+- Can narrative be subsumed by current models of higher-level cognition, or does it require new approaches?
+- How do narratives mediate our cognitive experiences, or affect our cognitive abilities?
+- How are narratives indexed and retrieved? Is there a universal scheme for encoding episodic information?
+- What comprises the set of possible narrative arcs? Is there such a set? How many possible story lines are there?
+- Is narrative structure universal, or are there systematic differences in narratives from different cultures?
+- What makes narrative different from a list of events or facts? What is special that makes something a narrative?
+- What are the details of the relationship between narrative and common sense?
+- What shared resources are required for the computational study of narrative?
+- What should a “Story Bank” contain?
+- What shared resources are available, or how can already-extant resources be adapted to the study of narrative?
+- What impact do the purpose, function, and genre of a narrative have on its form and content?
+- What are appropriate formal or computational representations for narrative?
+- How should we evaluate computational and formal models of narrative?
+**** 
+**** Papers
+**** 
+**** Contributed Papers
+***** CB-POCL: A Choice-Based Algorithm for Character Personality in Planning-based Narrative Generation
+Julio César Bahamón and R. Michael Young
+***** Cognitive Interpretation of Everyday Activities — Toward Perceptual Narrative Based Visuo-Spatial Scene Interpretation
+Mehul Bhatt, Jakob Suchan, Carl Schultz
+***** Exploring the Betrothed Lovers
+Andrea Bolioli, Matteo Casu, Maurizio Lana, and Renato Roda
+***** The Disappearance of Moral Choice in Serially Reproduced Narratives
+Fritz Breithaupt, Kevin M. Gardner, John K. Kruschke, Torrin
+M. Liddell, and Samuel Zorowitz
+***** Gist and Verbatim in Narrative Memory
+David A. Broniatowski and Valerie F. Reyna
+***** Assessing Two-Mode Semantic Network Story Representations Using a False Memory Paradigm
+Steven R. Corman, B. Hunter Ball, Kimberly M. Talboom, and Gene A. Brewer
+***** Processing Narrative Coherence: Towards a Top-Down Model of Discourse
+Erica Cosentino, Ines Adornetti, and Francesco Ferretti
+***** Ontological Representations of Narratives: a Case Study on Stories and Actions
+Rossana Damiano and Antonio Lieto
+***** Story Comparisons: Evidence from Film Reviews
+Bernhard Fisseni, Aadil Kurji, Deniz Sarikaya, und Mira Viehstädt
+***** A Paradigm for Eliciting Story Variation
+Bernhard Fisseni and Faith Lawrence
+***** Propp’s Morphology of the Folk Tale as a Grammar for Generation 
+Pablo Gervás
+***** Computationally Modeling Narratives of Social Group Membership with the Chimeria System
+D. Fox Harrell, Dominic Kao, and Chong-U Lim
+***** Narrative Similarity as Common Summary
+Elektra Kypridemou and Loizos Michael
+***** Testing Reader Ethical Judgments over the Course of a Narrative
+Greg Lessard and Michael Levison
+***** Theoretical Issues in the Computational Modelling of Yorùbá Narratives
+Olufemi D. Ninan and Odetunji A. O. dé. jo. bí 
+***** Constructing Spatial Representations from Narratives and Non-Narrative Descriptions: Evidence from 7-year-olds 
+Angela Nyhout and Daniela K. O’Neill 
+***** Linking Motif Sequences with Tale Types by Machine Learning
+Nir Ofek, Sándor Darányi, and Lior Rokach
+***** Character Networks for Narrative Generation: Structural Balance Theory and the Emergence of Proto-Narratives
+Graham Alexander Sack
+***** A Data-Driven Approach for Classification of Subjectivity in Personal Narratives
+Kenji Sagae, Andrew S. Gordon, Morteza Dehghani, Mike Metke, Jackie S. Kim,
+Sarah I. Gimbel, Christine Tipper, Jonas Kaplan, and Mary Helen Immordino-Yang
+***** Using Unexpected Simplicity to Control Moral Judgments and Interest in Narratives
+Antoine Saillenfest and Jean-Louis Dessalles
+***** Narrativity and Textuality in the Study of Stories
+Moshe Simon-Shoshan
+***** Social Narrative Adaptation using Crowdsourcing
+Sigal Sina, Avi Rosenfeld, and Sarit Kraus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 238
+***** Towards a Computational Model of Dramatic Tension 
+Nicolas Szilas and Urs Richle . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 257
+***** Writing Consistent Stories based on Structured Multi-Authored Narrative Spaces
+Alan Tapscott, Joaquim Colàs, Ayman Moghnieh, and Josep Blat . . . . . . . . . . . . . . . . 277
+***** Having one’s cake and eating it too: Coherence of children’s emergent narratives
+Mariët Theune, Thijs Alofs, Jeroen Linssen, and Ivo Swartjes . . . . . . . . . . . . . . . . . . . 293
+***** Emotional Expression in Oral History Narratives: Comparing Results of Automated Verbal and Nonverbal Analyses
+Khiet P. Truong, Gerben J. Westerhof, Sanne M.A. Lamers, Franciska de Jong,
+and Anneke Sools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 310
+***** Representing and Evaluating Legal Narratives with Subscenarios in a Bayesian Network
+Charlotte S. Vlek, Henry Prakken, Silja Renooij, and Bart Verheij . . . . . . . . . . . . . . . 315
+**** 
+**** Illustrative Topics and Questions
+
+What are the neural correlates of narrative or narrative processing?
+How can we study narrative from a neuroscientific point of view?
+What cognitive competencies underlie narrative, and how may they be studied?
+Can narrative be subsumed by current models of higher-level cognition, or does it require new approaches?
+How do narratives mediate our cognitive experiences, or affect our cognitive abilities?
+How are narratives indexed and retrieved?  Is there a universal scheme for encoding episodic information?
+What comprises the set of possible narrative arcs?  Is there such a set? How many possible story lines are there?
+Is narrative structure universal, or are there systematic differences in narratives from different cultures?
+What makes narrative different from a list of events or facts? What is special that makes something a narrative?
+What are the details of the relationship between narrative and common sense?
+What shared resources are required for the computational study of narrative? What should a “Story Bank” contain?  
+What shared resources are available, or how can already-extant resources be adapted to the study of narrative?
+What are appropriate formal or computational representations for narrative?
+How should we evaluate computational and formal models of narrative?
+*** 
+*** 7: 2016 http://narrative.csail.mit.edu/cmn16
+
+** INT
+*** INT1 (2007) http://www.aaai.org/Library/Symposia/Fall/fs07-05.php
+**** Organizing Committee /
+Brian S. Magerko and Mark O. Riedl
+**** Preface /
+Brian S. Magerko and Mark O. Riedl
+**** Program
+***** Rational Dialog in Interactive Games
+Maria Arinbjarnar
+***** Are We Telling the Same Story? Balancing Real and Virtual Actors in a Collaborative Story Creation System
+António Brisson, Ana Paiva
+***** S-MADE: Interactive Storytelling Architecture through Goal Execution and Decomposition
+Yundong Cai, Zhiqi Shen, Chunyan Miao, Ah-Hwee Tan
+***** The Story Molecule: Narrative as Information
+Beth Cardier
+***** How Can We Be Serious in a Game?
+João Catarino, Tiago Moreiras, Pedro Faria Lopes, Joaquim Esmerado, Isabel Machado Alexandre
+***** A Platform for Symbolically Encoding Human Narratives
+David K. Elson, Kathleen R. McKeown
+***** Generating Educational Tourism Narratives from Wikipedia
+Brent Hecht, Nicole Starosielski, Drew Dara-Abrams
+***** Emotion Discourse as Design Heuristic: Creating Emotional Intelligence for Virtual Narrative Agents
+David Herman, Joshua Steskal
+***** Psychopathology, Narrative, and Cognitive Architecture (or: Why AI Characters Should Be Just as Screwed-up as We Are)
+Ian Horswill
+***** An Authoring Tool for an Emergent Narrative Storytelling System
+Michael Kriegel, Ruth Aylett, João Dias, Ana Paiva
+***** Building Synthetic Actors for Interactive Dramas
+Sandy Louchart, Ruth Aylett
+***** Collaborative Narrative Generation in Persistent Virtual Environments
+Neil Madden, Brian Logan
+***** Measuring Dramatic Believability
+Brian Magerko
+***** Driving Interactive Drama Research through Building Complete Systems
+Manish Mehta, Santiago Ontañón, Ashwin Ram
+***** Ordering Events in Interactive Fiction Narratives
+Nick Montfort
+***** Understanding Goal-Based Stories through Model Finding and Planning
+Erik T. Mueller
+***** A Computer Model for Visual-Daydreaming
+Rafael Pérez y Pérez, Ricardo Sosa, Christian Lemâitre
+***** Affective Storytelling Based on Characters' Feelings
+David Pizzi, Marc Cavazza
+***** Using Feature Value Distributions to Estimate Player Satisfaction through an Author's Eyes
+David L. Roberts, Christina R. Strong, Charles L. Isbell
+***** Narrative Presence in Intelligent Learning Environments
+Jonathan P. Rowe, Scott W. McQuiggan, James C. Lester
+***** The Tale of Peter Rabbit: A Case-Study in Story-Sense Reasoning
+Malcolm Ryan, Nicholas Hannah, Joshua Lobb
+***** Drama Management Evaluation for Interactive Fiction Games
+Manu Sharma, Santiago Ontañón, Manish Mehta, Ashwin Ram
+***** Emergent Story Generation: Lessons from Improvisational Theater
+Ivo Swartjes, Joost Vromen
+***** Affective Interaction Design and Narrative Presentation
+Joshua Tanenbaum, Angela Tomizu
+***** Learning Player Preferences to Inform Delayed Authoring
+David Thue, Vadim Bulitko, Marcia Spetch, Eric Wasylishen
+***** Narrative Presentation and Meaning
+Emmett Tomai, Kenneth D. Forbus
+***** The Limitations of a Propp-based Approach to Interactive Drama
+Zach Tomaszewski, Kim Binsted
+***** A Genre-Independent Approach to Producing Interactive Screen Media Narratives
+Marian F. Ursu, Jonathan J. Cook, Vilmos Zsombori, Ian Kegel
+***** Extending and Evaluating a Platform for Story Understanding
+We present Scheherazade, a foundational platform for narrative
+intelligence that formally represents stories. The system draws upon
+prior theoretical work on the morphology of narrative without imposing
+a particular narrative domain or task a priori. Instead, while keeping
+narrative semantics separate and immutable, it provides a framework
+for the tools that build upon it to define world knowledge on a
+per-task basis. The system models semantics such as timelines, states,
+events, characters and goals, and can detect thematic patterns in both
+the deep content of the story (i.e., the fabula) and the manner of the
+story's telling (the sujzhet). We also present a sample tool that
+utilizes the platform to assist users who are unfamiliar with
+narratology to symbolically encode stories into this representation. A
+formative evaluation of this tool shows that technical and
+non-technical users can successfully encode a traditional fable using
+its graphical interface.
+ea
+*** INT2 (2009) http://www.aaai.org/Library/Symposia/Spring/ss09-06.php
+**** 
+Narrative is a pervasive aspect of human culture in both entertainment and education. Historically,
+humans have been the primary agents behind the creation, telling, and adapting of narrative.
+However, as society’s reliance on digital technology for both entertainment and communication
+increases, the need for more innovative approaches to represent, perform, and adapt narrative experiences
+increases as well. With recent research advances, computer systems now have the means
+to organize experiences into a narrative form enabling them to interact and communicate with human
+users in novel and intuitive ways that were not possible a short time ago. A computer system
+that possesses narrative intelligence can interact with and communicate with human users in novel
+and intuitive ways. The research presented through the Intelligent Narrative Technologies workshop
+represents the state of the art in the use of computational representation and reasoning about
+narrative for entertainment, communication, and education.
+The academic research community is continuing to make advances in intelligent computing that
+bring these experiences closer to realizing the full potential of the computer as an interactive
+medium. The Intelligent Narrative Technologies III (INT3) workshop at the 2010 Foundations
+of Digital Games (FDG) conference brings together participants from the research community and
+industry in an effort to accelerate technology transfer to commercial games. Computer games are a
+natural modality for storytelling because of the sense of immersion and transportation into a virtual
+world with compelling characters and the promise of opportunity to interact with characters and
+the world in a meaningful way. Many experiences in virtual worlds are entertaining but not necessarily
+strictly games. A second goal of the INT3 workshop was to explore the role of narrative
+intelligence in facilitating other forms of computer-based entertainment, education, and training.
+Narrative appears prominently in many forms of entertainment and interpersonal communication,
+including novels, movies, and machinima. Narrative can also play a role in education and training.
+Novel techniques for entertaining, training, and eduction have been developed in such fields
+as narrative understanding, narrative generation, storytelling, virtual cinematography, models of
+emotion, narrative cognition, and natural language generation.
+The 2010 INT3 workshop is the third in a successful sequence of symposia and workshops on
+artificial intelligence in representation and reasoning about narrative. The one-day INT3 workshop
+features 17 paper presentations from authors around the world on topics ranging from narrative
+understanding, emergent storytelling, player evaluations, narrative discourse, improvisation, and
+story generation.
+**** Program Committee
+- Elisabeth Andre, Augsburg University, Germany
+- Ruth Aylett, Heriott-Watt University, UK
+- Byung-Chull Bae, Samsung Research, S. Korea
+- Marc Cavazza, University of Teeside, UK
+- Yun-Gyung Cheong, Samsung Research, UK
+- Andrea Corradini, University of Southern Denmark, Denmark
+- Richard Evans, Maxis
+- Andrew Gordon, University of Southern California, USA
+- Ian Horswill, Northwestern University, USA
+- Daniel Kudenko, University of York, UK
+- James Lester, North Carolina State University, USA
+- Sandy Louchart, Hariott-Watt University, UK
+- Stacy Marsella, University of Southern California, USA
+- Manish Mehta, Georgia Institute of Technology and Disney Research, USA
+- Nick Montfort, Massachusettes Institute of Technology, USA
+- Erik Mueller, IBM Research, USA
+- Alexander Nareyek, National University of Singapore, Singapore
+- Ana Paiva, Instituto Superior Technico Lisbon, Portugal
+- Thomas Rist, Augsburg University, Germany
+- Andrew Salway, Burton Bradstock Research Labs, UK
+- Reid Swanson, University of Southern California, USA
+- David Thue, University of Alberta
+- Anders Drachen, IT University of Copenhagen, Denmark
+- Martin van Velsen, Carnegie Mellon University, USA
+- Peter Weyhrauch, Charles River Analytics, USA
+- R. Michael Young, North Carolina State University, USA
+**** Program
+***** Towards a Computational Model of Narrative Visualization 
+Alok Baikadi, Julius Goth, Christopher M. Mitchell, Eun Y. Ha, Bradford W. Mott, James C. Lester
+****** Abstract
+The task of narrative visualization has been the subject of increasing
+interest in recent years. Much like data visualization, narrative
+visualization offers users an informative and aesthetically pleasing
+perspective on “storydata.” Automatically creating visual
+representations ofnarratives poses significant computational
+challenges due to the complex affective and causal elements, among
+other things, that must be realized in visualizations. In addition,
+narratives that are composed by novice writers pose additional
+challenges due to the disfluencies stemming from ungrammatical
+text. In this paper, we introduce the NARRATIVE THEATRE, a narrative
+visualization system under development in our laboratory that
+generates narrative visualizations from middle school writers’
+text. The NARRATIVE THEATRE consists of a rich writing interface, a
+robust natural language processor, a narrative reasoner, and a
+storyboard generator. We discuss design issues bearing on narrative
+visualization, introduce the NARRATIVE THEATRE, and describe narrative
+corpora that have been collected to study narrative visualization. We
+conclude with a discussion of a narrative visualization research
+agenda.
+****** Keywords
+Story understanding; Structures and functions of narrative across media; Natural language generation/understanding for narrative
+***** The Case for Intention Revision in Stories and its Incorporation into IRIS, a Story-Based Planning System 
+Matthew William Fendt, R. Michael Young
+***** Corpus Annotation in Service of Intelligent Narrative Technologies
+Mark Alan Finlayson
+***** The Story Workbench: An Extensible Semi-Automatic Text Annotation Tool
+Mark Alan Finlayson
+***** Suggesting New Plot Elements for an Interactive Story
+Spyridon Giannatos, Mark J. Nelson, Yun-Gyung Cheong, Georgios N. Yannakakis
+***** Automaticity and Expressive Behavior in Virtual Actors: Notes on the Organization of Mammalian Behavior Systems
+Ian D. Horswill
+***** Learning Director Agent Strategies: An Inductive Framework for Modeling Director Agents
+Seung Lee, Bradford Mott, James Lester
+***** A Phone That Cures Your Flu: Generating Imaginary Gadgets in Fictions with Planning and Analogies
+Boyang Li, Mark O. Riedl
+***** Seven Design Challenges for Fully-realized Experience Management
+David L. Roberts
+***** A Discrete Event Calculus Implementation of the OCC Theory of Emotion
+Margaret Krystyna Sarlej, Malcolm Ryan
+***** Selecting Agents for Narrative Roles
+Alexander Shoulson, Daniel Garcia, Norman I. Badler
+***** A Rule-Based Framework for Modular Development of In-Game Interactive Dialogue Simulation
+Emmett Tomai, David Salinas, Rosendo Salazar
+***** Causality in Hundreds of Narratives of the Same Events
+Emmett Tomai, Laxman Thapa, Andrew S. Gordon, Sin-Hwa Kang
+***** On the Use of Reincorporation in Interactive Drama
+Zach Tomaszewski
+***** The SimpleFPS Planning Domain: A PDDL Benchmark for Proactive NPCs
+Stavros Vassos, Michail Papakonstantinou
+***** A Real-Time Concurrent Planning and Execution Framework for Automated Story Planning for Games
+Eric Cesar Jr. Esguerra Vidal, Alexander Nareyek
+***** Murder in the Arboretum: Comparing Character Models to Personality Models
+Marilyn Walker, Grace Lin, Jennifer Sawyer, Ricky Grant, Michael Buell, Noah Wardrip-Fruin
+***** Initial Results for Measuring Four Dimensions of Narrative Conflict
+Stephen G. Ware, Brent Harrison, R. Michael Young, David L. Roberts
+***** Approaching a Player Model of Game Story Comprehension Through Affordance in Interactive Narrative
+R. Michael Young, Rogelio Cardona-Rivera
+*** INT3 (2010 FDG) http://dl.acm.org.oca.ucsc.edu/citation.cfm?id=1822309&picked=prox
+**** Introduction
+Narrative is a pervasive aspect of human culture in both entertainment
+and education. Historically, humans have been the primary agents
+behind the creation, telling, and adapting of narrative. However, as
+society's reliance on digital technology for both entertainment and
+communication increases, the need for more innovative approaches to
+represent, perform, and adapt narrative experiences increases as
+well. With recent research advances, computer systems now have the
+means to organize experiences into a narrative form enabling them to
+interact and communicate with human users in novel and intuitive ways
+that were not possible a short time ago. A computer system that
+possesses narrative intelligence can interact with and communicate
+with human users in novel and intuitive ways. The research presented
+through the Intelligent Narrative Technologies workshop represents the
+state of the art in the use of computational representation and
+reasoning about narrative for entertainment, communication, and
+education.
+
+The academic research community is continuing to make advances in
+intelligent computing that bring these experiences closer to realizing
+the full potential of the computer as an interactive medium. The
+Intelligent Narrative Technologies III (INT3) workshop at the 2010
+Foundations of Digital Games (FDG) conference brings together
+participants from the research community and industry in an effort to
+accelerate technology transfer to commercial games. Computer games are
+a natural modality for storytelling because of the sense of immersion
+and transportation into a virtual world with compelling characters and
+the promise of opportunity to interact with characters and the world
+in a meaningful way. Many experiences in virtual worlds are
+entertaining but not necessarily strictly games. A second goal of the
+INT3 workshop was to explore the role of narrative intelligence in
+facilitating other forms of computer-based entertainment, education,
+and training. Narrative appears prominently in many forms of
+entertainment and interpersonal communication, including novels,
+movies, and machinima. Narrative can also play a role in education and
+training. Novel techniques for entertaining, training, and education
+have been developed in such fields as narrative understanding,
+narrative generation, storytelling, virtual cinematography, models of
+emotion, narrative cognition, and natural language generation.
+
+The 2010 INT3 workshop is the third in a successful sequence of
+symposia and workshops on artificial intelligence in representation
+and reasoning about narrative. The one-day INT3 workshop features 17
+paper presentations from authors around the world on topics ranging
+from narrative understanding, emergent storytelling, player
+evaluations, narrative discourse, improvisation, and story generation.
+**** Program
+***** A conversational framework for emergent collaborative storytelling
+Damian Hills
+
+This paper proposes a framework that incorporates shared narration
+through the design and evaluation of a creativity support system that
+promotes meaning and sense-making for collaborative storytelling in a
+situated context. The approach is to develop a holistic system that
+enables the processes during a group conversation, or the situated
+modalities associated with oral storytelling.
+***** Predicting reader response in narrative
+:PROPERTIES:
+:ID:       zzg484x0anh0@seebright.com
+:END:
+Inderjeet Mani
+****** Abstract
+This paper sketches a theory of how readers (or users, or players, or
+viewers) respond to narratives. Such a theory can be useful for
+developing evaluation functions to allow for narrative outcomes that
+have maximum impact at particular times on the reader. The reader's
+response is viewed in terms of character evaluations, namely judgments
+of sympathy or antipathy for the agent involved in that
+outcome. Character development is computed in terms of transitions in
+reader evaluations for an agent over the time course of the
+narrative. To formally model character evaluations, we begin with a
+representation of the narrative fabula in terms of the events, their
+participant roles, and their temporal relations. This representation
+is implemented on a corpus of narratives with existing tools and
+standards. Reader evaluations are annotated on events in the
+fabula. Once high reliability in human character evaluations has been
+proven, a character evaluation tagger will be trained on these
+evaluations.
+***** Semi-automatic task recognition for interactive narratives with EAT & RUN
+Jeff Orkin, Tynan Smith, Hilke Reckman, Deb Roy
+****** Abstract
+Mining data from online games provides a potential alternative to
+programming behavior and dialogue for characters in interactive
+narratives by hand. Human annotation of course-grained tasks can
+provide explanations that make the data more useful to an AI system,
+however human labor is expensive. We describe a semi-automatic
+methodology for recognizing tasks in gameplay traces, including an
+annotation tool for non-experts, and a runtime algorithm. Our results
+show that this methodology works well with a large corpus from one
+game, and suggests the possibility of refactoring the development
+process for interactive narratives.
+**** Maths4Kids: telling stories with Maths
+Isabel Machado Alexandre, David Jardim, Pedro Faria Lopes
+Article No.: 4
+doi>10.1145/1822309.1822313
+Full text: PDFPDF
+
+In this paper, we describe a novel approach to teaching early mathematical concepts to young children. This approach aims to merge storytelling and Maths. Evidence show that through dramatic games and role-playing activities young children (aging from 5--7 years old) learn to master new knowledge, to fit in a new school setting and to socially relate with their peers. So taking this evidence into account, it is possible to devise an innovative collaborative learning scenario that teaches early mathematical concepts by telling and creating stories. More than doing it in the traditional formats (oral or theatrical form), we are investigating the possibility to take this scenario to an innovative computerised platform -- Microsoft Surface™.
+
+collapse
+User evaluation of virtual reporting agents
+Neil Madden, Brian Logan
+Article No.: 5
+doi>10.1145/1822309.1822314
+Full text: PDFPDF
+
+Many persistent online environments such as Massively-Multiplayer Online Games (MMOGs), feature weblogs and/or live reportage of participants' activities in the world. While such reports and commentary can enhance the user's enjoyment and increase their sense of shared experience, the demands of such large scale reporting on the participants can be considerable. To address this problem a number of in-game reporting and commentary systems have been proposed which use virtual "reporter" agents within the game to produce real-time and post-game commentary tailored to the interests of individual users. However, to date, there has been no evaluation of these systems from a user perspective. In this paper we present the results of a live evaluation study performed using an instance of the online role-playing game Neverwinter Nights augmented with witness-narrator agents to provide in-game and post-game reports. Our results indicate that reporting does increase enjoyment of the game, and that players play for longer when their activities are recorded on a community web page, suggesting that agent-based reporting is a promising approach to community building in online games and social environments.
+
+collapse
+Authoring tangible interactive narratives using cognitive hyperlinks
+Joshua Tanenbaum, Karen Tanenbaum, Magy Seif El-Nasr, Marek Hatala
+Article No.: 6
+doi>10.1145/1822309.1822315
+Full text: PDFPDF
+
+Creating content for different forms of interactive narratives requires a different set of skills and techniques than writing non-interactive stories. In this paper we describe a prototype tangible interactive narrative system called the Reading Glove and outline the authoring process used to create story content for it. We begin by discussing different approaches to authoring that are currently in use in interactive digital storytelling. We then discuss in detail the process of writing the story for the Reading Glove and provide an analysis of the fiction created through this process. We put forth the notion of "cognitive hyperlinks": a design technique that we believe has utility for the authors of future interactive narratives. We conclude with a set of general design recommendations for authoring within interactive storytelling systems.
+
+collapse
+A method for generating narrative discourse to prompt inferences
+James Niehaus, R. Michael Young
+Article No.: 7
+doi>10.1145/1822309.1822316
+Full text: PDFPDF
+
+Narratives that prompt inferences can be more interesting in that they provide the reader with the opportunity to reason about the narrative world, participating in its construction. These narratives can also be more concise and direct, as details can be filled in by the reader. On the other hand, narratives that leave out important information without the opportunity to infer this information may be incoherent. To generate narratives that prompt inferences a system must 1) employ a theory of how inferences are prompted and 2) provide a capacity for creating narratives that satisfy inference goals. This paper presents is a novel algorithm for generating discourse plans that prompt inferences according to a theory of online inferencing in narrative discourse. Though other approaches have generated narrative and discourse structures to influence the reader's perception of the narrative, this is the first approach to present an empirically based cognitive model of online inference generation. The algorithm is a partial-order planning approach to discourse generation, selecting events to tell the reader from an input story plan.
+
+collapse
+Bottoms up: improvisational micro-agents
+Brian Magerko, Casey Fiesler, Allan Baumer, Daniel Fuller
+Article No.: 8
+doi>10.1145/1822309.1822317
+Full text: PDFPDF
+
+This paper describes our current approach in implementing computational improvisational micro-agents, agents that perform one specific aspect of our findings from the Digital Improv Project. This approach is intended to foster bottom-up research to better understand how to build more complex agent behaviors in a theatrical improvisational setting. The Digital Improv Project is a multi-year study at the Georgia Institute of Technology focused on studying real life theatrical improvisers with an aim towards better understanding the cognition employed in improvisation at the individual and group level.
+
+collapse
+Using narrative functions as a heuristic for relevance in story understanding
+Emmett Tomai, Ken Forbus
+Article No.: 9
+doi>10.1145/1822309.1822318
+Full text: PDFPDF
+
+Story understanding requires a degree of knowledge and expressiveness beyond the current state of natural language understanding. We present an approach that addresses these needs, using a large-scale knowledge base, simplified English grammar and a combination of compositional frame semantics and abductive reasoning. This in turn raises a significant challenge disambiguating complex semantic structures, which requires a pragmatics of narrative for constraint and guidance. We present a theory of narrative functions that serve as a heuristic for relevance in narrative, and provide evidence that this heuristic is effective for disambiguation that leads to consistent understanding.
+
+collapse
+Comme il Faut 2: a fully realized model for socially-oriented gameplay
+Josh McCoy, Mike Treanor, Ben Samuel, Brandon Tearse, Michael Mateas, Noah Wardrip-Fruin
+Article No.: 10
+doi>10.1145/1822309.1822319
+Full text: PDFPDF
+
+Social games---common patterns of character interactions that modify the social environment of the story world---provide a useful abstraction when authoring a story composed of interactive characters, making it possible to create games with deep possibility spaces that are about social interaction (which would be intractable if hand-authoring all the options). In this paper, we detail the workings of a major new version of our social artificial intelligence system, Comme il Faut, that enables social game play in interactive media experiences. The workings of Comme il Faut 2 are shown, with running examples, from both knowledge representation and process perspectives. Finally, the paper concludes with a plan for evaluating and demonstrating Comme il Faut 2 through an implementation of an interactive media experience that consists of a playable social space.
+
+collapse
+Rules of engagement: moving beyond combat-based quests
+Anne Sullivan, Michael Mateas, Noah Wardrip-Fruin
+Article No.: 11
+doi>10.1145/1822309.1822320
+Full text: PDFPDF
+
+Computer role-playing games (CRPGs) are known for their strong narrative structure. Over time, quests have become one of the main mechanics for leading a player through the story. Quests are given to the player in the form of a set of tasks to complete with few, if any, options. The options given to the player instead often revolve around combat-oriented actions -- requiring the player to engage in combat to progress through the storyline, despite player preference or game story that hints otherwise. We address this issue with the GrailGM, a run-time game master which offers quests and actions to the player based on their history and current world state.
+
+collapse
+MINSTREL Remixed: a rational reconstruction
+Brandon Tearse, Michael Mateas, Noah Wardrip-Fruin
+Article No.: 12
+doi>10.1145/1822309.1822321
+Full text: PDFPDF
+
+In this paper, we introduce Minstrel Remixed, a rational reconstruction of MINSTREL by Scott Turner. In addition to recreating the landmark story generation system for public usage we also introduce a number of modifications that were made during the reconstruction that allow for investigation into the inner workings of the system. Additionally we introduce Minstrel Remixed as a platform for use in Interactive Narrative applications and provide a number of concrete examples.
+
+collapse
+Investigating director agents' decision making in interactive narrative: a Wizard-of-Oz study
+Seung Y. Lee, Bradford W. Mott, James C. Lester
+Article No.: 13
+doi>10.1145/1822309.1822322
+Full text: PDFPDF
+
+Interactive narrative planning offers significant potential for creating engaging narrative experiences that are tailored to individual users. Orchestrating all of the events in a storyworld to create optimal user experiences calls for effective narrative decision-making. A key requirement of this endeavor is understanding the role that different knowledge sources play in narrative decision making. To investigate knowledge sources for interactive narrative, a corpus was collected in a Wizard-of-Oz (WOZ) study conducted with a narrative-centered learning environment. With narrative planning and natural language dialogue functionalities provided by wizards, the data from the WOZ study offers insight into the knowledge sources involved in narrative decision making and suggests how these knowledge sources can be effectively utilized by a narrative planner to create engaging interactive narratives.
+
+collapse
+A framework for narrative adaptation in interactive story-based learning environments
+Jonathan P. Rowe, Lucy R. Shores, Bradford W. Mott, James C. Lester
+Article No.: 14
+doi>10.1145/1822309.1822323
+Full text: PDFPDF
+
+A key functionality provided by interactive narrative systems is narrative adaptation: augmenting story experiences in response to users' actions, and tailoring story elements to individual users' preferences and needs. However, the task of interactive narrative adaptation is not yet well defined. There is little consensus about the key features of a general model for narrative adaptation, which results in a limited ability to draw comparisons between alternate solutions. This paper aims to synthesize a diverse range of approaches to narrative adaptation, as well as related experience management techniques from intelligent tutoring systems, in order to devise a framework for more clearly conceptualizing the general task of interactive narrative adaptation. The framework has three components: plot adaptation, discourse adaptation, and user tailoring. The conceptual framework is illustrated with examples from Crystal Island, an interactive narrative-centered learning environment for middle school microbiology. The framework is being used to inform preliminary development efforts on an interactive narrative director agent for the Crystal Island learning environment, and aims to provide a first step toward establishing a general model of interactive narrative.
+
+collapse
+Shared mental models in improvisational performance
+Daniel Fuller, Brian Magerko
+Article No.: 15
+doi>10.1145/1822309.1822324
+Full text: PDFPDF
+
+This paper describes the mental structures called shared mental models, which are heavily related to group problem solving and cognition, and reports how they are related to theatrical improvisation based on our empirical findings. We have conducted a series of studies on real life improvisers aimed at uncovering the underlying cognition involved in improvisation, with the end goal of having a clear understanding of how to build improvisational synthetic characters. We describe cognitive divergence, when improvisers have conflicting mental models of what is occurring on stage, and cognitive convergence, which is the process of resolving such conflicts within the performance. These findings are supported by examples from our study and are used to make conclusions about improvisational synthetic character design.
+
+collapse
+A comparison of interactive narrative system approaches using human improvisational actors
+Mark O. Riedl
+Article No.: 16
+doi>10.1145/1822309.1822325
+Full text: PDFPDF
+
+Interactive narrative is an approach to interactive entertainment or learning in which a system attempts to tell a story to an interactive participant. In this paper we report on a study to compare the theoretical strengths and weaknesses of two approaches to developing computational interactive narrative systems. We compare two approaches to interactive narrative: emergent approaches utilizing autonomous virtual character agents, and drama management approaches utilizing semi-autonomous virtual character agents. Our study uses improvisational theatre as an idealized, human analogue to computational interactive narrative. Results suggest that, regardless of approach, idealized interactive narrative systems should be nearly indistinguishable in terms of character believability and narrative coherence. Results suggest that drama management systems may have an advantage when particular features are required to emerge in players' interactive experiences.
+
+collapse
+RoleModel: towards a formal model of dramatic roles for story generation
+Sherol Chen, Adam M. Smith, Arnav Jhala, Noah Wardrip-Fruin, Michael Mateas
+Article No.: 17
+doi>10.1145/1822309.1822326
+Full text: PDFPDF
+
+RoleModel is a novel story generator organized around explicit formal models of character roles. RoleModel expands the expressiveness of stories generated from arbitrary partial domain specification by using a formal model of roles within an abductive logic programming framework. Authorial goals in the system can be fully or partially specified as constraints in an abductive logic program. In particular, the RoleModel system focuses on representing and satisfying role constraints of the story characters. This paper discusses the basic architecture for the RoleModel approach, demonstrates example output from the system through three use-cases, discusses the authorial expressiveness enabled by a "stageless" abductive logic approach to story generation, and proposes the current and future directions.
+*** INT4 (2011 AIIDE) http://www.aaai.org/Library/Workshops/ws11-18.php
+*** INT5 (2012) https://www.games.ncsu.edu/
+*** INT6 (2013) http://www.int6.gatech.edu/
+
+Accepted Papers
+*** Full Papers
+**** Improving Goal Recognition in Interactive Narratives with Models of Narrative Discovery Events 
+Alok Baikadi, Jonathan Rowe, Bradford Mott and James Lester -
+**** An Authoring Tool to Derive Valid Interactive Scenarios 
+Kim Dung Dang and Ronan Champagnat -
+**** Evaluating the Use of Action Templates to Create Suspense in Narrative Planning 
+Matthew Fendt, R. Michael Young and David Roberts -
+**** Identifying Personal Narratives in Chinese Weblog Posts 
+Andrew Gordon, Luwen Huangfu, Kenji Sagae, Wenji Mao and Wen Chen -
+**** Generating Believable Stories in Large Domains 
+Bilal Kartal, John Koenig and Stephen Guy -
+**** Integrating formal qualitative analysis techniques within a procedural narrative generation system 
+Ben Kybartas and Clark Verbrugge -
+**** Leaving the Script: A Blending Approach to the Generation of Pretend Play Scripts 
+Justin Permar and Brian Magerko -
+**** Evaluation, Orientation, and Action in Interactive StoryTelling 
+Elahe Rahimtoroghi, Reid Swanson and Marilyn Walker -
+**** A Modular Reinforcement Learning Framework for Interactive Narrative Planning 
+Jonathan Rowe and James Lester -
+**** Toward Event-Centric Interactive Narrative 
+Alexander Shoulson, Mubbasir Kapadia and Norman Badler -
+**** Dammit to Jotunheim: Increasing Author Leverage with Expressive Language Generation 
+Marilyn Walker, Jennifer Sawyer, Carolynn Jimenez, Grace Lin, Elena Rishes and Noah Wardrip-Fruin -
+*** Short Papers
+**** Toward Salience-Based Cinematic Generation
+Bradley Cassell and R. Michael Young - Ember, 
+**** [[A Call for Emotion Modeling in Interactive Storytelling]] 
+:PROPERTIES:
+:ID:       dv3f3tb19nh0@seebright.com
+:END:
+Sergio Poo Hernandez and Vadim Bulitko -
+***** Abstract
+Artificial Intelligence (AI) techniques are widely used in video
+games. Recently, AI planning methods have been applied to maintain
+plot consistency in the face of player’s agency over the
+narrative. Combined with an automatically populated player model, such
+AI experience managers can dynamically create a consistent narrative
+tailored to a specific player.  These tools help game narrative
+designers achieve narrative goals while affording players a choice. On
+the other hand, they increase the number of feasible plot branches
+making it more difficult for the author to ensure that each branch
+carries the player along a desired emotion arc. In this paperwe
+discuss the problem and call for an extension of experience managers
+with player emotion models. When successful, interactive narrative can
+be then automatically produced to satisfy authorial goals not only in
+terms of specific events but also in terms of emotions evoked in the
+player.
+**** Science Considered Harmful
+Ian Horswill - 
+**** CONTACT: A Multimodal Corpus for Studying Expressive Styles and Informing the Design of Individualized Virtual Narrators 
+Cheikh Mbengue, David Antonio Gómez Jáuregui and Jean Claude Martin -
+**** Modelling Character Knowledge in Plan-Based Interactive Narrative to Extend Accomodative Mediation
+Justus Robertson and R. Michael Young - 
+**** Implementation Cost and Efficiency for AI Experience Managers
+David Thue, Vadim Bulitko and Howard Hamilton - 
+**** Toward Automatic Extraction of Narrative Structure from Natural Language Text
+Josep Valls-Vargas, Santiago Ontañón and Jichen Zhu -
+**** A Belief-Desire-Intention Model for Narrative Generation
+Theo Wadsley and Malcolm Ryan - 
+*** Poster
+**** Using Interactive Narrative in Health Interventions: A Drama Manager Approach
+Langxuan Yin, Nick Montfort and Timothy Bickmore - 
+*** INT7 (2014) http://int7.westphal.drexel.edu/
+*** INT8 (2015) https://public.intellimedia.ncsu.edu/workshops/INT8/
+**** Organizers
+- Camille Barot, North Carolina State University
+- Boyang “Albert” Li, Disney Research
+- Jonathan Rowe, North Carolina State University
+- Emmett Tomai, University of Texas – Pan American
+**** Program Committee
+- Byung-Chull Bae, Hongik University
+- Julio Bahamon, North Carolina State University
+- Alok Baikadi, University of Pittsburgh
+- Vadim Bulitko, University of Alberta
+- Marc Cavazza, University of Teesside
+- Ronan Champagnat, L3i - Universite de La Rochelle
+- Fred Charles, University of Teesside
+- David Elson, Google
+- Mark Finlayson, Florida International University
+- Andrew Gordon, University of Southern California
+- Ian Horswill, Northwestern University
+- Arnav Jhala, University of California, Santa Cruz
+- Seung Lee, SAS
+- James Lester, North Carolina State University
+- Benedikt Löwe, Universiteit van Amsterdam
+- Brian Magerko, Georgia Institute of Technology
+- Alex Mitchell, National University of Singapore
+- Julie Porteous, Teesside University
+- Mark Riedl, Georgia Institute of Technology
+- David Roberts, North Carolina State University
+- Emily Short, Linden Lab
+- Leonid Sigal, Disney Research
+- Anne Sullivan, Play Crafts
+- Reid Swanson, University of California, Santa Cruz
+- Joshua Tanenbaum, University of California, Irvine
+- Martin Van Velsen, Carnegie Mellon University
+- Marilyn Walker, University of California, Santa Cruz
+- Stephen Ware, University of New Orleans
+- Jichen Zhu, Drexel University
+- Alexander Zook, Georgia Institute of TechnologyJulio Bahamon, North Carolina State University
+- Alok Baikadi, University of Pittsburgh
+- Vadim Bulitko, University of Alberta
+- Marc Cavazza, University of Teesside
+- Ronan Champagnat, L3i - Universite de La Rochelle
+- Fred Charles, University of Teesside
+- David Elson, Google
+- Mark Finlayson, Florida International University
+- Andrew Gordon, University of Southern California
+- Ian Horswill, Northwestern University
+- Arnav Jhala, University of California, Santa Cruz
+- Seung Lee, SAS
+- James Lester, North Carolina State University
+- Benedikt Löwe, Universiteit van Amsterdam
+- Brian Magerko, Georgia Institute of Technology
+- Alex Mitchell, National University of Singapore
+- Julie Porteous, Teesside University
+- Mark Riedl, Georgia Institute of Technology
+- David Roberts, North Carolina State University
+- Emily Short, Linden Lab
+- Leonid Sigal, Disney Research
+- Anne Sullivan, Play Crafts
+- Reid Swanson, University of California, Santa Cruz
+- Joshua Tanenbaum, University of California, Irvine
+- Martin Van Velsen, Carnegie Mellon University
+- Marilyn Walker, University of California, Santa Cruz
+- Stephen Ware, University of New Orleans
+- Jichen Zhu, Drexel University
+- Alexander Zook, Georgia Institute of Technology
+**** Topics
+- Artificial intelligence for story generation and storytelling
+- Computational understanding, analysis, and summarization of narratives, including natural language processing and computer vision
+- Applications of intelligent narrative technologies, including education and healthcare
+- Drama management for interactive narratives
+- Narrative discourse generation
+- Virtual cinematography for narratives
+- Virtual characters that converse, narrate, perform, and behave believably
+- Computable narrative models inspired by cognitive science, narratology, drama studies, and related disciplines
+- Narrative presence and engagement in virtual environments
+- Narrative-related affect and emotion
+- Narrative knowledge acquisition
+- Computational creativity in narrative systems
+- Authoring tools for intelligent narrative technologies, including collaborative authoring
+- Evaluation methods for intelligent narrative technologies
+- User studies and deployed intelligent narrative systems
+- Human-computer interaction with narrative technologies
+**** Papers: INT
+***** Cinematic Ambient, Inhabitable Narrative Environments: Story Systems in Search of an Artificial Intelligence Engine
+Stephen Wingate
+***** Symbolic Plan Recognition in Interactive Narrative Environments
+Rogelio E. Cardona-Rivera and R. Michael Young
+***** Plotter: Operationalizing the Master Book of All Plots
+Markus Eger, Colin Potts, Camille Barot and R. Michael Young
+***** A Tripartite Plan-based Model of Narrative for Narrative Discourse Generation
+Camille Barot, Colin M. Potts and R. Michael Young
+***** Interactive Narrative Intervention Alibis through Domain Revision
+Justus Robertson and R. Michael Young
+***** Toward Natural Language Generation by Humans
+James Owen Ryan, Andrew Max Fisher, Taylor Owen-Milner, Michael Mateas, Marilyn Walker and Noah Wardrip-Fruin
+***** Increasing Engagement with Conversational Agents Using Co-Constructed Storytelling
+Timothy Bickmore and Cristina Battaglino
+***** Aesthetic Interleaving of Character Performance Requests
+Daniel Shapiro, Larry Lebron, Andrew Stern and Michael Mateas
+***** On the Merits of a Temporal Modal Logic for Narrative Discourse Generation
+Markus Eger, Camille Barot and R. Michael Young
+***** Designing Story-Centric Games for Player Emotion: A Theoretical Perspective
+Jason Harley, Jonathan Rowe, James Lester and Claude Frasson
+***** Towards an Accessible Interface for StoryWorld Building
+Steven Poulakos, Mubbasir Kapadia, Andrea Schuepfer, Fabio Zuend, Robert Sumner and Markus Gross
+***** Toward an Automated Measure of Narrative Complexity
+Sarah Harmon and Arnav Jhala
+**** Papers: Social Believability in Games
+***** NPCs as Social Mediators in Massively Multiplayer Online Games
+Nicole Crenshaw and Bonnie Nardi
+***** Modelling Social Network Interactions In Games
+Edgar Omar Cebolledo Gutierrez and Olga De Troyer
+***** Culturally Appropriate Behavior in Virtual Agents
+Mashael Al-Saleh and Daniela Romano
+***** Implementing Injunctive Social Norms Using Defeasible Reasoning
+Joseph Blass and Ian Horswill
+***** Social Play in Non-Player Character Dialog
+Mike Treanor, Joshua McCoy and Anne Sullivan
+***** Automated Generation of Conversational Non Player Characters
+Foaad Khosmood, Grant Pickett and Allan Fowler
+*** INT9 (2016) http://icids2016.ict.usc.edu/
+**** Program Committee
+- Nahum Alvarez, Shinshu University, Japan
+- Elisabeth Andre, Augsburg University, Germany
+- Ruth Aylett, Heriot-Watt University, UK
+- Julio Bahamon, North Carolina State University, USA
+- Alok Baikadi, University of Pittsburgh, USA
+- Udi Ben-Arie, Tel-Aviv University, Israel
+- Rafael Bidarra, Delft University of Technology, The Netherlands
+- Anne-Gwenn Bosser, Ecole Nationale d’Ingénieurs de Brest, France
+- Luis Bruni, Aalborg University, Denmark
+- Daniel Buzzo, University of the West of England, UK
+- Beth Cardier, Sirius-Beta.com
+- Rogelio Cardona-Rivera, North Carolina State University, USA
+- Marc Cavazza, University of Teesside, UK
+- Pablo Cesar, Centrum Wiskunde & Informatica, The Netherlands
+- Fred Charles, Teesside University, UK
+- Fanfan Chen, National Dong Hwa University, Taiwan
+- Teun Dubbelman, Hogeschool voor de Kunsten Utrecht, The Netherlands
+- Micha Elsner, The Ohio State University, USA
+- Clara Fernandez Vara, New York University, USA
+- Gabriele Ferri, Amsterdam University of Applied Sciences, The Netherlands
+- Mark Finlayson, Florida International University, USA
+- Henrik Fog, Aalborg University, Denmark
+- Pablo Gervás, Universidad Complutense de Madrid, Spain
+- Stefan Goebel, Technische Universität Darmstadt, Germany
+- Andrew Gordon, University of Southern California, USA
+- Dave Green, Newcastle University, UK
+- April Grow, University of California, Santa Cruz, USA
+- Charlie Hargood, University of Southampton, UK
+- Sarah Harmon, University of California, Santa Cruz, USA
+- Ian Horswill, Northwestern University, USA
+- Nienke Huitenga, Avans University of Applied Sciences, The Netherlands
+- Ichiro Ide, Nagoya University, Japan
+- Noam Knoller, Utrecht University, The Netherlands
+- Hartmut Koenitz, Hogeschool voor de Kunsten Utrecht, The Netherlands
+- Ben Kybartas, Delft University of Technology, The Netherlands
+- James Lester, North Carolina State University, USA
+- Boyang Li, Disney Research, USA
+- Vincenzo Lombardo, Università di Torino, Italy
+- Sandy Louchart, Glasgow School of Art, UK
+- Domitile Lourdeaux, University of Technology of Compiègne, France
+- Stephanie Lukin, University of California, Santa Cruz
+- Simon Lumb, BBC Research & Development, UK
+- Brian Magerko, Georgia Institute of Technology, USA
+- Chris Martens, North Carolina State University, USA
+- Peter A. Mawhorter, University of California, Santa Cruz, USA
+- David Millard, University of Southampton, UK
+- Alex Mitchell, National University of Singapore, Singapore
+- Paul Mulholland, The Open University, UK
+- John Murray, University of California, Santa Cruz, USA
+- Gonzalo Méndez, Universidad Complutense de Madrid, Spain
+- Frank Nack, University of Amsterdam, The Netherlands
+- Michael Nitsche, Georgia Institute of Technology, USA
+- Eefje Op den Buijsch, University of Amsterdam, The Netherlands
+- Federico Peinado, Universidad Complutense de Madrid, Spain
+- Paolo Petta, Austrian Research Institute for Artificial Intelligence, Austria
+- Julie Porteous, Teesside University, UK
+- Rikki Prince, Southampton University, UK
+- Justus Robertson, North Carolina State University, USA
+- Remi Ronfard, INRIA, France
+- Christian Roth, Hogeschool voor de Kunsten Utrecht, The Netherlands
+- Jonathan Rowe, North Carolina State University, USA
+- James Ryan, University of California, Santa Cruz, USA
+- Magy Seif El-Nasr, Northeastern University, USA
+- Emily Short, Independent writer
+- Mei Si, Rensselaer Polytechnic Institute, USA
+- Marcin Skowron, Austrian Research Institute for Artificial Intelligence, Austria
+- Anne Sullivan, American University, USA
+- Kaoru Sumi, Future University Hakodate, Japan
+- Nicolas Szilas, University of Geneva, Switzerland
+- Joshua Tanenbaum, University of California, Irvine, USA
+- Mariet Theune, University of Twente, The Netherlands
+- David Thue, Reykjavik University, Iceland
+- Emmett Tomai, University of Texas – Rio Grande Valley, USA
+- Martin Trapp, Austrian Institute for Artificial Intelligence, Austria
+- Mirjam Vosmeer, Hogeschool van Amsterdam, The Netherlands
+- Stephen Ware, University of New Orleans, USA
+- Nelson Zagalo, University of Minho, Portugal
+- Jichen Zhu, Drexel University, USA
+** FDG
+*** 
+** AIIDE
+*** 2005
+AIIDE-05 Conference Organizers
+Conference Chair
+R. Michael Young, North Carolina State University, USA
+
+Program Chair
+John Laird, University of Michigan, USA
+
+Demos And Exhibits Chair
+Michael van Lent, University of Southern California/ICT, USA
+
+Local Arrangements Chair
+Michael van Lent, University of Southern California/ICT, USA
+
+Publicity Chair
+Ian Lane Davis, Mad Doc Software, USA
+
+Finance Chair
+R. Michael Young, North Carolina State University, USA
+
+Program Committee
+David Aha, Naval Research Laboratory
+Greg Alt, Surreal Software
+Bruce Blumberg, MIT Media Lab
+Barry Brumitt, Microsoft
+Christian Darken, Moves Institute
+Magy Seif El-Nasr, Pennsylvania State University
+Will Ferguson, BBN
+Bill Fisher, Quicksilver
+Ken Forbus, Northwestern University
+Euan Forrester, Next Level Games
+Dan Fu, Stottler Henke
+John Hiles, NPS
+Lewis Johnson, USC Information Sciences Institute
+Randy Jones, Colby/Soar Tech
+Michael Mateas, Georgia Institute of Technology
+Alexander Nareyek, AI Center
+Jeff Orkin, Monolith Productions
+Steve Rabin, Nintendo
+Deb Roy, MIT Media Lab
+Jonathan Schaeffer, University of Alberta
+Paul Tozour, Retro Studios
+**** Papers
+Owen Bourne, Abdul Sattar:
+**** Applying Constraint Weighting to Autonomous Camera Control. AIIDE 2005: 3-8
+Christopher Brown, George Ferguson, Peter Barnum, Bo Hu, Dave Costello:
+**** Quagents: A Game Platform for Intelligent Agents. AIIDE 2005: 9-14
+Donna K. Byron, Aakash Dalwani, Ryan Gerritsen, Mark A. Keck, Thomas Mampilly, Vinay Sharma, Laura Stoia, Timothy Weale, Tianfang Xu:
+**** Natural Noun Phrase Variation for Interactive Characters. AIIDE 2005: 15-20
+Marc Cavazza, Fred Charles:
+**** Dialogue Generation in Character-based Interactive Storytelling. AIIDE 2005: 21-26
+Christian Darken:
+**** Towards Learned Anticipation in Complex Stochastic Environments. AIIDE 2005: 27-32
+Kevin Dill, Denis Papp:
+**** A Goal-Based Architecture for Opposing Player AI. AIIDE 2005: 33-38
+Thomas D'Silva, Roy Janik, Micahel Chrien, Kenneth O. Stanley, Risto Miikkulainen:
+**** Retaining Learned Behavior During Real-Time Neuroevolution. AIIDE 2005: 39-44
+Greg Dunham, Kenneth D. Forbus, Jeffrey M. Usher:
+**** nuWar: A Prototype Sketch-based Strategy Game. AIIDE 2005: 45-50
+Peter Gorniak, Bruce Blumberg:
+**** Sequence Learning by Backward Chaining in Synthetic Characters. AIIDE 2005: 51-56
+Peter Gorniak, Deb Roy:
+**** Speaking with your Sidekick: Understanding Situated Speech in Computer Role Playing Games. AIIDE 2005: 57-62
+Hai Hoang, Stephen Lee-Urban, Héctor Muñoz-Avila:
+**** Hierarchical Plan Representations for Encoding Strategic Game AI. AIIDE 2005: 63-68
+Marcelo Kallmann:
+**** Scalable Solutions for Interactive Virtual Humans that Can Manipulate Objects. AIIDE 2005: 69-75
+Mike Klaas, Tristram Southey, Warren Cheung:
+**** Particle-Based Communication Among Game Agents. AIIDE 2005: 75-80
+Sandy Louchart, Ruth Aylett, João Dias, Ana Paiva:
+**** Unscripted Narrative for Affectively Driven Characters. AIIDE 2005: 81-86
+Brian Magerko:
+**** Story Representation and Interactive Drama. AIIDE 2005: 87-92
+Michael Mateas, Andrew Stern:
+**** Structuring Content in the Façade Interactive Drama Architecture. AIIDE 2005: 93-98
+Mark J. Nelson, Michael Mateas:
+**** Search-Based Drama Management in the Interactive Fiction Anchorhead. AIIDE 2005: 99-104
+Jeff Orkin:
+**** Agent Architecture Considerations for Real-Time Planning in Games. AIIDE 2005: 105-110
+Mark O. Riedl, Robert Michael Young:
+**** From Linear Story Generation to Branching Story Graphs. AIIDE 2005: 111-116
+David Silver:
+**** Cooperative Pathfinding. AIIDE 2005: 117-122
+Finnegan Southey, Gang Xiao, Robert C. Holte, Mark Trommelen, John W. Buchanan:
+**** Semi-Automated Gameplay Analysis by Machine Learning. AIIDE 2005: 123-128
+Bill Tomlinson:
+**** Negative Behavior Space in the Design of Interactive Agents. AIIDE 2005: 129-134
+Michael van Lent, Mark O. Riedl, Paul Carpenter, Ryan McAlinden, Paul Brobst:
+**** Increasing Replayability with Deliberative and Reactive Planning. AIIDE 2005: 135-140
+Robert Zubek, Ian Horswill:
+**** Hierarchical Parallel Markov Models of Interaction. AIIDE 2005: 141-146
+Joel M. Gompert:
+**** Real-time Simulation of Herds Moving Over Terrain. AIIDE 2005: 149-150
+Stefan Jacobs, Alexander Ferrein, Gerhard Lakemeyer:
+**** Controlling Unreal Tournament 2004 Bots with the Logic-based Action Language GOLOG. AIIDE 2005: 151-152
+Michael Mateas, Andrew Stern:
+**** The Interactive Drama Façade. AIIDE 2005: 153-154
+C. Adam Overholtzer, Simon D. Levy:
+**** Adding Smart Opponents to a First-Person Shooter Video Game through Evolutionary Design. AIIDE 2005: 155-156
+Stuart C. Shapiro, Josephine Anstey, David E. Pape, Trupti Devdas Nayak, Michael Kandefer, Orkan Telhan:
+**** The Trial The Trail, Act 3: A Virtual Reality Drama Using Intelligent Agents. AIIDE 2005: 157-158
+Kenneth O. Stanley, Ryan Cornelius, Risto Miikkulainen:
+**** Real-time Learning in the NERO Video Game. AIIDE 2005: 159-160
+*** 2014
+**** 
+**** [[chrome-extension://bomfdkbfpdhijjbeoicnfhjbdhncfhig/view.html?mp=qNrr65EM][Emotion-based interactive storytelling with Artificial Intelligence]]
+Artificial Intelligence (AI) techniques have been widely used in video
+games to control non-playable characters. More recently, AI has been
+applied to automated story generation and game-mastering: managing the
+player's experience in an interactive narrative on-the-fly. Such
+methods allow the narrative to be generated dynamically, in response
+to the player's in-game actions. As a result, it is more difficult for
+the human game designers to ensure that each possible narrative
+trajectory will elicit desired emotional response from the player. We
+tackle this problem by computationally predicting the player's
+emotional response to a narrative segment. We use the predictions
+within an AI experience manager to shape the narrative dynamically
+during the game to keep the player on an author-supplied target
+emotional curve.
+** CHI PLAY
+*** 
+* Annotated Bibliography
+** [[chrome-extension://bomfdkbfpdhijjbeoicnfhjbdhncfhig/view.html?mp=mc2vhCys][Computational Modeling of Narrative]]
+** The Amsterdam hypermedia model: adding time and context to the Dexter model 
+* Dustbin
+** Abstract
+Analyzing interactive digital storytelling experiences has proven a
+challenging interdisciplinary endeavor in part due to the variety of
+approaches and to the as-yet-unsolved challenge of fully modeling
+narrative meaning. The competing values and goals of the community
+which share the same interest has resulted in a tapestry of efforts
+that often do not build upon one another, but instead seek to amend
+perceived faults in the execution or in the coverage of previous
+approaches. This paper surveys efforts at understanding interactive
+narrative through three lenses: player emotions or affect, player
+interaction or choices, and player knowledge or beliefs. These lenses
+provide insight into how the communities goals relate to existing
+efforts. We use these observations to develop a theory of modeling
+interactive narrative content with the goal of separating the
+necessary efforts into layers that can build upon one another. The
+core contention of the proposed layered approach is that a unified
+theory of interactive digital narratives is counterproductive in
+understanding how specific artifacts operate and in guiding the
+creation of novel artifacts which achieve similar effects.
+
+

@@ -1,0 +1,85 @@
+* ICIDS Requirements for Modeling Interactive Digital Narratives
+Sole Authorship -- John Murray, Michael Mateas, Noah Wardrip-Fruin
+
+*Brave New Ideas*
+
+- Position Paper
+
+Understand other minds, other ways of being, other combinatorics of
+reality. To author with a digital assistant to help escape one's own
+situation, to augment empathic experience and to anticipate the
+effects of choices, opportunities, risks and rewards.
+
+- Literature Survey of Computational Analytics + Modeling of Story, Story Understanding
+  - Harmon
+  - Elson
+  - Finlayson
+- Discourse Analysis
+  - 
+- Choice Poetics
+  - Presenting Believable Choices (Justus Robertson, R. Michael Young)
+  - 
+ 
+- Compare Goals
+
+** Motivation
+  - Corpora of successful games annotated with opportunities &
+  - Create a "Narrative Game Playing Bot"
+    - Requires text processing, image analysis, input synthesis
+    - Requires facial expression processing, story recognition,
+      emotional simulation,
+    - Has beliefs, atittudes toward particular topics.
+    - How to classify player experiences -- positive, negative, what
+      they reveal about the person.
+    - Player Modeling + Feedback for Story Design
+    - High Level Interactive Story Authoring Tools
+
+** Requirements Analysis
+  - Genre by Genre, as each set of game mechanics motivate a new
+    coding schema
+  - Example Genres that would be suitable, by Functional Game Mechanic
+  - Narrative Coding Schema for Video Playthroughs
+    - Uses Existing Story Intention Graphs
+    - Problems with Annotating (Graphical Interface, etc)
+** Challenges
+*** How to uniquely identify choice (within a possible set of choices)
+Can't give a choice an ID.
+
+* ICIDS: Analyzing Causes of Player Emotions During An Interactive Narrative
+- Describe Study Design, Data Set and Procedure
+- Discuss emotion, narrative causes for emotions, and results
+- Show diagrams of key moments and player decisions that preceded them
+  - By understanding which decisions were associated with the values,
+    the emotion can be better understood.
+- Player Attitude toward topics, characters and the work shifts over time
+- Players understand propositions and react to them. They anticipate
+  them, and they react to them.
+- Timing plays a critical but often hard to handle role. Distance
+  between an emotional trigger and the payoff may affect the strength
+  of an emotion. Linear film often controls this presentation
+  completely, but interactive narratives introduce periods where the
+  user can spend longer or shorter periods of time.
+
+* CHI contributions
+
+* INT Contributions
+- Graph Algorithm input: 
+  - 
+recognize
+
+* Outstanding theoretical problems:
+
+1. How do you link story points between traversals?
+  - Which decisions influenced the current content?
+  - Which story points (causally) led to the current content?
+  - What kind of story event took place?
+
+2. How do you label segments/choices/etc that are identical between the two?
+  - Fingerprint each playthrough
+  - Choices represent various values (player-chosen)
+  - Choices can be tagged with player-values, player-intents and
+    player-identification
+  - 
+
+
+3. 

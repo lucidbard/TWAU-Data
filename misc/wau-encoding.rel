@@ -1,0 +1,24 @@
+;; RefTeX parse info file
+;; File: /Users/lucid/Dropbox/wau-encoding.org
+;; User: lucid (John Murray)
+
+(set reftex-docstruct-symbol '(
+
+
+(xr nil "\\\\\\\\\\\\")
+
+(index-tags)
+
+(is-multi nil)
+
+(bibview-cache)
+
+(master-dir . "/Users/lucid/Dropbox/")
+
+(label-numbers)
+
+(bof "/Users/lucid/Dropbox/wau-encoding.org")
+
+(eof "/Users/lucid/Dropbox/wau-encoding.org")
+))
+

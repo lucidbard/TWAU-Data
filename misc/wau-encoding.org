@@ -1,0 +1,68 @@
+Dialogue Lines
+| LineID | Char | Line                                                                       |
+|--------+------+----------------------------------------------------------------------------|
+| D1     | BW   | I'm looking at a 3 foot toad                                               |
+| D2     | BW   | in a sweater... That's a problem.                                          |
+| D3     | BW   | If you can't afford to look human                                          |
+| D4     | BW   | you're going to The Farm.                                                  |
+| D5     | BW   | It's as simple as that.                                                    |
+| D6     | MT   | You can't send me up to live with those animals                            |
+| D7     | MT   | You know what I mean                                                       |
+| D8     | BW   | Go see a witch, get a glamour                                              |
+| D9     | MT   | Bigby, they are bleeding me dry, mate                                      |
+| D10    | MT   | The quality of the spell goes down, but the rates keep climbing up         |
+| D11    | MT   | Do you have any idea how much it costs to keep an entire family in glamour |
+| D12    | BW   | I've heard enough of your excuses toad, this is unacceptable               |
+| D13    | BW   | Look, no harm done, I'll give you a pass, but listen                       |
+| D14    | MT   | Come on Bigby, say something. You're starting to scare me.                 |
+
+* Choice 1
+| Shot | Length | Dialogue |
+|------+--------+----------|
+| A1   |   1:29 | D1       |
+| B1   |   3:18 | D2       |
+| C    |   3:04 | D3 D4    |
+| D    |   5:14 | D5 D6    |
+| E    |   2:06 |          |
+| F    |   1:12 | D7       |
+| G    |   3:06 | D8       |
+| H    |   5:29 | D9 D10   |
+| I    |   6:22 | D11      |
+|------+--------+----------|
+
+* Choice 2
+| Shot | Duration | Dialogue |
+|------+----------+----------|
+| A2   |     4:29 | D12      |
+| C    |     3:13 | D3 D4    |
+| D    |     5:14 | D5 D6    |
+| E    |     2:09 |          |
+| F    |     1:21 | D7       |
+| G    |     3:06 | D8       |
+| H    |     5:27 | D9 D10   |
+| I    |     5:21 | D11      |
+
+* Choice 3
+| Shot | Duration | Dialogue  |
+|------+----------+-----------|
+| A3   |     7:16 | D13 D3 D4 |
+| D    |     5:08 | D5 D6     |
+| E    |     2:10 |           |
+| F    |     1:18 | D7        |
+| G    |     3:07 | D8        |
+| H    |     5:27 | D9 D10    |
+| I    |     5:20 | D11       |
+|------+----------+-----------|
+
+* Choice 4
+| Shot | Duration | Dialogue |
+|------+----------+----------|
+| A4   |     7:16 | D14      |
+| C    |     3:13 | D3 D4    |
+| D    |     5:08 | D5 D6    |
+| E    |     2:10 |          |
+| F    |     1:18 | D7       |
+| G    |     3:06 | D8       |
+| H    |     5:27 | D9 D10   |
+| I    |     5:21 | D11      |
+|------+----------+----------|

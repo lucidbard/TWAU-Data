@@ -1,0 +1,2538 @@
+#+TITLE:  /The Holmes Complex/: Extending Story Intention Graphs for Interactive Cinematic Narratives
+#+SUBTITLE: PhD Advancement Proposal
+#+AUTHOR: John Murray
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../style.css" />
+#+HTML_DOCTYPE: html5
+#+HTML_CONTAINER: content
+#+HTML_LINK_UP: index.html
+#+HTML_LINK_HOME: ../index.html
+#+INFOJS_OPT: view:content toc:nil ltoc:nil 
+#+LATEX_CLASS: llncs
+#+LaTeX_HEADER: \frontmatter          % for the preliminariese
+#+LaTeX_HEADER: \pagestyle{headings}  % switches on printing of running heads
+* Abstract
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+Narrative can be understood as a phenomenon that arises from the
+coordination of inherent mental abilities, specifically the ability to
+understand the interaction of a set of agents and their goals and
+beliefs, and the sequence of causally related events they are involved
+in. Computational Narratology investigates and applies narrative
+theory using a variety of computational tools in order to assess,
+apply and discover properties of this particular type of human
+discourse. David Elson released a set of discourse relations to
+represent key relationships among concepts from narrative theory,
+called the Story Intention Graph (SIG). Elson collected a set of SIG
+encodings of selected Aesop’s Fables in order to assess the schemata
+and to discover analogous relationships among them.
+
+Computational Narratology currently focuses primarily on textual
+narratives, due to their tractability to algorithmic approaches and
+the availability of tools from natural language processing. Similarly,
+interactive narratives are difficult to apply techniques that have
+been designed around a single underlying reality. I propose to use the
+concept of operational logics, originally proposed by Noah
+Wardrip-Fruin and others to develop a model of the surface of
+cinematic choice-based adventure games that takes the representation
+of film techniques and the branching logic into account. I propose to
+use this model to inform an extension of Elson’s SIG to account for
+branching interactive narratives and to publish an encoded version of
+Telltale Games' /The Wolf Among Us/. Finally, I will evaluate the
+value of this encoded structure for highlighting important narrative
+elements by comparing the reported influential content that played a
+part in significant decisions, using a list of previous decisions to
+specify an encoding of a single traversal using the enhanced SIG that
+represents the story values and predecessors highlighted in those
+decisions.
+* Introduction
+#+BEGIN_QUOTE
+Our appetite for story is a reflection of the profound human need to
+grasp the patterns of living, not merely as an intellectual exercise,
+but within a very personal, emotional experience.
+
+/Robert McKee/ \cite{Mckee1997}
+#+END_QUOTE
+
+Stories are fashioned from every media. Narrative, and specifically,
+story, can be understood as a phenomenon that arises from the
+coordination of inherent mental abilities \cite{Herman2013}
+\cite{Ryan2010}. Marie-Laure Ryan asserts that "as long as we are able
+to construct a world populated with individuated agents, identify
+changes of states, ascribe motivations to the agents, and detect
+causal relations between events, we understand a text as a story,
+whether or not we are aware of what we are doing"
+\cite{Ryan2010}. Text can be interpreted more broadly to refer to any
+media, including computational media which has as one of its primary
+affordances interactivity. This proposal expands existing
+computational models of narrative in order to address computational
+media artifacts that contain possible stories and which demand that
+the players join the protagonist in their most critical decisions.
+
+In order to understand how interaction and story co-exist in
+interactive narratives, we will use existing formalisms and theories
+for both interactive computational media and computational models of
+narrative to develop new tools and techniques and extend previous
+ones. The proposed dissertation includes the design, creation and use
+of an encoded set of gameplay recordings that reflect a rational
+reconstruction of the underlying operational logics in a particular
+subgenre of adventure game \cite{Wardrip-Fruin2009} annotated with an
+extension of David Elson's computational model of narrative, the Story
+Intention Graph (SIG) \cite{Elson2012}. While the extension of these
+existing computational models to apply to non-textual artifacts and to
+incorporate the possibility space inherent in choice-based narratives,
+one of the motivating questions is whether the combination of these
+two innovations allow insight into the experience of a player making a
+decision in a choice-based adventure game. These insights would
+provide guidance on the authoring task and system design of many types
+of story games beyond the subgenre described herein, as it would be
+the first complete model of the story content of a production
+contemporary interactive digital narrative.
+
+Interactive digital narratives represent a possibility space of
+potential stories which require non-trivial effort to "experience."
+Espen Aarseth calls these works "ergodic literature" in his book,
+/Cybertext/ \cite{Aarseth1997}, drawing attention to the properties
+that differentiates this medium from other types of literature. Nick
+Montfort uses the term "traversal" [fn:5] to describe one possible or
+actual story that results from engaging with a work, further
+distinguishing "successful" or "complete" traversals based on
+completion.  For instance, a failure of the player to overcome an
+obstacle, resulting in the character's death, does not always result
+in completion of the intended story content, but rather requires the
+player to attempt the challenge again before proceeding
+\cite{Montfort2006}. Hartmut Koenitz proposed the term "instance" to
+describe a parameterized traversal, using the sense prevalent in
+computer programming \cite{Hartmut2015}.  Koenitz describes the space
+of instances as a "protostory." We will use the term "traversal" to
+refer to a sequence of player actions and story content, while the
+concept of a protostory will surround much of the discussion of
+extending the SIG schemata to incorporate possible worlds . Unlike the
+exactness of a transcript of an interactive fiction traversal,
+"traversal" in this proposal will refer to a sequence of player
+choices and non-interactive segments, where the interactive segments
+could vary, but where the order of initial encounter of content during
+interactive segments is significant and details such as the exact
+movement or timing of navigating spaces or the exact timing of a
+choice made during a dialogue choice is not considered, for the
+present study, as significant. This definition allows us to remain
+focused on the story content without getting distracted by the
+totality of possible executions and user inputs that would be possible
+with an interactive program, especially one which has sections that
+allow the player to remain indefinitely or to revisit content
+infinitely.
+
+** Research Questions
+:PROPERTIES:
+:ID:       kkf7ytm0e7h0@seebright.com
+:END:
+The proposed dissertation will investigate the following three
+research questions which concern computational narratology in
+interactive digital narratives and Telltale Games /The Wolf Among Us/
+in particular:
+
+- *RQ1*. How do you define and represent, using story control logics,
+  the significant story-related surface content of cinematic
+  choice-based adventure games?
+
+- *RQ2* What extensions are necessary for the Story Intention Graph
+  schemata to cover the possibility space of variations present in the
+  story of a cinematic choice-based adventure games?
+
+- *RQ3* Can an extended SIG, encoded with the surface content and
+  provided a set of decisions made by a player, predict players'
+  attribution of content that influenced their decision in a
+  significant choice in /The Wolf Among Us/?
+
+We will unpack the key phrases and terms, starting with the subgenre
+of cinematic choice-based adventure games.
+
+*** Cinematic Choice-based Adventure Games
+:PROPERTIES:
+:ID:       i68is8r0c8h0@seebright.com
+:END:
+
+#+CAPTION: Axes describing simulationist/determinstic vs combinatorial/procedural
+#+NAME:   fig:simulation_instantial
+#+LABEL: fig:simulation_instantial
+#+ATTR_LATEX: :width 10cm
+[[file:simulationistdeterminist.png]] 
+
+Telltale Game’s /The Wolf Among Us/ was released in 2013 for multiple
+platforms. The game received numerous positive critical reviews and
+represents a mature example of this subgenre. Its story content is
+conveyed through a combination of dialogue, performance of the
+characters and cinematography. The game has even been translated into
+a comic book, the original media that of the /Fables/ series on which
+the game is based \cite{Sturges2014}. This document locates the work
+in a subgenre of adventure game, and further places it on two axes.
+
+Figure [[fig:simulation_instantial]] depicts a two-dimensional
+categorization scheme and several existing works that are plotted on
+both axes. The x axis represent the degree to which the game relies on
+simulation, or the mathematical model of physical or other properties
+such as the social physics engine of Prom Week \cite{McCoy2012} or the
+manners simulation present in /Versu/ \cite{Evans2014}. The negative
+direction (toward the left) indicates an increased reliance on an
+alogrithm which uses real numbers (Floating points) for the selection
+and configuration of content. This is contrasted with games which have
+a minimal level of system modeling in favor of hand-authored content
+based on human imagination.[fn:8] The second axis charts the
+granularity of selection tagging or criteria for content which is
+reconfigured. These axes are more for isolating the type of variations
+than measuring precisely how this variation exists, though future work
+could develop these distinctions further. It is useful to locate the
+specific space that the subgenre of cinematic choice-Based adventure
+games occupies: where story content is coded to be presented to the
+player in a very specific order and under very specific conditions and
+where virtually no unexpected sequence of content occurs.[fn:9] The
+label "cinematic choice-based adventure game" was chosen not because
+it is the popular name used for this subgenre of adventure games,
+which could be considered a hybrid of the point-and-click adventure
+game and interactive movie, but rather for how it highlights the
+primary mechanics (making choices) and the primary representational
+mode (cinematic) as well as including the historical genre of
+adventure games which is distinguished by distinct authored
+player-character(s) and an emphasis on story.
+
+The adventure game genre is often put in opposition to genres which
+promote more player freedom, such as in Massively Multiplayer Role
+Playing Games (MMORPGs) or Open World RPGs which allow players to
+create and develop their own character. Clara Fernandez-Vara describes
+in her dissertation how adventure games shape "the means by which the
+player restores the behavior that is expected by playing the game"
+\cite{ClaraFernandez-Vara2009}. In other words, in adventure games,
+the player takes actions that are authored by the game's creator
+rather than have those actions emerge from the system's behaviors. The
+player's choices vary the way in which that performance is carried out
+as well as certain key facts that make up the plot. Most decisions and
+actions only have an impact on the pacing or variation of the
+performance rather than ontological changes in the plot, such as the
+timing for choosing menu options or choosing two options that have the
+same outcome but which have apparent different descriptive text. Some
+choices result in content which provides the player satisfaction later
+in the game, labeled the "payoff" in this document. Another term that
+will be useful is the concept of an "influential thread", or content
+that plays a role in affecting a future player decision.
+
+Cinematic choice-based adventure games avoid themed puzzles such as
+the cake puzzle in Graeme Devine's /7th Guest/, coordination skill
+tests such as the various object and physics puzzles in Valve's
+/Portal/ or abstract logic puzzles such as found in Jonathan Blow's
+/The Witness/. Instead the subgenre favors dramatically staged choices
+that branch the story's presentation, making it an ideal candidate for
+modeling the surface story content in the context of a specific subset
+of operational logics, named story control logics in this document,
+that overlap with interface and performance logics. Operational logics
+provides a set of theoretical tools to talk about how the
+representations, specifically the affordances of the representations
+in the form of interfaces and objects as interfaces, are consistently
+representative of processes that are outside of the story (they
+control the story's flow) and yet are necessary to abstract the actual
+set of traversals possible. One way of looking at the story control
+logic is that of a rational reconstruction of the underlying code that
+was used in selecting content through the official Telltale
+tool. Rational reconstruction involves investigating the inner
+workings of a system by creating a version of it and comparing the two
+systems. Brandon Tearse, Noah Wardrip-Fruin and Michael Mateas used
+this technique in creating a rational reconstruction of Minstrel, both
+due to the loss of the original work and to investigate potential
+improvements \cite{Tearse2010a}. The evaluation of the surface story
+content is detailed in section [[id:ep1b8cd159h0@seebright.com]], but it
+differs in that the goal is not to understand the underlying
+computational system, but rather to use a reconstruction of the system
+to understand the mapping between the choices and the narrative
+through the deep story structure.
+
+There are some examples of choices which provide payoff based on the
+player's observation skills, two examples include putting together
+parts of a murder scene and catching Mr. Toad in a lie, but these do
+not gate progress. Marie-Laure Ryan describes changes that effect the
+world of the narrative as ontological versus exploratory, which covers
+the mode where the reader encounters content in a different orders
+based on different orders for a traversal \cite{Ryan2001}. The
+variation of interest is the ontological variation that is modulated
+by the story control logic, though some exploratory sections are
+present in the subgenre, particularly segments where a number of nodes
+can be visited in any order without affecting the story world.
+
+/The Wolf Among Us/ is episodic: future episodes must account for
+previous player decisions. This requirement is different from
+stand-alone story games which often have a greater variety of
+endings. An example of a non-episodic story game in the interactive
+drama genre is Michael Mateas and Andrew Stern's collaboration,
+/Façade/ \cite{mateas2003integrating}, or the text-based /Versu/
+\cite{Evans2014}. In /Façade/, there are several possible outcomes
+determined by player's interactions with the characters. Replayability
+is one of the stated design goals, and to that end the variations and
+additional content reward the player with deeper insight into the
+characters and the history through repeated engagement. In contrast,
+episodic story games build on decisions made by the player in previous
+episodes and have limited replay value due to the amount of content
+that is necessarily conserved. Other non-episodic games, such as
+/Heavy Rain/,[fn:6] are closely related in their operational logics
+and their suitability for discovering content relationships using the
+techniques proposed in this document.
+
+By conserving content and maximizing payoffs among possible
+traversals, this subgenre is ideally suited to algorithmic traversal
+by the intentional frames captured by SIGs, as the player’s goals and
+intentions are rewarded while the story remains relatively consistent.
+
+*** Story Control Logics
+:PROPERTIES:
+:ID:       tx6har00e8h0@seebright.com
+:END:
+
+Noah Wardrip-Fruin introduced the analytical concept of operational
+logics \cite{Wardrip-fruin} to describe the synergistic relationship
+of abstract process and representational goals. He did so in the
+context of understanding the relationships between surface, process
+and data in the work leading up to the book /Expressive Processing/,
+and described some of the key insights there \cite{Wardrip-Fruin2009}.
+The concept was later formalized and further defined in collaboration
+with Michael Mateas in \cite{Mateas2009b}:
+
+#+BEGIN_QUOTE
+An operational logic defines an authoring (representational)
+strategy, supported by abstract processes or lower-level logics, for
+specifying the behaviors a system must exhibit in order to be
+understood as representing a specified domain to a specified
+audience. \cite{Mateas2009b}
+#+END_QUOTE
+
+Operational logics can be used to precisely model and analyze how an
+author communicates through a set of abstract processes and
+representations an underlying "domain" with an audience. This
+proposal's surface content model depends on the slipperiness of the
+domain of human affairs that is narrative, and how at the same time
+operational logics "determine the state evolution of a system," how
+they specify an abstract model of the underlying system, "with how
+they are understood at a human level," through the proposed encoding
+\cite{Mateas2009b}. Some examples of operational logics that are
+proposed by Wardrip-Fruin include collision logics and dialogue tree
+logics, which reflect certain strategies to manage the content and the
+actual experience of engaging with it \cite{Wardrip-Fruin2009}. As
+long as a particular logic is maintained throughout a work, and that
+logic reflects a systematic application of an underlying process, it
+can be fruitfully analyzed as an operational logic. In this section,
+the operational logics targeted are principally those that control and
+represent the branching of the story and not necessarily logics that
+pertain to any underlying simulation of the story domain. In this way,
+they are not that much different than dialogue tree logics or the use
+of quest flags, and the proposed SIG extension takes advantage of that
+simplicity. The main difference is that the strategy of reflecting the
+choices through interfaces are tied to an underlying time-based
+performance that is critical to the pacing of the dramatic work.
+
+The encoding of the surface representation depends on a model of the
+underlying operations that each of the proposed story control
+logics. These logics occupy the intersection between (graphical)
+interface logics and performance logics, as they provide the player
+with options tied to an underlying content selection architecture as
+well as afford the player a set of performance options that either
+determine or enact the choices.
+
+The state evolution and representational strategy of cinematic
+choice-based adventure games is represented by modeling the following
+*story control logics*:
+
+| Operational Logic Name       | Description                                                 |
+|------------------------------+-------------------------------------------------------------|
+| *1* /Response Selection/     | Language-based menus that reflect player-character options. |
+| *2* /Object-Verb Selections/ | Verb-selection for object or character.                     |
+| *3* /Inventory/              | Objects that either reflect ongoing or past plots           |
+| *4* /Quick-time/             | Affordances that require enactment to proceed               |
+| *5* /"Payoff" Signaling/     | Text that indicates (truthfully or not) underlying state    |
+|                              |                                                             |
+
+There are other operational logics at work, such as collision logics
+and camera control logics, but these don't affect the story structure
+as defined by the SIG. The four above operational logics cover every
+relevant non-linear control mechanism and corresponding
+representation. These logics must be reflected in a surface model in
+order to represent the possible variations. Because of the importance
+of these control logics in determining the surface structure, we will
+review each in the following sections.
+
+**** Response Selection
+Response selection is so named because it how a player selects the
+next actions or intent of the character. Like most adventure games,
+the character itself actually carries out the action or dialogue, and
+even sometimes the way a particular choice plays out may differ from
+what was anticipated. The underlying operation is simply one of
+selecting the content to be played.
+
+**** Object-Verb Selection
+This logic is a variant on the response selection, except that it
+plays the character interacting with an object instead of interacting
+with a character and often has physical actions instead of dialogue
+options. An example is either knocking or kicking down a door, or
+picking up an object.
+
+**** Inventory Logics
+In this logic, the main function is as a flag to whether certain
+content choices are available. Secondarily, it is a reminder of
+important plot threads.
+**** Quick-time
+This represents the enactment of the player of a particular situation
+the character is in, often through repeated button presses or through
+a quick decision in a heated moment. Failing these may result in
+replaying from a checkpoint, so most do not branch the story.
+**** /"Payoff" signaling
+
+This is one of the more complex logics that may not determine
+underlying state at all, but rather simply shaping player expectations
+of how their decision affected agents. It is because of this
+expectation that it needs to be represented as a distinct logic in the
+surface story content, and because it is consistently applied in a way
+that would suggest an underlying model is being affected.
+
+The complexity of navigating the surface content defined by these
+logics and the recorded gameplay motivates the creation of a "story
+browser" tool to aid analyzing the distribution and patterns that the
+content takes. This tool is discussed further in section
+[[id:pc99b2h0i8h0@seebright.com]].
+
+*** Surface Story Content
+:PROPERTIES:
+:ID:       89e9zj61i8h0@seebright.com
+:END:
+In this section, we will review the motivation behind modeling the
+surface story content with respect to existing models of narrative
+discourse. We will further review why the content of /The Wolf Among
+Us/ cannot be represented by mapping it onto a simple text.
+
+The concept of *surface story content* represents the narrative
+content that is conveyed to a player. The name derives from the idea
+that story-related information, also known as content, in contemporary
+published games, is primarily authored through "scripting"[fn:2]. It
+is scripted in the sense of an authored script that details the
+content of a dramatic work, including directions for action and mood.
+The story content, relies on an interpretation by a player of the
+surface of that content to describe agents pursuing goals through
+various channels, specifically the dialogue lines spoken, the text
+rendered and the actions portrayed, rather than an understanding of
+the underlying computationally modeled simulation as in the case of
+physics simulated content or the properties of weapons and targets in
+the case of projectile-based or item-based content. The system that is
+interpreted operates at the level of agents pursuing goals within the
+context of an overall story. Games which fall under this category
+include /The Wolf Among Us/ \cite{TelltaleGames2013}, /Life is
+Strange/ \cite{DontnodEntertainment2015} and /Kentucky Route Zero/
+\cite{Elliott2013}.
+
+Surface Story Content in this document refers to the primary
+/instantial/ content that determines the interpretation of story
+elements in a traversal.  For instance, it would be sufficient to
+describe the surface story content by using sequences of gameplay
+recordings in the form of dialogue, captured gameplay video and
+interface elements, especially insofar as these traversals have
+sections that are considered shared. The surface story content is
+modeled using gameplay recordings and the logical structure that
+determines their selection them from within the game. It can spans the
+possibility space of story content from any potential (meaningfully
+different) traversal. This approach accounts for the fact that an
+infinite loop could occur in an actual traversal by only accounting
+for the initial visit to "cutscenes" and not assuming new information
+is provided through repetitive visits even if possible in a given
+segment (such as an exploratory segment where a given object could be
+repeatedly examined).
+
+As opposed to the set of recorded traversal sections, modeled along
+with potential player choices, a Story Intention Graph encoding of a
+story is referred to in this document as the *deep story
+structure*. This is the underlying set of relationships between
+events, characters, beliefs, goals and affect that the audience forms
+as they witness a story unfolding, and is influenced by narratological
+theories.  The SIG incorporates all three of Mieke Bal’s levels of
+narrative structure: the /text/, or the set of signs are represented
+by /Text Nodes/, the /story/, or the sequence of presented happenings
+or events influenced the /text/ nodes sequencing, and the /fabula/
+level is reflected in the /state/ node and its ontological status as
+the truth of a story, or the entirety of the fictional world that is
+ordered into the /story/. Surface Story Content, as described above,
+corresponds to the /text and discourse/ levels of Bal's model and the
+deep story content to the story level for interactive works where such
+an approach is possible \cite{Bal2009}. 
+
+Noah Wardrip-Fruin cites three components of computational media
+works: surface, processes and data \cite{Wardrip-Fruin2009}. While the
+term "surface story content" is inspired by this usage, in order for
+it to occupy the role it needs to its sense is extended to incorporate
+the representational strategies of the key operational logics. For
+brevity, we will refer to the surface story content as the surface
+content, and understand that it does not include every detail of the
+surface representation but only those aspects which are necessary in
+understanding the story.
+
+David Elson’s Story Intention Graphs refers to the "Textual Layer" in
+his dissertation as fulfilling this role: "a linear vector of nodes
+that contain the *utterances of the original discourse* that is being
+modeled." Elson mentions that this layer could also be visual or oral,
+but does not elaborate on the exact way that such works would be
+handled. /Scheherazade/ \cite{Elson2012} is a Java program designed
+for annotators to encode SIGs from plain text narratives. The system
+references individual segments of a source text by the beginning and
+ending index within the original text, and these spans are used to
+anchor propositions in the timeline layer. The timeline layer then
+affords connecting proposition nodes[fn:3] with points or intervals in
+time represented by states based on /TimeML/ \cite{Ingria2003}. This
+representation would work equally well by referencing timecodes in a
+video or panels in a comic that does not branch, but must be extended
+to account for branching logic of interactive digital narratives. A
+more detailed review of how Elson’s SIG format is suitable can be
+found in section [[id:9k4lun20i8h0@seebright.com]], while a description of
+the elements of the schemata can be found in section [[id:8zs4eaz059h0@seebright.com]].
+
+The proposed model for surface story content is a data structure that
+incorporates three types of information, two which are generated
+instantial assets: the sequence of images or frames and the
+accompanying synchronized audio. The third is a transcription and time
+encoding of linguistic content either spoken or shown. The sequence of
+images, or shots, correspond to the traditional definition, a
+continuous view from a single virtual camera. The term "segment" is
+introduced as a way of organizing sequences of shots that are always
+played together between "control points", points in a traversal where
+the surface story content diverges. For instance, following a player
+choice, one of four segments would result, each of which may share
+shots with the others.
+
+This model of surface and text is useful because it affords certain
+means of measuring the surface content without access to the
+implementation of the underlying processes, even as it presents
+problems. In this way it is a form of rational reconstruction, like
+that used with /Minstrel/ \cite{Tearse2010a}. Unlike works of film,
+the surface content of games are determined during execution by player
+input. Further, although words and phrases offer a natural
+segmentation of meaning for textual narratives, and each word presents
+a denotative meaning and a sentence can be considered a vehicle for
+meaning which can be modeled by multiple propositions, as Elson
+enables through mappings of proposition nodes to text nodes, it is not
+obvious how to provide hooks for annotation of cinematic interactive
+narratives whose interpreted meaning may be spread across shots, or be
+present in a character's expression, or even by connotated by the
+underlying subtext of an interaction or the connotations of the set
+design.
+
+A single line of dialogue might be performed across multiple shots, or
+discrete continuous sequences of frames as taken by a virtual
+camera. Would each shot be a segment of meaning, or would the line of
+dialogue be treated as an atomic whole?  These questions are central
+to creating and assessing a model of surface content model.
+
+Section [[id:7ag9o190f8h0@seebright.com]] goes into detail about what an
+objective surface story content dataset might like, but the
+anticipated form is that of a collection of of recorded gameplay
+videos of traversal story segments that are referenced by a model of
+the story control logics. This combination of content and logic
+results in a dataset that contains all possible traversals (that
+contain a unique sequence of initially-encountered content) and their
+corresponding shots/sequences.
+
+The encoded dataset (including "objective" annotations such as
+textual representations of dialogue, timing, characters present, etc)
+will be annotated with the appropriate interpretive SIG elements, in
+particular the represented goals, plans, the affect endpoint of
+goals/plans and the constituent events or planned events.
+
+The broader questions of how to achieve and measure agency and how the
+property of interactivity influences narrative experience have been
+topics of interest in the interactive storytelling community and is
+often cited as a central concern in interactive narratives. Janet
+Murray described it as a "satisfying power" in \cite{Murray1997a},
+Michael Mateas directly addresses how to achieve it through balancing
+formal and material constraints in \cite{mateas2001preliminary}, and
+Stacey Mason expanded related definitions involving the distinction
+between diegetic and extra-diegetic agency in \cite{Mason2013}, while
+Mateas and Noah Wardrip-Fruin refined the definition to include the
+computational model in \cite{Wardrip-Fruin2009b}. In this proposal,
+the third research question (RQ3) addresses a particular type of
+player experience that is at the core of the subgenre identified. The
+satisfying feeling of making an important narrative choice is one
+which is unique to this genre, and understanding how it operates
+depends heavily on the deep story structure of the work. The rest of
+this section introduces the discipline of computational narratology
+and the concept of a Deep Story Structure, followed by the three main
+research questions and their explication.
+
+*** Deep Story Structure
+Instead of producing a novel computational model of narrative, the
+proposed dissertation builds on David Elson's Story Intenton Graph
+schemata \cite{Elson2012}. The SIG was shown to be useful for
+discovering analogies and has been recognized in the computational
+narrative modeling community as an important effort
+\cite{Goguen2010a}. The SIG schemata consists of three layers of
+structure that interrelate: the textual layer, the timeline layer and
+the interpretive layer. The schemata incorporates concepts from
+previous models such as Wendy Lehnert's plot units \cite{Lehnert1981},
+and specifically attempts to create a robust and expressive model that
+captures the aspects of a story that are salient. This includes
+relationships amongst intentional agents pursuing goals across
+time. It also means not specifying a knowledge representation for
+propositions, but rather the topological structure that assist in
+describing how agents, beliefs, goals and values relate to one
+another. The *textual layer* captures the surface representations of
+the work, while the *timeline layer* models the actual events conveyed
+by those representations. The *interpretive layer* captures the
+inferences and motivations that may only be implied or hinted at in
+the surface of the work.
+
+Elson’s structure addresses several deficiencies of previous models of
+narrative discourse, and is an example of the approach of contributing
+not only a model but a set of data that makes use of that model, a
+collection of annotations of Aesop’s Fables named the DramaBank
+\cite{Elson2012b}. These annotations are used to evaluate the
+effectiveness of the schema for capturing structural similarities
+between different human annotations of the same story, as well as to
+identify potential analogical relationships between different stories
+in the collection.
+
+Elson used the SIG schemata to investigate analogous relationships
+among Aesop's Fables. He relied on human annotators to interpret the
+structures that SIG describes and compared multiple attempts to
+interpret individual stories as a measure of utility and accuracy of
+SIG itself \cite{Elson2012b}. We go into more detail later on SIG in
+sections [[id:9k4lun20i8h0@seebright.com]] and 
+
+*** Players' Attribution of Content that Influenced their Decision
+Stories are a mental phenomena. In this sense, their subjective
+effects can only be understood through those who experience
+stories. While cognitive narratology makes claims about general mental
+faculties that either arise from or are created through the capacity
+for narrative, the third research question is focused primarily on a
+more practical concern. Given a traversal path, can the combination of
+a SIG and the encoded surface structure of a work predict which parts
+of the traversal were most influential on the player's decision making
+process?
+
+This question avoids some of the core uncertainty around agency, as it
+specifically deals with the experience of making a choice in the
+context of the game from a provided (small) set of choices. Later in
+the game, a large variety of content will have been experienced by the
+player, some of which will be more important to the narrative and
+valued relationships while others, though containing the characters or
+settings involved, will not. Understanding how to predict and
+understand the relationship and value of such content can make
+authoring such stories more effective, predicting traversals where
+there may be an imbalance of content to make decisions more
+challenging.
+
+Marie-Laure Ryan addresses the myth that a wide variety of choices are
+a desirable property of interactive narratives in /Avatars of Story/
+\cite{Ryan2006c}, alongside other purported myths that emerge from
+early scholarship and theories. Michael Mateas considers resolving the
+"paradox" of agency in story where such meaningful choices are not
+pervasive as one of the primary goals of interactive drama and
+interactive storytelling \cite{mateas2001preliminary}. Mateas put
+forward a proposition that "creating a sense of both story and agency
+(interactivity) requires 'merely' the hard task of balancing material
+and formal constraints" \cite{Mateas2002b}, where the formal
+affordances consist of what is desirable or indicated is possible and
+the material refers to the set of things which can be potentially
+acted upon in the presentation of a scenario. In this sense, the
+attribution of previously experienced content is a means of measuring
+the formal constraints whereas examining the offered choices is a way
+of measuring the material affordances at the time of the decision.
+
+The hypothesis, further expanded in section
+[[id:ip68y67159h0@seebright.com]], is that this relationship is clearly
+evident once the content has been encoded using the two methods, first
+through an encoding of the surface story structure and second through
+an interpretation of that surface story structure in a deep story
+structure through an encoding using the extended SIG.
+
+** Overview of proposed contributions
+There are a few existent systems designed to support annotating and
+analyzing stories through computational means. David Elson's
+/Scheherazade/ is specifically designed to apply the SIG formalism to
+textual narratives, whereas Mark Finlayson developed a more
+generalized approach to annotating textual stories in his /Story
+Workbench/, an integrated environment based on /Eclipse/
+\cite{Finlayson2008}. Finlayson hypothesized that assisting an
+annotator with suggestions would help increase the number and quality
+of available annotations for future work, whereas Elson primarily
+focused on providing accurate feedback in the form of presenting the
+understood meaning back to the annotator.
+
+The proposed contributions will include creating and releasing a set
+of systems that specifically target complex, interactive multi-media
+games in the cinematic choice-based adventure game subgenre. This
+system incorporates lessons from /Scheherazade/ and /Story Workbench/
+and the target platform is HTML5 to enable the use of crowdsourcing
+evaluations and potentially even leveraging Amazon's Mechanical Turk.
+
+Another contribution is the encoding of a long form contemporary
+narrative. The genres of fable and parable, although compact in their
+representation of some narratological principles, are not good
+examples of the incorporation of suspense or mystery, and the
+originals on which much of the research is based are
+non-interactive[fn:7]. The length of the work affects the full impact
+of certain events later in the story. For instance, by the end of /The
+Wolf Among Us/, the player will have established a number of
+relationships, made several decisions and accumulated impressions that
+will determine the subjective experience of the ending in ways that
+shorter works or selections from a complete work cannot address.
+
+Many practitioners of computational narratology cite the extension of
+the techniques to address non-textual and interactive media as an
+important next step in understanding the cross-media nature of
+narrative. For example, in the living handbook of narratology,
+Inderjeet Mani states "As a hybrid of game and narrative that spans
+multiple media, interactive narrative represents a new and evolving
+genre. What novel constructs from computational narratology are
+applicable here, and which old ones need refinement?"
+\cite{Goguen2010a}. Fox Harrell, in his dissertation, specifically
+calls out media annotation as an area for future research
+\cite{Harrell2007}. Hartmut Koenitz calls for work on segmenting what
+he termed "protostories," also described in this document, as an
+important step in furthering theory of interactive digital narratives.
+
+The proposed work hopes to make a contribution to this collective
+effort and enable future work that reveals even more about narratives,
+how they work and even how to author content for them more
+efficiently.
+
+* Related Work 
+In this section we will review work that informs and relates to the
+[[id:kkf7ytm0e7h0@seebright.com][Research Questions]]. The approach of applying theories and building
+systems in computational narratology is inherently multidisciplinary,
+comprising insights from narratology, computational linguistics, game
+studies, interactive digital narratives, artificial intelligence and
+film studies.
+
+There are three major threads that weave together the proposed
+research questions and their concern with structures both on the
+surface and beneath it. The first section reviews some of the work
+done in applying concepts from narratology in developing and assessing
+computational models of narrative and the various purposes they serve,
+primarily in the influential areas of automated understanding and
+generation. The second section, computational narratology, will review
+key works and theorists who are explicitly interested in the
+intersection of narratology and computation, contextualizing the
+proposed work and contributions within existing efforts to understand
+and test narrative models and analyze datasets, including the selected
+narrative discourse model, Story Intention Graphs. Finally, the field
+of interactive digital narratives is viewed with an eye to description
+and categorization, with particular attention paid to how the target
+object's subgenre relates to the key concerns, genres and disciplinary
+traditions as well as which communities would be most interested in
+the results.
+
+The three sections are not necessarily chronologically ordered, but
+rather represent three overlapping perspectives which contextualize
+and motivate the proposed work.
+
+** Narratives Understanding and Generation
+In the introduction, we introduced the concept and value of
+narratology in its relation to the proposed model of [[id:89e9zj61i8h0@seebright.com][Surface Story
+Content]]. Here we will review the systems and purposes that narrative
+models have adopted over the years.
+
+Todorov coined the term narratology in the 1960s, (‘la narratologie)
+\cite{Tzvetan2012a}, though the methods and discipline has its origins
+well before in Aristotle and more recently in Russian formalism with
+Vladimir Propp and his famous and oft-cited analysis of Russian
+folktales \cite{Propp1928}. Todorov even referenced this need to
+vacillates between theory and analysis in his article, saying "it is
+always a question of going continually back and forth, from abstract
+literary properties to individual works and vice versa. Poetics and
+description are in fact two complementary activities"
+\cite{Tzvetan2012a}.
+
+What can computers do with narratives? This question, and variants
+around the acts of communication and knowing, were what motivated
+early AI researchers such as Roger Schank to pursue narrative and its
+formal representations, as well as inspiring a community of
+researchers interested in applying advances and innovations in using
+computers as media to understand and create with.
+
+*** Knowledge Representations
+While one of the first experiences of character and of illusion was
+the famous ELIZA: DOCTOR program \cite{Man1966}, whose significance
+and early reception has been analyzed by Noah Wardrip-Fruin
+\cite{Wardrip-Fruin2009} as the progenitor of a strong potential for
+artistic and expressive uses of computers, Schank was very interested
+in using data structures to explore the core of what understanding
+meant, and in particular how to get at it through models. SAM (Script
+Applier Mechanism) was a system designed to understand stories through
+the concept of a script \cite{Schank1975}. It was represented its
+understanding in the form of paraphrases and summaries, and was
+designed around a similar idea that resulted in Alan Turing's famous
+Turing Test: if a system can produce the same types of responses as a
+human, then it may have arrived at it through similar processes, or
+similar enough as to be considered intelligent.
+
+#+BEGIN_QUOTE
+In some ways, it is ironic that conceptual dependency and its
+derivatives are often grouped into the family of semantic net
+representations, because in general, semantic nets are a structure
+theory, whereas CD is a content theory. \cite{Lytinen1992}
+#+END_QUOTE
+
+In this sense, Elson's Story Intention Graphs are more in the
+tradition of Conceptual Dependency graphs because of the attention to
+the content that is being targeted, namely representations of story
+and of the mind itself. Wendy Lehnert, creator of the plot unit
+formalism, echoes this parallelism between cognitive and computational
+structures \cite{Lehnert1981}:
+
+#+BEGIN_QUOTE
+How is the hierarchical ordering of a memory representation
+constructed at the time of understanding? Exactly what elements of the
+memory representation are critical in building this structure? What
+search processes are used to examine memory during summarization? How
+are summaries produced after memory has been accessed?
+#+END_QUOTE
+
+"Scripts" were a formalism that Schank codified that capture the
+notion that knowledge has a structure that is accessed, reified and
+run. The classic example of a restaurant script is one where a set of
+behaviors are suggested by an environment, and that the knowledge
+surrounding that set of expectations enables actors to behave
+appropriately. This is explored by the crowd-sourced project known as
+/The Restaurant Game/ conducted by Orkin and Roy \cite{Orkin2009}.
+
+The concept of a script was an inspiration for Short and Evans in the
+/Versu/ social practice system \cite{Evans2014} while /Prom Week/ uses
+a theory from social-psychology along with an exchange unit that
+follows a game.
+
+Marie-Laure Ryan addresses the role of formal representations in
+aiding human understanding in her chapter on /Formalizing Plot/ in
+/Possible Worlds, Artificial Intelligence and Narrative Theory/
+\cite{Ryan1991} by suggesting that a graph representation should make
+things that are obvious to a reader obvious from reading the diagram,
+and things that are subtle, subtle. This goal of accurately
+representing the mental structures of story diverge from that of
+making apparent relationships and structures which may be parallel to
+the mental structures themselves. This goal of achieving a useful
+diagrammatic notation for a representation is not necessarily shared
+by Elson in his Story Intention Graph formalism, though he often
+employs a variant of the schemata in creating diagrams that omit
+subsections in order to maintain clarity. For the purposes of scope,
+the proposed work outlined in this document does not include dynamic
+representations of narrative diagrams, but this may change based on
+time and value provided.
+
+*** Generating Narratives
+Generating stories has been shown to be one of the most challenging
+and most easily appreciated uses of computational models. The interest
+in telling stories using computational means within the field of
+Artificial Intelligence began with Robert Schank's lab and research
+group and their concern with representing knowledge. The extension of
+this understanding to the creation of novel stories and artifacts is a
+natural progression, even if the original generative system did not
+concern itself with narratives at all: /ELIZA: DOCTOR/
+\cite{Man1966}. James Meehan created a program, Tale-spin
+\cite{Meehan1981} to explore the automated generation of narratives
+using models and simulations of communication and meaninng. Lebowitz
+played more with representation in his system /Universe/, which
+charted the lives of soap opera characters as various events put them
+into continual cycles of conflict. They used hand-authored conventions
+and tropes to substitute for exhaustive real-world knowledge
+structures \cite{MichaelLebo1984}. Both use fairly procedural
+structural transformations in order to model aspects of plot, but
+/Universe/ and many recent spiritual successors have acknowledged the
+limitations imposed by using techniques such as planning along with a
+complete knowledge representation. They capitalize on hand-authored
+content to fill in the structures.
+
+One of the key problems in generating narratives is the final media
+and presentation of the generated narrative. Tale-Spin used a simple
+text generator, "mumble," to present the plans held in memory for
+inspection. Nick Montfort leveraged his experience in interactive
+fiction to create a system to experiment with the different ways that
+time and narration can be varied through various natural language
+pipelines and facilities. His project, /Curveship/
+\cite{Montfort2009}, is very much a work of computational
+narrative. It uses a simulation and a model to produce narrative
+communication acts which could be varied parametrically. This system
+is an excellent example of computational narratology, even though its
+concern was primarily with the linguistic consequences of time and
+style on narrated text, it provided a test for theories surrounding
+the perception of event orders.
+** Computational Narratology
+:PROPERTIES:
+:ID:       zs8ipn70i8h0@seebright.com
+:END:
+#+BEGIN_QUOTE
+Computational narratology is the study of narrative from the point of
+view of computation and information processing. It focuses on the
+algorithmic processes involved in creating and interpreting
+narratives, modeling narrative structure in terms of formal,
+computable representations. Its scope includes the approaches to
+storytelling in artificial intelligence systems and computer (and
+video) games, the automatic interpretation and generation of stories,
+and the exploration and testing of literary hypotheses through mining
+of narrative structure from corpora \cite{Goguen2010a}.
+#+END_QUOTE
+
+The proposed work is principally about how to operationalize and
+discover new properties about narrative through a specific subgenre of
+interactive digital narratives. Cavazza and Pizzi describe how
+computational narratology emerged from several approaches to
+formalizing narrative from the existing disciplinary traditions
+\cite{Cavazza2006b}.
+
+There have also been several conference series that explore different
+perspectives on computation and narratives. The ACM Workshops on Story
+Representation, Mechanism and Context, which was held in 2004, 2006
+and 2011, looked at both the creation and analysis of stories and
+related technologies in a variety of media but focused mainly on
+nonfictional scenarios. The Intelligent Narrative Technologies
+workshop series was started by Mark Riedl and Brian Magerko in 2007
+alongside the Association for the Advancement of Artificial
+Intelligence conference (AAAI). The International Conference on
+Interactive Digital Storytelling (ICIDS) conference series provides a
+venue for theoretical and creative works in interactive storytelling
+and how to evaluate such works.
+
+Using computation to study and create narratives has come to be
+labeled as computational narratology \cite{Goguen2010a}, although the
+usage has overlaps with interactive digital narratives, interactive
+storytelling and computational models of narrative. Fox Harrell uses
+computational narratology to investigate algorithms and formalisms
+that support blending of concepts and metaphors \cite{Harrell2007},
+while Henrik Schärfe embarked on an early investigation of how
+computers can be used in analyzing narratives, /A Study in Computer
+Aided Narrative Analysis/ \cite{Scharfe2004}.  It may be useful to
+keep the analytical sense of computational narratology distinct from
+practices that use it to describe approaches for creation of
+interactive digital narratives works. This analytical sense is the one
+used in the rest of this document.
+
+Some of the key theorists who explicitly identify as practicing
+computational narratology are Inderjeet Mani, author of the recently
+published /Computational Modeling of Narratives/ \cite{Mani2012}, Fox
+Harrell's work on using algebraic semiotics to understand and generate
+representations and analogies, and Mark Finlayson, founder of the
+Computational Models of Narrative workshop. Another early researcher
+was Henrik Schärfe. His work looks at the task of formalizing aspects
+of narratology for the purposes of analyzing and subsequently aiding
+in interpretation \cite{Scharfe2004}. Unlike Elson, his approach uses
+conceptual graphs to model aspects of content in narratives, which
+places a larger emphasis on uniform granularity of formalism whereas
+Elson's approach separates the structure clearly away from the
+propositional logic level. Conceptual graphs were proposed by John
+Sowa based heavily on Charles Sanders Peirce's existential graphs
+\cite{Sowa2008}. Henrik's approach to using computational tools allows
+for a human interpretation and does not go directly into using numbers
+to explain everything: "actual interpretations are outside the domain
+of interest here, because the really interesting part of (structural)
+analyses takes place as an discussion of how the elements rendered by
+the analysis relate to each other... the actual interpretation, along
+with speculations and ideas pertaining to the consequences of that
+interpretation must reside in the hands of humans" \cite{Scharfe2004}.
+
+*** Annotation Efforts
+The idea of annotating works or collections of works is a fairly well
+established practice in the digital humanities and computational
+linguistics. One of the initial initiatives to encode non-digital
+information was the Text Encoding Initiative, an international
+organization founded in 1987. Examples of an encoded set of works
+includes the classic folk tales studied by Vladimir Propp. More
+recently, close content analysis has fallen primarily under the social
+sciences domain, especially applying to sentiment analysis and
+understanding the prevalance of a topic or practice based on freely
+available natural language texts residing on the web and in forums.
+
+*** Story Intention Graphs
+:PROPERTIES:
+:ID:       9k4lun20i8h0@seebright.com
+:END:
+David Elson developed a set of discourse relations comprising a
+schemata which are collectively entitled "Story Intention
+Graph." These relations are defined by a semantic graph consisting of
+labeled nodes, arcs and a set of logical relationships that determine
+"legal" associations amongst them. In this section, I will briefly
+review the key features of the SIG schemata that make it a suitable
+model for the proposed work.
+
+Of the many formal models and accompanying datasets and applications
+of story content, David Elson's Story Intention Graph is the only
+model which has been validated through the application and comparison
+to a baseline algorithm using a corpus of annotated, existing
+stories. Elson's model is a synthesis of a number of previous
+models. Elson describes Story Intention Graphs as a formalism whose
+goal is to be *robust*, "emphasizing the key elements of narrative
+rather than attempting to model the entire semantic world"
+\cite{Elson2012}, *expressive and computable*, such that it is "formal
+enough to allow us to find analogies, identify patterns, and design
+summaries of narrative content" and *accessible* and so able to be
+used by human annotators with minimal training \cite{Elson2012}.
+
+SIGs encodings are suitable for computational analysis using graph
+traversal algorithms that are aware of the node types and properties
+such as causal entailment. Elson's primary research goal was to
+compare SIGs, and through this goal he was able to validate that even
+encoding structures of goals, beliefs and affects which didn't
+explicitly include propositional content were useful to discover
+relationships across works using annotators \cite{Elson2012}. He was
+also interested in analogy, and his schemata enables the computational
+discovery of analogies between different stories, as well as the
+recognition and incorporation into a machine learning classification
+scheme of well-defined "patterns" that composed a library of story
+patterns much like Lehnert's plot units.
+
+These properties that help tackle the right balance of formality and
+expressivity make SIGs a good match for the types of
+questions pursued in the proposed dissertation. The ability to extend
+the schemata also allows for the types of structures present in
+interactive works to be represented in the model, in particular the
+diverging traversal paths as determined by the story control logics of
+the work.
+
+The types of nodes are briefly described in section
+[[id:havh9l7069h0@seebright.com]], whereas the arc types are described in
+section [[id:3macmm7069h0@seebright.com]]. Elson's dissertation contains
+the definitive definitions, including logical rules present in the
+schemata \cite{Elson2012}.
+
+*** Film and Media
+Two of the primary adjacent fields, narratology and film studies, owe
+a debt to linguistics and semiotics. Both embarked on searches for
+meaning through structure and both seek to identify universal
+properties. Narratology, unlike film studies, focuses on the study of
+stories independent of medium. Film Studies focuses on concerns
+specific to that medium. As part of the proposed work, the field of
+film studies and criticism, especially as it relates to semiotic codes
+and conventions will need to be further explored in relation to the
+proposed system and study.
+
+Film studies will primarily influence the surface story content, and
+in particular guide the story-relevant codes that should be
+highlighted and annotated. These codes are already reflected in the
+usage of terms such as shots and sequences, but there are other
+significant choices present in film that are not necessarily choices
+in literary or purely textual narratives. These include costume,
+actions and performances and even setting and camera angles (wide view
+and close ups). These choices reflect an intentional stance by the
+author for how a scene should be interpreted, and the importance in an
+encoding is also apparent.
+
+** Interactive Digital Narratives
+#+BEGIN_QUOTE
+The combination of narrativity and interactivity oscillates between
+two forms: the narrative game, in which narrative meaning is
+subordinated to the player’s actions, and the playable story, in which
+the player’s actions are subordinated to narrative meaning. Or, to put
+it differently, in a narrative game, story is meant to enhance
+gameplay, while in a playable story, gameplay is meant to produce a
+story \cite{Ryan2015b}.
+#+END_QUOTE
+
+In the brief history of the field of game studies, the narrativist vs
+ludologist debate has been seen as an opportunity to build boundaries
+and establish the fledgling form amongst more established discplines
+such as narratology, new media and film studies. The debate is well
+summarized by Ian Bogost in his blog post, "Game Studies: Year Fifteen"
+\cite{Bogost2015}, which echoes an initial journal article in /Game
+Studies/ by Espen Aarseth.
+
+This section does not focus on the debate, however, but instead
+discusses the overall category of works that /The Wolf Among Us/
+belongs in and situates the study in historical and disciplinary
+approaches. Cinematic choice-based adventure games were introduced and
+defined in the introduction. While the another genre label could be
+considered a "Telltale-style" point and click graphical adventure, so
+prevalent is Telltale's signature set of game mechanics and logics,
+the effects and the mechanisms and the resulting insights that can be
+obtained are firmly in the field of interactive digital narratives.
+
+Interactive stories as a subject cut across most traditional
+disciplinary boundaries. There are at least two international
+gatherings dedicated to the study and creation of these types of
+works: Interactive Narrative Technologies (INT), a workshop associated
+with AIIDE, and International Conference on Interactive Digital
+Storytelling (ICIDS). 
+
+Authors of narrative works use craft to address the capabilities
+identified by Marie-Laure Ryan using the material affordances of a
+chosen medium, driven by the creator(s) "desire to touch the
+audience"  \cite{Mckee1997}. Computational narratology has a close
+relationship with the fields of interactive digital narratives and
+interactive storytelling, informing and inspiring various approaches
+and systems. Narratological concepts, such as the distinction Seymour
+Chatman draws between "story" (the events as they occur
+chronologically in a story world) and "discourse" (the order in which
+events are related) have been used in a variety of fields ranging from
+cognitive science \cite{Herman2013} to interactive storytelling
+\cite{Name2014} to form hypotheses or as an inspiration for
+computational models \cite{Chatman1980}.
+
+Interactive Digital Narrative has several overarching genres
+determined primarily by the original works and the primary interface
+mechanics, including interactive fiction (IF), adventure games and
+hypertext works. The subgenre of "cinematic choice-based adventure
+games" was selected because of its heavy reliance on interpretation
+instead of simulation or combination while still incorporating
+alternate performances and even ontological changes in the story world
+based on player choice. Traditional adventure games have certain
+characteristics, though, including puzzles and more direct
+manipulation of a player-character through a simulated space to
+achieve objectives, which are not prevalent in /The Wolf Among Us/.
+
+/The Wolf Among Us/ is one of several interactive digital narratives
+produced by Telltale Games that earned critical acclaim for its
+storytelling. Telltale's approach often incorporates material and
+licenses adapted from another, non-interactive
+medium [fn:1]. Telltale's brand of graphical adventure games has been
+seen as noteworthy not only by game critics, but also by scholars
+interested in applying alternative methodologies such as
+microethnography \cite{Taylor2015}. The close relationship between
+story content and interactivity makes this particular work a prime
+subject for study using computational narratology. The fact that it
+avoids emergent narrative or simulation makes the subgenre
+particularly attractive for the approach described below of
+associating a model of the surface content with video recordings of
+traversals.
+
+In this section we will also attempt to draw a distinction between the
+genres of interactive digital narrative that the approach proposed
+would be suitable for and the types that it may require additional
+extension in order to address.
+
+Another thread of work in interactive digital narratives proposes a
+new vehicle for storytelling using the properties of computational
+media: interactive drama, where player’s interactions with virtual
+characters are handled in real time while retaining the emotional
+power of dramatic works based on Aristotle's structural model for
+drama \cite{Mateas2000a}. While the genre of interactive drama has
+existed for a while, the ability for a computer to handle the roles
+previously only possible using human actors and potentially even a
+director or writer. Brenda Laurel's dissertation \cite{Laurel1986}
+served as the inspiration behind this category. In it, Laurel lays out
+a set of requirements that describe a computer system shaping a
+narrative in real time for an audience. This work, postulated first in
+Brenda Laurel’s dissertation \cite{Laurel1986}, is further imagined
+and theorized by Janet Murray in /Hamlet on the Holodeck/
+\cite{Murray1997a} and its first recognized instance was released by
+Michael Mateas and Andrew Stern in the interactive drama Façade
+\cite{mateas2003integrating}. Interactive Drama is a subset of
+Interactive Digital Narratives that aspire to a high degree of
+immersion, as described by Marie-Laure Ryan \cite{Ryan2015b}, where
+the interface and the signs are close to those encountered in everyday
+life instead of mediated through menus and convention-based controls.
+
+*** Telltale-style Adventure Games
+:PROPERTIES:
+:ID:       1fz708r0c8h0@seebright.com
+:END:
+
+Adventure games have been studied both from a fan studies and
+historical perspective by Salter \cite{Salter} and from a game studies
+perspective with particular attention to the realtionship between
+simulation and restoring the intended behavior of an author by
+Fernandez Vara \cite{ClaraFernandez-Vara2009}. Adventure games are
+recognized as a fairly old genre that is traceable to its origins in
+the 1970s and its evolution as an expressive example of ergodic
+literature \cite{Aarseth1997}.
+
+Clara Fernandez Vara makes a distinction between representation and
+simulation in her dissertation that adventure games have evolved so
+that "the player does not stray too far from the behavior to be
+restored" \cite{ClaraFernandez-Vara2009}. This restoration of behavior
+is important in understanding RQ3, as the behavior to be restored is
+varied in interesting ways through the sequence of narratively-charged
+decisions that are unique to the subgenre. Fernandez-Vara goes on to
+note that "the restoration of behavior must take place in a specific
+way, so that the player enacts the events of the embedded story"
+\cite{ClaraFernandez-Vara2009}.
+
+The structure of adventure games enables an approach that addresses
+many of the authoring problems of the open-ended story game approaches
+while retaining a strong narrative. It is for this reason that it is
+well suited for a content-based approach, as works such as Mateas and
+Stern's interactive drama Facade have a much larger space of possible
+traversals with things such as timing and possible input making the
+work intractable for such an approach.
+
+Telltale games has pioneered the subgenre identified in the
+introduction (section [[id:i68is8r0c8h0@seebright.com]]) as a style that
+is distinctive enough to begin being referred to as a "Telltale-style
+adventure game" \cite{Hamilton2015}. It draws heavily from cinema in
+its surface representations, to the point that it has even been called
+interactive cinema. But despite the potential derogatory nature of
+some of the comments on popular forums and the polemic against
+non-game content being foregrounded in games, this particular type of
+story game has struck many chords in the popular game criticism
+community, as described by Maltbie in a post defending Telltale-style
+games as video games:
+
+#+BEGIN_QUOTE
+My mind stayed engaged, I took responsibility for what happened, and
+I was absorbed by the idea that I need to *pay attention to details if
+I want the story to play out a certain way*. And that's an incredibly
+personal experience when you get down to it. And at the end of the
+chapter in the Telltale games, a menu shows how your choices differ
+from other players who are going through the game for the first
+time. If the experience is malleable like this, how can it not be a
+game? \cite{Maltbie2016} [emphasis added]
+#+END_QUOTE
+
+Telltale games have been accused of "beads on a string," even if some
+recognize the value of the illusion that is actually being
+constructed:
+
+"But one major complaint comes up again and again: Fast-paced choices
+and moral quandaries are the most prominent feature of The Walking
+Dead, but they seem to have no real consequences. Why did this game
+receive approximately all of the awards in 2012 if its main selling
+point is used so inconsequentially? I suggest that the most important
+aspect about this game is not the many difficult choices it offers the
+player – it’s the illusion of choice the game constructs."
+\cite{Froschauer2014}
+
+Froschauer goes on to make one of the claims that can be better
+studied by addressing the second proposed research question: "the
+amount of different content that needs to be produced is limited to a
+minimum while, ideally, still giving you a feeling of agency"
+\cite{Froschauer2014}.
+
+David Cage describes this act as "bending stories," providing the
+right hints, feedback and sets of reactions in order to ensure that
+the branch isn't broken and that most of the effort is conserved
+through most traversals \cite{Cage2006}. This approach is
+diametrically opposed to the simulationist or combinatorial approach,
+where material is generated or reconfigured on the fly without the
+author's prior understanding and where "folding in" plot threads is
+not currently an objective. Instead, simulationists have suggested
+that a different type of authoring is required to account for the
+generative power of simulationist/combinatorial story systems, such as
+"quantum authoring," an approach Aaron Reed describes as holding the
+many permutations of possible outcomes in an author's head as one
+designs content for a combinatorial system.  Reed cites /Prom Week/ and
+18 Cadence as examples of combinatorial story games where this
+approach has been fruitful \cite{Reed2011}. 
+
+While the desirable properties of the subgenre should be becoming
+apparent, the main reason that /The Wolf Among Us/ was chosen was its
+relatively shorter length than the full set of /Walking Dead/ seasons,
+the critical acclaim it accrued and the discussions about the plot
+that it inspired as well as the general familiarity I have with the
+work and appreciation for its narrative and artistic goals.
+
+* Prior Work
+My original course of study was to combine visual art and creative
+writing, and I only pursued computer science once I began to
+appreciate its potential as a tool to tell stories. In that sense, my
+undergraduate training and aspirations are imminently relevant to the
+proposed work. The themes of narrative, visualization and structure
+have persisted through each of the projects I’ve contributed to,
+starting with my original undergraduate thesis project under Matt
+Kirschenbaum and Ben Shneiderman. /StorySigns/ was a text annotation
+tool I developed to assist in writing and understanding story
+structures based on narrative theory by Seymour Chatman
+\cite{Chatman1980}, especially the notion of satellite and kernel plot
+events.  I used Flash to explore how one could combine the data
+provided by the raw language representations with visualizations that
+aided in understanding them. 
+
+The proposed set of systems focuses on understanding non-textual media
+using some of the powerful techinques currently applied to textual
+stories. In this section I will review some of my previous works, both
+of an academic nature and of an enterpreneurial nature, starting with
+my experience in student film production.
+
+** War Story
+During my time as an undergraduate, I aspired to become a storyteller
+through multiple media, not just through the creative writing I had
+experimented with at the writer's house, but also through digital art
+and performance. I was always fascinated with filmmaking, likely
+citing a similar origin story with others through powerful works that
+affected my development and tastes in my formative years.
+
+Seeing an opportunity to learn about it more in an upper level digital
+arts class, I jumped on it.  I storyboarded, scripted, directed,
+filmed and edited a short film with a number of my classmates and
+friends as actors. This experience provided me with invaluable insight
+into how film, specifically moving images comprised of shots, works
+from various artistic and critical points of view. During the project,
+I performed all aspects of the film making process, and this
+familiarity is what informed my initial investigations into using
+non-linear video editing techniques as an avenue for tackling the
+surface level content of cinematic choice-based story games.
+** Flash Platform Studies
+The interactions of technology, affordances and society are complex
+and worthy of study. The Flash Platform presents an example of how a
+software system can shape the artifacts and culture that are based on
+it. In the proposed dissertation, an awareness of the use of
+technology in shaping scholarship and culture is critical to
+understanding how tools that can aid in computational narratology will
+ultimately shape and contain their own ideological purposes. My
+experience in researching the complex emotional and technical
+relationships between users, developers and the platform itself
+provides a perspective on the existent game community that keeps a
+theoretical approach such as computational narrative grounded in the
+pragmatics of the works' value both in the interactive storytelling
+community as well as the perception of the work from the greater
+audience of such works.
+
+Flash and its underlying technologies shaped the way that we expect
+rich media to behave and how we create content for it. Its compact
+distribution format and flexible metaphors put it a decade ahead of
+the standards-based HTML. In /Flash: Building the Interactive Web/
+\cite{Salter2014}, I explore with my coauthor Anastasia Salter
+the evolution of this platform and the various choices that were made
+in its development and their implications for the role that software
+platforms occupy in the evolution of technological culture. As the
+platform matured, it implemented some of the best practices from
+modern programming languages, but in turn it became harder to
+understand and use for artists. The Flash Platform was unprecedented
+in its accessibility which led to experimental works by the world's
+best electronic literature practitioners and amateur works with mass
+popularity such as those found in Newgrounds.
+
+Flash's key affordance and its role specifically as a platform shaped
+the types of artifacts produced enabled a generation of designers and
+artists to acquire procedurally expressive skills that could be
+leveraged on a massive distribution opportunity which was the early
+web. The book has served as a textbook for introductions to digital
+humanities (such as Rutger's Universities English 394 Spring 2015
+course) as well as was contextualized in Apperley and Parikka's
+assessment of the platform studies approach in the context of media
+archeaology \cite{Apperley2015}.
+
+** Seebright
+It is rare that a technology has a chance to change the way we
+perceive the nature of media, communication and ourselves. See-through
+augmented reality is one such technology, taking a place alongside LED
+screens and touchscreens present in smartphones and laptops as a
+fundamental change with how we interact with media. Smartphones
+revolutionized our relationship with websites and communication with
+one another, and augmented reality has the potential to change the way
+we understand the world and be effective agents within it. There
+continues to be a divide between what humans are capable of
+understanding and what effort is needed to model and communicate that
+understanding to a computer. Augmented reality is one solution to that
+problem: by presenting the computer’s understanding directly in front
+of the user on top of their own perception of the world, the system
+can cross that divide. Likewise, by having access to a user’s vision
+and current context, computers can be capable of anticipating a user’s
+needs and desires more effectively than through noisy channels such as
+browser logs and GPS readings. Although consumer devices are still a
+ways off, the value of see-through displays are evident from this need
+to represent computer information to users more efficiently.
+
+With Katherine Compton, I started Seebright to explore this question –
+and through the course of the company’s development, I executed a
+number of experiments and explorations, including designing a novel
+control solution that would specifically allow the user to interact
+with the system on the same level of representation: direct
+manipulation.
+
+More than anything, my experiences founding and working for Seebright
+has provided me a grounding in what is valued by different communities,
+and how to recognize and create value. I have an appreciation about
+how industry perceives technological innovations, how it makes
+decisions in the presence of risk and uncertainty, and how work of a
+variety of types is defined and accomplished, and most of all how
+important it is for academia to make efforts to inform industry about
+the relevance of its work even as it communicates the nature and
+importance of the research to the general public.
+
+** Prototypes
+During the first part of 2016, two prototypes were created to better
+understand the nature of the proposed work and to lay the groundwork
+for the systems described in the proposed work section. The goals and
+the methods followed to produce them are described below, while a
+description of the design is present in the appendix.
+*** Surface Content Story Browser
+The browser demonstrates the basic approach taken in the system
+provide a set of parallel encodings of content locations that can be
+used as various layers of surface discourse. Allow this content to be
+rearranged according to the structural characteristics of the
+underlying operational logic in the game, in particular choice points,
+inventory items, decisions.
+*** Story Browser Prototype
+:PROPERTIES:
+:ID:       nbnfcz7048h0@seebright.com
+:END:
+This section describes the current state of the Story Browser, as well
+as outstanding issues that need to be addressed. This interface uses
+the schema described in [[id:rrvhbt6048h0@seebright.com][Proposed Dramatic Story Game Surface Content Schema]]. 
+
+     #+CAPTION: Story Browser Prototype Interface
+     #+ATTR_HTML: :alt cat/spider image :title Action! :align right
+     [[file:story_browser.png]]
+The Story Browser Interface shows off two main features: 
+
+1. A navigation timeline that shows the location of segments of
+   content. In this version, there are two timelines. The first
+   represents the raw content (divided into segments corresponding
+   roughly to choice points and "cut scenes"
+2. A choice selection interface which allows the user to specify which
+   traversal to make "selected." Each choice point's options are
+   displayed along with the segment that results, changing to the
+   correct clip when the user selects the corresponding choice.
+*** Prototype Surface Story Content Schema
+:PROPERTIES:
+:ID:       rrvhbt6048h0@seebright.com
+:END:
+The interface depicted in the section [[id:nbnfcz7048h0@seebright.com][Story Browser Prototype]] was a
+motivation behind a number of the structural schema described
+below. The goal was to isolate the key relationships in such a way as
+to make it easy to program an interface to sort and select amongst
+them.
+
+This task quickly revealed itself to be fairly abritrary, as the
+chosen language, JSON, was capable of representing the entities either
+directly through hierarchy (a segment could contain a decision) or
+indirectly through id reference (a segment could contain a refernce to
+a choice, which itself could be contained in a separate location). 
+
+The difficulty of evaluating the schema in absence of a concrete set
+of interface use cases led to the suspension of schema development
+once the interface described in [[id:nbnfcz7048h0@seebright.com][Story Browser Prototype]] was complete.
+**** Timecodes
+In film, a timecode is a way to uniquely identify every frame in a
+piece of video. The format is similar to traditional time
+representations, with hour, minute and second separated by colons. In
+addition, this format includes the frame, which for the purposes of
+this study will be at a framerate of 30 frames per second.
+
+This means a format of 05:04:10 represents a frame at 5 minutes, 4
+seconds and 10 frames, or frame number 9120.
+
+Because this study considers non-linear games, the gameplay footage
+cannot be simply mapped to traditional timecodes. Instead, the
+gameplay is divided into segments roughly corresponding to cutscenes
+and interaction opportunities. These are detailed in the following
+sections.
+
+**** Shots and Segments
+
+In film studies, a shot by shot analysis usually divides film into
+continuous sequences of frames which are separated by cuts or other
+transitions. In this format, shots are identified by timecode and made
+available for tagging as a semantic unit.
+
+Sequences of shots are further aggregated into segments which indicate
+key boundaries that are bounded by opportunities for interaction.
+
+The proposed methods of dealing with this type of content is to
+identify each segment uniquely and describe the relationship both to
+the preceding and succeeding segments as well as the logical
+conditions under which that segment is both shown and made available
+(as in the case of choices where a certain condition must have been
+met in order for a choice to be available).
+
+This is a breakdown of the beginning portion of a single source file
+into shots, showing the timecode for the start and end and the unique
+ID used elsewhere.
+
+#+BEGIN_SRC javascript
+[
+    {
+        "shot_id": 0,
+        "thumb" : null,
+        "source_file" : "source_1",
+        "source_begin" : "00:00:00",
+        "source_end" : "00:08:18",
+    },
+    {
+        "shot_id": 1,
+        "thumb" : null,
+        "source_file" : "source_1",
+        "source_begin" : "00:08:27",
+        "source_end" : "00:17:07",
+    },
+]
+#+END_SRC
+
+A segment is simply a set of shots that either are between, during or
+result from a player action. This technique requires a different
+tactic for free-roam segments (an example walkthrough for each
+hotspot, for instance), but includes quick-time segments.
+
+#+BEGIN_SRC javascript
+[
+  {
+    "segment_id": 0,
+    "type": "cutscene",
+    "begin": "00:00:00",
+    "end": "01:52:22",
+    "thumb": null,
+      "shots": [0,1,2,3,4,5,6,7,8,9,
+                10,11,12,13,14,15,16,
+                17,18],
+    "beats": []
+  },
+  {
+    "segment_id": 1,
+      "type": "choice",
+      "choices_id":0,
+      "begin": "01:52:23",
+      "end": "02:24:29",
+      "predecessors":[0],
+      "thumb": null,
+      "shots": [19,20,21,22,23],
+      "beats": []
+  }
+]
+#+END_SRC
+**** Choice Points
+
+"Choice Points" are the segments where a (usually textual) menu of
+responses are presented for the player to make a decision. They
+usually consist of either a paraphrase of the response but can include
+either silence or an action in brackets. Selecting an option triggers
+a segment which dramatically presents how that choice plays out,
+usually first by an action or a dialogue act by the player-character
+(Bigby Wolf in /The Wolf Among Us/), followed by the response by
+another character or character(s) and/or the environment.
+
+Choice points represent a particularly important feature of the
+encoded surface content. The data structure reflects both the role as
+variable (each choice determines which future choices are available)
+as well as preconditions (some choices requires that certain
+conditions be met in order to be present in a set of choices).
+
+This is a possible data structure that captures the graph
+nature as well as the text necessary for rendering interfaces. It has
+an ID of the associated segment that plays during the choice itself as
+well as access to the text of the choice. Further additions would be
+pre-conditions such as presence or absence of an inventory item or a
+previous choice the player made.
+
+#+BEGIN_SRC javascript
+[{
+		"segment_id": 5,
+		"choices": [{
+			"alt_id": 0,
+			"choice_text": "So what have I walked into?",
+			"next_segment": 7
+		}, {
+			"alt_id": 1,
+			"choice_text": "What do you want me to do?",
+			"next_segment": 7
+		}, {
+			"alt_id": 2,
+			"choice_text": "[Head Upstairs]",
+			"next_segment": 8
+		}, {
+			"alt_id": 3,
+			"choice_text": "...",
+			"next_segment": 7
+		}]
+	}]
+#+END_SRC
+
+Likewise, for quicktime events they would indicate the type, duration
+and the action sequence in the same way that choices did.
+
+#+BEGIN_SRC javascript{
+		"quicktime_event": {
+			"key": "up"
+		}
+	}, {
+		"quicktime_choice": {
+			"choices": [{
+				"alt_id": 0,
+				"description": "couch",
+				"mouse": "left"
+			}, {
+				"alt_id": 1,
+				"description": "sink",
+				"mouse": "left"
+			}]
+		}
+	}]
+#+END_SRC
+**** Dialogue
+
+Another key content represented in this format is the dialogue. This
+represents textual content, but it is usually for a full listing of
+different structures supported and the types of information each
+encodes. Below is a sample of some dialogue encoded for the first
+scene:
+
+For dialogue and other text, I plan to use the industry standard VTT
+encoding which is used for subtitles and captions for video content. I
+will provide it for each clip, and use the javascript API to show or
+trigger the relevant dialogue lines.
+
+Below is a sample of the encoding at work.
+
+#+BEGIN_SRC javascript
+[
+    {
+        "lineid": 0,
+        "type": "text",
+        "text": "Episode 1"
+    },
+    {
+        "lineid": 1,
+        "type": "text",
+        "begin": "0:10:05",
+        "end": "0:32:21",
+        "text": "Once upon a time in New York City there lived
+                 a community of fairy tale characters known as 
+                 Fabletown. The Fables who live there arrived 
+                 hundreds of years ago, after they were exiled 
+                 from their Homelands"
+    },
+    {
+        "lineid": 9,
+        "type": "dialogue",
+        "begin": "1:56:01",
+        "end": "1:56:29",
+        "speaker": "bigby",
+        "text": "Mr. Toad?"
+    },
+    {
+        "lineid": 10,
+        "type": "dialogue",
+        "begin": "1:57:05",
+        "end": "1:58:23",
+        "speaker": "toad",
+        "text": "Oh shit"
+    },
+
+]
+#+END_SRC
+
+*** Process to Encode Surface Content
+For the Story Browser prototype, I selected and employed a manual
+process for encoding the surface content. From my experience in
+Seebright (working with a professional production company to create a
+concept video) as well as in the production of the student film /War
+Story/, I have become familiar with the use of non-linear video
+editing tools such as Adobe Premier Pro. These tools enable precise
+editing and combination of source video files, using operations such
+as inserting a cut (a segmentation of a video file based on a timecode
+that specifies a location for potential insertion of another clip. The
+principle role of an editor is to select which frame of a source clip
+on which to cut to an adjacent film. This selection of timing usually
+happens during an action or dialogue line in order to maintain
+"continuity" or the percption of continous space and time. These
+decisions both are based on and result in a "shot list" which is the
+series of "shots" that are sequenced to create the film.
+
+This process of creating a cinematic artifact provides a guide for how
+to analyze one, as the same decisions that are made during the
+planning, shooting and editing phases affect the final sequence. These
+represent three phases of production: storyboarding, filming source
+footage (in the form of multiple variants of a single scene), and the
+final editing of the shots into a finished sequence. In the
+storyboarding phase, the goal is to select angles and segmentation of
+the dialogue in a script that best convey the important story
+points. They must also convey the continuity of action and the salient
+emotions and reactions necessary for an audience to understand the
+story content. In the source footage phase, the goal is to record
+several variations or versions (takes) of a performance by the
+actors. The last stage is to combine and intersperse the takes and
+select exactly which frames the cut between shots should occur
+on. These are determined mainly by timing and understanding through
+continuity -- for instance starting an action in one shot and
+continuing that same action in the next shot. Another goal is to
+ensure a consistent progression and spatial relationship between
+actors and setting.
+
+In the first minute of the student film I produced, /War Story/
+(viewable at https://www.youtube.com/watch?v=UOrLMQWsn04), there are
+12 shots that together portray the action of one student greeting
+another in a library, the student picks up his bag and decides to
+catch up to the first student, the observation of a flier promoting an
+event and their eventual meeting. Each shot was planned to convey a
+certain mood and atmosphere, relate a specific action performed by a
+character and reinforce a characterization as well as to convey in
+that single minute a continous reality even if the story time was not
+continuous. An audience member does not need to know the exact
+terminology of the shot types, and in fact like our first definition
+of narrative, an audience member will understand a sequence of such
+shots as a story.
+
+In creating an encoded version of the content presented in the Story
+Browser, the process of collection will involve documenting each
+possible segment of content and either recording it or finding it
+already recorded by other players on video sharing services such as
+YouTube. 
+
+There are two parts to this collection process. The first part
+involves documenting the logical structure of the traversal paths,
+while the second part involves finding or recording the content that
+is associated with a particular set of edges in the traversal
+graph. The first part involves recording segment association with each
+branch point of the graph, and testing whether these branch points
+have effects on subsequent content availability, performances or
+choices. The total set of traversals will first be charted by
+examining the set of available player guides and walkthroughs that
+contain information about consequential decisions. These community
+efforts will guide which traversals are potentially vary based on
+prior choices. The recordings are associated with the requisite
+preconditions and a graph that records all possible traversal
+paths. The second part involves recording and identifying shots and
+potential equivalence relationships between shots in different
+traversals and identifying them with respect to the previous decisions
+that had to have been made to access it. If there are enough remaining
+traversals that have not been accounted for, or if there are any that
+may have an effect on a piece of content, a more automated approach
+(whereby the gameplay is recorded and varied using a macro that
+performs the player input).
+
+For instance, the first sequence where Bigby is called to investigate
+a domestic disturbance by Mr. Toad, he is presented with a set of
+dialogue options that have a significant choice embedded within
+them. The choice is whether Bigby lets Mr. Toad off easy, or whether
+he issues a stern warning. While this is a subtle distinction, there
+are certain choices that lead to one of the two paths that determines
+future content references. This significant choice is the only one,
+however, in the sequence. The rest merely determine the performance of
+"satellite" performances which provide a level of responsiveness to
+the player's decisions. These are independent of one another and can
+be recorded separately and combined based on the immediately preceding
+choice. For example, a video recording choice B at decision point 2
+can be combined with a separate video recording choice A at decision
+point 1 to duplicate the experience of having chosen A then B in
+order.
+
+In a like way, decisions regarding the activation or acquisition of
+inventory items either in conversation or during free-roam segments
+can likewise be associated with future content possibilities.
+
+In the current form of the story browser, the content is recorded as
+segments reflecting their variation, but it is anticipated that
+increasing the granularity would better provide for comparisons
+between different traversals in terms of which shots and lines of
+dialogue are identical.
+
+For quicktime events, for the most part the failure to perform the
+event in time results in an alternative content segment indicating
+that failure but which otherwise progresses the sequence. Some result
+in the character's death, which then must be attempted again to
+progress. There are cases where a significant decision is presented as
+a quick-time event, emulating the split-second decision making that the
+protagonist must inevitably make.
+
+One of the challenges that will need to be addressed in the proposed
+work is collecting a complete set of content, and in being confident
+in that coverage. Two approaches
+
+*** Schemata Editor
+The initial goal for the semantic graph editor is threefold:
+1.	Provide a means of navigating a semantic graph encoding such
+   as SIG, including direct creation of nodes and links.
+2.	Provide a visualization that organizes SIG elements according
+   to their properties
+3.	Enable an author to create a SIG encoding without violating
+   the Schemata and only allow creation of links and nodes that are
+   allowed by the schemata.
+
+The editor currently supports free-form creation of typed nodes, using
+a force-directed layout provided by d3 and based on a graph editor
+developed by Ross Kirsling and released under the MIT license. The
+editor displays arc types according to the SIG schemata, but does not
+currently enforce arcs or nodes. Each element can be inspected using a
+window in the lower left corner. The next version of the editor will
+include a means of visualizing both text content and the non-linear
+video content described by the browser. The hope is that this editor
+will be backwards compatible with existing SIG encodings in the
+DramaBank and provide a valuable tool for analyzing and visualizing
+SIG structures.
+
+     #+CAPTION: Semantic Graph Editor Prototype Interface
+     [[file:semantic_graph_overview.png]]
+
+**** Schema Editor
+:PROPERTIES:
+:ID:       8zs4eaz059h0@seebright.com
+:END:
+     #+CAPTION: Node Type Panel and Properties
+     #+ATTR_LATEX: :width 3cm
+     [[file:schema_panel.png]] 
+
+The editor is designed to facilitate editing and experimentation with
+schemas. To that end, this panel enables users to switch between
+schemas, create schemas and save them. The currently selected schema
+is highlighted in blue, while schemas present on the client have
+dashed outlines.
+
+Future features include keeping track of versions of schemas, as well
+as finding all graphs associated with a schema.
+
+**** Graphs
+     #+CAPTION: Node Type Panel and Properties
+     #+ATTR_LATEX: :width 3cm
+     [[file:graph_panel.png]] 
+
+The graph panel reflects the current graph that is displayed in the
+main display area. By clicking on a different graph, the display is
+refreshed with the particular contents of that graph.
+
+**** Node Types
+:PROPERTIES:
+:ID:       havh9l7069h0@seebright.com
+:END:
+     #+CAPTION: Node Type Panel and Properties
+     #+ATTR_LATEX: :width 3cm
+     [[file:node_type_panel.png]]
+
+David Elson described a schemata consisting of 8 different node types,
+each of which are listed below:
+
+*Text* (TE) 
+
+A node corresponding to a segment of text.
+
+*Proposition* (P)
+
+A modeled formal content. Elson is agnostic to the exact system used
+to model the content of the proposition node, and this work follows
+the later encodings which omit such proposition-level representations
+in favor of a placeholder for a proposition that is given meaning
+through it's relationship to characters and goals, even if it is only
+described using text.
+
+*State* (S)
+
+A node representing a single instant in time in interval logic. A
+proposition can begin at or end at different states to indicate
+duration.
+
+*Timeline* 
+
+A node associated through the (in) arc with a set of states, real or
+hypothetical. This can be used for the actual events as well as
+hypothetical timelines or belief states.
+
+*Interpretive Proposition*
+
+A proposition in the interpretive context. These may be inferred by
+the annotator, and not necessarily correspond to the surface
+discourse.
+
+*Goal*
+
+The goal node is used to indicate membership of interpretive
+propositions
+
+*Belief*
+
+A belief node encloses a particular agent's idea of the world. It can
+be either a single entity or a collection of entities that share the
+same beliefs. A goal could be to create a belief state for another
+agent.
+
+*Affect*
+
+Every goal must be associated with a character's affectual result,
+which is not specified by the schemata but often refers to properties
+like EGO or HEALTH.
+
+**** Arc Types
+:PROPERTIES:
+:ID:       3macmm7069h0@seebright.com
+:END:
+     #+CAPTION: Semantic Graph Editor Prototype Interface
+     #+NAME:   fig:link_panel
+     #+LABEL: fig:link_panel
+     #+ATTR_LATEX: :width 3cm
+     [[file:link_type_panel.png]] 
+
+Links are the arcs that traverse between nodes. They can be one of a
+number of types. This panel describes and controls which nodes are
+legal for each side of the link. See Figure [[fig:link_panel]]
+
+There are also three properties:
+- *Directed* The link's directionality is significant
+- *Homogenous* Does the link only connect nodes of the same type?
+- *One/Many* How many links of this type can there, either incoming or
+  outgoing?
+
+The interface allows the user to fold arcs as well as rename them.
+
+The arcs present in the Story Intention Graph are briefly described
+below (from \cite{Elson2012}):
+
+*Follows* (f)
+
+Arc that determines order in a sequence of states or text nodes
+
+*Interpreted As* (ia)
+
+Arc connecting proposition (P) to corresponding text nodes (TE)
+
+*Begins at*
+
+Determines start time (corresponding to a State) for a proposition node (P)
+
+*Ends at*
+
+Connects end state (S) for proposition (P)
+
+*In*
+
+Associates state (S) with timeline (T)
+
+*Referenced By*
+
+Associates P or I node with timeline which incorporates it modally.
+
+*Equivalent*
+
+Connects two state (S) nodes to show equivalence on different timelines (T)
+
+*Implies*
+
+Implication by a P node of an I, G or B node
+
+*Actualizes*
+
+Connects a P node to a interpretive proposition, goal or belief node
+when the inference is that those are actualized by that proposition
+
+*Ceases*
+
+The same as actualizes but ceases a I, G or B node.
+
+*Would cause*
+
+Show dependency relation between one I, G or B node and another
+
+*Would prevent*
+
+Show anti-dependency relation between one I, G or B node and another
+
+*Precondition for*
+
+Shows necessity of one I, G or B node for another
+
+*Precondition against*
+
+Shows necessity that one I, G or B node must be ceased for another
+
+*Attempt to cause*
+
+Intention by an agent through proposition to actualize an I, G or B node
+
+*Attempt to prevent*
+
+Similar to attempt to cause but with intention to prevent
+
+*Provides for*
+
+Positive affectual impact of I, G or B node to an A node of an agent
+
+*Damages*
+
+Negative affectual impact of an I, G or B node to an A node associated
+with an agent
+
+For more details, see Elson's dissertation where the schemata and its
+various rules are fully detailed.
+**** Rules
+A schemata is not simply a set of nodes types and link types. It also
+consists of a set of logical rules that enforce the structural
+properties of the schemata. Below are the rules that make a SIG
+"legal" in Elson's terminology. In the editor, these rules will likely
+be implemented as a set of JavaScript tests that are run on the graph
+every time a change occurs, highlighting the violating nodes and the
+rule violated.
+
+Some examples of rules present in the SIG schemata are the "sink"
+property where each goal must result in a positive or negative impact
+to a character through an affect node. This enforces the desire for
+the schemata to only represent events that influence the state of
+agents and not necessarily inconsequential events or plans.
+
+* Proposed Work
+The work proposed includes developing an extension of an existing
+model of narrative discourse for interactive and cinematic media (a
+game in the cinematic choice-based adventure game genre) in order to
+investigate whether the deep structures of a story can predict player
+attribution of encountered content for their decisions in key choice
+points. The proposed work will pioneer the use of this dual structure
+and hopes to inform both the creation of story content as well as
+understanding how the surface structure and deep structure relates to
+create a sense of satisfaction.
+
+The system and the evaluation built using it indexes of the surface
+content elements using story control logics and concepts from film in
+order to interpret them using Elson's SIG schemata. By comparing the
+resulting content and semiotic relationships between the two domains
+(surface structure and the SIG encoding), I anticipate uncovering
+aspects of how the subgenre of cinematic choice-based adventure games
+is able to be as successful as it is (both critically and
+commercially) without relying on simulations, emergent narrative or
+ludic mechanics (as, for instance, Jonathan Blow's /The Witness/ or
+Valve's /Portal/).
+
+The work is comprised of several related efforts, outlined here and
+described in more detail in this section:
+
+1. Develop an surface content encoding schema based on operational
+   logics described in the section on [[id:tx6har00e8h0@seebright.com][Story Control Logics]] which
+   contains surface representations present in the original work,
+   required for later interpretation (in form of video segments)
+2. Encode /The Wolf Among Us/ by extracting and recording the surface
+   media
+3. Develop browser for this dataset that highlights the variations and
+   interactions by the player
+4. Extend an existing computational narratology formalism (SIG) to
+   account for the possible worlds present in branching narratives
+5. Using this extended SIG, create an encoding of the surface content
+   onto constructs such as states, goals, beliefs and actions
+6. Design an experiment which demonstrates that the extended SIG
+   formalism correctly predicts the previous content relevant to a
+   player's decision
+
+In the previous section, two prototypes were described and presented
+that demonstrate progress toward the main goals: accurately describing
+the surface story content and extending existing semantic graph
+schemata in order to map it onto the newly developed model of surface
+story content for cinematic choice-based adventure games.
+
+We will begin by introducing an appropriate synthesis of existing
+methodologies that can be adopted, followed by a model for encoded
+surface story content, a system that would support that encoding, and
+finish with a discussion about ways to evaluate these contributions
+along with a selection of sample analyses that show the types of
+insights that are anticipated.
+
+** Methodology
+The proposed methodology is a synthesis of methods from digital
+humanities, computational linguistics and artificial intelligence
+research. For the first two research questions (RQ1 and RQ2), a
+relevant theory is used to extend or create a novel encoding. For the
+first, the theory from film studies and operational logics are used to
+identify key structural properties of the subgenre. For the second
+research question, the principle one is that espoused frequently by
+Marie-Laure Ryan of Possible Worlds Theory. This theory, along with
+hypertext theory, provides the vocabulary and expressivity necessary
+to extend the Story Intention Graph schemata to account for SIG
+"hyperpatterns" and to handle a set of possible stories (and their
+corresponding traversals) instead of the single story that
+distinguishes actual from hypothetical in the current schemata.
+
+A common approach of computational linguistics and even a digital
+humanities practice is a distant reading. This practice tabulates and
+compares properties across a (usually large) body of work. Examples of
+this "corpus" approach include /Google N-Gram/, /TimeML/
+\cite{Ingria2003}, The /Penn Discourse Treebank/ \cite{Prasad2008} and
+Elson's /DramaBank/ \cite{Elson2012b}. The two major drawback of this
+approach to studying humanistic works are the knowledge engineering
+that must be done prior to encoding the works and the lack of focus on
+the relationships within a single story. In the case of collecting a
+corporus, this necessarily involves developing a schema of tags and an
+ontology of concepts and how they are related before the corpus is
+annotated. This can be more or less tractable; in linguistic cases
+where the various categories are fairly fixed, there is not a lot of
+variations in schema, but in cases where the structure itself is far
+from stable such as in narratological interpretation, the value of the
+corpus is reduced relative to a singular work for certain types of
+insights.
+
+The first effort already begun is to define and a model of surface
+story content found in these games and do so using an existent work
+that has the desired properties. This data, in whatever format it
+would be finalized as, would become the "text"[fn:4] in the SIG
+schemata, and would provide whatever information was necessary to
+capture the impacts of interactivity.
+
+** /The Wolf Among Us/ Surface Story Content Encoding
+:PROPERTIES:
+:ID:       7ag9o190f8h0@seebright.com
+:END:
+One of the primary contributions will be the release of the encoded
+surface story content of /The Wolf Among Us/. This annotated
+collection of recordings of the surface content (in the form of
+traversal video segments) will be instrumental in further content
+analysis. The nature of this contribution is distinguished from
+"corpus" based approaches, as unlike collecting multiple
+interpretations of a single text or collecting multiple texts, this
+approach outlines the application of schemata (also a contribution of
+this proposal) to the encoding of the surface representations. A
+similar approach has been taken by the Text Encoding Initiative (TEI),
+but several different fundamental decisions differ, including the use
+of a standoff, operational logics-based formalism instead of attention
+to minute surface details of the representation itself.
+
+The particular genre that Telltale Games subscribes to draws heavily
+from medium-specific techniques adapted from film and
+television. Accordingly, the vocabulary and a review of critical
+approaches that are relevant are outlined here as they relate to the
+surface representation. The design of a surface encoding that
+incorporates the work done in film studies is imperative, and part of
+the proposed work is to evaluate both techniques of close-analysis of
+film as well as other critical methods that film studies employs to
+understand the role that mimetic moving images play in conveying
+story meaning.
+
+Likewise the cinematic choice-based adventure game subgenre mechanics
+have many properties that are worth modeling and which apply to other
+interactive stories and digital interactive narratives.
+
+** Computational Narratology System Proposal
+There are three related systems proposed for this work.
+
+First, a *story browser*, which enables display and organization of
+encoded surface content.
+
+Second, a *schemata editor*, for creating and extending schemata
+(starting with SIG). This tool is used to experiment with different
+formats, relationships and types that best balance expressivity with
+robustness.
+
+Third, an *annotation tool*, for annotating both textual and
+non-textual stories. This is used to create encodings that map onto
+cinematic choice-based adventure games that usually are built from
+non-linear and non-textual story content. This tool will aid in the
+encoding of the /The Wolf Among Us/ uing the extended SIG formalism.
+
+The annotation system proposed is a direct successor to
+/Scheharazade/, in that it is designed to enable and study encodings
+of narrative works using SIG. It would be ideal for it to both consume
+and produce files of its predecessor, as well as enable a wider
+distribution and set of compatible devices through distribution using
+web technologies.
+
+The SIG encoding is a semantic graph, or a graph which conforms to a
+particular schemata (detailed in Elson’s dissertation). This
+schemata's properties can be used to make inferences based on the type
+of nodes and edges and various properties that hold true. While this
+data structure is amenable to processing and machine learning because
+of its relationship to the source material, the existing interface
+does not provide analytical features, these must be accessed via the
+published Java API. Further, /Scheharazade/ and the underlying SIG
+layers (Text and State) do not support non-textual source material,
+interactivity or branching stories.
+
+The below presents a scrollable view of Elson’s interpretive layer as
+depicted in the tool developed for use by annotators:
+
+     #+CAPTION: /Scheherazade/ Graph Visual Interface
+     #+NAME:   fig:link_panel
+     #+LABEL: fig:link_panel
+     #+ATTR_LATEX: :width 12cm
+     [[file:elson_scheherazade.png]] 
+ 
+While the primary contributions of the proposed dissertation are a
+surface content model, an extension of SIG to account for branching
+stories and a surface story content dataset of /The Wolf Among Us/,
+these contributions place an increased requirement for the tools that
+address them to enable encoding, exploration and analysis.
+
+The following systems provide the means to author a schemata, use it
+for encoding and leverage its analytical capabilities to explore a
+dataset of surface story content and its associated SIG
+encodings. Once the dataset has been collected, the associated content
+can be used in a variety of ways, especially due to the richness of
+the captured video. One example would be through classification of
+shots, characters or scenes using machine learning algorithms. Another
+would be to recognize characters or emotions in the associated video
+files. By precisely delineating the surface material representations,
+the operational logics and the deeper interpretive structures, this
+dataset presents an opportunity to study interactive stories in a
+variety of ways.
+
+
+*** Story Content Browser
+:PROPERTIES:
+:ID:       pc99b2h0i8h0@seebright.com
+:END:
+For textual stories, there are many ways to explore the content from a
+linguistic perspective, and increasingly even from a deeper structural
+view. A single novel can fill a screen if displayed with various
+techniques. The Story Content Browser would use the surface content
+structure model to allow a user to visualize and play with the full
+set of possible player traversals, or "protostory" in Koenitz's
+terminology \cite{Hartmut2015}.
+
+Currently the only way to explore the narrative of games such as /The
+Wolf Among Us/ is to use video traversals combined with playing the
+game itself. This has a number of disadvantages. Formally referencing
+a particular state is difficult, as each traversal contains a number
+of choices which determine the content at any given point. There have
+been some efforts to instrument games so that an automated or even
+computer-assisted analysis can take place, but these are not possible
+to apply to published commerical games of this nature
+\cite{T.Bullen2007}. Comparisons of choice paths are difficult, as it
+would require aligning different traversals with the same previous
+choices. And finally, annotation is impossible, as there is no current
+way to associate annotated content with the series of decisions that
+led to its presentation.
+
+For cinematic choice-based adventure games, this means depicting the
+totality of choices in a game, as well as allowing access to the
+variations and permutations based on previous choices up to a point.
+
+Future work in the browser involves tools to measure and understand
+the variations.
+
+*Requirements for Story Browser*
+
+- Must be able to view an entire dataset in a single screen (overview
+  and detail design pattern)
+- Must allow subgraphs to be visible for particular purposes
+  (consistency, character timelines, etc)
+- Must be able to succinctly depict causal and intentional sequences
+  as such.
+*** Schemata Editor
+Formalizing narrative constructs is a primary activity in narratology,
+making statements about narratives that apply and are useful in their
+study. It is particularly important for the theoretical constructs to
+be of use in other disciplines, especially those of interactive
+storytelling. 
+
+David Elson's Story Intention Graph schemata is a unified formalism
+that is supported by a tool to operationalize its application to
+textual narratives.
+
+In order to extend the SIG formalism it becomes desirable to evaluate
+and tweak the additions to achieve various objectives.
+
+*Requirements for Semantic Graph/SIG editor*
+- Supports editing the relationships between node type and arc type
+- Supports testing with a set of sample graphs
+- Desirable to be backward compatible with previous SIG encodings
+
+*** Annotation Tool
+Benefits to the SIG approach is the organization of
+interpretations. The proposed annotation tool is an extension of the
+story browser to include those features of Elson's /Scheharazade/ that
+are necessary to encode a SIG and associate it with the proposed
+surface structure. While there is not an existing prototype for this
+component, some requirements have become apparent:
+
+*Sample Requirements*:
+
+- Be able to focus down to a single scene and relevant previous events
+  and/or future events
+- Be able to annotate a set of traversals that all intersect at a
+  given story control point
+
+While this initial list is worth pursuing in the next set of
+prototypes, it is likely only through use and applying the tools to
+future projects that I will determine the final format and system
+** Evaluation
+:PROPERTIES:
+:ID:       oyec8711e8h0@seebright.com
+:END:
+There are three primary research questions detailed above, repeated
+here:
+
+- *RQ1*. How do you define and represent, using story control logics,
+  the significant story-related surface content of cinematic
+  choice-based adventure games?
+
+- *RQ2* What extensions are necessary for the Story Intention Graph
+  schemata to cover the possibility space of variations present in the
+  story of a cinematic choice-based adventure games?
+
+- *RQ3* Can an extended SIG, encoded with the surface content and
+  provided a set of decisions made by a player, predict players'
+  attribution of which previous content was influential in their
+  decision for significant choices in /The Wolf Among Us/?
+
+*** Evaluating RQ1 
+:PROPERTIES:
+:ID:       ep1b8cd159h0@seebright.com
+:END:
+
+#+BEGIN_QUOTE
+*RQ1*. How do you define and represent, using story control logics,
+the significant story-related surface content of cinematic
+choice-based adventure games?
+#+END_QUOTE 
+
+The first question suggests several strategies for evaluation. The
+definition of the content types, categories and boundaries determine
+the types of operations and questions which it can answer. This leads
+to the notion that taking a set of test questions and applying them to
+the content, once recorded, would provide enough evidence of the
+approach's utility to answering non-obvious questions.
+
+These questions are simply the beginning to the more interesting
+questions that arise from comparing the surface content to the deep
+narrative structure that guides the actual experience of the work.
+
+In order to tease apart the types of insights that are possible with a
+dataset that documents the content as an operational logic, below are
+some examples of questions that engage with just the surface story
+content itself without requiring the deep story structure and its
+necessary interpretation which SIG provides for.
+
+- How much (in terms of percentage) of the content in /The Wolf Among
+  Us/ is displayed to a player on average? This requires a mechanistic
+  tabulation of the surface story content without any interpretation
+  or reference to SIG content, but would be useful in answering
+  questions about authorial burden or "efficiency" of the work's usage
+  of hand-authored content in a more precise way than lines of
+  dialogue.
+- What are the distributions of traversal length? Do traversal length,
+  measured by either content elements or total time, follow a normal
+  curve?
+- How can each decision be ranked in terms of its impact on the
+  possible traversals it is a precondition for?
+
+The hypothesis is that by using elements traditionally analyzed by
+film to segment the work and using the three "story control"
+operational logics (OL1, OL2, OL3 & OL4), a number of questions which
+engage the material surface could be formulated.  The answers can be
+strengthened by using the surface content dataset and the
+visualizations and examples it would highlight. An example of such a
+traversal could be one discovered where the player-character has the
+shortest total traversal time as measured by summing up the duration
+of each segment length. What choices did the player make that gave
+rise to such a traversal? Were they surprising in any way? How much do
+similar traversals vary, and were there any indicators as to their
+significance in those dialogue options?
+
+*** Evaluating RQ2
+:PROPERTIES:
+:ID:       g6ndcpb0f8h0@seebright.com
+:END:
+
+#+BEGIN_QUOTE
+*RQ2* What extensions are necessary for the Story Intention Graph
+schemata to cover the possibility space of variations present in the
+story of a cinematic choice-based adventure games?
+#+END_QUOTE
+
+The second question digs deeper into how the approach outlined in the
+system can inform and guide questions that go beyond identifying
+patterns and automating the highlighting of structural features such
+as similarity. It primarily addresses the need to account for the
+presence of multiple possible worlds, only one of which is actualized
+in a given traversal. 
+
+How do you recognize that the extensions actually accomplish the
+objective?
+
+Currently, it is possible to use Story Intention Graphs to annotate a
+single traversal of /The Wolf Among Us/. The schemata even has the
+ability to account for the modal timelines of potential actions that
+the main character could have taken.
+
+However, when the player makes a choice, the choice-path not taken is
+never "actualized" through the arc in the schemata, nor is there a
+means to account for this path through the story.
+
+An extension to the SIG would then be sufficient if it met the
+following criteria:
+
+**** Extended SIG Evaluation Criteria
+*Represent any possible traversal of the game according to the story
+control logics*
+
+An extended SIG should represent the full set of possible traversals
+of the story, such that any particular traversal of a player
+
+*Clearly delineate dependency between decisions and content*
+
+Any changes to the content that are associated with a prior decision should be easy to trace back to the decision that determined them.
+
+*Remained tractable for authoring and annotation purposes*
+
+While every particular traversal is unique, much of the content itself
+(including large portions of the story) in /The Wolf Among Us/ is in
+fact conserved. This means that these elements, either characters,
+goals or beliefs, should be conserved between traversals as much as
+possible while allowing for the potential for differing
+interpretations in any given traversal.
+
+*Enable simple selection and browsing of the possible traversals*
+
+The SIG schemata was originally designed to highlight analogous
+relationships between stories by ensuring that elements were largely
+similar in structure between stories. In this criteria, the goal is to
+make sure the chosen modifications highlight content or choice points
+that influence the current state of the story.
+
+**** Sample SIG extensions
+
+The following are a set of possible extensions to the SIG schemata
+that would address the criteria above. The addition of new nodes
+rather than modification of existing nodes would allow the schemata to
+be a proper superset of the existing schemata, which would also allow
+existing algorithms to operate on it.
+
+*Hyperstate* (HS) node
+
+A hyperstate is a substitution for the state node. A hyperstate can be
+in one of several variants based on preconditions that are influenced
+by prior choice points or the presence or absence of inventory.
+
+It is possible that the hyperstate is the only necessary addition, but
+by adding metadata to the nodes, it may require too much logic to be
+added to the rest of the nodes.
+
+*Hyper Proposition* (HP), *Hyper Interpretive Proposition* (HIP) nodes
+
+These nodes would likely need to be modified in order to depend on the
+previous or current hyperstates. Examples of these would be the death
+of a character which occurs in some traversals but not others.
+
+*Potential*, *Actualized* (hp) (ha) arcs
+
+The addition of the potentiality arc will further drive in the
+perceived story from the perspective of a choice point. Because the
+player does not have access to the actual outcome of a choice not
+chosen, this selection may be either represented as a specific arc or
+as a property on an arc (indicating which of the several possible
+actions were taken)
+
+*Player* (PL) node
+
+A node which reflects the player's agency in determining
+actions, and which each *Choice* arc eminates from. Having *Player*
+nodes also enables multiple traversals to co-exist in a graph form,
+each anchored to a Player node.
+
+*Player Interaction* (pi) arc
+
+An arc between a player and a hyper state
+which determines, for that player, which set of propositions are
+actualized or potential.
+
+*** Evaluating RQ3
+:PROPERTIES:
+:ID:       ip68y67159h0@seebright.com
+:END:
+
+#+BEGIN_QUOTE
+*RQ3* Can an extended SIG, encoded with the surface content and
+provided a set of decisions made by a player, predict players'
+attribution of which previous content was influential in their
+decision for significant choices in /The Wolf Among Us/?
+#+END_QUOTE
+
+The main way of evaluating this research question is through the
+design of a study, one which evaluates whether the predicted
+importance of certain pieces of content does in fact agree with the
+players rating of their importance relative to a particular decision.
+
+The hypothetical study design that would evaluate this is described
+below.
+
+A collection of players are asked to play The Wolf Among Us, noting
+each of their decisions each time they make it using an iPad. These
+decisions are recorded to ensure that a record of the content they
+were presented with is fixed and that, until the final decision point,
+a "fulfilled" SIG can be fixed using them.
+
+Each player plays until the point in the narrative where the key
+decision is presented. Usually these are binary decisions, and there
+is usually only one in each episode. In /The Wolf Among Us/ this
+decision at the end is whether to call for the execution of the main
+villain or whether to exile him. 
+
+The actual decision itself is measured within the game and presented
+to players. Some decisions are more lopsided than others. It is my
+hypothesis that this lopsidedness of some decisions verus others can
+be explained by the number of traversals which present supporting
+content for a particular choice in each of these key choice paths.
+
+Once the player makes the final decision, they will then be presented
+with a selection of clips that are related to the decision based on
+shared surface content. This set is complete, and the player is asked
+to rate each piece of content on a scale from 1 to 3 as to how much it
+influenced which decision they made.
+
+The hypothesis is that those decisions which are more lopsided have
+more content which supports the value at stake in the decision (either
+through clips that are sympathetic to the character involved or which
+reinforce a particular value of the community).
+
+This content is then compared to a set of content selected as causally
+related to the decision paths and compared on a similar scale.
+
+** Proposed Work Summary
+
+This section outlined a set of works that would address a number of
+pressing open questions in the narrative modeling and computational
+narratology communities. The surface story structure encoding and
+proposed hand-encoded version of /The Wolf Among Us/ would be of value
+regardless of the final formalisms or systems applied to it down the
+line. The schemata editor acknowledges the importance of continual
+innovation and of experimentation when investigating models, while the
+story browser acknowledges the need for natively humanist methods of
+exploring and arriving at insights even with computational aid.
+
+* Schedule
+Below is a simple schedule for pursuing the work outlined in this
+document. While it does provide a clear set of milestones and ways to
+publish and get feedback on intermediate results, part of the goal is
+to discover what opportunities this approach can open up.
+
+| *Quarter*   | *Activity*                                                                    |
+|-------------+-------------------------------------------------------------------------------|
+| Spring 2016 | Advance                                                                       |
+|             | Begin initial development and first testing of system based on S.I.G in April |
+|-------------+-------------------------------------------------------------------------------|
+| Summer 2016 | Present at ELO Conference 2016, do initial encoding of /The Wolf Among Us/    |
+|             | Revise prototypes into more functional variants based on story control logics |
+|-------------+-------------------------------------------------------------------------------|
+| Fall 2016   | Present at conferences                                                        |
+|             | Conduct an initial assessment of the encoding                                 |
+|             | Develop SIG extension and test according to criteria outlined                 |
+|-------------+-------------------------------------------------------------------------------|
+| Winter 2017 | Refine system based on feedback                                               |
+|             | Conduct controlled user study for predicted references extended SIG           |
+|             | Writing Dissertation                                                          |
+|-------------+-------------------------------------------------------------------------------|
+| Spring 2017 | Working on papers for fall deadline conferences                               |
+|-------------+-------------------------------------------------------------------------------|
+| Fall 2017   | Go on job market, conference presentations                                    |
+|-------------+-------------------------------------------------------------------------------|
+| Winter 2018 | Defend dissertation, more conferences                                         |
+
+* Closing 
+Cinematic choice-based adventure games are popular and successful
+non-linear narratives that are often seen as an anomaly in their
+reliance on hand-authored content, but what they represent is an
+opportunity to understand story and interactivity in a genre that is
+potentially tractable for computational narratology approaches. The
+proposed work will develop a corpus for researchers looking to compare
+theoretical approaches and assess results of novel systems that use
+computational narratology as a basis and conduct an initial study. By
+better understanding what works using existing tools, we can better
+understand both how to develop better content, how to understand how
+existing artifacts create the effects that they do and further
+anticipate how to create more efficient and powerful authoring tools
+and systems.
+
+#+BIBLIOGRAPHY:  AdvancementProposal plain alimit:t option:--both
+
+* Footnotes
+
+[fn:9] This is influenced by Michael Mateas' concept of "content
+selection architectures" as a useful way to describe how various types
+of content and the configuration of the systems that organize them can
+be compared. \cite{Mateas2015}
+
+[fn:8] labeled deterministic, even though these works could branch and
+Chris Crawford sense of instantial \cite{Crawford1982} could just as
+well apply
+
+[fn:7] Even in their contemporary generated kin, such as Meehan's /Talespin/
+\cite{Meehan1981}
+
+[fn:6] Quantic Dream, 2010
+
+[fn:5] In interactive fiction, this is a textual transcript as all
+input and output of the work is recorded in a log.
+
+[fn:4] the string of characters that is the entirety of the original
+work considered in Elson's dissertation as referenced by text nodes
+\cite{Elson2012}
+
+[fn:3] The SIG Schemata is agnostic to the format or even the presence
+of a logical proposition within each of these "Proposition" nodes.
+
+[fn:2] As opposed to "procedural" content, the distinction Chris
+Crawford describes in his 1984 book "The Art Of Computer Game
+Design." He even goes on to claim in his discussion that "A game
+derives its quality from the richness of the network of options it
+presents. These options are only accessible through the
+process-intensive aspects of the game." \cite{Crawford1982}
+
+[fn:1] One recent Telltale Games work, Minecraft, uses a sandbox-style
+creation game based on voxels as its basis, which departs from
+previous works that use either comics or television.
+
+
+
+

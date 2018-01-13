@@ -1,0 +1,2837 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY www "http://www.cadmos.cirma.unito.it#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY olo "http://purl.org/ontology/olo/core#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY vs "http://www.w3.org/2003/06/sw-vocab-status/ns#" >
+    <!ENTITY drammar "http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#"
+     xml:base="http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:www="http://www.cadmos.cirma.unito.it#"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:olo="http://purl.org/ontology/olo/core#"
+     xmlns:drammar="http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://www.cadmos.cirma.unito.it">
+        <dc:date rdf:datatype="&xsd;dateTime">2011-05-11T12:10:52+01:00</dc:date>
+        <owl:versionInfo rdf:datatype="&xsd;decimal">5.0</owl:versionInfo>
+        <dc:creator rdf:datatype="&xsd;string">Authors:
+Vincenzo Lombardo,
+Antonio Pizzo,
+Rossana Damiano.
+-
+Contributors:
+Giacomo Albert,
+Cristina Battaglino,
+Mario Cataldi,
+Antonio Lieto.
+</dc:creator>
+        <dc:description rdf:datatype="&xsd;string">The Drammar Ontology provides basic concepts and properties 
+for semantic annotations of story-based media. </dc:description>
+        <terms:publisher>CIRMA</terms:publisher>
+        <dc:title xml:lang="en">Drammar Ontology</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="&dc;creator">
+        <rdfs:label xml:lang="en-us">Creator</rdfs:label>
+        <terms:modified>2008-01-14</terms:modified>
+        <terms:issued>1999-07-02</terms:issued>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en-us">An entity primarily responsible for making the resource.</rdfs:comment>
+        <terms:description xml:lang="en-us">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#creator-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="&dc;date">
+        <rdfs:label xml:lang="en-us">Date</rdfs:label>
+        <terms:modified>2008-01-14</terms:modified>
+        <terms:issued>1999-07-02</terms:issued>
+        <rdfs:comment xml:lang="en-us">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en-us">Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#date-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="&dc;description">
+        <rdfs:label xml:lang="en-us">Description</rdfs:label>
+        <terms:issued>1999-07-02</terms:issued>
+        <terms:modified>2008-01-14</terms:modified>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en-us">An account of the resource.</rdfs:comment>
+        <terms:description xml:lang="en-us">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#description-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="&dc;title">
+        <rdfs:label xml:lang="en-us">Title</rdfs:label>
+        <terms:modified>2008-01-14</terms:modified>
+        <terms:issued>1999-07-02</terms:issued>
+        <rdfs:comment xml:lang="en-us">A name given to the resource.</rdfs:comment>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#title-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="&terms;description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <owl:AnnotationProperty rdf:about="&terms;hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="&terms;issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="&terms;modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="&terms;publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="&terms;title"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#isDefinedBy -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;isDefinedBy"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#seeAlso -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
+
+    <owl:AnnotationProperty rdf:about="&vs;term_status"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:AnnotationProperty rdf:about="&skos;note"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#appraisingAgent -->
+
+    <owl:ObjectProperty rdf:about="&www;appraisingAgent">
+        <rdfs:comment>The appraisingAgent property connects an Emotion with the Agent who appraises it.
+
+It encompasses specific subproperties for the specific emotion types (in OCC theory, there are 22 emotion types such as Love or Shame)</rdfs:comment>
+        <rdfs:range rdf:resource="&drammar;Agent"/>
+        <rdfs:domain rdf:resource="&drammar;Emotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#coOccurInScene -->
+
+    <owl:ObjectProperty rdf:about="&www;coOccurInScene">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:comment>coOccurInScene can be used to describe the fact that two Plans co-occur in the same Scene.</rdfs:comment>
+        <rdfs:range rdf:resource="&www;Plan"/>
+        <rdfs:domain rdf:resource="&www;Plan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#hasADTComponent -->
+
+    <owl:ObjectProperty rdf:about="&www;hasADTComponent">
+        <rdfs:comment>A generic property for representing the relation among a given abstract structure type and its components.</rdfs:comment>
+        <rdfs:range rdf:resource="&www;ADTComponent"/>
+        <rdfs:domain rdf:resource="&www;AbstractDataType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#hasChild -->
+
+    <owl:ObjectProperty rdf:about="&www;hasChild">
+        <rdfs:comment>the basic relation employed for modelling the computational data structure of tree.</rdfs:comment>
+        <rdfs:domain rdf:resource="&www;TreeNode"/>
+        <rdfs:range rdf:resource="&www;TreeNode"/>
+        <rdfs:subPropertyOf rdf:resource="&www;hasADTComponent"/>
+        <owl:inverseOf rdf:resource="&www;hasParent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#hasEmotion -->
+
+    <owl:ObjectProperty rdf:about="&www;hasEmotion">
+        <rdfs:subPropertyOf rdf:resource="&www;hasMentalState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#hasMentalState -->
+
+    <owl:ObjectProperty rdf:about="&www;hasMentalState">
+        <rdfs:domain rdf:resource="&drammar;Agent"/>
+        <rdfs:range rdf:resource="&drammar;MentalState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#hasMotivationIn -->
+
+    <owl:ObjectProperty rdf:about="&www;hasMotivationIn">
+        <rdfs:comment>The hasMotivation property represents the relation bewteen a plan and the timeline it motivates (namely, where the actions of the plan are actually contained).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#hasParent -->
+
+    <owl:ObjectProperty rdf:about="&www;hasParent">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>The parent/child relation for modelling tree structures.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#hingesOn -->
+
+    <owl:ObjectProperty rdf:about="&www;hingesOn">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:comment>A DrammarScene hinges on some ConflictSet</rdfs:comment>
+        <rdfs:range rdf:resource="&www;ConflictSet"/>
+        <rdfs:domain rdf:resource="&www;DrammarScene"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#inConflictWith -->
+
+    <owl:ObjectProperty rdf:about="&www;inConflictWith">
+        <rdfs:comment>The conflict relation over goals</rdfs:comment>
+        <rdfs:range rdf:resource="&www;Plan"/>
+        <rdfs:domain rdf:resource="&www;Plan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#inSupportOf -->
+
+    <owl:ObjectProperty rdf:about="&www;inSupportOf">
+        <rdfs:comment>The support relation over goals (parallel to inConflictWith)</rdfs:comment>
+        <rdfs:domain rdf:resource="&www;Plan"/>
+        <rdfs:range rdf:resource="&www;Plan"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#isHingedOnBy -->
+
+    <owl:ObjectProperty rdf:about="&www;isHingedOnBy">
+        <rdfs:comment>Inverse of hingesOn.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&www;hingesOn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#isMentalStateOf -->
+
+    <owl:ObjectProperty rdf:about="&www;isMentalStateOf"/>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#isMotivationFor -->
+
+    <owl:ObjectProperty rdf:about="&www;isMotivationFor">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>A plan is the motivation for a timeline, namely for a list of units containing actions.</rdfs:comment>
+        <rdfs:domain rdf:resource="&www;Plan"/>
+        <owl:inverseOf rdf:resource="&www;hasMotivationIn"/>
+        <rdfs:range rdf:resource="&drammar;Timeline"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#isOrderedBy -->
+
+    <owl:ObjectProperty rdf:about="&www;isOrderedBy">
+        <owl:inverseOf rdf:resource="&www;orders"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#orders -->
+
+    <owl:ObjectProperty rdf:about="&www;orders">
+        <rdfs:comment>A Timeline orders Unit.</rdfs:comment>
+        <rdfs:domain rdf:resource="&drammar;Timeline"/>
+        <rdfs:range rdf:resource="&drammar;Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#target -->
+
+    <owl:ObjectProperty rdf:about="&www;target">
+        <rdfs:comment>A generic property for describing the relation of an appraised emotional state with the target of the emotion, further articulated into more specific target types for each emotion type (see appraisingAgent property).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#achieves -->
+
+    <owl:ObjectProperty rdf:about="&drammar;achieves">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>achieves links a Plan to the Goal it aims at achieving</rdfs:comment>
+        <owl:inverseOf rdf:resource="&drammar;isAchievedBy"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#containsFirstOLE -->
+
+    <owl:ObjectProperty rdf:about="&drammar;containsFirstOLE">
+        <rdfs:domain rdf:resource="&drammar;List"/>
+        <rdfs:range rdf:resource="&drammar;OrderedListElement"/>
+        <rdfs:subPropertyOf rdf:resource="&drammar;containsOLE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#containsLastOLE -->
+
+    <owl:ObjectProperty rdf:about="&drammar;containsLastOLE">
+        <rdfs:domain rdf:resource="&drammar;List"/>
+        <rdfs:range rdf:resource="&drammar;OrderedListElement"/>
+        <rdfs:subPropertyOf rdf:resource="&drammar;containsOLE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#containsOLE -->
+
+    <owl:ObjectProperty rdf:about="&drammar;containsOLE">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:comment>Inverse of isOLElementOf.
+Connects the ordered list to its elements. </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&www;hasADTComponent"/>
+        <rdfs:domain rdf:resource="&drammar;List"/>
+        <rdfs:range rdf:resource="&drammar;OrderedListElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#describes -->
+
+    <owl:ObjectProperty rdf:about="&drammar;describes">
+        <rdfs:comment>A SituationSchema describes a DramaPerdurant, i.e. provides a template for describing processes and states.</rdfs:comment>
+        <rdfs:range rdf:resource="&drammar;DramaPerdurant"/>
+        <rdfs:domain rdf:resource="&drammar;SituationSchema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#follows -->
+
+    <owl:ObjectProperty rdf:about="&drammar;follows">
+        <rdfs:comment>Inverse of precedes.
+Sequential order in an ordered list.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&drammar;precedes"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#happyFor_appraisingAgent -->
+
+    <owl:ObjectProperty rdf:about="&drammar;happyFor_appraisingAgent">
+        <rdfs:subPropertyOf rdf:resource="&www;appraisingAgent"/>
+        <rdfs:range rdf:resource="&drammar;Agent"/>
+        <rdfs:domain rdf:resource="&drammar;Emotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#happyFor_target -->
+
+    <owl:ObjectProperty rdf:about="&drammar;happyFor_target">
+        <rdfs:subPropertyOf rdf:resource="&www;target"/>
+        <rdfs:range rdf:resource="&drammar;Agent"/>
+        <rdfs:domain rdf:resource="&drammar;Emotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#hasData -->
+
+    <owl:ObjectProperty rdf:about="&drammar;hasData">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:comment>Property that connects a structural element (e.g. of the class OLE) with the data contained in it. 
+Range is not defined; it is defined for each specific structure element. </rdfs:comment>
+        <rdfs:domain rdf:resource="&www;ADTComponent"/>
+        <rdfs:range rdf:resource="&owl;Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#hasDoneState -->
+
+    <owl:ObjectProperty rdf:about="&drammar;hasDoneState">
+        <owl:inverseOf rdf:resource="&drammar;isDoneStateOf"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#hasEmotionType -->
+
+    <owl:ObjectProperty rdf:about="&drammar;hasEmotionType">
+        <rdfs:domain rdf:resource="&drammar;EmotionSchema"/>
+        <rdfs:range rdf:resource="&drammar;ExternalRefEmotionType"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#hasExtRef -->
+
+    <owl:ObjectProperty rdf:about="&drammar;hasExtRef">
+        <rdfs:comment>Quality of an entity (DramaEndurant)
+
+In particular:
+
+Object_type
+This property provides a URI, in YAGOSUMO or in Wordnet, or a custom string that defines the class of some object. E.g., object individual PinkOctopus in Oktapodi is of Object_type &quot;octopus&quot; in Yago.
+
+Environment_periodOfYear
+Epoch of some environment. 
+E.g. summer, january, Easter.
+Can be a URI or forced custom string. This is why Range is empty.
+
+Environment_location
+Can be &quot;exterior&quot; or &quot;interior&quot;. From a fixed menu.
+
+Environment_timeOfDay
+Can be 
+&quot;dawn&quot;
+&quot;morning&quot;
+&quot;afternoon&quot;
+&quot;evening&quot;
+&quot;night&quot;. 
+From a fixed menu.
+
+Environment_type
+The type of an envrironment.
+E.g.: forest, kitchen, office, ... .
+It can be custom string or URI.
+This is why Range is empty.
+
+Environment_epoch
+Epoch of some environment. 
+E.g. 20th century, 1710&apos;s, 50&apos;s.
+Can be a URI or forced custom string. This is why Range is empty.
+
+</rdfs:comment>
+        <rdfs:range rdf:resource="&drammar;ExternalReference"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;DescriptionTemplate"/>
+                    <rdf:Description rdf:about="&drammar;DramaEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#hasFiller -->
+
+    <owl:ObjectProperty rdf:about="&drammar;hasFiller">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>Filler is the property that connects a Role of a FrameNetSchema with the DramaEntity (DramaEndurant or DramaPerdurant) that fills that Role.</rdfs:comment>
+        <rdfs:range rdf:resource="&drammar;DramaEntity"/>
+        <rdfs:domain rdf:resource="&drammar;Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#hasGoal -->
+
+    <owl:ObjectProperty rdf:about="&drammar;hasGoal">
+        <rdfs:comment>The property which connects an agent with her/his goals.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&www;hasMentalState"/>
+        <rdfs:domain rdf:resource="&drammar;Agent"/>
+        <rdfs:range rdf:resource="&drammar;Goal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#hasMember -->
+
+    <owl:ObjectProperty rdf:about="&drammar;hasMember">
+        <rdfs:comment>The specific property for modelling Sets (as a data structure). Any entity, in Drammar, can be a member of a Set.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&www;hasADTComponent"/>
+        <rdfs:domain rdf:resource="&drammar;Set"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#hasPlanEffect -->
+
+    <owl:ObjectProperty rdf:about="&drammar;hasPlanEffect">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>Property that connects a plan with the consistent set of states that is the effect of a plan (ConsistentStateSet).</rdfs:comment>
+        <rdfs:range rdf:resource="&www;ConsistentStateSet"/>
+        <rdfs:domain rdf:resource="&www;Plan"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#hasPlanPrecondition -->
+
+    <owl:ObjectProperty rdf:about="&drammar;hasPlanPrecondition">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>Property that connect a plan with the ConsistentStateState which forms its precondition.</rdfs:comment>
+        <rdfs:range rdf:resource="&www;ConsistentStateSet"/>
+        <rdfs:domain rdf:resource="&www;Plan"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#hasRole -->
+
+    <owl:ObjectProperty rdf:about="&drammar;hasRole">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:comment>Connects a SituationSchema ( modelled by a frame-like linguistic structure) with each Role of the schema.</rdfs:comment>
+        <rdfs:domain rdf:resource="&www;FrameNetSchema"/>
+        <rdfs:range rdf:resource="&drammar;Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#hasTimelineEffect -->
+
+    <owl:ObjectProperty rdf:about="&drammar;hasTimelineEffect">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:comment>Property that connect a Timeline with the ConsistentStateState which forms its effects.</rdfs:comment>
+        <rdfs:range rdf:resource="&www;ConsistentStateSet"/>
+        <rdfs:domain rdf:resource="&drammar;Timeline"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#hasTimelinePrecondition -->
+
+    <owl:ObjectProperty rdf:about="&drammar;hasTimelinePrecondition">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>Property that connect a Timeline with the ConsistentStateState which forms its precondition.</rdfs:comment>
+        <rdfs:range rdf:resource="&www;ConsistentStateSet"/>
+        <rdfs:domain rdf:resource="&drammar;Timeline"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#hasValueEngaged -->
+
+    <owl:ObjectProperty rdf:about="&drammar;hasValueEngaged">
+        <rdfs:comment>The property hasValue connects an agent to her/his ValueEngaged</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&www;hasMentalState"/>
+        <rdfs:domain rdf:resource="&drammar;Agent"/>
+        <rdfs:range rdf:resource="&drammar;ValueEngaged"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#intends -->
+
+    <owl:ObjectProperty rdf:about="&drammar;intends">
+        <rdfs:comment>Intends has as domain an Agent and as range a Plan.</rdfs:comment>
+        <rdfs:range rdf:resource="&www;Plan"/>
+        <rdfs:domain rdf:resource="&drammar;Agent"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isAchievedBy -->
+
+    <owl:ObjectProperty rdf:about="&drammar;isAchievedBy">
+        <rdfs:comment>This property connects a goal with the plan that achieves it.</rdfs:comment>
+        <rdfs:range rdf:resource="&www;Plan"/>
+        <rdfs:domain rdf:resource="&drammar;Goal"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isDataOf -->
+
+    <owl:ObjectProperty rdf:about="&drammar;isDataOf">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:comment>isDataOf connects some entity to a data structure component (namely, an OrderedListElement) of which it is the content.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&drammar;hasData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isDescribedBy -->
+
+    <owl:ObjectProperty rdf:about="&drammar;isDescribedBy">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>Inverse of describes, this property connects a Dynamics (Process or State) with the SituationSchema that describes it.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&drammar;describes"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isDoneStateOf -->
+
+    <owl:ObjectProperty rdf:about="&drammar;isDoneStateOf">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>This is the property that connects a process with a particular state, called a done state, that holds whether the process has terminated. </rdfs:comment>
+        <rdfs:domain rdf:resource="&drammar;DoneSchema"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&www;Plan"/>
+                    <rdf:Description rdf:about="&drammar;Process"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isEmotionOf -->
+
+    <owl:ObjectProperty rdf:about="&drammar;isEmotionOf">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>Connects an emotion with the agent who feels it.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&www;hasEmotion"/>
+        <rdfs:subPropertyOf rdf:resource="&www;isMentalStateOf"/>
+        <rdfs:range rdf:resource="&drammar;Agent"/>
+        <rdfs:domain rdf:resource="&drammar;Emotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isFillerOf -->
+
+    <owl:ObjectProperty rdf:about="&drammar;isFillerOf">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:comment>Connects some DramaEndurant or Perdurant to a Role in a SituationSchema</rdfs:comment>
+        <owl:inverseOf rdf:resource="&drammar;hasFiller"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isGoalOf -->
+
+    <owl:ObjectProperty rdf:about="&drammar;isGoalOf">
+        <rdfs:comment>inverse of hasGoal</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&www;isMentalStateOf"/>
+        <rdfs:range rdf:resource="&drammar;Agent"/>
+        <owl:inverseOf rdf:resource="&drammar;hasGoal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isIntendedBy -->
+
+    <owl:ObjectProperty rdf:about="&drammar;isIntendedBy">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>Inverse of intends.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&drammar;intends"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isKnownBy -->
+
+    <owl:ObjectProperty rdf:about="&drammar;isKnownBy">
+        <rdfs:subPropertyOf rdf:resource="&www;isMentalStateOf"/>
+        <rdfs:range rdf:resource="&drammar;Agent"/>
+        <owl:inverseOf rdf:resource="&drammar;knows"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="&drammar;isMemberOf">
+        <owl:inverseOf rdf:resource="&drammar;hasMember"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isOLEContained -->
+
+    <owl:ObjectProperty rdf:about="&drammar;isOLEContained">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>Connects the element of an ordered list to the ordered list.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&drammar;containsOLE"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isPlanEffectOf -->
+
+    <owl:ObjectProperty rdf:about="&drammar;isPlanEffectOf">
+        <owl:inverseOf rdf:resource="&drammar;hasPlanEffect"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isPlanPreconditionOf -->
+
+    <owl:ObjectProperty rdf:about="&drammar;isPlanPreconditionOf">
+        <owl:inverseOf rdf:resource="&drammar;hasPlanPrecondition"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isRoleOf -->
+
+    <owl:ObjectProperty rdf:about="&drammar;isRoleOf">
+        <owl:inverseOf rdf:resource="&drammar;hasRole"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isSpannedBy -->
+
+    <owl:ObjectProperty rdf:about="&drammar;isSpannedBy">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <owl:inverseOf rdf:resource="&drammar;spans"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isTimelineEffectOf -->
+
+    <owl:ObjectProperty rdf:about="&drammar;isTimelineEffectOf">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <owl:inverseOf rdf:resource="&drammar;hasTimelineEffect"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isTimelinePreconditionOf -->
+
+    <owl:ObjectProperty rdf:about="&drammar;isTimelinePreconditionOf">
+        <owl:inverseOf rdf:resource="&drammar;hasTimelinePrecondition"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isValueOf -->
+
+    <owl:ObjectProperty rdf:about="&drammar;isValueOf">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&www;isMentalStateOf"/>
+        <rdfs:range rdf:resource="&drammar;Agent"/>
+        <owl:inverseOf rdf:resource="&drammar;hasValueEngaged"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#knows -->
+
+    <owl:ObjectProperty rdf:about="&drammar;knows">
+        <rdfs:comment>Property of an agent, who BELIEVES a Belief (a mental state with a propositional content).
+BELIEVES = KNOWS.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&www;hasMentalState"/>
+        <rdfs:domain rdf:resource="&drammar;Agent"/>
+        <rdfs:range rdf:resource="&drammar;Belief"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#love_appraisingAgent -->
+
+    <owl:ObjectProperty rdf:about="&drammar;love_appraisingAgent">
+        <rdfs:subPropertyOf rdf:resource="&www;appraisingAgent"/>
+        <rdfs:range rdf:resource="&drammar;Agent"/>
+        <rdfs:domain rdf:resource="&drammar;Emotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#love_target -->
+
+    <owl:ObjectProperty rdf:about="&drammar;love_target">
+        <rdfs:subPropertyOf rdf:resource="&www;target"/>
+        <rdfs:range rdf:resource="&drammar;Agent"/>
+        <rdfs:domain rdf:resource="&drammar;Emotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#precedes -->
+
+    <owl:ObjectProperty rdf:about="&drammar;precedes">
+        <rdfs:comment>Sequential order in an ordered list.</rdfs:comment>
+        <rdfs:range rdf:resource="&drammar;OrderedListElement"/>
+        <rdfs:domain rdf:resource="&drammar;OrderedListElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#propositionalContent -->
+
+    <owl:ObjectProperty rdf:about="&drammar;propositionalContent">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>propositionalContent links  BeliefSchema or a GoalSchema) to the its content (a factual state or process), that is the Process or State that is the actual content of the belief or the goal.</rdfs:comment>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;BeliefSchema"/>
+                    <rdf:Description rdf:about="&drammar;GoalSchema"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#shame_appraisingAgent -->
+
+    <owl:ObjectProperty rdf:about="&drammar;shame_appraisingAgent">
+        <rdfs:subPropertyOf rdf:resource="&www;appraisingAgent"/>
+        <rdfs:range rdf:resource="&drammar;Agent"/>
+        <rdfs:domain rdf:resource="&drammar;Emotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#shame_target -->
+
+    <owl:ObjectProperty rdf:about="&drammar;shame_target">
+        <rdfs:subPropertyOf rdf:resource="&www;target"/>
+        <rdfs:range rdf:resource="&drammar;Agent"/>
+        <rdfs:domain rdf:resource="&drammar;Emotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#spans -->
+
+    <owl:ObjectProperty rdf:about="&drammar;spans">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:comment>The coincidence relation of a Scene on a Timeline.</rdfs:comment>
+        <rdfs:domain rdf:resource="&drammar;Scene"/>
+        <rdfs:range rdf:resource="&drammar;Timeline"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&owl;topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#accomplished -->
+
+    <owl:DatatypeProperty rdf:about="&www;accomplished">
+        <rdfs:comment>Entirely executed</rdfs:comment>
+        <rdfs:domain rdf:resource="&www;Plan"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#consistent -->
+
+    <owl:DatatypeProperty rdf:about="&www;consistent">
+        <rdfs:comment>A property expressing the fact that a given set is internally consistent. Employed to define a ConsistentStateSet.</rdfs:comment>
+        <rdfs:domain rdf:resource="&drammar;Set"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#quale_LexicalReferenceType -->
+
+    <owl:DatatypeProperty rdf:about="&www;quale_LexicalReferenceType"/>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Goal_type -->
+
+    <owl:DatatypeProperty rdf:about="&drammar;Goal_type">
+        <rdfs:comment>Type of the goal: one of the strings
+&quot;Achievement&quot;
+&quot;Maintainance&quot;
+&quot;Perform&quot;
+&quot;Query&quot;</rdfs:comment>
+        <rdfs:domain rdf:resource="&drammar;Goal"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first>Achievement</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first>Maintainance</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first>Perform</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first>Query</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Role_ID_resource -->
+
+    <owl:DatatypeProperty rdf:about="&drammar;Role_ID_resource">
+        <rdfs:comment>Two possible resources:
+Framenet OR Verbnet</rdfs:comment>
+        <rdfs:domain rdf:resource="&drammar;ExternalRefRole"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Role_framenetRoleID -->
+
+    <owl:DatatypeProperty rdf:about="&drammar;Role_framenetRoleID">
+        <rdfs:comment>Role_framenetRoleID
+ID of the role as stated by Framenet. It is the string returned through the access to Framenet. The string represent the ID of the Frame Element. </rdfs:comment>
+        <rdfs:domain rdf:resource="&drammar;ExternalRefRole"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Role_verbnetRoleType -->
+
+    <owl:DatatypeProperty rdf:about="&drammar;Role_verbnetRoleType">
+        <rdfs:comment>Type of the role as stated by Verbnet. It is the string returned through the access to Verbnet. This happens when the access to Framenet fails.</rdfs:comment>
+        <rdfs:domain rdf:resource="&drammar;ExternalRefRole"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#atStake -->
+
+    <owl:DatatypeProperty rdf:about="&drammar;atStake">
+        <rdfs:comment>Boolean property of a ValueEngaged:
+- true, if the value is at stake; 
+- false, if the value is balanced.</rdfs:comment>
+        <rdfs:domain rdf:resource="&drammar;ValueEngaged"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#hasManifestation -->
+
+    <owl:DatatypeProperty rdf:about="&drammar;hasManifestation">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>hasManifestation
+
+This property connects a Unit to a manifestation of drama according to FRBR model. In the real world, a manifestation is represented by a IRI (e.g., the URL of a movie, of the recording of a performance, or of the digital edition of a novel).</rdfs:comment>
+        <rdfs:domain rdf:resource="&drammar;Unit"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#hasMessage -->
+
+    <owl:DatatypeProperty rdf:about="&drammar;hasMessage">
+        <rdfs:comment>Anything can convey a message.
+Standard cases: 
+Signpost at a city entrance &quot;Ciudad de Mexico&quot;; 
+Toothpaste brand name on the object toothpaste: &quot;Colgate&quot;
+A specific utterance in a communication action.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&owl;Thing"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#isIntentional -->
+
+    <owl:DatatypeProperty rdf:about="&drammar;isIntentional">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>Boolean property for Intentionality of processes. Applies to Processes to distinguish Action from an UnintentionalProcess.</rdfs:comment>
+        <rdfs:domain rdf:resource="&drammar;Process"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#quale -->
+
+    <owl:DatatypeProperty rdf:about="&drammar;quale">
+        <rdfs:comment>Any quality associated to anything. 
+Can be a custom string or URI in some vocabulary.
+This is why Range is empty.</rdfs:comment>
+        <rdfs:domain rdf:resource="&drammar;ExternalReference"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#quale_LexicalReference_URI -->
+
+    <owl:DatatypeProperty rdf:about="&drammar;quale_LexicalReference_URI">
+        <rdfs:comment>WNSense is valued to a URI in Wordnet via MultiWordnet. E.g. &quot;partire&quot; is &quot;{v#01371248}&quot;. </rdfs:comment>
+        <rdfs:domain rdf:resource="&drammar;ExternalReference"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#quale_frame_URI -->
+
+    <owl:DatatypeProperty rdf:about="&drammar;quale_frame_URI">
+        <rdfs:comment>This property of the ExternalRefSchema links the schema to the frame it corresponds to, needed to describe some state or process occurring in drama.
+
+The value is the ID in Framenet.
+
+Currently, in the implementation, it is the string of the number of choice in the list of frames returned. E.g. &quot;1&quot;</rdfs:comment>
+        <rdfs:domain rdf:resource="&drammar;ExternalRefSchema"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#quale_ontologicalConcept -->
+
+    <owl:DatatypeProperty rdf:about="&drammar;quale_ontologicalConcept">
+        <rdfs:comment>The range is a concept in YagoSUMO. E.g. &amp;%Speaking+, &amp;%Arriving=, these two probably from SUMO; http://www.mpii.de/yago/resource/wordnet_bathing_100427853, probably from YAGO.</rdfs:comment>
+        <rdfs:domain rdf:resource="&drammar;ExternalReference"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#quale_originalTerm -->
+
+    <owl:DatatypeProperty rdf:about="&drammar;quale_originalTerm">
+        <rdfs:comment>This is the string originally inserted for searching the URI in the external ontology. E.g. &quot;parlare&quot; &quot;eleganza&quot;</rdfs:comment>
+        <rdfs:domain rdf:resource="&drammar;ExternalReference"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#quale_schemaType -->
+
+    <owl:DatatypeProperty rdf:about="&drammar;quale_schemaType">
+        <rdfs:comment>This datatype property represents the type of schema for some construct. 
+
+Its value correspond to the different types of state acknowledged in Drammar: beliefs, goals, etc. Each value correspond to a state type: e.g., &quot;belief&quot; for the Belief class.
+In particular, framenet is the magic word for the schemata extracted from Framenet.</rdfs:comment>
+        <rdfs:domain rdf:resource="&drammar;SituationSchema"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first>belief</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first>done</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first>emotion</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first>framenet</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first>goal</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first>not</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                        <rdf:first>value</rdf:first>
+                                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="&owl;topDataProperty">
+        <rdfs:comment>All these properties are data associated with classes. Labels are self-explaining (e.g. hasDMO domain is absolutely Unit) or have domain Thing. In non-obvious names, the domain class is in the prefix of the name (e.g. Environment_epoch). </rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#ADTComponent -->
+
+    <owl:Class rdf:about="&www;ADTComponent">
+        <rdfs:subClassOf rdf:resource="&www;DataStructure"/>
+        <rdfs:comment>ADTComponent 
+
+This class includes the entities which provide the components of abstract data types. 
+
+Currently, only the list data type includes a component, the OrderedListElement.
+
+The mapping on the AbstractDataType class is given by the hasADTComponent object property, which has the AbstractDataType class as its domain, and the ADTComponent class as its range.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#AbstractDataType -->
+
+    <owl:Class rdf:about="&www;AbstractDataType">
+        <rdfs:subClassOf rdf:resource="&www;DataStructure"/>
+        <rdfs:comment>AbstractDataType
+
+The data types needed for describing drama are sets, lists and trees (more precisely, tree nodes).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#ConflictSet -->
+
+    <owl:Class rdf:about="&www;ConflictSet">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;Set"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;hasMember"/>
+                        <owl:someValuesFrom rdf:resource="&www;Plan"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;Set"/>
+        <rdfs:comment>This class represents the relation of conflict distributed over a set of plans.  
+It represents the orchestration of conflicts in drama.
+
+Although conflict may occur, in drama, between (or within) entities of different types (characters may be in conflict with each other, ir the same character may experience conflicting emotions), here we reduce the notion of conflict to this single class.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#ConsistentStateSet -->
+
+    <owl:Class rdf:about="&www;ConsistentStateSet">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;Set"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&drammar;isPlanEffectOf"/>
+                                <owl:onClass rdf:resource="&www;Plan"/>
+                                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&drammar;isPlanPreconditionOf"/>
+                                <owl:onClass rdf:resource="&www;Plan"/>
+                                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&drammar;isTimelineEffectOf"/>
+                                <owl:onClass rdf:resource="&drammar;Timeline"/>
+                                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&drammar;isTimelinePreconditionOf"/>
+                                <owl:onClass rdf:resource="&drammar;Timeline"/>
+                                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;hasMember"/>
+                        <owl:someValuesFrom rdf:resource="&drammar;State"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&www;consistent"/>
+                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A ConsistentStateSet is a set of states held consistent by definition. 
+
+It can be a set of states bordering a timeline (i.e., the state of affairs holding before and after the timeline) or it can be the state of affairs that holds before and after a plan (in this case, it represents the plan precondintions and effects).
+
+The isTimelinePreconditionOf (isTimelineEffectOf) property connects a ConsistentStateSet with a Timeline.
+
+The isPlanPreconditionOf (isPlanEffectOf) property connects a ConsistentStateSet with a Plan.
+
+A ConsistentStateSet has one or more states as its members (hasMember property)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#DataStructure -->
+
+    <owl:Class rdf:about="&www;DataStructure">
+        <rdfs:comment>DataStructure
+
+This class encodes the data structures that provide  structural organization to the other entities. It includes abstract data types (namely sets, lists and trees) and data type components.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#DirectlyExecutablePlan -->
+
+    <owl:Class rdf:about="&www;DirectlyExecutablePlan">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&www;Plan"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&www;isMotivationFor"/>
+                        <owl:someValuesFrom rdf:resource="&drammar;Timeline"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;achieves"/>
+                        <owl:someValuesFrom rdf:resource="&drammar;Goal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;containsOLE"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&drammar;OrderedListElement"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&drammar;hasData"/>
+                                        <owl:someValuesFrom rdf:resource="&drammar;Action"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&www;Plan"/>
+        <rdfs:comment>DirectlyExecutablePlans
+
+Directly executable plans are plans that contain only actions. 
+Formally, a directly executale plan is a list (List class) that contains (containsOLE) only elements (OrderedListElement) that have actions as their data (hasData).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#DrammarScene -->
+
+    <owl:Class rdf:about="&www;DrammarScene">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;Scene"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&www;hingesOn"/>
+                        <owl:someValuesFrom rdf:resource="&www;ConflictSet"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;Scene"/>
+        <rdfs:comment>DrammarScene
+
+A DrammarScene is a type of scene that hinges on characters&apos; conflicting plans. In Drammar, the conflict over plans is represented by a class, the ConflictSet, which contains the set of plans in conflict.
+
+The hingesOn object property connects the DrammarScene with the Conflict Set.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#FrameNetSchema -->
+
+    <owl:Class rdf:about="&www;FrameNetSchema">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;SituationSchema"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;quale_schemaType"/>
+                        <owl:hasValue>framenet</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;SituationSchema"/>
+        <rdfs:comment>A FrameNetSchema corresponds to a process or state describable by a frame in Framenet (https://framenet2.icsi.berkeley.edu/fnReports/data/frameIndex.xml).
+
+The reference of the schema to the external linguistic reality (the FrameNet frame) is mediated through an apposite class subsumed by the ExternalReference class, the ExternalRefSchema class: the SituationSchema class (and, by inheritance, also the FrameNetSchema class) is linked to the ExternalRefSchema class via the hasExtRef property. The quale_frame_URI, then, bridges the ExternalRefSchema class onto the URI of the appropriate frame.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#NegatedState -->
+
+    <owl:Class rdf:about="&www;NegatedState">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;State"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;isDescribedBy"/>
+                        <owl:onClass rdf:resource="&www;NegationSchema"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;State"/>
+        <rdfs:comment>Done is a type of state that corresponds to the negation of an other state. It is needed to represent changes in the state of the world operated by process. For example, the effect of a movement action may be that the proposition &quot;Hamlet is in the room&quot; is negated because it does not hold anymore. Its use in annotation is regulated by guidelines. 
+
+Formally, it is defined by constraining an EventiveState to be described by a NegationSchema</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#NegationSchema -->
+
+    <owl:Class rdf:about="&www;NegationSchema">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;SituationSchema"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;quale_schemaType"/>
+                        <owl:hasValue>not</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;SituationSchema"/>
+        <rdfs:comment>This schema establishes, through the value  &apos;negation&apos; of the datatype property quale_schemaType, that the representation of a negated state (i.e., a state obtained by negating a given state of affairs) requires a NegationSchema.
+
+Notice that this is in line with the flat-style representation of states in Drammar (se the documentaion of the SituationSchema class): Drammar does not represent the transition between states in terms of the manipulation of the state content (for example, by allowing a state to be first negated and then asserted, or vice versa). Instead, the logics of drama is entirely contained in the representation of plans, which are mapped onto practical actions (in units) that affect the state of the world and the agents&apos; mental states.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#Plan -->
+
+    <owl:Class rdf:about="&www;Plan">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;List"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;isIntendedBy"/>
+                        <owl:someValuesFrom rdf:resource="&drammar;Agent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;List"/>
+        <rdfs:comment>Plan
+
+A plan is a sequence of actions devised by an agent to achieve some Goal. 
+In the BDI model, the agent&apos;s &apos;intention&apos; to execute a plan is the bridge between goals and practical actions. 
+In Drammar, a plan is intended by (intendedBy object property) an Agent to achieve (achieve property) some Goal. As a consequence, the plan motivates (isMotivationFor object property) a timeline (i.e. a given extent of the drama text). These are the necessary and sufficient conditions of class.
+
+Following the paradigm of hierarchical planning, plans are recursive. So plans can contains actions or other, simpler plans.
+Formally, a Plan is a list (namely, it is a subclass of the List class) whose elements are simpler plans (for abstract plans) or actions (for directly executable plans). A plan is related to its elements by the containsOLE property.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#TreeNode -->
+
+    <owl:Class rdf:about="&www;TreeNode">
+        <rdfs:subClassOf rdf:resource="&www;AbstractDataType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&www;hasChild"/>
+                <owl:allValuesFrom rdf:resource="&www;TreeNode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>TreeNode
+
+The TreeNode class represents tree-like structures in drama, namely Scenes.
+This class only represents the recursive structure of drama without an explicit commitment to the notion of &apos;drama as a tree&apos;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#UnderspecifiedPlan -->
+
+    <owl:Class rdf:about="&www;UnderspecifiedPlan">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&www;Plan"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&www;isMotivationFor"/>
+                                <owl:someValuesFrom rdf:resource="&drammar;Timeline"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&drammar;achieves"/>
+                                <owl:someValuesFrom rdf:resource="&drammar;Goal"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&drammar;containsOLE"/>
+                                <owl:someValuesFrom rdf:resource="&drammar;OrderedListElement"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&www;Plan"/>
+        <rdfs:comment>An UnderspecifiedPlan is a plan that is part of a larger plan to achieve some goal, but has not been executed.
+
+In drama, it represents the unobservable part of a plan that has not been fully carried out by some agent. Its existence (in the agent&apos;s mind) can only be conjectured - remember that a Plan is intended by some agent by definition. 
+As such, an UnderspecifiedPlan:
+
+- does *not* motivate a timeline (it has not taken place);
+- does *not* achieve a goal (the actions/subplans composing it and its specific goal are not known);
+- does *not* contain any actions.
+
+These conditions, part of its definition as an Equivalent Class, distinguish it from Abstract and Directly Executable Plans.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#AbstractPlan -->
+
+    <owl:Class rdf:about="&drammar;AbstractPlan">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&www;Plan"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&www;isMotivationFor"/>
+                        <owl:someValuesFrom rdf:resource="&drammar;Timeline"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;achieves"/>
+                        <owl:someValuesFrom rdf:resource="&drammar;Goal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;containsOLE"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&drammar;OrderedListElement"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&drammar;hasData"/>
+                                        <owl:someValuesFrom rdf:resource="&www;Plan"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&www;Plan"/>
+        <rdfs:comment>Abstract Plan
+
+An abstract plan is a recursive plan, i.e., a plan whose elements are plans. 
+Formally, an AbstractPlan is a list (List class) containing (containsOLE) elements (OrderedListElements) that have plans as their data (hasData). 
+The plans contained in an abstract plan can be either abstract plans or directly executable plans.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Action -->
+
+    <owl:Class rdf:about="&drammar;Action">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;Process"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;isMemberOf"/>
+                        <owl:someValuesFrom rdf:resource="&drammar;Unit"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;Process"/>
+        <owl:disjointWith rdf:resource="&drammar;UnintentionalProcess"/>
+        <rdfs:comment>An Action is an intentional Process, which is a type of Process.
+Formally, an action is an Process which is constrained to be contained (isMemberOf) some Unit.
+
+In Drammar, an Action can be part of a plan of an agent (formally, a plan ia a list of actions), or can be included in a Unit (ordered into some timeline). Only direct executable plans  (DirectlyExecutablePlan class) contain actions
+
+The Action class is formally disjoint with the UnintentionalEventiveProcess class.
+
+We have introduced an explicit boolean datatype property isIntentional, because it could that the annotators will use actions directly in the units.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Agent -->
+
+    <owl:Class rdf:about="&drammar;Agent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;DramaEndurant"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;intends"/>
+                        <owl:someValuesFrom rdf:resource="&www;Plan"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;DramaEndurant"/>
+        <owl:disjointWith rdf:resource="&drammar;Object"/>
+        <rdfs:comment>Agent.
+
+Derived from BDI model, a mentalist model of agent which sees the agent as a rational entity who form intentions, or plans, (based on her beliefs) to achieve her desires (or goals). See Bratman et al. 1988 and Cohen and Levesque 1995.
+
+Agents are those entities in drama, that potentially 
+-  have goals (object property hasGoal);
+-  intend plans to achieve goals (object property intends);
+-  participate in actions with some role (object property isFillerOf);
+
+In addition,  agents have emotional states (as a result of targeted emotions appraisal processes) and have moral values (hasValue):
+-  feel emotions as a result of a cognitive appraisal process (specific object properties link each the appraisal of each emotion type to the agent); 
+-  have values (object property hasValue);
+
+The requirement, in drama, is that an agent has a plan, since the fact of having a goal would not be sufficient to ensure that the goal is translated into some concrete, perceivable behavior in drama. Having a plan, instead, implies that the agent also has goal.
+
+Notice that some Agent (e.g. Polonius) is involved in an action without being intentional (e.g., being the topic of a conversation), it remains classified as an Agent in Drammar, though it fills a different role in the frame (e.g., Topic of Conversation).
+
+References:
+Bratman, M. E., Israel, D. J., &amp; Pollack, M. E. (1988). Plans and resource‐bounded practical reasoning. Computational intelligence, 4(3), 349-355.
+Cohen, P. R., &amp; Levesque, H. J. (1995, June). Communicative Actions for Artificial Agents. In ICMAS (Vol. 95, pp. 65-72).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Belief -->
+
+    <owl:Class rdf:about="&drammar;Belief">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;MentalState"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;isDescribedBy"/>
+                        <owl:onClass rdf:resource="&drammar;BeliefSchema"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;MentalState"/>
+        <owl:disjointWith rdf:resource="&drammar;Goal"/>
+        <rdfs:comment>A belief is what an agent believes (which may be true or not in the world) In the BDI model, beliefs form the agent&apos;s knowledge about the world that the agent relies on for devising plans to achieve her goals.
+
+In Drammar there is no distinction between knowing and believing, because reasoning concerns the agent motivations for acting, rather than the relationship between single agent knowledge and shared knowledge. 
+
+A belief is formally defined as the type of MentalState described by a BeliefSchema. 
+
+In the annotation, it is in the scope a ConsistenStateSet, that is precondition or effect of a Plan. SWRL rules for mapping project a belief onto some ConsistentStateSet which precedes or follows a timeline.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#BeliefSchema -->
+
+    <owl:Class rdf:about="&drammar;BeliefSchema">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;MentalStateSchema"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;quale_schemaType"/>
+                        <owl:hasValue>belief</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;MentalStateSchema"/>
+        <rdfs:comment>The BeliefSchema class describes a Belief (a type of MentalState). 
+
+This class is formally defined as the subclass of MentalStateSchema having as its quale_schemaType value the string &quot;belief&quot;.
+
+A BeliefSchema has as its propositional content (via the propositionalContent object property) a factual process (FactualProcess class) or state (FactualState class).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#DescriptionTemplate -->
+
+    <owl:Class rdf:about="&drammar;DescriptionTemplate">
+        <owl:disjointWith rdf:resource="&drammar;DramaEntity"/>
+        <rdfs:comment>DescriptionTemplate
+
+This class contains a well known role-based pattern for representing the linguistic schemata that describe the elements of drama, such as the entities and dynamics. Drammar imports this pattern from other ontologies, namely DOLCE. 
+The class DescriptionTemplate contains two classes:
+
+- Role
+- SituationSchema
+
+The class SituationSchema provides the specific pattern for the description of incidents and states, generically termed here as &quot;situations&quot;. A situation can be either a process or a state, usually described by a linguistic expression consisting of a verb  (&quot;giving&quot;) for processes, such as in the expression  &quot;Ophelia gives the gift back to Hamlet&quot;, or a by a preposition (&quot;behind&quot;) for states, such as in the expression &quot;Polonius is behind the tapestry&quot;). 
+
+The Role class provides the pattern for the roles that play a part in the state or process (in the above example, the role of the &quot;donor&quot; filled by Ophelia, the role of the &quot;recipient&quot; filled by Hamlet, etc.). 
+
+The linguistic counterpart of the role-based structure of the description templates is provided by a frame-like accounts of the linguistic descriptions of events, such as Framenet or Verbnet (https://framenet2.icsi.berkeley.edu/fnReports/data/frameIndex.xml). Based on a lexical semantics perspective, these initiatives are aimed at grouping verbs (including statives) into &quot;frames of action&quot;, i.e., linguistic structures representing a group of semantically similar verbs with the complements that accompany them.
+
+Following a design choice that characterizes the Drammar ontology, all references to the external (linguistic or commonsense) knowledge are mediated by the ExternalReference class, a top level class whose function is specifically to act as a bridge to the external knowledge (see the documentation of the class). So, neither the Roles nor the Situation Schemata directly refer to the external linguistic knowledge they assume: rather, the hasExtRef property links each component of the pattern onto its corresponding class within the ExternalReference class: the SituationSchema class is related to the ExternalRefSchema, the Role class is related to the ExternalRefRole class. 
+Each ExternalReference subclass, then, bridges each pattern component onto the corresponding component within the external knowledge source via a specific data type property.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Done -->
+
+    <owl:Class rdf:about="&drammar;Done">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;State"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;isDescribedBy"/>
+                        <owl:onClass rdf:resource="&drammar;DoneSchema"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;State"/>
+        <rdfs:comment>Done is a type of state that represents the outcome of the complete execution of a process.
+
+Formally, it is defined by constraining it to be described by a DoneSchema.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#DoneSchema -->
+
+    <owl:Class rdf:about="&drammar;DoneSchema">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;SituationSchema"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;quale_schemaType"/>
+                        <owl:hasValue>done</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;SituationSchema"/>
+        <rdfs:comment>This schema establishes, through the value  &apos;done&apos; of the datatype property quale_schemaType, that the representation of a Done state (i.e., the state where some action has been accomplished) requires a Done schema.
+
+The DoneSchema is connected through a property  isDoneStateOf with an EventiveProcess or the Plan that the Done state terminates.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#DramaEndurant -->
+
+    <owl:Class rdf:about="&drammar;DramaEndurant">
+        <rdfs:subClassOf rdf:resource="&drammar;DramaEntity"/>
+        <rdfs:comment>DramaEndurant is an entity of drama that can be described as an endurant following Gangemi et al. 2002. 
+In Gangemi et al. 2002 &quot;Endurants are wholly present (i.e., all their proper parts are present) at any time they are present&quot;, differently from perdurants, which are only partially present at any time they are present.
+
+Endurants (and Perdurants, in some cases) play a role in processes and states: an Endurant is connected to a role (Role class) in the description of a given process or state  by the hasRole object property.
+
+The class of drama endurants encompasses more specific drama entities such as Agent and Object.
+This bipartite distinction is derived from the drama literature, where
+- Agents that intentionally perform actions;
+- Objects are involved in the actions in an unintentional way. 
+
+For instance, in Hamlet, the King of England is a drama endurant (but non an agent) because it is the filler of a role in Claudius&apos; actions (sending ... ) but does not intend any plan (a feature would locate it in the Agent class).
+
+The difference beteween the King of England and a coffee machine is entrusted to common sense knowlegde (e.g., the external lexical knowledge stating the sementic type of these two entities).
+
+Reference:
+Gangemi, A., Guarino, N., Masolo, C., Oltramari, A., &amp; Schneider, L. (2002). Sweetening ontologies with DOLCE. In Knowledge engineering and knowledge management: Ontologies and the semantic Web (pp. 166-181). Springer Berlin Heidelberg.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#DramaEntity -->
+
+    <owl:Class rdf:about="&drammar;DramaEntity">
+        <rdfs:comment>DramaEntity 
+
+Class of all the dramatic entities, that is, of all the entities that are peculiar to drama.
+Its sisters are classes that are not peculiar to drama, but concern templates, (DescriptionTemplate), references to external lexical and semantic systems (ExternalReference) and data structures (DataStructure) from computer science.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#DramaPerdurant -->
+
+    <owl:Class rdf:about="&drammar;DramaPerdurant">
+        <rdfs:subClassOf rdf:resource="&drammar;DramaEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&drammar;isDescribedBy"/>
+                <owl:onClass rdf:resource="&drammar;SituationSchema"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The DramaPerdurant class contains the entities of drama that can described as perdurants in DOLCE (Gangemi et al. 2002):
+&quot;Perdurants [...] just extend in time by accumulating different temporal parts, so that, at any time they are present, they are only partially present, in the sense that some of their proper temporal parts (e.g., their previous or future phases) may be not present.&quot; In other words, perdurants, namaly processes, are not entirely present at any time they are present, differently from endurants.
+
+The DramaEdurant is the class of elements of Drama that describe the story dynamics, i.e. Processes and States.
+In the context of Drammar, the individuals of this class describe the story advancement in terms of incidents and states holding between incidents. Each has a specific relation to the segmentation of drama:  processes are grouped in units, states precedes and follows timelines (which contain units).
+
+Notice that processes and states are not distinct in Framenet, the knowledge source we refer to for describing perdurants outside of Drammar.
+
+Reference:
+Gangemi, A., Guarino, N., Masolo, C., Oltramari, A., &amp; Schneider, L. (2002). Sweetening ontologies with DOLCE. In Knowledge engineering and knowledge management: Ontologies and the semantic Web (pp. 166-181). Springer Berlin Heidelberg.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Emotion -->
+
+    <owl:Class rdf:about="&drammar;Emotion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;MentalState"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;isDescribedBy"/>
+                        <owl:onClass rdf:resource="&drammar;EmotionSchema"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Emotion is the class of emotions felt by an agent in a scene.
+Formally, it is described as the subclass of MentalState described by an EmotionSchema.
+
+The emotions refer to OCC emotion ontology (22 emotions types). 
+Emotion type is an external resource (ExternalRefEmotionType).
+
+An Emotion has an appraising agent (appraisingAgent object property) and, when appraised, is an emotion of (isEmotionOf object property) that agent.
+An emotion also has a target (the agent or object that is the target of the emotion): a specifi object property connects each emotion type with its target (e.g., shame_target, love_target, etc.).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#EmotionSchema -->
+
+    <owl:Class rdf:about="&drammar;EmotionSchema">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;MentalStateSchema"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;quale_schemaType"/>
+                        <owl:hasValue>emotion</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;MentalStateSchema"/>
+        <rdfs:comment>An EmotionSchema represents the description of an EmotionState, bridged onto some external linguistic or semantic system through the mediation of the ExternalRefEmotionType class.
+
+The EmotionSchema is a MentalStateSchema for describing an Emotion. Formally, it is constrained to the value &quot;emotion&quot; for the quale_schemaType data property.
+
+The hasExtRef property links the EmotionSchema to the ExternalRefEmotionType class which in turn links the description of the Emotion to a reference theory of emotions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#ExternalRefEmotionType -->
+
+    <owl:Class rdf:about="&drammar;ExternalRefEmotionType">
+        <rdfs:subClassOf rdf:resource="&drammar;ExternalReference"/>
+        <rdfs:comment>This class includes individuals for all the 22 emotion types referred by OCC theory.
+
+The individuals are bridge individuals to some external formal OCC-based knowledge source, which does not exist yet but is assumed here.
+
+These individuals could also be a bridge to some commonsense ontology, such as YagoSumo for Values, but it would be different from the adoption of the OCC theory, as committed in Drammar.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#ExternalRefEntity -->
+
+    <owl:Class rdf:about="&drammar;ExternalRefEntity">
+        <rdfs:subClassOf rdf:resource="&drammar;ExternalReference"/>
+        <rdfs:comment>The ExternalRefEntity class has the function of bridging the description of a DramaEntity (not an entity in general) to some external linguistic or semantic resource such a dictionary or an ontology. 
+
+An entity can be linked to its ExternalReference by the hasExtRef object property, which has the ExternalReference as its range.
+
+The ExternalRefEntity iherits the &quot;quale&quot; data property from its direct ancestor, ExternalReference class.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#ExternalRefRole -->
+
+    <owl:Class rdf:about="&drammar;ExternalRefRole">
+        <rdfs:subClassOf rdf:resource="&drammar;ExternalReference"/>
+        <rdfs:comment>The ExternalRefRole class has the function of bridging the description of a Role (not an entity in general) to a description of the role in some external linguistic that represents the argument structure of an event. 
+
+An Role can be linked to its ExternalRefRole by the hasExtRef object property, which has the ExternalRefRole as its range.
+
+The ExternalRefRole class has three data properties which connect it to the reference system: 
+
+- role_framenetRoleID: connects the Role to the id of the corresponding role in FrameNet 
+- role_verbnetRoleType: connects the Role to the name of the corresponding role in VerdNet (a string)
+- role_ID_resource</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#ExternalRefSchema -->
+
+    <owl:Class rdf:about="&drammar;ExternalRefSchema">
+        <rdfs:subClassOf rdf:resource="&drammar;ExternalReference"/>
+        <rdfs:comment>The ExternalRefSchema class has the function of bridging the description of a SituationSchema to some external lexical-semantic resource  representing apt to represent the role structure of a process or state.
+
+An SituationSchema (or, better, a subclass of it) can be linked to its ExternalRefSchema by the hasExtRef object property, which has the ExternalReference as its range.
+
+The quale_frame_URI data property connects the SituationSchema with the FrameNet frame which correponds to it, following the paradigm of Linked Data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#ExternalReference -->
+
+    <owl:Class rdf:about="&drammar;ExternalReference">
+        <rdfs:comment>ExternalReference
+
+This is a class that provides the service of accumulating all the &quot;quale&quot; datatype properties that refer to external linguistic or commonsense knowledge sources. Through this class, the description of the drama entities is bridged onto some external lexicon or ontology.
+
+Its subclasses are useful in grouping, but do not represent specific issues in support.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Goal -->
+
+    <owl:Class rdf:about="&drammar;Goal">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;MentalState"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;isGoalOf"/>
+                        <owl:someValuesFrom rdf:resource="&drammar;Agent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;isMemberOf"/>
+                        <owl:someValuesFrom rdf:resource="&www;ConsistentStateSet"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;isDescribedBy"/>
+                        <owl:onClass rdf:resource="&drammar;GoalSchema"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;isGoalOf"/>
+                        <owl:onClass rdf:resource="&drammar;Agent"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;MentalState"/>
+        <rdfs:comment>The Goal class represents the objectives of an agent. In the BDI model, the agent is driven by her desires, or goal, and forms plans to achieve them. 
+
+In Drammar, a goal is achieved by a plan; the achives object property connects a plan with the goal it achieves (a single goal, since the achieves property is functional). An agent intends (intends object property) a goal.
+
+Formally, the Goal class is a defined as a subclass of the MentalState class which is constrained:
+- to be the goal of some agent 
+- to be part of some ConsistentStateState
+- to be described by a GoalSchema
+ 
+Goal has a propositional content that is
+- a process in the case of perform goal PG (Hamlet wants to ask Ophelia ...)
+- a state in the case of 
+  - achievement (Hamlet wants Ophelia goes to a nunnery)
+  - maintenance (Hamlet wants Claudius (keeps) believing Hamlet is mad)
+  - query (Hamlet wants to know whether Ophelia is honest)
+
+In these various cases the propositional content is different:
+- Perform Goal - PC: Action
+- AG - PC: State, embedded in one Belief, with status false or 
+                  Process, embedded in Belief, with accomplishment false
+- MG - PC: State or Process, embedded in Belief, 
+                  with status/accomplishment true 
+- Query Goal - PC: depends on query; e.g.:
+  - Y/N question: the boolean status of a state (currently implemented as a 
+                            State with status TRUE)
+  - Wh question: the filler of a role in some state or process (currently not      implemented)
+
+These are guidelines for writing the plans correctly.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#GoalSchema -->
+
+    <owl:Class rdf:about="&drammar;GoalSchema">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;MentalStateSchema"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;quale_schemaType"/>
+                        <owl:hasValue>goal</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;MentalStateSchema"/>
+        <rdfs:comment>The GoalSchema class describes a Goal (a type of MentalState). 
+
+This class is formally defined as the subclass of MentalStateSchema having as its quale_schemaType value the string &quot;goal&quot;.
+
+A GoalSchema has as its propositional content (via the propositionalContent object property) a factual process (FactualProcess class) or state (FactualState class).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#List -->
+
+    <owl:Class rdf:about="&drammar;List">
+        <rdfs:subClassOf rdf:resource="&www;AbstractDataType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&drammar;containsOLE"/>
+                <owl:allValuesFrom rdf:resource="&drammar;OrderedListElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>List
+
+List is inspired by a well known ontology (http://smiy.sourceforge.net/olo/spec/orderedlistontology.html#ordered_list); however, its implementation in Drammar makes some simplifications (e.g., indexes are not included) and renames some entities according to the terminology of the drama domain.
+
+List in drama: 
+- Plan: sequence of plans (abstract plans) or single actions (directly executable plans);
+- Timeline: sequence of units.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#MentalState -->
+
+    <owl:Class rdf:about="&drammar;MentalState">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;State"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;isDescribedBy"/>
+                        <owl:onClass rdf:resource="&drammar;MentalStateSchema"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;State"/>
+        <rdfs:comment>MentalStates are EventiveStates that are attributed to the mind of an agent. 
+There are four types of mental states:
+1. Emotion
+2. Belief
+3. Goal
+4. Value
+
+Belief and Goal are traditionally described as having a propositional content because they both concern some attitude of the agent toward a proposition; 
+in Drammar, we don&apos;t enforce this distinction because the reference theoriesd we adopt for emotion and values also enforce some time of propositional content. The only difference is that only the schema types for beliefs and goals (BeliefSchema and GoalSchema) have a propositional content attached to it (through the propositionalContent object property).
+
+A MentalState is defined as an EventiveState that is described by a MentalStateSchema. 
+The latter are to be specified as EmotionSchema, BeliefSchema, GoalSchema, ValueSchema, depending on the MentalState type: so, the MentalStateSchema type works as a selector for the right trait of the mental schema.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#MentalStateSchema -->
+
+    <owl:Class rdf:about="&drammar;MentalStateSchema">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;SituationSchema"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&www;isMentalStateOf"/>
+                        <owl:someValuesFrom rdf:resource="&drammar;Agent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;SituationSchema"/>
+        <rdfs:comment>The MentalStateSchema class collects all the schemata that license the behavior of the mental states.
+
+Following the guidelines for describing mental states in Ferrario, R., &amp; Oltramari, A. (2005, March). Towards a computational ontology of mind. In Aerospace Conference, 2005 IEEE (pp. 1-9). IEEE, propositional attitudes such as beliefs and goals are considered mental states in Drammar.
+
+The MentalState class includes: 
+- BeliefSchema
+- EmotionSchema
+- GoalSchema
+- ValueSchema
+
+The schemata match the mental states included in Drammar. Mental states are grouped in the DramaPerdurant class as eventive mental states (MentalState class) or as factual mental states (F_MentalState class).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Object -->
+
+    <owl:Class rdf:about="&drammar;Object">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;DramaEndurant"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&drammar;intends"/>
+                                <owl:someValuesFrom rdf:resource="&www;Plan"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;DramaEndurant"/>
+        <rdfs:comment>Object
+
+Class of entities (endurant) that participates into Perdurants, but without having intentions. An object is formally defined as a subclass of DramaEndurant whose member do not have plans.
+
+Objects can be filler of roles in the description of processes and states (for example, a book can be &quot;theme&quot; in a giving action (i.e. the entity that changes ownership as a consequence of a giving act).
+
+This class is formally disjoint from Agents (Disjoint property).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#OrderedListElement -->
+
+    <owl:Class rdf:about="&drammar;OrderedListElement">
+        <rdfs:subClassOf rdf:resource="&www;ADTComponent"/>
+        <rdfs:comment>Class of the elements of the ordered lists (lists are plans and timelines). Sometimes referred to as OLE.
+The hasOrderedListElement object property has the List class as its domain and the OrderedListElement as its range.
+
+Notice that this class works as a placeholder that represents the single item in a list (it is not the list content itself): the property hasData links the OrderedListElement with the actual data, i.e. the content of the item. For example, the OrderedListElements Plans have other plans or actions as their data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Process -->
+
+    <owl:Class rdf:about="&drammar;Process">
+        <rdfs:subClassOf rdf:resource="&drammar;DramaPerdurant"/>
+        <rdfs:comment>Processes represents the dynamic class of the perdurants: they are gathered into units, which are contained into ordered timelines bordered by states.
+
+Process is the class that bridges to the concept of Process in upper ontologies, externally to Drammar (like DOLCE, where States and Processes are types of Statives: here, we include also the event types called accomplishments and achievements in DOLCE).
+
+Consider that such resources are not of linguistic type. The DescriptionTemplate class (or, better, its subclass FrameNetSchema), in fact, drives the behavior of the process inside a Plan or a Unit, linking it (via the ExternalReference Class) to:
+1. a Wordnet sense
+2. a Frame (from Framenet or Verbnet)
+3. a set of Roles, played by roles encompassed in the frame
+All these links are bridged by the ExternalReference Class, which has &quot;quale&quot; properties that link the reference to specific resources.
+
+In the external ontology, a process may be logically defined through the use of axioms:
+for example, in the action of asking, it is assumed that Speaker and Addressee are connected through some communication medium, e.g. co-presence in a room or a telephone.
+
+In Drammar, the DramaStructures that contain the Processes are Units (subclasses of DramaSets) and Plans (subclasses of DramaLists). 
+
+They are then subdivided through a further trait, that is 
+  whether the process is intentional (of an agent) or not
+  (Action or UnintentionalProcess).
+This trait is defined through a specific Datatype property, of boolean type, called isIntentional.
+
+So, its subclasses are:
+  - Action: with isIntentional property valued TRUE;
+  - UnintentionalProcess: with isIntentional property valued FALSE.
+
+Same happens in parallel to the States, although in that case the trait concerns the state schema.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Role -->
+
+    <owl:Class rdf:about="&drammar;Role">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;DescriptionTemplate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;hasFiller"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&drammar;DramaEndurant"/>
+                                    <rdf:Description rdf:about="&drammar;DramaPerdurant"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;isRoleOf"/>
+                        <owl:onClass rdf:resource="&www;FrameNetSchema"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;DescriptionTemplate"/>
+        <rdfs:comment>Role provides the pattern for the role fillers in a frame instantiation, that occurs in SituationSchema, for describing processes and states.
+
+A Role is filled by a DramaEntity: the fact that a given role has an entity as a filler is represented by the hasFiller property and its inverse isFillerOf property. 
+
+A Role belongs (isRoleOf) to a given SituationSchema, namely a ProcessSchema or a StateSchema (hasRole property). The Role class is related to its filler by the hasFiller property, whose range is the DramaEntity class.
+
+For example, given the incident describable as &quot;Ophelia gives the gift back to Hamlet&quot;, the roles of &quot;donor&quot; (the one who does the action of giving), &quot;recipient&quot; (the one wjho receives the object to be given) and &quot;theme&quot; (the object of giving action) are all instance of the Role class connected to the same Situation, each labeled with a linguistic label (&quot;donor&quot;, &quot;recipient&quot;, etc.) and each connected to its filler via  the hasFiller property. Roles can also be intended as thematic roles of verbs following the description contained in the Verbnet resource (http://verbs.colorado.edu/verb-index/index.php).
+
+The Role class, via the hasExtRef object property, is linked to the subclass of the top level ExternalReference class, the ExternalRefRole class, whose function is to connect the description of the role with the appropriate role name or URI in a linguistic account of roles through apposite data properties (namely, the Role_framenetRoleID and Role_verbnetRoleType data properties respectively for FrameNet and VerbNet).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Scene -->
+
+    <owl:Class rdf:about="&drammar;Scene">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&www;TreeNode"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;spans"/>
+                        <owl:someValuesFrom rdf:resource="&drammar;Timeline"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&www;hasChild"/>
+                        <owl:allValuesFrom rdf:resource="&drammar;Scene"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&www;TreeNode"/>
+        <rdfs:comment>Scene
+
+Drama is divided into scenes, which correspond to an extent of the &apos;text&apos; of drama.
+Scenes (as a type of TreeNode) form a hierarchy, which represents the recursive nature of drama. 
+
+This is obtained by implementing the Scene class as a subclass of the TreeNode class. 
+Scenes contains children scenes: this relation is modeled through the hasChild property. 
+
+All scenes span some timeline (spans object property), i.e., they have a correspondance with some extent of the drama text (represented by the Timeline class).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Set -->
+
+    <owl:Class rdf:about="&drammar;Set">
+        <rdfs:subClassOf rdf:resource="&www;AbstractDataType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&drammar;hasMember"/>
+                <owl:allValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Set
+
+The class of set structures. The relation between sets and set members is represented by the hasMember object property.
+
+It includes specific subclasses, with each subclass characterized by a specific type of members.
+
+Sets include:
+
+- ConflictsSets: sets of conflicting plans;
+- ConsistentStateSets: sets of consistent states (left and right boundaries of timelines and plans).
+- Units: sets of actions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#SituationSchema -->
+
+    <owl:Class rdf:about="&drammar;SituationSchema">
+        <rdfs:subClassOf rdf:resource="&drammar;DescriptionTemplate"/>
+        <rdfs:comment>The situation schema provides the pattern for the description of incidents and states. It is inspired by the Situation ontology Pattern of the Ontology Design Pattern initiative (http://ontologydesignpatterns.org/). 
+So, a SituationSchema describes (&quot;describes&quot; object property) a DramaPerdurant (either a State or a Process).
+
+The schema works as a hub for the roles involved in a situation. The property hasRole links the Situation class (its domain) with the Role class (the range of the property). 
+
+Also, notice that, as illustrated in the documentation of the SituationSchema class, a Situation Schema (or, better, its subclasses) does not directly refer to the external linguistic knowledge employed to describe drama: rather, it refers to the ExternalRefSchema class (subclass of the top level ExternalReference class), which in turn refers  to the linguistic knowledge.
+
+The SituationSchema class specializes into specific schemata for describing specific type of situations:
+
+- FrameNetSchema: for describing processes, like giving or killing (in Drammar, they are grouped into units arranged on timelines), and states, like being behind some object or being dead (in Dramamr, they are bundled into sets that border timelines and plans).
+- DoneSchema: for describing states that result from the accomplishment of some action (for example, the state in which an action has been done).
+- NegationSchema: for describing states that are characterized by the negation of some propositional content (for example, the state in which it is not true that a given state of affaris holds).
+- MentalStateSchema: this class groups the specific types of schemata for describing the mental states of the agents in Drammar, namely beliefs, goals, emotions and values. 
+
+Technically, the subtypes of SituationSchema are characterized by different values of the quale_schemaType data property: &quot;belief&quot;, &quot;done&quot;, &quot;emotion&quot;, &quot;framenet&quot;, &quot;goal&quot;, &quot;not&quot;, &quot;value&quot;.
+
+Finally, it worth mentioning that is a specific design choice of Drammar not to represent the nesting of states: only the type of the top level state, be it a negation or a belief or else,  is represented, independent of what that negation or belief contains in turn. This flat style of representation is determined by the decision not to commit to a specific logical account of state types. When Drammar is employed for annotation, the content nested into a state is described informally in natural language description accompanying the state, if needed.
+
+
+Refs: Gangemi, A., &amp; Presutti, V. (2009). Ontology design patterns. In Handbook on ontologies (pp. 221-243). Springer Berlin Heidelberg.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#State -->
+
+    <owl:Class rdf:about="&drammar;State">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;DramaPerdurant"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;isMemberOf"/>
+                        <owl:someValuesFrom rdf:resource="&www;ConsistentStateSet"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;DramaPerdurant"/>
+        <rdfs:comment>State represents the static class of the Perdurant. 
+
+State is the class that bridges to the concept of State in upper ontologies, externally to Drammar. For example, in DOLCE, states and process are the two distinct types of statives.
+
+Both factual and eventive states are further divided into different state types: 
+
+- MentalStates, namely Belief, Goals, Values and Emotions (all sharing some propositional content in their description);
+- StateOfAffairs, namely situations holding in the world;
+- ad hoc state types, needed to represent change in drama, namely Done and Negation.
+
+States participate to some structure. In Drammar, these structures are ConsistenStateSets (types of Sets), which borders timelines and plans.
+ 
+The specific type pf States are defined through the use of specific  types of StateSchema (subclass of DescriptionTemplate). 
+
+So, its subclasses are:
+  - DoneState: the state resulting from some action that has come at an end, i.e., has been accomplished:
+  - NegatedSchema: the state obtained as the negation of another state;
+  - MentalState: the mental state of an agent;
+  - StateOfAffairs: an objective state of the story world.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#StateOfAffairs -->
+
+    <owl:Class rdf:about="&drammar;StateOfAffairs">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;State"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;isDescribedBy"/>
+                        <owl:onClass rdf:resource="&www;FrameNetSchema"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;State"/>
+        <rdfs:comment>StateofAffairs are states that concern the storyworld as a whole; they are described by a FrameNetSchema, namely a SituationSchema that points (through the ExternalRefSchema class) points to a specific frame. 
+
+This class gathers all states that are external to the characters&apos; mental states, and can be linguistically described through some external resources such as FrameNet.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Timeline -->
+
+    <owl:Class rdf:about="&drammar;Timeline">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;List"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;hasTimelineEffect"/>
+                        <owl:someValuesFrom rdf:resource="&www;ConsistentStateSet"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;hasTimelinePrecondition"/>
+                        <owl:someValuesFrom rdf:resource="&www;ConsistentStateSet"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;containsOLE"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&drammar;OrderedListElement"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&drammar;hasData"/>
+                                        <owl:someValuesFrom rdf:resource="&drammar;Unit"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Timeline
+
+Timeline is a subclass of List whose function is to impose some ordering on the units in a drama. Notice that the notion of timeline cannot be collapsed onto the actual text: rather, it is simply an indexing posed upon units (which correspond to a manifestation of drama in FRBR sense). In formal terms, the orders object property has Timeline as its domain and units as its range, so a unit &quot;orders&quot; some units.
+
+A Timeline contains unit. Formally, the elements (OrderedListElements class) contained in a timeline (containsOLE property) are units.
+
+A Timeline is surrounded by states of affairs that hold before and after it, namely instances of the ConsistentSateSets class that precede and follow a given timeline.  Formally, the Timeline class is the domain of  the hasTimelineEffect(Precondition) properties, which have the ConsistentStateSet class as their range.
+
+A timeline is motivated by some plan (motivates object property) and is spanned by some unit (span object property). The relation between units and timelines is independent of the scene/timeline relation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#UnintentionalProcess -->
+
+    <owl:Class rdf:about="&drammar;UnintentionalProcess">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;Process"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;isIntentional"/>
+                        <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;Process"/>
+        <rdfs:comment>UnintentionalProcess is an unintentional Process.
+
+So, an UnintentionalProcess is a Process with the property isIntentional that values FALSE.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#Unit -->
+
+    <owl:Class rdf:about="&drammar;Unit">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;Set"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&www;isOrderedBy"/>
+                        <owl:someValuesFrom rdf:resource="&drammar;Timeline"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;hasMember"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&drammar;Action"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&drammar;isDescribedBy"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="&www;FrameNetSchema"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&drammar;hasRole"/>
+                                                        <owl:onClass>
+                                                            <owl:Class>
+                                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                                    <rdf:Description rdf:about="&drammar;Role"/>
+                                                                    <owl:Restriction>
+                                                                        <owl:onProperty rdf:resource="&drammar;hasFiller"/>
+                                                                        <owl:someValuesFrom rdf:resource="&drammar;Agent"/>
+                                                                    </owl:Restriction>
+                                                                </owl:intersectionOf>
+                                                            </owl:Class>
+                                                        </owl:onClass>
+                                                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Unit
+
+Units are the segmentation of drama. A drama can have multiple segmentations.
+Units are ordered by some Timeline.
+
+Units are devoted to the representation of characters&apos; actions. So, we require that any unit contains at least one action whose description (ProcessSchema) encompasses at least one role having an agent as a filler. If a building collapses, this action, by itself, can be part of Unit only if an agent is involved in it (e.g., an agent dies).
+
+This definition guarantees that, in the minimal case, at least one agent appears as filler of the roles in the description of at least an action of every unit.
+
+A Unit has one or more actions as its members (hasMember property).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#ValueEngaged -->
+
+    <owl:Class rdf:about="&drammar;ValueEngaged">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;MentalState"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&drammar;atStake"/>
+                                <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&drammar;atStake"/>
+                                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;isMemberOf"/>
+                        <owl:someValuesFrom rdf:resource="&www;ConsistentStateSet"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;isDescribedBy"/>
+                        <owl:onClass rdf:resource="&drammar;ValueSchema"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;MentalState"/>
+        <rdfs:comment>The ValueEngagedClass represents the valued of an agent. These values are engaged in drama by the execution of the agents&apos; plans. 
+
+Formally, a ValueEngaged is a subclass of the MentalState class which is constrained to:
+
+- be in a given state, true or false, of the boolean property atStake
+- be in a ConsistentStateSet (namely, the consequences of some plan that puts the value at stake or brings it back to balance)
+- be described by a ValueSchema.
+
+For example, in the nunnery scene, Ophelia&apos;s answer &quot;At home, my Lord&quot;, being a lie, results in a state that puts at stake Hamlet&apos;s value of honesty.</rdfs:comment>
+        <rdfs:comment>This class represents the dynamic state of a value</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl#ValueSchema -->
+
+    <owl:Class rdf:about="&drammar;ValueSchema">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&drammar;MentalStateSchema"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&drammar;quale_schemaType"/>
+                        <owl:hasValue>value</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&drammar;MentalStateSchema"/>
+        <rdfs:comment>The ValueSchema class describes an agent&apos;s ValueEngaged. 
+
+Formally, it is a subclass of MentalStateSchema whose property quale_schemaType is constrained to the string &quot;value&quot;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing">
+        <rdfs:comment>Thing contains four major taxonomies:
+
+- DescriptionTemplate
+- DramaEntity
+- ExternalReference
+- DataStructure</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#p1 -->
+
+    <owl:NamedIndividual rdf:about="&www;p1">
+        <rdf:type rdf:resource="&www;DirectlyExecutablePlan"/>
+        <www:inConflictWith rdf:resource="&www;p1"/>
+        <www:inConflictWith rdf:resource="&www;p2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#p2 -->
+
+    <owl:NamedIndividual rdf:about="&www;p2">
+        <rdf:type rdf:resource="&www;DirectlyExecutablePlan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cadmos.cirma.unito.it#s1 -->
+
+    <owl:NamedIndividual rdf:about="&www;s1">
+        <rdf:type rdf:resource="&drammar;Set"/>
+        <hasMember rdf:resource="&www;p1"/>
+        <hasMember rdf:resource="&www;p2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&dc;format">
+        <rdfs:label xml:lang="en-us">Format</rdfs:label>
+        <terms:issued>1999-07-02</terms:issued>
+        <terms:modified>2008-01-14</terms:modified>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en-us">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</terms:description>
+        <rdfs:comment xml:lang="en-us">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&olo;item">
+        <rdfs:label xml:lang="en">has item</rdfs:label>
+        <rdfs:comment xml:lang="en">An item of a slot in an ordered list.</rdfs:comment>
+        <vs:term_status xml:lang="en">stable</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/olo/core#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;contributor">
+        <rdfs:label xml:lang="en-us">Contributor</rdfs:label>
+        <terms:modified>2008-01-14</terms:modified>
+        <terms:issued>1999-07-02</terms:issued>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en-us">An entity responsible for making contributions to the resource.</rdfs:comment>
+        <terms:description xml:lang="en-us">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#contributor-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;identifier">
+        <rdfs:label xml:lang="en-us">Identifier</rdfs:label>
+        <terms:issued>1999-07-02</terms:issued>
+        <terms:modified>2008-01-14</terms:modified>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en-us">An unambiguous reference to the resource within a given context.</rdfs:comment>
+        <terms:description xml:lang="en-us">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifier-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;language">
+        <rdfs:label xml:lang="en-us">Language</rdfs:label>
+        <terms:modified>2008-01-14</terms:modified>
+        <terms:issued>1999-07-02</terms:issued>
+        <rdfs:comment xml:lang="en-us">A language of the resource.</rdfs:comment>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en-us">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#language-007"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/">
+        <terms:modified>2010-10-11</terms:modified>
+        <terms:title xml:lang="en-us">Dublin Core Metadata Element Set, Version 1.1</terms:title>
+        <terms:publisher rdf:resource="http://purl.org/dc/aboutdcmi#DCMI"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;publisher">
+        <rdfs:label xml:lang="en-us">Publisher</rdfs:label>
+        <terms:modified>2008-01-14</terms:modified>
+        <terms:issued>1999-07-02</terms:issued>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en-us">An entity responsible for making the resource available.</rdfs:comment>
+        <terms:description xml:lang="en-us">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#publisher-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;source">
+        <rdfs:label xml:lang="en-us">Source</rdfs:label>
+        <terms:modified>2008-01-14</terms:modified>
+        <terms:issued>1999-07-02</terms:issued>
+        <rdfs:comment xml:lang="en-us">A related resource from which the described resource is derived.</rdfs:comment>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en-us">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#source-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;rights">
+        <rdfs:label xml:lang="en-us">Rights</rdfs:label>
+        <terms:issued>1999-07-02</terms:issued>
+        <terms:modified>2008-01-14</terms:modified>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en-us">Information about rights held in and over the resource.</rdfs:comment>
+        <terms:description xml:lang="en-us">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#rights-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;coverage">
+        <rdfs:label xml:lang="en-us">Coverage</rdfs:label>
+        <terms:issued>1999-07-02</terms:issued>
+        <terms:modified>2008-01-14</terms:modified>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en-us">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</terms:description>
+        <rdfs:comment xml:lang="en-us">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#coverage-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;subject">
+        <rdfs:label xml:lang="en-us">Subject</rdfs:label>
+        <terms:issued>1999-07-02</terms:issued>
+        <terms:modified>2008-01-14</terms:modified>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en-us">The topic of the resource.</rdfs:comment>
+        <terms:description xml:lang="en-us">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary. To describe the spatial or temporal topic of the resource, use the Coverage element.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#subject-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;type">
+        <rdfs:label xml:lang="en-us">Type</rdfs:label>
+        <terms:issued>1999-07-02</terms:issued>
+        <terms:modified>2008-01-14</terms:modified>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en-us">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</terms:description>
+        <rdfs:comment xml:lang="en-us">The nature or genre of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#type-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;relation">
+        <rdfs:label xml:lang="en-us">Relation</rdfs:label>
+        <terms:issued>1999-07-02</terms:issued>
+        <terms:modified>2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en-us">A related resource.</rdfs:comment>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en-us">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#relation-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&www;TreeNode"/>
+            <rdf:Description rdf:about="&drammar;List"/>
+            <rdf:Description rdf:about="&drammar;Set"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

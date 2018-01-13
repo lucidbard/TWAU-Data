@@ -1,0 +1,24 @@
+{
+    "title": "Choice",
+    "type": "object",
+    "format": "grid",
+    "properties": {
+        "choices_id": {
+            "type": "integer",
+            "options":{
+                "input_width":"30px"
+            }
+
+        },
+        "segment_id": {
+            "type": "string",
+            "watch": {
+                "segs": "segments"
+            },
+            "enumSource": [{
+                "source":"segs",
+                "value": "{{item.id}}"
+            }]
+        },
+    }
+}

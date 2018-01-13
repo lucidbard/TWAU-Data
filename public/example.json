@@ -1,0 +1,64 @@
+{
+  "variables": [
+    {
+      "symbol": "",
+      "description": ""
+    },
+    {
+      "symbol": "HARD_ON_TOAD",
+      "description": "Whether or not Wolf goes hard on toad"
+    }
+  ],
+  "segments": [
+    {
+      "segment_type": "cutscene",
+      "id": 0,
+        "shots": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+    },
+    {
+        "segment_type": "choice",
+        "id": 1,
+        "choices_id":0
+    },
+      {
+          "segment_type": "result",
+          "id": 2,
+      }
+  ],
+  "choice_set": [
+      {
+          "choices_id": "0",
+          "segment_id": "5",
+          "choices": [
+              {
+                  "alt_id": 1,
+                  "choice_text": "test",
+                  "preconditions": [],
+                  "postconditions": [],
+                  "status_text": "",
+                  "next_segment": "5"
+              }
+          ]
+      }
+  ],
+  "free_roam": [
+    {
+      "id": 5,
+      "opportunities": [
+        {
+          "text": "test",
+          "actions": [
+            {
+              "action_type": "type",
+              "segment": 0,
+              "postcondition": "test"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sequence": [
+    0
+  ]
+}

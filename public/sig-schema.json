@@ -1,0 +1,87 @@
+{
+    "type":"object",
+    "properties": {
+        "nodeTypes": {
+            "type":"array",
+            "title": "Node Types",
+            "format":"table",
+            "options":{
+                "disable_array_reorder":true
+            },
+            "items": {
+                "type":"object",
+                "properties":{
+                    "symbol":{
+                        "type":"string"
+                    },
+                    "name":{
+                        "type":"string"
+                    },
+                    "description":{
+                        "type":"string"
+                    }
+                }
+            }
+        },
+        "linkTypes": {
+            "type":"array",
+            "format":"table",
+            "title": "Link Types",
+            "options":{
+                "disable_array_reorder":true
+            },
+            "items": {
+                "type":"object",
+                "properties":{
+                    "symbol":{
+                        "type":"string"
+                    },
+                    "name":{
+                        "type":"string"
+                    },
+                    "description":{
+                        "type":"string"
+                    },
+                    "left_nodes":{
+                        "title": "Left Nodes",
+                        "type":"array",
+                        "options":{
+                            "disable_array_reorder":true,
+                            "disable_array_add":true,
+                            "disable_array_delete":true
+                        },
+                        "items":{
+                            "type":"string",
+                            "watch": {
+                                "nodes": "sig_schema.nodeTypes"
+                            },
+                            "enumSource": [{
+                                "source":"nodes",
+                                "value": "{{item.symbol}}"
+                            }]
+                        }
+                    },
+                    "right_nodes":{
+                        "title": "Right Nodes",
+                        "type":"array",
+                        "options":{
+                            "disable_array_reorder":true,
+                            "disable_array_add":true,
+                            "disable_array_delete":true
+                        },
+                        "items":{
+                            "type":"string",
+                            "watch": {
+                                "nodes": "sig_schema.nodeTypes"
+                            },
+                            "enumSource": [{
+                                "source":"nodes",
+                                "value": "{{item.symbol}}"
+                            }]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

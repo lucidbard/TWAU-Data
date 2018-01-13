@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1515447495305" name="http://www.cadmos.cirma.unito.it" uri="Drammar_NunnaryScene_Optimized_Rules.owl.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1515447495305" name="http://www.cadmos.cirma.unito.it/drammar/2012/4/drammar.owl" uri="DrammarOntology.owl.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1515447495305" name="http://www.co-ode.org/ontologies/pizza/pizza.owl" uri="Description%20Logics/pizza.owl.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1515447495305" name="http://www.semanticweb.org/lucid/ontologies/2017/6/untitled-ontology-6" uri="1D.owl"/>
+    </group>
+</catalog>

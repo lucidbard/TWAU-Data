@@ -1,0 +1,48 @@
+Define points of interest:
+
+1. Story-based Emotional Choices
+
+An emotional choice is one where the player must decide based in part on a feeling about another character. It can either be emotionally framed, or its consequences are linked to an affective outcome for some character.
+
+There are several choices in the Wolf Among Us that qualify.
+
+
+
+2. Story Points 
+
+Point where important or new story information is conveyed (propositions)
+- Faith's head is revealed
+- Faith's identity is revealed
+- Prince Lawrence is shown
+- Toad is caught in a lie
+
+Define emotional response as a greater-than-probability combination of HR, GSR and SEI.
+- Excluding thinkaloud
+
+Period after is 30 seconds.
+
+Narrative-Focusing Lenses:
+
+1. Key Choice Paths (Show overlapping choices)
+   - Key Choice 1: Toad (Let off vs admonish)
+   - Key Choice 2: Woodsman (Taunt/NoTaunt)
+   - Key Choice 3: Faith (Money/No Money) -- sympathize
+2. Story Events (Key Plot Moments + Decisions)
+   - A SCENE is an action through conflict in more or less continuous time and space that turns the value-charged condition of a character's life on at least one value with a degree of perceptible significance. Ideally, every scene is a STORY EVENT.
+3. Decisions (What a player chose)
+4. Beat Decisions -- key decisions that determine how the beat will end.
+   1. Toad let off or Toad Chastised
+   2. Diffuse or Taunt
+   3. 
+5. Beats (Action/Reaction pair around a story value)
+6. Scenes (Characterized by a scene goal and (usually) a location.
+7. 
+
+
+Question: Do player decisions correlate with their feelings about key events?
+
+Identification in traditional narrative is a key propertyand is heavily influenced by the actions and attitudes of characters (seee.g., (Feilitzen and Linn ́e, 1975; Oatley, 1995)). In narratives that includechoices, the player usually has some control over the actions of one or morecharacter(s), although this control is often incomplete, especially when itcomes to attitudes rather than actions. This degree of control can enablea different type of identification in which the player actually assumes thepsychological perspective of a character, as opposed to viewing them asa role model (see (Klimmt, Hefner, and Vorderer, 2009)).
+
+Klimmt, Hefner, and Vorderer, 2009)
+
+A feeling of responsibility for one’s own actions (as dis-tinct from empathizing with a character who feels the burden of respon-sibility) is something uniquely afforded by interactive narratives (see e.g.(Murphy and Zagal, 2011)). Choice structures are key to creating this, andthere are several conditions for enabling responsibility. First, the playermust be given moral agency within the story world, which means thatdifferent outcomes at a choice must have consequences which have morallydistinct outcomes.

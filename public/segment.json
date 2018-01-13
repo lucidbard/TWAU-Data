@@ -1,0 +1,30 @@
+{
+    "headerTemplate": "Segment {{self.id}}",
+    "type": "object",
+    "format": "grid",
+    "properties": {
+        "segment_type": {
+            "type": "string",
+            "enum": [
+                "choice",
+                "result",
+                "cutscene"
+            ],
+            "default": "choice"
+        },
+        "id": {
+            "type": "integer",
+            "options": {
+                "input_width":"40px"
+            }
+        },
+        "shots": {
+            "type": "array",
+            "title": "shots",
+            "format": "table",
+            "items": {
+                "$ref":"shot.json"
+            }
+        }
+    }
+}

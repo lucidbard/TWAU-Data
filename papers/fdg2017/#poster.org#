@@ -1,0 +1,57 @@
+* Issues
+** The methodology description is not clear or detailed enough for a graduate student to replicate the work.
+** The main limitation is that the authors do not explain exnough the motivation behind this research
+** The previous work is not discussed in detail to show how the work discussed in this paper is situated in the previous body of work.
+** The related work section does also not present any other formalism. 
+** Authors should explain why among all these possibilities they chose SIG.
+ - The related work section does also not present any other formalism. Stories can be encoded using plot points graphs, plans, petri nets or even linear logic (see natkin 2004 encoding of silent hill into petri nets for instance).
+** The authors seem to have used a text format to encode the underlying story logic, and then have fed it into scheherazade to focus on the interpretation level, but it is not clear why.
+** The different layers of interpretation that can be seen in scheherazade seem not to be used in the results / discussion section. 
+** What does such a complex workflow offer that a simple branching storygraph would not ?
+*** In my opinion, the authors choice might be worse : even after having loaded the files in scheherazade, I'm not able to see the episode as a whole and the kernels and satellites etc... as I would be with a simple branching story graph.
+** The author's rebuttal did not sufficiently convince me that this paper provides a significant contribution in the area of game analytics and visualization. 
+** As such, I have updated my scores. I do encourage the authors to continue along this line of research as I do think it is interesting. 
+** This just may not have been the correct venue for this particular work.
+
+
+Reviewers are on the fence regarding this submission with R1 - also
+being the most confident - proposing to reject the submission and R3
+suggesting to accept it. Focusing on the positive aspects first both
+R2 and R3 think the paper is well-written. R2 notes that it provides
+some insights and R3 thinks it could spark interesting discussions at
+the conference.
+
+However, the paper has several shortcomings, mainly revolving around
+two issues in my view.  
+
+First, the paper seems to be difficult to read, is missing details,
+and has issues with clarity. 
+
+For example, R1 finds the paper hard to read, noting that the
+methodology would need to be described in more detail. 
+
+For R1, it also becomes not clear how the user fits into the
+methodology. 
+
+For R2, although being more positive, the motivation behind the work
+(a sentiment shared also by R3) and the workflow (as for R1) is not
+really clear. 
+
+Many of the other points raised by R2 seem to be attributable to this
+lack of clarity as well. 
+
+Going into more depth, R2 asks for a better description of the purpose
+to be able to judge the appropriateness of the model and raises
+concerns how the approach is better then branching story graphs.
+
+Secondly, the work is not well situated in the current body of
+work. 
+
+R1 highlights that previous work is not discussed in great detail and
+that it is unclear how the work advances the state-of-the-art. 
+
+R2 voices similar concerns, noting that the related work does not
+cover other formalism which can be used to encode stories and why
+among all these possibilities SIGs have been chosen.
+
+

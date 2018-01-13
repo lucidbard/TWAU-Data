@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<annotation-spec>
+  <head>
+    <valuetype-def>
+      <valueset name="SensualEvaluationInstruments">
+        <value-el key="k">Spiky</value-el>
+        <value-el key="p">Pseudopod</value-el>
+        <value-el key="a">Anteater</value-el>
+        <value-el key="b">Bubbly</value-el>
+        <value-el key="s">Stone</value-el>
+        <value-el key="d">Doubleball</value-el>
+        <value-el key="l">Ball</value-el>
+        <value-el key="r">BarbaPapa</value-el>
+      </valueset>
+      <valueset name="PromptType">
+        <value-el>QTE</value-el>
+        <value-el>MultipleChoice</value-el>
+        <value-el>BigDecision</value-el>
+        <value-el>HotSpots</value-el>
+      </valueset>
+      <valueset name="InterruptionType">
+        <value-el>Stuck</value-el>
+        <value-el>TechnicalDifficulty</value-el>
+        <value-el>Break</value-el>
+        <value-el>Other</value-el>
+      </valueset>
+      <valueset name="PlayerInputGestures">
+        <value-el>NavigateTo</value-el>
+        <value-el>ButtonMash</value-el>
+        <value-el>CursorMoveTo</value-el>
+        <value-el>ButtonPress</value-el>
+      </valueset>
+      <valueset name="SEI">
+        <value-el>Spiky</value-el>
+        <value-el>Pseudopod</value-el>
+        <value-el>Anteater</value-el>
+        <value-el>Bubbly</value-el>
+        <value-el>Stone</value-el>
+        <value-el>Doubleball</value-el>
+        <value-el>Ball</value-el>
+        <value-el>BarbaPapa</value-el>
+      </valueset>
+      <valueset name="Characters">
+        <value-el>Bigby</value-el>
+        <value-el>Faith</value-el>
+        <value-el>Woodsman</value-el>
+        <value-el>Mr. Toad</value-el>
+        <value-el>TJ</value-el>
+      </valueset>
+      <valueset name="MultipleChoiceValues">
+        <value-el key="x">X</value-el>
+        <value-el key="y">Y</value-el>
+        <value-el key="a">A</value-el>
+        <value-el key="b">B</value-el>
+        <value-el key="l">Left</value-el>
+        <value-el key="r">Right</value-el>
+        <value-el>RB</value-el>
+        <value-el>LB</value-el>
+        <value-el>Up</value-el>
+        <value-el>Down</value-el>
+        <value-el>RT</value-el>
+        <value-el>LT</value-el>
+      </valueset>
+      <valueset name="InteractionTypes">
+        <value-el>Hold</value-el>
+        <value-el>Gesture</value-el>
+        <value-el>Touch</value-el>
+      </valueset>
+    </valuetype-def>
+  </head>
+  <body>
+    <font color="#000000" face="SansSerif.plain" size="12" style="plain"/>
+    <group name="SensualEvaluationInstrument"/>
+    <group name="InteractiveNarrative">
+      <track-spec name="InteractionPrompts" type="primary">
+        <attribute defaultvalue="MultipleChoice" name="PromptType" valuetype="PromptType">
+          <doc>The type of player decision</doc>
+        </attribute>
+        <attribute defaultvalue="0" name="PromptChoices" valuetype="String">
+          <doc>This records a CSV of INK elements that correspond to choices.</doc>
+        </attribute>
+      </track-spec>
+      <track-spec color-attr="Input" name="PlayerInput" type="primarypoint">
+        <font color="#000000" face="Dialog.plain" size="10" style="plain"/>
+        <attribute display="true" name="Input" valuetype="MultipleChoiceValues"/>
+        <attribute name="Target" valuetype="String"/>
+        <attribute defaultvalue="ButtonPress" display="true" name="PlayerGesture" valuetype="PlayerInputGestures"/>
+      </track-spec>
+    </group>
+    <group name="Divisions">
+      <track-spec name="Chapters" type="primary">
+        <attribute name="Chapter Number" valuetype="Number(1,5)"/>
+      </track-spec>
+      <track-spec name="Scenes" ref="Divisions.Chapters" type="subdivision"/>
+      <track-spec name="Segments" ref="Divisions.Scenes" type="subdivision">
+        <font color="#000000" face="Dialog.plain" size="10" style="plain"/>
+      </track-spec>
+      <track-spec name="Dialogue" type="primary">
+        <attribute defaultvalue="Bigby" name="Character" valuetype="Characters"/>
+        <attribute name="Content" valuetype="String"/>
+        <attribute name="ContentID" valuetype="Number(0,1000)"/>
+      </track-spec>
+      <track-spec name="Actions" type="primary">
+        <attribute defaultvalue="Bigby" name="Character" valuetype="Characters"/>
+        <attribute name="ContentID" valuetype="Number(0,1000)"/>
+        <attribute name="Action Description" valuetype="String"/>
+      </track-spec>
+      <track-spec name="Shots" type="primary"/>
+    </group>
+  </body>
+</annotation-spec>

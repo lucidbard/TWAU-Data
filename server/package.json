@@ -1,0 +1,24 @@
+{
+  "name": "karen",
+  "version": "0.0.1",
+  "description": "A simple server that retains various progress indicators and commands",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "morgan": "^1.9.0",
+    "path": "^0.12.7",
+    "poppler-simple": "^0.2.9",
+    "watch": "^1.0.2",
+    "ws": "^4.0.0"
+  },
+  "devDependencies": {
+    "reload": "^2.2.2"
+  }
+}

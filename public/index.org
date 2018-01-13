@@ -1,0 +1,1699 @@
+#+TITLE: The Wolf Among Us Emotional Study
+#+PROPERTY: header-args:emacs-lisp :var base-video-path="/cygdrive/e/Study"
+#+PROPERTY: header-args:bash :var base_video_path="/cygdrive/e/Study", WORKDIR="/Users/lucid/2"
+#+EXPORT_FILE_NAME: index2
+#+OPTIONS: date:nil author:nil title:nil email:nil
+* Work
+** Infrastructure
+***
+** TODO [/] Dashboard
+:PROPERTIES:
+:EXPORT_FILE_NAME: dashboard
+:END:
+#+NAME: part-table
+| Player          | ID | StudyFile | GameFile | SOffset | Length | OverFile | Offset |
+|-----------------+----+-----------+----------+---------+--------+----------+--------|
+| [[./img/fr2-t.png]] |  2 | 2G.mp4    |          |   13660 |        |          |        |
+| [[./img/fr3-t.png]] |  3 | 3G.mp4    |          |    9673 | 238239 |          |        |
+| [[./img/fr4-t.png]] |  4 | 4G.mp4    |          |    2307 | 208171 |          |        |
+| [[./img/fr5-t.png]] |  5 | 5G.mp4    |          |    6902 | 187955 |          |        |
+| [[./img/fr6-t.png]] |  6 | 6G.mp4    |          |    3940 | 242417 |          |        |
+| [[./img/fr7-t.png]] |  7 | 7G.mp4    |          |    5923 | 221546 |          |        |
+** Current Video
+:PROPERTIES:
+:EXPORT_FILE_NAME: current
+:END:
+#+ATTR_HTML: :controls controls :width 350
+#+BEGIN_video
+#+HTML: <source src="5G_1_1.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+*** Utils :noexport:
+#+name: wrap-html
+#+begin_src emacs-lisp :var text="" :results raw
+(concat "#+BEGIN_HTML\n<div class=\"html-output\">\n" text "\n</div>\n#+END_HTML")
+#+end_src
+
+#+RESULTS: wrap-html
+#+BEGIN_HTML
+<div class="html-output">
+</div>
+#+END_HTML
+
+** Write
+*** Submissions
+**** ELO
+***** TODO Salt Immortal Sea App
+***** The Emotion Machine
+Technology wants to know us. To understand us. But does it want to
+help us? We have invited Alexa, Siri and others into our home with the
+goal of making life easier, with the hope that we will do more.
+
+This work explores the relationship between humanity and machines
+through measures of emotion.
+
+Frame Story.
+
+I want to understand you. How you work. How you tick.
+
+Would you like to play a game? It'll be easy.
+
+I ask questions, you provide a response. Some will be easier than others.
+
+(Includes emotional input). Sentiment analysis of content.
+
+Play a video clip and ask question.
+
+1. A single user sits in front of it. Can leave at any point.
+2. Uses a live read of a player's heart rate and expression (Infrared camera?)
+3. Presents a few simple interactive choices in a sort of reverse turing test
+   - Output is generated from the context and a model of the emotional response
+4. Voice + Physical input
+5. Uses a screen as common sketchpad for context -- including the choices
+   - Some choices are simple, others are harder.
+   - Do you want to play a game?
+6. Voice output (Polly)
+
+Outcomes:
+
+1. Reveal
+2.
+
+*** Papers
+**** DiGRA paper
+**** Technical Report (HTML Tool + Ontology)
+**** Corpus
+
+*** TODO Introduction
+*** TODO Story Understanding and the Semantic Gap
+*** TODO Extending Story Intention Graphs
+*** TODO Study Design & Data Collection
+*** TODO Analytical Methodologies
+*** TODO Conclusion
+** TODO Create OWL Ontology of SIG (Determine the minimum expressivity required)
+** Decisions
+- [ ] Timecode vs Time
+- [ ] Decision Ontology based on Peter Mawhorter's work
+- Reader/Author Concepts in addition to SIG concepts
+- Relationshp of SIG to ICSIG++
+- Define a subset of CSIG for cinematic narratives (no player)
+- Define a subset of ICSIG for interactive narratives
+- Define a subset of ICSIG for playthroughs of an interactive choice-based cinematic narrative
+** Extract features from video
+*** TODO Extract Heartrate & Skin Conductivity Sensor Readings
+*** TODO Extract Facial Expressions
+*** TODO Extract Heartrate Variability from Video
+- Use Eulerean magnification?
+- Find paper that details how to do it, avoiding matlab if possible
+- Start with 1 minute of footage of one player
+
+*** TODO Extract Subtitles
+Using color range?
+- Detect text algorithm
+*** TODO Identify Music
+*** TODO Extract Dialogue Sound
+Use OCR subtitles as hints?
+- Speaker identification (Mouth moving?)
+- Player vs Character
+- Goal is to tag each dialogue segment with character
+*** TODO Extract Choices
+- Classify a screenshot as either choice or not-choice
+- Extract the timecode, content and decision from the videos automatically
+*** TODO Align "Cutscene" Content Segments
+- [ ] Algorithm is needed
+- [ ] Content ID is also needed.
+- [ ] Problem is "Context" of previous decisions.
+- [ ] Cannot identify predecessor automatically?
+
+**** Divide into shots
+**** Compare each frame until overlap
+**** Length of overlap
+**** Compute Pairwise
+
+** Prototype HTML HyperVideo Tool
+*** Requirements
+**** Allow annotating a video file with SIG++
+**** Focus on non-automatic annotations of high level concepts (other concepts have been annotated automatically)
+**** "Ground" Referrants include:
+***** Dialogue (Vocal Tone, Discourse Act, Content)
+***** (One or More) Physical Acts
+***** Character Knowledge/Belief changes
+***** Character Expressions
+***** Props
+***** Environments
+***** Locations
+*** Model Player expression (retargetting?)
+
+** TODO Define problem
+- Show how Scheherazade is insufficient
+* Outline
+** Introduction
+** Story Understanding and The Semantic Gap
+*** "Problems" and "Goals"
+*** Theories of Narrative
+- Classical
+- Marie-Laure Ryan
+- Cognitivist
+- Theory of Mind
+
+*** Modeling vs Describing Narratives
+- Models
+- Plot Units
+
+*** Story Reasoning
+- Queries
+*** Emotion
+*** Personality and Personas
+*** A Vision
+
+** Extending Story Intention Graphs
+
+Originally Elson sought to identify patterns among multiple stories
+based on the theory-of-mind readings.
+
+This new project aims to identify the core features of an interactive
+narrative through observing players and the work simultaneously.
+
+SIG supported textual source materials.
+
+While it is trivial to simply extend SIG to include frame offsets,
+this simply won't work for nonlinear video content.
+
+While SIGs have an implicit model of the reader, the interest in the
+role of decisions on the narrative motivates making user agency and
+the player themselves a first class construct in the representation.
+
+This leads to two additional constructs of use: the implied reader,
+and the implied author. The first represents the median reader for
+which the content is designed. The second represents the imputed goals
+of the selection and crafting of content by an agent (the "Author"),
+whose control over the materials is complete.
+
+We would like to ask questions about how the narrative experience operates.
+
+In particular, we can define several objectives for this new representation:
+
+1. Represent a set of higher level features for unsupervised learning on the source video (ideally with as few additional sensors).
+2. Enable detection and summarization of events of interest
+3. Enable cross-user comparisons
+4. Enable prediction of when a particular event (within the story context) is likely to cause an emotional response.
+
+We have a lot of interesting observations:
+1. Expressions.
+2. Measures of Attention (Gaze on Screen, blinks)
+3. Measures of cognitive load
+4. Physiological indicators (measured multiple ways)
+5. Decisions
+6. Event Timing (content)
+
+*** Translating Schemata to OWL 2 DL
+*** Identifying Additional Ontology domains
+**** Sensor Data
+**** Multimedia
+**** Human Affect
+**** Visual and Physical Performance
+**** Cinematography
+*** Additional Concepts:
+**** Player and Author
+**** Uncertainty and Ambiguity
+**** Realtime vs Storytime
+**** Scenes
+**** Beats
+**** Dialogue
+*** Validating Additions
+**** Test Cases and Queries (SPARQL)
+****
+*** Hypervideo Annotation Tool: Moriarty
+** Study Design & Data Collection
+*** Parallel Data Sets
+*** Objective Observations
+*** Self-Report Measures
+**** Thinkaloud
+**** Sensual Evaluation Instrument
+**** Survey
+** Analytical Methodologies
+*** Hand Annotation
+**** SEI Usage
+**** Objective Measure Spikes
+**** Beats
+**** Tagging Characters
+*** Automation
+**** Extracting HRV + HR
+**** Speaker Attribution + Speech-to-Text
+**** Scene Boundaries
+*** Annotation Tool
+****
+** Conclusions
+*** Remaining Gaps
+****
+
+* Study Data
+** Node server
+** Video Metadata
+:PROPERTIES:
+:header-args: emacs-lisp+ :var player='0', id='1', studyfile='2'
+:END:
+*** Dashboard
+#+NAME: part-table
+| Player            | ID | StudyFile | GameFile | SOffset | Length | OverFile | Offset |
+|-------------------+----+-----------+----------+---------+--------+----------+--------|
+| [[~/2/frame-2-t.png]] |  2 | 2G.mp4    |          |   13660 |        |          |        |
+| [[~/2/frame-3-t.png]] |  3 | 3G.mp4    |          |    9673 | 238239 |          |        |
+| [[~/2/frame-4-t.png]] |  4 | 4G.mp4    |          |    2307 | 208171 |          |        |
+| [[~/2/frame-5-t.png]] |  5 | 5G.mp4    |          |    6902 | 187955 |          |        |
+| [[~/2/frame-6-t.png]] |  6 | 6G.mp4    |          |    3940 | 242417 |          |        |
+| [[~/2/frame-7-t.png]] |  7 | 7G.mp4    |          |    5923 | 221546 |          |        |
+
+*** 2
+#+CALL: extract-frame-crop(FRAME=(org-sbe "frames-to-timecode" (FRAMES 13660)),INFILE="2G.mp4",OUT="frame-2")
+#+ATTR_ORG: :width 400
+#+RESULTS:
+[[file:/Users/lucid/2/frame-2.png]]
+#+CALL: downscale(IN="frame-2",OUTFILE="frame-2",XPOS="230",YPOS="80",WIDTH="130",HEIGHT="130",OUTWIDTH="105",OUTHEIGHT="105")
+#+RESULTS:
+[[file:/Users/lucid/2/frame-2-t.png]]
+***
+*** 3
+#+CALL: extract-frame-crop(FRAME=(org-sbe "frames-to-timecode" (FRAMES 9673)),INFILE="3G.mp4",OUT="frame-3")
+#+RESULTS:
+[[file:/Users/lucid/2/frame-3.png]]
+#+CALL: downscale(IN="frame-3",OUTFILE="frame-3",XPOS="175",YPOS="60",WIDTH="180",HEIGHT="180",OUTWIDTH="105",OUTHEIGHT="105")
+#+RESULTS:
+[[file:/Users/lucid/2/frame-3-t.png]]
+
+*** 4
+#+CALL: extract-frame-crop(FRAME=(org-sbe "frames-to-timecode" (FRAMES 2307)),INFILE="4G.mp4",OUT="frame-4")
+#+RESULTS:
+[[file:/Users/lucid/2/frame-4.png]]
+#+CALL: downscale(IN="frame-4",OUTFILE="frame-4",XPOS="100",YPOS="0",OUTWIDTH="105",OUTHEIGHT="105")
+#+RESULTS:
+[[file:/Users/lucid/2/frame-4-t.png]]
+
+*** 5
+#+CALL: extract-frame-crop(FRAME=(org-sbe "frames-to-timecode" (FRAMES 6902)),INFILE="5G.mp4",OUT="frame-5")
+#+RESULTS:
+[[file:/Users/lucid/2/frame-5.png]]
+#+CALL: downscale(IN="frame-5",OUTFILE="frame-5",OUTWIDTH="105",OUTHEIGHT="105")
+#+RESULTS:
+[[file:/Users/lucid/2/frame-5-t.png]]
+
+*** 6
+#+CALL: extract-frame-crop(FRAME=(org-sbe "frames-to-timecode" (FRAMES 3940)),INFILE="6G.mp4",OUT="frame-6")
+#+RESULTS:
+[[file:/Users/lucid/2/frame-6.png]]
+#+CALL: downscale(IN="frame-6",OUTFILE="frame-6",OUTWIDTH="105",OUTHEIGHT="105",XPOS="90",YPOS="0")
+#+RESULTS:
+[[file:/Users/lucid/2/frame-6-t.png]]
+
+*** 7
+#+CALL: extract-frame-crop(FRAME=(org-sbe "frames-to-timecode" (FRAMES 6283)),INFILE="7G.mp4",OUT="frame-7")
+#+RESULTS:
+[[file:/Users/lucid/2/frame-7.png]]
+#+CALL: downscale(IN="frame-7",OUTFILE="frame-7",OUTWIDTH="105",OUTHEIGHT="105",WIDTH="150",HEIGHT="150",XPOS="150",YPOS="20")
+#+RESULTS:
+[[file:/Users/lucid/2/frame-7-t.png]]
+*** Utility Functions
+**** Get Participant File
+#+NAME: GetPartipantFile
+#+BEGIN_SRC emacs-lisp :var table=part-table :results file
+(message (nth studyfile (car table)))
+#+END_SRC
+#+RESULTS: GetPartipantFile
+[[file:2G.mp4]]
+
+**** Portrait Processing
+#+CALL: downscale(IN="frame-2",OUTWIDTH="105",OUTHEIGHT="105",XPOS="210",YPOS="70",WIDTH="160",HEIGHT="160",OUTFILE="frame-2")
+#+RESULTS:
+[[file:/Users/lucid/2/frame-2-t.png]]
+
+** Extracting Data from Videos
+*** Test pipeline (Homer)
+:PROPERTIES:
+:header-args: :var BASEPATH="e:/StudyData", USER="2", batchsize=2000
+:ID:       25552c1a-4948-462e-8e22-02b825f0cb57
+:END:
+
+#+BEGIN_SRC bash :session homer-img-02 :results value
+cd echo $PWD
+shopt -s dotglob nullglob;
+cd e:/${USER};a=(*.tif);
+#+END_SRC
+#+RESULTS:
+: /cygdrive/e
+
+#+NAME: Count-files
+#+BEGIN_SRC bash :session homer-img-02  :results value
+echo ${#a[@]}
+#+END_SRC
+
+#+RESULTS: Count-files
+: 187397
+
+#+NAME: Calculate
+#+BEGIN_SRC emacs-lisp :var num_files=Count-files :results value table :cache yes
+(setq tally 0)
+(setq newlist (cons (list (+ (/ num_files batchsize) 1) (- num_files (% num_files batchsize)) (- num_files 1)) '()))
+(setq lastnum (- num_files (% num_files batchsize)))
+(let ((numtimes (/ num_files batchsize)) (remainer
+                                     (% num_files batchsize)))
+  (dotimes (i numtimes)
+    (setq lastnum (- lastnum batchsize))
+    (setq newlist (cons
+                   (list (- numtimes i)
+                         (if (eq (- numtimes i) 1)
+                             0 lastnum)
+                         (- (* (- numtimes i) batchsize) 1))
+                   newlist))
+    )
+    newlist)
+#+END_SRC
+#+RESULTS[4e0c30f7cc8b1d4acc1dd0d13c37543d48967f81]: Calculate
+|  1 |      0 |   1999 |
+|  2 |   2000 |   3999 |
+|  3 |   4000 |   5999 |
+|  4 |   6000 |   7999 |
+|  5 |   8000 |   9999 |
+|  6 |  10000 |  11999 |
+|  7 |  12000 |  13999 |
+|  8 |  14000 |  15999 |
+|  9 |  16000 |  17999 |
+| 10 |  18000 |  19999 |
+| 11 |  20000 |  21999 |
+| 12 |  22000 |  23999 |
+| 13 |  24000 |  25999 |
+| 14 |  26000 |  27999 |
+| 15 |  28000 |  29999 |
+| 16 |  30000 |  31999 |
+| 17 |  32000 |  33999 |
+| 18 |  34000 |  35999 |
+| 19 |  36000 |  37999 |
+| 20 |  38000 |  39999 |
+| 21 |  40000 |  41999 |
+| 22 |  42000 |  43999 |
+| 23 |  44000 |  45999 |
+| 24 |  46000 |  47999 |
+| 25 |  48000 |  49999 |
+| 26 |  50000 |  51999 |
+| 27 |  52000 |  53999 |
+| 28 |  54000 |  55999 |
+| 29 |  56000 |  57999 |
+| 30 |  58000 |  59999 |
+| 31 |  60000 |  61999 |
+| 32 |  62000 |  63999 |
+| 33 |  64000 |  65999 |
+| 34 |  66000 |  67999 |
+| 35 |  68000 |  69999 |
+| 36 |  70000 |  71999 |
+| 37 |  72000 |  73999 |
+| 38 |  74000 |  75999 |
+| 39 |  76000 |  77999 |
+| 40 |  78000 |  79999 |
+| 41 |  80000 |  81999 |
+| 42 |  82000 |  83999 |
+| 43 |  84000 |  85999 |
+| 44 |  86000 |  87999 |
+| 45 |  88000 |  89999 |
+| 46 |  90000 |  91999 |
+| 47 |  92000 |  93999 |
+| 48 |  94000 |  95999 |
+| 49 |  96000 |  97999 |
+| 50 |  98000 |  99999 |
+| 51 | 100000 | 101999 |
+| 52 | 102000 | 103999 |
+| 53 | 104000 | 105999 |
+| 54 | 106000 | 107999 |
+| 55 | 108000 | 109999 |
+| 56 | 110000 | 111999 |
+| 57 | 112000 | 113999 |
+| 58 | 114000 | 115999 |
+| 59 | 116000 | 117999 |
+| 60 | 118000 | 119999 |
+| 61 | 120000 | 121999 |
+| 62 | 122000 | 123999 |
+| 63 | 124000 | 125999 |
+| 64 | 126000 | 127999 |
+| 65 | 128000 | 129999 |
+| 66 | 130000 | 131999 |
+| 67 | 132000 | 133999 |
+| 68 | 134000 | 135999 |
+| 69 | 136000 | 137999 |
+| 70 | 138000 | 139999 |
+| 71 | 140000 | 141999 |
+| 72 | 142000 | 143999 |
+| 73 | 144000 | 145999 |
+| 74 | 146000 | 147999 |
+| 75 | 148000 | 149999 |
+| 76 | 150000 | 151999 |
+| 77 | 152000 | 153999 |
+| 78 | 154000 | 155999 |
+| 79 | 156000 | 157999 |
+| 80 | 158000 | 159999 |
+| 81 | 160000 | 161999 |
+| 82 | 162000 | 163999 |
+| 83 | 164000 | 165999 |
+| 84 | 166000 | 167999 |
+| 85 | 168000 | 169999 |
+| 86 | 170000 | 171999 |
+| 87 | 172000 | 173999 |
+| 88 | 174000 | 175999 |
+| 89 | 176000 | 177999 |
+| 90 | 178000 | 179999 |
+| 91 | 180000 | 181999 |
+| 92 | 182000 | 183999 |
+| 93 | 184000 | 185999 |
+| 94 | 186000 | 187396 |
+
+*** Creating SC + HR Image Files
+
+#+NAME: crop
+#+BEGIN_SRC bash :session jarvis-img-02 :results file :var IN="000000", OUT_SUFFIX="crop" WIDTH="54", HEIGHT="15", XPOS="280", YPOS="245",
+cd $WORKDIR
+magick `eval echo ${IN}`.tif -crop ${WIDTH}x${HEIGHT}+${XPOS}+${YPOS} -interpolative-resize $((WIDTH*2))x$((HEIGHT*(2))) -unsharp 0x10+4+0 -set filename:f "%t-${OUT_SUFFIX}.%e" "%[filename:f]";
+echo $PWD/$IN-$OUT_SUFFIX.tif
+#+END_SRC
+
+#+ATTR_ORG: :width 150
+#+RESULTS: crop
+
+#+CALL: crop(IN="000000", WIDTH="100", HEIGHT="100", XPOS="240", YPOS="300", OUT_SUFFIX="crop1")
+
+#+ATTR_ORG: :width 150
+#+RESULTS:
+[[file:/Users/lucid/2/000000-crop1.tif]]
+
+#+NAME: negate
+#+BEGIN_SRC bash :session jarvis-img-02 :results file :var IN="000000", OUT_SUFFIX="test"
+magick -quiet ${IN}-resize-${OUT_SUFFIX}.tif  -channel rgb -negate -colorspace gray  +dither -colors 2 -normalize ${IN}-${OUT_SUFFIX}.tif;echo "$PWD/${IN}-${OUT_SUFFIX}.tif"
+#+END_SRC
+
+#+ATTR_ORG: :width 150
+#+RESULTS: negate
+[[file:/Users/lucid/2/000000-test.tif]]
+[${WIDTH}x${HEIGHT}+${XPOS1}+${YPOS1}]
+
+#+CALL: identify(IN="000000")
+
+#+RESULTS:
+| Width/Height: | 366x401+0+0 |
+| Color         |  8-bit sRGB |
+*** Downscale/Crop
+#+NAME: downscale
+#+header: :var WIDTH="250", HEIGHT="250", XPOS="130", YPOS="0", IN="frame", OUT_SUFFIX="t", WDIR="/Users/lucid/2/", OUTWIDTH="75", OUTHEIGHT="75"
+#+BEGIN_SRC bash :session jarvis-img-02 :results raw
+cd $WDIR
+BASE="magick ${IN}.*"
+$BASE  \
+-crop ${WIDTH}x${HEIGHT}+${XPOS}+${YPOS} -interpolative-resize ${OUTWIDTH}x${OUTHEIGHT} -alpha off -set filename:e "%t-${OUT_SUFFIX}.%e" "%[filename:e]"
+echo "[[file:$PWD/${IN%.*}-${OUT_SUFFIX}.png]]"
+#+END_SRC
+
+#+RESULTS: downscale
+[[file:/Users/lucid/2/frame-t.png]]
+
+#+CALL: identify(IN="frame-t",EXT="png")
+
+#+RESULTS:
+> Width/Height:,76x80+26+0
+Color,8-bit sRGB
+> Width/Height:,152x160+52+0
+Color,8-bit sRGB
+
+*** Transform/Crop
+#+NAME: both
+#+header: :var WIDTH="366", HEIGHT="238", XPOS="8", YPOS="0", IN="00000?", OUT_SUFFIX1="hr", WIDTH1="54", HEIGHT1="15", XPOS1="280", YPOS1="245", WIDTH2="63", HEIGHT2="15", XPOS2="245", YPOS2="320", OUT_SUFFIX2="sc"
+#+BEGIN_SRC bash :session jarvis-img-02 :results raw
+#+HEADER_ARG: :var
+cd ~/2/2
+for img in $IN.tif; do
+BASE="magick ${img}"
+$BASE  \
+\( -clone 0 -crop ${WIDTH1}x${HEIGHT1}+${XPOS1}+${YPOS1} -interpolative-resize $((WIDTH1*2))x$((HEIGHT1*(2))) -unsharp 0x14+2.8+0 -channel rgb -negate -colorspace gray +dither -colors 2 -normalize -alpha off -density 72 -set filename:g "%t-${OUT_SUFFIX1}.%e" +write "%[filename:g]" \) \
+\( -clone 0 -crop ${WIDTH2}x${HEIGHT2}+${XPOS2}+${YPOS2} -interpolative-resize $((WIDTH2*2))x$((HEIGHT2*(2))) -unsharp 0x14+2.8+0 -channel rgb -negate -colorspace gray +dither -colors 2 -normalize -alpha off -density 72 -set filename:f "%t-${OUT_SUFFIX2}.%e" +write "%[filename:f]" \) \
+-delete 1-2 -crop ${WIDTH}x${HEIGHT}+${XPOS}+${YPOS} -set filename:e "%t-crop.%e" "%[filename:e]"
+echo "[[file:$PWD/${img%.*}-sc.tif]]
+[[file:$PWD/${img%.*}-hr.tif]]
+[[file:$PWD/${img%.*}-crop.tif]]"
+done
+
+#+END_SRC
+
+#+RESULTS: both
+[[file:/Users/lucid/2/2/000000-sc.tif]]
+[[file:/Users/lucid/2/2/000000-hr.tif]]
+[[file:/Users/lucid/2/2/000000-crop.tif]]
+[[file:/Users/lucid/2/2/000001-sc.tif]]
+[[file:/Users/lucid/2/2/000001-hr.tif]]
+[[file:/Users/lucid/2/2/000001-crop.tif]]
+[[file:/Users/lucid/2/2/000002-sc.tif]]
+[[file:/Users/lucid/2/2/000002-hr.tif]]
+[[file:/Users/lucid/2/2/000002-crop.tif]]
+[[file:/Users/lucid/2/2/000003-sc.tif]]
+[[file:/Users/lucid/2/2/000003-hr.tif]]
+[[file:/Users/lucid/2/2/000003-crop.tif]]
+[[file:/Users/lucid/2/2/000004-sc.tif]]
+[[file:/Users/lucid/2/2/000004-hr.tif]]
+[[file:/Users/lucid/2/2/000004-crop.tif]]
+[[file:/Users/lucid/2/2/000005-sc.tif]]
+[[file:/Users/lucid/2/2/000005-hr.tif]]
+[[file:/Users/lucid/2/2/000005-crop.tif]]
+[[file:/Users/lucid/2/2/000006-sc.tif]]
+[[file:/Users/lucid/2/2/000006-hr.tif]]
+[[file:/Users/lucid/2/2/000006-crop.tif]]
+[[file:/Users/lucid/2/2/000007-sc.tif]]
+[[file:/Users/lucid/2/2/000007-hr.tif]]
+[[file:/Users/lucid/2/2/000007-crop.tif]]
+[[file:/Users/lucid/2/2/000008-sc.tif]]
+[[file:/Users/lucid/2/2/000008-hr.tif]]
+[[file:/Users/lucid/2/2/000008-crop.tif]]
+[[file:/Users/lucid/2/2/000009-sc.tif]]
+[[file:/Users/lucid/2/2/000009-hr.tif]]
+[[file:/Users/lucid/2/2/000009-crop.tif]]
+
+#+CALL: identify(IN="000000-both")
+
+#+RESULTS:
+| Width/Height: |  108x30+560+490 |
+| Color         | 8-bit Grayscale |
+
+#+NAME: identify
+#+BEGIN_SRC bash :session jarvis-img-02 :results raw :var IN="0-test", EXT="tif" DIR="/Users/lucid/2/"
+cd $DIR; OUT=`magick identify "${IN}.${EXT}"`;OUT_LIST=($OUT);echo "Width/Height:,${OUT_LIST[3]}
+Color,${OUT_LIST[4]} ${OUT_LIST[5]}"
+#+END_SRC
+
+#+RESULTS: identify
+
+*** Helper Lisp (Frames etc)
+**** DONE Frames To Timecode
+#+NAME: frames-to-timecode
+#+BEGIN_SRC elisp :var FRAMES=1000
+  (format "%02d:%02d:%02d.%1d"
+          (/ (/ (/ FRAMES 30) 60) 60)(/ (/ FRAMES 30) 60)
+          (% (/ FRAMES 30) 60)
+          (truncate (* (/ (% FRAMES 30) (float 30)) 10)))
+#+END_SRC
+
+#+RESULTS: frames-to-timecode
+: 00:00:33.3
+
+**** TODO Timecode to Frames
+#+NAME: timecode-to-frames
+#+BEGIN_SRC elisp :vars TIMECODE="00:00:33.3"
+
+(setq frames 1000)
+(format "%02d:%02d:%02d.%1d"
+        (/ (/ (/ frames 30) 60) 60)(/ (/ frames 30) 60)
+        (% (/ frames 30) 60)
+        (truncate (* (/ (% frames 30) (float 30)) 10)))
+#+END_SRC
+
+#+RESULTS: frames-to-timecode
+: 00:00:33.3
+*** Extract Frame and Crop
+
+#+NAME: extract-frame-crop
+#+header:  :var FRAME=(org-sbe "frames-to-timecode" (FRAMES 6902)), XPOS="900", YPOS="320", WIDTH="380", HEIGHT="400", MAXX="1280", MAXY="720", OUT="frame", INFILE="5G.mp4"
+#+BEGIN_SRC bash :results file :session homer-extract
+cd $WORKDIR
+rm $OUT.png >/dev/null 2>/dev/null
+
+homer_command1="cd '${base_video_path}'; rm ${OUT}.png >/dev/null 2>/dev/null; /usr/local/bin/ffmpeg -nostdin -i '${base_video_path}/${INFILE}' -ss $FRAME -filter:v 'crop=${WIDTH}:${HEIGHT}:${XPOS}:${YPOS}' -r 1 -q:v 1 -qmax 1 -vframes 1 ${base_video_path}/${OUT}.png;"
+karen_command="rm ${OUT}.png; ssh homer \"${homer_command1}\""
+karen_command2="scp homer:'${base_video_path}/${OUT}.png' /home/lucid/;"
+set -e
+ssh karen "${karen_command} && ${karen_command2}" >/dev/null 2>/dev/null
+scp karen:/home/lucid/${OUT}.png ${WORKDIR}/ >/dev/null 2>/dev/null && echo "${WORKDIR}/${OUT}.png"
+set +e
+#+END_SRC
+
+#+ATTR_ORG: :width 300
+#+RESULTS: extract-frame-crop
+[[file:/Users/lucid/2/frame.png]]
+
+
+#+NAME: extract-frame
+#+BEGIN_SRC bash :results file :session homer-extract :var FRAME="00:00:00.000", OUT="frame-full"
+ssh karen -t "ssh homer \"cd '/cygdrive/e/Google Drive/fiction emotion collab/PremierProFiles'; rm frame.png; /usr/local/bin/ffmpeg -i out.mp4 -ss $FRAME -r 1 -q:v 1 -qmax 1 -vframes 1 frame.png\"; scp homer:\"'/cygdrive/e/Google Drive/fiction emotion collab/PremierProFiles/frame.png'\" /home/lucid/" >/dev/null 2>/dev/null;scp karen:/home/lucid/frame.png /Users/lucid/2/$OUT.png >/dev/null 2>/dev/null;echo /Users/lucid/2/$OUT.png
+#+END_SRC
+
+#+RESULTS: extract-frame
+[[file:/Users/lucid/2/frame-full.png]]
+
+#+CALL: identify(EXT="png",IN="frame-full") :results raw
+
+#+RESULTS:
+|                                     |              |
+| bash-3.2$ bash-3.2$ > Width/Height: | 1280x720+0+0 |
+| Color                               |   8-bit sRGB |
+
+*** OCR
+"c:/Program Files (x86)/Tesseract-OCR/tesseract.exe"
+export TESSDATA_PREFIX="c:/Program Files (x86)/Tesseract-OCR/tessdata";
+EACHFILE = echo cygpath --windows
+
+#+NAME: OCR
+#+header: :var REM_TEMP="false", TESSDATA="/Users/lucid/git/tesseract/tessdata", EACHFILE="echo", USER="2", TESSERACT="tesseract", OUT_SUFFIX="hr", BASEPATH="/Users/lucid/2"
+#+BEGIN_SRC bash :session jarvis-img-02 :var IN="0-both-test" :async
+cd ${BASEPATH};
+>outfile-${OUT_SUFFIX};
+export TESSDATA_PREFIX=$TESSDATA
+test=`echo $PWD/${USER}/*-${OUT_SUFFIX}.tif`
+for eachfile in ${test[@]}
+do
+    $EACHFILE $eachfile >> outfile-${OUT_SUFFIX};
+done
+$TESSERACT ./outfile-${OUT_SUFFIX} --psm 6 --oem 0 -c tessedit_char_whitelist=1234567890. out-${OUT_SUFFIX}  2>/dev/null
+sed '/^\s*$/d' <out-${OUT_SUFFIX}.txt >out-lines-${OUT_SUFFIX}.txt
+>out-nospace-${OUT_SUFFIX}.txt;tr -d '[:blank:]' <out-lines-${OUT_SUFFIX}.txt >out-nospace-${OUT_SUFFIX}.txt
+sed 's/^[01][^\.]/0./g' <out-nospace-${OUT_SUFFIX}.txt | sed 's/^[\t]\f?*//;s/[. ^]*\$//;s/\r\f//' | tr -d '\000-\011\013\014\016-\037' > $USER-${OUT_SUFFIX}.txt;
+if [[ "$REM_TEMP" == 'true' ]]
+then
+    rm out*;
+fi
+cat $USER-${OUT_SUFFIX}.txt
+#+END_SRC
+
+#+RESULTS: OCR
+| 65.08176 |
+| 65.08176 |
+| 65.08176 |
+| 65.08176 |
+| 65.08176 |
+| 65.08176 |
+| 65.08176 |
+| 65.08176 |
+| 65.08176 |
+| 65.08176 |
+
+
+#+CALL: OCR(OUT_SUFFIX="sc")
+
+#+RESULTS:
+| 0.8701502 |
+| 0.8701502 |
+| 0.8701502 |
+| 0.8701502 |
+| 0.8701502 |
+| 0.8701502 |
+| 0.8701502 |
+| 0.8701502 |
+| 0.8701502 |
+| 0.8701502 |
+
+#+NAME: crop-hr
+#+CALL: crop(WIDTH=54,HEIGHT=15,OUT_SUFFIX="hr")
+
+#+ATTR_ORG: :width 150
+#+RESULTS: crop-hr
+[[file:/Users/lucid/2/0-resize-hr.tif]]
+
+#+NAME: invert-hr
+#+CALL: negate(OUT_SUFFIX="hr")
+
+#+ATTR_ORG: :width 150
+#+RESULTS: invert-hr
+[[file:/Users/lucid/2/0-hr.tif]]
+
+#+CALL: identify(IN="0-hr")
+
+#+RESULTS:
+| Width/Height: |      108x30+0+0 |
+| Color         | 8-bit Grayscale |
+
+#+NAME: crop-sc
+#+CALL: crop(WIDTH=63,HEIGHT=15,XPOS=245,YPOS=320,OUT_SUFFIX="sc")
+
+#+ATTR_ORG: :width 150
+#+RESULTS: crop-sc
+[[file:/Users/lucid/2/0-resize-sc.tif]]
+
+#+NAME: invert-sc
+#+CALL: negate(OUT_SUFFIX="sc")
+
+#+ATTR_ORG: :width 150
+#+RESULTS: invert-sc
+[[file:/Users/lucid/2/0-sc.tif]]
+
+
+#+NAME: resize-image
+#+BEGIN_SRC bash :session jarvis-img-02 :results file :var IN="0", OUT="default" WIDTH="54", HEIGHT="15", XPOS="280", YPOS="245"
+magick -quiet "${IN}.tif[${WIDTH}x${HEIGHT}+${XPOS}+${YPOS}]" ${OUT};echo "$PWD/${in}-resize-$OUT.tif"
+#+END_SRC
+
+
+#+NAME: run-batch
+#+BEGIN_SRC bash :session homer-img-02  :var filesize='16', charlimit='32000', start='0', iter='1', filetable=Calculate :results raw drawer
+let i=(start+1);
+saveddir=$PWD
+cd e:/${USER}/
+let stop=(start+iter)
+until [ $i -gt $stop ]
+do
+    set ${filetable[$i]};
+    echo "Batch $i begins at" `printf "%06d" $1` "end at" `printf "%06d" $2`;
+    begin=`printf "%06d" $1`;
+    end=`printf "%06d" $2`;
+    glob="$PWD/{$begin..$end}.tif";
+    files=`eval echo $glob`;
+    paths=`cygpath -m $files`;
+    NEWDIR=`printf "%02d" $i`
+
+    #./ExtractSC-${USER}.exe $paths
+    #mkdir ${BASEPATH}/SC/${USER}/${NEWDIR}
+    #mv ${BASEPATH}/SC/${USER}/*.tif ${BASEPATH}/SC/${USER}/${NEWDIR}/
+    ./ExtractHR-${USER}.exe $paths
+    mkdir ${BASEPATH}/HR/${USER}/${NEWDIR}
+    mv ${BASEPATH}/HR/${USER}/*.tif ${BASEPATH}/HR/${USER}/${NEWDIR}/
+    ((i++))
+done
+#+END_SRC
+
+#+RESULTS: resize-image
+[[file:/Users/lucid/2/-resize-default.tif
+bash: cd: e:/lucid/: No such file or directory]]
+
+#+RESULTS: run-batch
+:RESULTS:
+
+> $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ > $ $ $ $ $ > > > > > > > > > > Batch 1 begins at 000000 end at 001999
+mkdir: cannot create directory 'e:/StudyData/HR/2/': File exists
+:END:
+#+NAME: test-one-file
+#+BEGIN_SRC bash :session homer-img-02 :var MYFILE="000000", USER="2", BATCH="01"
+>outfile-test;cd ${BASEPATH};test=(SC/${USER}/${BATCH}/*.tif);i=0;for eachfile in ${test[@]}; do echo `cygpath --windows ${PWD}/$eachfile` >> outfile-test ;((i++)); done;
+export TESSDATA_PREFIX="c:/Program Files (x86)/Tesseract-OCR/tessdata";"c:/Program Files (x86)/Tesseract-OCR/tesseract.exe" ./outfile-test --psm 6 --oem 0 -c tessedit_char_whitelist=1234567890. out-test
+sed '/^\s*$/d' <out-test.txt >out-test-lines.txt
+>out-test-nospace.txt;tr -d '[:blank:]' <out-test-lines.txt >out-test-nospace.txt
+sed 's/^[01][^\.]/0./g' out-test-nospace.txt | sed 's/^[ ^t]*//;s/[. ^]*$//' > out-test-nospace-period.txt; cat out-test-nospace-period.txt
+#+END_SRC
+#+RESULTS: test-one-file
+
+#+NAME: further-refinements
+#+BEGIN_SRC bash :session homer-img-02
+
+#+END_SRC
+
+#+RESULTS: further-refinements
+*** Live pipeline
+#+NAME: files
+#+BEGIN_SRC bash :session homer-img-02 :results silent
+cd /cygdrive/e/StudyData/02/SC;>outfile;test=(*.tif);for eachfile in ${test[@]}; do echo "${PWD}/$eachfile" >> outfile; done;
+#+END_SRC
+
+#+NAME: tesseract
+#+BEGIN_SRC bash :session homer-img-02 :results silent
+export TESSDATA_PREFIX="c:/Program Files (x86)/Tesseract-OCR/tessdata";"c:/Program Files (x86)/Tesseract-OCR/tesseract.exe" ./outfile --psm 6 --oem 0 -c tessedit_char_whitelist=1234567890. out
+#+END_SRC
+
+#+NAME: remove-blank-lines
+#+BEGIN_SRC bash :session homer-img-02 :results silent
+sed '/^\s*$/d' <out.txt >out-lines.txt
+#+END_SRC
+
+#+NAME: remove-spaces
+#+BEGIN_SRC bash :session homer-img-02 :results silent
+>out-test-nospace.txt;tr -d '[:blank:]' <out-lines.txt >out-nospace.txt
+#+END_SRC
+
+#+NAME: further-refinements
+#+BEGIN_SRC bash :session homer-img-02 :results silent
+>out-nospace-period.txt; sed 's/^[10][^\.]/0./g' out-nospace.txt | sed 's/^[ ^t]*//;s/[. ^]*$//' > out-nospace-period.txt
+#+END_SRC
+
+* Variants
+
+Variants:
+
+1. Pure Circle/Color Tracking
+2.
+
+
+10.76 dilation
+Value: 175.41/255
+Saturation:
+44.4/255
+Hue: 26.2275/47.92
+Papers:
+*** Test
+* Papers
+** INT
+
+Predicting Reader Response Mani describes a methodology for analyzing
+character evaluations by inter-annotator agreement.
+
+** [[file:~/Dropbox/org/papers/fdg2017/fdg_poster.org][FDG Poster]]
+- [[id:zmq4v160wmh0@seebright.com][FDG Poster Feedback]]
+*** V1
+**** Abstract
+This paper describes a planned study to use a model of the narrative
+meaning to analyze a contemporary interactive digital narrative. The
+primary research question is whether a model of the underlying story
+can predict player emotional responses to key events within an
+interactive narrative when provided with a player's earlier
+choices. The game /The Wolf Among Us/ by Telltale Games was selected
+due to both its critically acclaimed status and the fact that it has
+both a strong, stable narrative and rich emotional content tied
+directly to the story itself. The combination of sophisticated
+narrative and high production values provides an opportunity to
+understand how choices and branching stories operate within
+contemporary digital narratives. The game uses choice menus with
+natural language labels with simplistic accounting of inventory and
+environments. The games uses bespoke hand authorship of complex
+well-rounded characters and on dramatic voice and animated
+performances, representing highly layered meanings and attracting
+fervent fan communities.  We selected an existing computational model
+of narrative for its ability to represent affective relationship
+between story-values and the character goal networks that pursue them
+(David Elson's Story Intention Graph and its text-focused annotation
+tool, /Scheherazade/ \cite{Elson2012}) and plan to use annotated
+adaptations of traversals to compare player experiences. This paper
+describes the proposed efforts to pursue the aforementioned research
+question: first, developing a repeatable methodology for annotating a
+cinematic choice-based adventure using the selected narrative model
+(SIG) and in particular associating events with story values and
+characters. Second, recording a set of player's emotional experiences
+while playing the game, and using the method developed in the first
+effort to associate these responses with configurations of the story
+content. Third, developing an algorithm whose input is the player's
+traversal and whose output are potential places for emotional
+response. Fourth, a second study validating the algorithm which is
+conducted using episode 2 of /The Wolf Among Us/.
+**** Outline
+***** Introduction
+Interactive storytelling uses the capabilities of computational media
+to dynamically assemble stories based on player input and/or on an
+underlying simulation of a world.
+
+This paper is organized as follows: First, we motivate the research
+question and situated its goals within game studies and the
+computational narratology.
+
+****** Motivation
+Interactive narratives are challenging to study: they present a
+constantly moving target for analysis, as each traversal (a term
+introduced by to describe a specific playthrough) still in their
+infancy.
+
+This work builds on the ongoing efforts within the computational
+narratology community, especially those focused on corpora and formal
+models.
+
+Narrative can be understood as phenomenon that arises from the
+coordination of inherent mental abilities, including the ability to
+understand the interaction of agents, their goals, and beliefs and the
+sequence of causally related events they are involved in
+\citep{Ryan2015b}.
+
+In the field of Computational Narratology, Mark Finlaysen conducted a
+study of the use of corpora that observes that text[fn:3], is prioritized
+given the availability of tools \cite{Finlayson2013}, although the
+only game logs that he cited were those of Orkin in the game EAT & RUN
+\cite{Orkin2010}.
+
+The literature does not, however, provide an example of a corpus of a
+modern interactive narrative game in a format suitable for annotation,
+nor does it detail an effort to map an existing model of computational
+narratives onto a pre-existing long-form interactive digital
+narrative work.
+
+David Elson intended the /Story Intention Graph/ to be a descriptive
+model of meaning, representing the mental simulation that naturally
+takes place of agents, their pursuit of goals and resulting causally
+linked events that make up those pursuits.
+
+In the next section, we'll briefly define the subset of narratives
+that fall in Tanenbaum's /readerly/ pleasure.
+
+
+****** Cinematic choice-based adventure (CCBA) games
+Telltale Game's /The Wolf Among Us/ was released in 2013 for multiple
+platforms.
+
+It is useful to locate the specific space that the subgenre of
+cinematic choice-based adventure games occupies: where story content
+is coded to be presented to the player in a very specific order and
+under very specific conditions and where virtually no unexpected
+sequence of content occurs.[fn:9]
+
+The adventure game genre is often put in opposition to genres which
+promote more player freedom, such as in Massively Multiplayer Role
+Playing Games (MMORPGs) or Open World RPGs which allow players to
+create and develop their own character.
+
+/The Wolf Among Us/ is episodic: future episodes must account for
+selected previous player decisions, although these are usually limited
+to decisions that have an ontological effect on the world (including
+the memories of the characters).
+
+Games in this subgenre conserve content and maximizing narrative
+payoffs among all possible traversals, this subgenre is ideally suited
+to annotation using SIG, as the player's goals and intentions are
+rewarded for small perturbations while the story remains relatively
+consistent.
+***** Story Intention Graphs
+The Story Intention Graph (SIG) schemata were developed by David Elson
+as a set of discourse relations to represent key relationships among
+concepts such as goals, values and agents present in textual
+narratives using concepts from narrative theory.
+
+Elson found that the SIG schemata, even without representing
+individual propositions, was more successful than alternative methods
+at identifying similarities in the stories.
+
+The lack of contemporary narrative games as the source of annotated
+datasets is further exacerbated by the popularity within the fields of
+narrative generation and understanding for using simple stories such
+as Aesop's fables.
+
+The proposed study requires the development of new methodology.
+
+***** Methodology and Study Design
+The proposed study requires the development of new methodology.
+1. Select and adapt narrative model to represent relationships between
+   events and decisions and the gameplay itself.
+2. Use the model to annotate a set of "natural" traversals of users
+   who also report emotional events.
+3. Analyze the emotional content with respect to story structure.
+4. Use these results to iterate on the model, annotation process and
+   to determine if these are predictive or indicative of underlying
+   story-influenced emotional responses.
+
+****** Using a Model to Annotate Narrative Structure
+First, the narrative structure needs to be available for annotation.
+
+1. It be in a text format, given availability of SIG annotation software
+2. Be capable of adding additional traversal content without redoing
+   deleting or altering previous traversal positions. This would allow
+   comparison amongst traversals where if one traversal referred to a
+   piece of content it would be at the same position as a separate
+   one.
+
+We began with the scope of the first episode, using as a source what
+we are calling a "natural traversal."
+****** User Study
+
+****** Iterations on SIG
+****** Second User Study
+***** Conclusion
+*** V2
+**** TODO Cut and bolster
+Pick things to cut, add additional detail & discussion to methodology
+section to reproduce results.
+**** Integrate the following literature:
+***** Computational Narrative literature review
+****** Computational Narratology - Mani, Inderjeet
+For computational accounts to be made more relevant to humanities
+narratology, two issues need to be confronted: (a) the challenge of
+interdisciplinary communication across substantial methodological
+divides, especially given the shift in interest of post-classical
+narratology away from the precise analyses that characterized its
+structuralist phase; (b) the fact that computational representations
+and techniques for story generation are not general enough to concoct
+anything other than very short, relatively simple stories (such as
+fairy tales), let alone epics or novels (Gervás et al. 2006).
+****** Finlayson
+*****
+***** Annotation approaches
+- Amsterdam Hypermedia Model
+-
+***** Emotion in Narratives
+*****
+More nuanced models of characters’ emotions have also been
+explored. For example, the interactive storytelling system of Pizzi
+(2011) is driven by plans that exploit an inventory of characters’
+feelings listed in Flaubert’s preliminary studies for Madame
+Bovary; such a framework allows for a variety of sentiment-driven
+interactive retellings of the novel. Another interesting reformulation
+of a narratological construct is that of suspense. Cheong (2007)
+generates stories judged to be suspenseful by modeling the reader’s
+reasoning about limitations and conflicts involving a protagonist’s
+goals (Prince → Reader [7]), based on narratologica
+
+* Inbox
+** Open annotations on multimedia Web resources
+Authors:	Bernhard Haslhofer	Department of Information Science, Cornell University, Ithaca, USA 14850
+Robert Sanderson	Los Alamos National Laboratory, Los Alamos, USA 87544
+Rainer Simon	Austrian Institute of Technology, Vienna, Austria 1220
+Herbert Sompel	Los Alamos National Laboratory, Los Alamos, USA 87544
+Open annotations on multimedia Web resources	2014 Article
+Published in:
+· Journal Multimedia Tools and Applications archive
+Volume 70 Issue 2, May 2014
+** HyperCafe: narrative and aesthetic properties of hypervideo
+Authors:	Nitin Sawhney	The Georgia Institute of Technology, School of Literature, Communication, and Culture, Atlanta, GA
+David Balcom	The Georgia Institute of Technology, School of Literature, Communication, and Culture, Atlanta, GA
+Ian Smith	The Georgia Institute of Technology, College of Computing, Atlanta, GA
+** Surfing the movie space: advanced navigation in movie-only hypermedia
+	Jörg Geißler	GMD (German National Research Center for Information Technology), IPSI (Integrated Publication and Information Systems Institute), Dolivostr. 15, D - 64293 Darmstadt, Germany
+* Literature Search Methodology
+:PROPERTIES:
+:ID:       ixgk2f01umh0@seebright.com
+:END:
+** Collect tables of contents for all of:
+*** ICIDS
+*** ICVS 2003
+**** Stories in Space: The Concept of the Story Map
+*** ICVS 2005
+**** [[https://paperpile.com/view/dc637123-c626-0dae-a1dc-f3f0a8f9c420][Formal Encoding of Drama Ontology]]
+****
+*** CMN
+*** INT
+** Identify relevant papers by title + abstract and add to list
+** Identify conferences/publications in works cited that would be relevant
+
+* INT Outline
+We present a methodology and results of encoding playthroughs of an
+existing interactive narrative in such a way as to be modeled using
+existing models of story. Modeling interaction, engagement, player
+response and story content are increasingly important as AI methods
+improve in using labeled and unlabeled datasets to determine
+underlying models and relationships. The present study focuses on
+emotional engagement and player choices, drawing from theories of
+choice poetics and dramatic situation analysis and discussing the
+results of creating a format amenable to existing models of linear
+narrative, demonstrating the suitability for nonlinear narratives of a
+particular complexity.
+
+
+** Motivations
+1. Contemporary interactive narratives are not currently used as
+   objects of academic study at the level of computational models.
+2. This means that many of the design advances made by authors of such
+   platforms and narratives are out of scope for works that purport to
+   advance the state of the art, leading to a disconnect between where
+   generation of interactive narratives currently is and where the
+   contemporary capabilities are. This gap is evident in the ratio of
+   hand-crafted content vs generative content. See Prom Week, Versu,
+   Facade, etc.
+3. The state of the art in story understanding systems is unable to
+   work with non-linear narratives.
+4. Current models of story are divorced from actual player experiences
+   as measured in empirical experiments or actual readings.
+5. Planning-based approches are unable to account for the non-logical
+   additive and nonlocal effect of cumulative information presented in
+   rich multimedia stories such as those produced by Telltale Games.
+6. Hypermedia approaches do not account for works authored outside of
+   a hypermedia model of authorship.
+7. Text Encoding Initiative and the Amsterdam Hypermedia Model exclude
+   logical relationships and models of the underlying story that
+   define the reception of the content. Also, TEI focuses on textual
+   documents, such as scripts, and not on dynamic works, whereas
+   Amsterdam Hypermedia Model ....
+8. What does a complex workflow offer that a branching storygraph
+   would not? -- a means of comparing player experiences to one
+   another and to identify commonalities and constants in the
+   underlying narrative as compared to variations based on choices.
+- What would serve as a good baseline?
+- What is the current state of the art?
+- Who else is pursuing these goals?
+- Why are these goals important?
+
+** Goals
+1. Describe the relationship amongst an interactive story's underlying
+   model, its choice structure and the player's individual emotionally
+   charged experience.
+2. To chart and visualize player's desires, choices, expectations and
+   exposure and reception of information through an experience of an
+   interactive story.
+
+** Research Questions:
+1. Why do choice-based cinematic narratives trigger strong emotions?
+2. How do you measure and contextualize player response to a
+   storygame?
+3. What are meaningful ways to compare enriched traversal records of a
+   storygame when the content differs?
+4. Does a model of the underlying story increase the value for
+   predicting player responses to narratives, as compared to
+   alternative methods?
+5. How do you measure story understanding for a nonlinear story?
+   1. Which aspects or elements remain constant? Which aspects vary?
+
+** Contribution of present paper (ICIDS)
+*** Describe the methodology for recording, encoding and mapping player experience of interactive narrative
+ - Encoding: To take an existing nontextual interactive story and to
+   reify it in a way amenable to computational methods. In particular,
+   to select a structure and annotate it with layers of meaningful
+   information contained in the artifact as playable.
+** Applications and Future Work
+ - Player modeling for assessment of narrative design could improve
+   the evaluation of generated narratives.
+ - A computational model of interactive narratives would allow
+   researchers to begin addressing new questions about the works that
+   are otherwise impossible.
+ -
+** Related Works
+*** Misc
+- BBC -- Representational work. David Base -- long running show.
+- Archers since the 40s
+- paper a decade ago about modeling secrets
+- Marble Springs
+- Afternoon
+- Lust
+- Ulysses
+- KJane mutiny
+- Early modernist
+  - Lady in the Lake
+  - Raymond Chandler
+  - (Ed) Katmul
+  - Post modernism attack on the narrative line
+- Simple art of murder (Chandler)
+- The best piece on what the mystery is really about.
+- Morningstore
+- Franco Moretti -- Theoretic analysis
+- Paul Sage
+- Dog's in the vineyards
+- Tabletop games that try to remediate Dungeons and Dragons. Get rid
+  of the gamemaster, more interesting stories.
+- Cathy Marshall. Gene Colevinsky
+- Annotation. Early book on reading and writing the electronic
+       book.
+- Manciny. Dissertation on Cinematic Hypertext. Full of
+         formal models. Little predictive value.
+- Nifty dissertation at NYU by James Douglas. On interactive
+       fiction -- hypertext fiction. First reading log of Afternoon.
+- Jill Walker, 2001 -- some writing on Afternoon.
+- Ben Shneiderman
+- Adaptive hypertext. (distinct from Dynamic)
+-
+*** Encoding
+**** Theory
+***** [[https://paperpile.com/view/1ce89591-30f3-09dd-b2c2-265250797d29][From Narrative to Visual Narrative to Audiovisual Narrative: the Multimodal Discourse Theory Connection]]
+*****
+**** Text Encoding Initiative
+**** Content Coding
+**** Annotation Frameworks
+**** Plot Point Graphs, Plans, Petri Nets, Linear Logic,
+**** User(/player) Modeling
+*** Hartmut (Unified Theory)
+*** Modeling
+**** Modeling (What?) Surface vs Deep Structure
+**** Hypermedia (Lens)
+**** Choice Poetics
+**** Operational Logics
+**** Computational Models of Story
+***** Story Intention Graphs
+***** Mark A. Finlayson
+***** Dramatology
+**** (Texton & Scripton) Espen Aarseth
+***** Non-trivial -- negated by the silent option. QTE may be considered non-trivial
+*** ICIDS
+*** INT
+*** FDG
+*** DIGRA
+
+*** Hypertext Theory
+**** Cinematic Hypertext (http://projects.kmi.open.ac.uk/hyperdiscourse/theory.html)
+Cinematic Hypertext: Research led by Clara Mancini has laid
+theoretical and empirical foundations for a paradigm that considers
+hypertext as a cinematic medium, media fragments connected by
+discourse relations derived from Cognitive Coherence Relations
+theory. This work now continues with Donia Scott.
+**** Narrative Storybases:
+Research led by Joanna Kwiat is exploring theories of narrative as the
+basis for a flexible story metadata scheme [Storymaking Project]. This
+is being evaluated in the context of a web story database for
+knowledge sharing and annotation amongst health professionals. more
+**** Narrative Theory and Story Annotation
+Kwiat, J. (2006). Realisation of the Resource Potential of Narrative
+and Narrative Collections via Multi-Perspective Markup. Medical
+Humanities Conference, Kings College London, UK (August 2006)
+[PDF][PPT]
+
+Participatory Hypermedia Construction: Research led by Al Selvin is
+exploring the nature of high performance literacy in the use of
+hypermedia tools such as Compendium in demanding, real time team
+sensemaking contexts. This work seeks to view such hypemedia
+construction through the lenses of aesthetics, ethics and
+improvisation.
+
+Selvin, A. (2005) Aesthetic and Ethical Implications of Participatory
+Hypermedia Practice, Technical Report KMI-05-17, Knowledge Media
+Institute, Open University,
+UK. [http://kmi.open.ac.uk/publications/pdf/kmi-05-17.pdf]
+
+Al Selvin (2004) Building Collaborative Knowledge Representations in
+Real Time: An Analysis of Facilitative Micro-Actions, Webcast Seminar,
+Knowledge Media Institute, Open University, UK, 5 October 2004 [PPT]
+****
+
+*** Reader Response Theory (Literature)
+** Research Questions
+** Evaluation
+** Methodology (Contributions?)
+*** Mapping Content to Model
+
+*** Calibration Steps
+- Coding Guide
+- The videos timecodes become canonical for the purposes of the
+  various layers of information.
+- Events within the game are recorded and mapped to timecodes.
+  - This enables identical content segments to be aligned to one
+    another with the predecessor moments according to the model.
+  - Existing storygraph models do not enable comparison of these
+    dependencies alongside one another.
+- Encode the playthrough into INK
+  - First, document the actual content as layers (e.g. stage directions, shot description, dialogue,
+  - Additionally, document the choices contributed by the player.
+- Choices recorded (+ Time to decision)
+- Usage of SEI (start + end time of video segment during use)
+** Future Work
+*** Use the data collected to evaluate methods of predicting emotional response.
+**** Method 1. Graph patterns.
+**** Method 2. Baseline.
+**** Method 3. Niave storygraph.
+*** Second Study: Take Episode 2 and use the methods to evaluate them on a new dataset.
+**** Use a first episode of a different Telltale game vs second episode of current game?
+**** Discuss limitations of approach and expected sources of error.
+**** Testing propositional knowledge at each point -- whether a player observes a piece of information.
+
+*
+We record every playthrough, every choice everyone makes. Look at
+percentages of people who make one choice verse another.  If you have
+a character that no one is really leaning into, get to guide creative.
+
+10 billion event records.
+
+"People are very very noisy."
+
+When we did Star Wars, strong inclination -- light side dark side.
+
+Build situations that are intentionally noisy.  Everything comes with
+a plus benefit and a negative benefit. Inviting noisy gameplay.
+
+"There are these big decision moments" critical junctures.
+You can't decide people into "Did you or didn't you save this person?"
+
+Bottom-up find out what type of players we had.
+
+* User Replay Reports
+I first completed A Wolf Among Us a month ago. After doing a few other
+things, these past few weeks I've been replaying the game a ton,
+trying different approaches to see if I can find anything new. I don't
+know how many times the average TWAU player plays the game, and since
+the game is almost two years old, it could be that everything I've
+discovered is common knowledge. But I thought it'd be fun to talk
+about what I've found.  During one playthrough, I went through the
+game picking the silence option every chance I could. I call this my
+"Strong, Silent Wolf" playthrough. If you haven't done it, do so. It's
+hilarious. It seems like Bigby randomly decides to troll people by not
+answering him. Or that he has a curse on him that'll makes it so he
+can only say a certain number of words per day, so he has to be
+selective. It's not always as awkward as you might think, because the
+characters already know Bigby, and seem to be able to guess what he's
+thinking, or they realize that they need to keep the conversation
+moving. Normally it doesn't result in new dialogue, but there are
+exceptions. If you don't answer Snow at the beginning of episode 2,
+she eventually gets pissed that you won't confide at her. If you
+refuse to answer Beast when he asks you if you've seen Beauty, you get
+this hilarious bit where he says "Motherfucker...!" as the elevator
+doors close. If you don't answer Beauty while investigating the hotel
+room, she'll get annoyed and ask how Snow puts up with it. If you
+refuse to tell Snow why you interrupted Lily's funeral, she'll tell
+you that she doesn't have time for your "lost boy at the mall"
+routine. If you don't answer Mary at the foundry, she'll ask you if
+you're trying to "eyeball" her to death.  During that playthrough, I
+also failed as many QTEs as I could, and I found a couple of
+interesting things. In episode 3, if you grapple with Dee for his
+shotgun and fail, it'll discharge and the bullets will nick Snow
+across the neck. It's not mentioned in dialogue, but for the next
+couple of episodes she has a bandage across one part of her neck, and
+a stitched up wound below it. If you don't hit Q fast enough when
+Vivian trys to drive you into a wall in episode 5, it knocks Bigby out
+and he wakes up an hour later. When he goes to the club, Vivian has
+killed herself. I was disappointed to find out that this happens if
+you jump on The Crooked Man's car, because I thought I had found a
+variation few other people would be aware of.  The interrogation scene
+is fun to toy around with. You can get two answers from the suspect by
+hitting them. After that, they'll stop talking, and Ichabod and
+Bluebeard will tell you to try a different approach. You can keep
+hitting them, but eventually the option disappears. It's fun to pulp
+their faces as much as you can, even if it's pointless. If you're
+trying to torment them as much as possible, then with Tweedledee
+you'll end with two violent interrogation methods unused, and with the
+Woodsman one, since he doesn't have any money for you to steal.  One
+thing I think is neat about the first episode is that the dialogue you
+hear when examining Toad's apartment varies depending on what order
+you few the objects. I think that every two possible combinations have
+unique dialogue. In a similar vein, the dialogue varies depending on
+what order you view the evidence in Room 207, and where you find the
+envelope depends on what you examine last.  Replaying the game as made
+me realize something about Telltale's choice system. You get those
+"The character will remember that" messages, but sometimes you need to
+pick a particular dialogue option to see any variation. For example,
+with Aunty Greenleaf you only see any effect from your interactions
+with Rachel if you pick the option to ask her why she chose to
+disguise herself as a child. If you pick the most playful dialogue
+options, she'll comment that Bigby was good with her. If you pick the
+aggressive options, she'll say that not many people would be willing
+to strongarm a child. I'm not sure that seeing those messages insures
+that you can find some variation. TJ and Nerissa have several of those
+messages, and I don't think I've noticed any variation in their
+dialogue. Sometimes you get additional dialogue options if you pick a
+certain response. If you tell Snow White that you have no doubt that
+Crane is the killer, you get several options where you can explain why
+you think that. I've also noticed that usually the moments where you
+get a "The character will remember that" are activated by picking any
+of the possible responses, while sometimes you only get that if you
+pick one particular response, like telling Beast "Not now" at the
+start of episode 3 or telling Bluebeard that he's not needed in the
+investigation.  As an aside, if you're looking to make Bigby the
+biggest bastard possible, I'd recommend going to Crane's apartment in
+episode 3 instead of the Tweedle's office, because although you can
+beat up Jack, you can't beat up Flycatcher. In episode 4 I'd recommend
+going to the Pawn Shop first instead of The Butcher's, because The
+Butcher plays out largely the same either way, while visiting the Pawn
+Shop gives you the opportunity to abuse Toad and Jack. You also get
+the option to tell Johann that you nearly killed the Jersey Devil,
+which alters his dialogue in the meatlocker scenes.  On the topic of
+choices. How Telltale handles their choices is a big point of
+contention. Proponents argue that it's not about changing the story,
+it's about shaping the characters. I've seen a few people who said
+they thought TWAU did Telltale's style of choices better than their
+other games, because it really does feel like it's more about shaping
+Bigby than influencing the story. I'd have to agree with that. For the
+most part, the game isn't about big moral choice as it is deciding
+whether you want to be the Big Bad Wolf, or the Great Good Wolf. Also,
+I doubt anyone expects every choice to have big consequences, but
+certain choices really should logically affect the trajectory of the
+story, and it's up to the writers to provide a good explanation for
+why they don't. I feel like TWAU didn't really have many of those kind
+of choices, and I rarely felt pulled out of the story by the game
+going against my choices. You're also given several legitimate options
+on how to approach your investigation, which gives the game some
+replayability. There were a few things I think could've been done
+better.  I was hoping that treating Tweedledee nicely in the
+interrogation would've had some future effect. I know Dee isn't the
+kind of person to go against his boss, but I would've liked having a
+couple of scenes where instead of threatening Bigby, he genuinely
+tries to get him to back off because he doesn't want to hurt him. I
+was annoyed when the game has Crane dispose of Lily's body even if you
+tell her she can have it. Character wise, it makes sense that Crane
+would want to get rid of Lily's body before anyone can examine it
+further, but it's still a bit annoying because allowing Holly to give
+Lily a proper send off wouldn't affect the rest of the story.  I feel
+the trial scene could've been done better. I was looking forward to
+seeing the characters acknowledge my choices, and I hoped they'd take
+my overall attitude into account and not just my big choices. But if
+you make good choices, you don't hear about the things you did right,
+you just don't hear about the decisions you did wrong. One exception
+is Aunty Greenleaf. If you burn her tree, she's pissed at both of
+you. If you just walk away, she'll still be upset that you threatened
+to do it. If you give her a job, she'll be angry at Snow, but grateful
+to Bigby.  How the scene plays out if you kill The Crooked Man is even
+more problematic. It makes sense if you've made the worst choices, but
+not much if you haven't. Gren approves of you killing Crooked Man, but
+complains that you ripped his arm off. Perfectly reasonable. If you
+haven't, he complains that you knocked him around the bar, even though
+in most cases he attacked you first. A certain dialogue option has
+Beast complain that you nearly gouged his eyes out, even though,
+again, he attacked you first. Unlike in the other scenario, Aunty
+Greenleaf is pissed at you even if you offered her a job. Granted, it
+makes sense that the characters wouldn't want to give Bigby much
+leeway when he walks in carrying a dead body, but I think making the
+player feel like their choices mattered is more important. The bright
+side to the characters having selective memory is that it makes the
+option to walk out of the trial so much more satisfying, because Bigby
+basically calls them all ungrateful assholes and tells them to go fuck
+themselves.  Thoughts? Questions? Ever wondered what would happen if
+you picked a certain option? It's possible I've done it.
+** ---
+
+I'm curious about your choices and why you made them. I'm thinking mostly major choices in the game but anything that was meaningful to you I'm interested in as well. Or if you don't think you can narrow it down to single choices, how did you play as Bigby overall, mean-hearted, good-hearted, witty, silent?
+I'm just very curious because I've played through the game a couple times now and I noticed that my perspectives on Bigby (and some of the other charaters) changed based how I chose to play.
+35 commentssharesavehidegive goldreport
+all 35 comments
+sorted by: best
+[–]PopularKid 29 points 2 years ago
+I liked to roleplay Bigby as an angry, cruel guy trying to be good. So he was good, giving Faith money, not burning down Greenleaf's tree etc. but in the heat of the moment he used violence and intimidation because of his instincts, ripping off Gren's arm, killing Dum, slamming the Butcher etc.
+permalinkembedsavegive gold
+[–]ArkAngel7777777 12 points 2 years ago
+That's how I played too. Trying to be a good guy but when he starts to transform he gets less and less control over his actions.
+permalinkembedsaveparentgive gold
+[–]trakmiro 2 points 2 years ago
+I spared Dum because I thought it would give me pull with the twins later on, like they'd come through for me or something when I needed it... but nope. I bet that it isn't any different if you kill him. That feels like it should have been a much bigger decision given how big a role the Tweedles played in the first half of the season.
+permalinkembedsaveparentgive gold
+[–]MonkahBoy 20 points 2 years ago
+I played as Batman-- I tried to make my actions as close as possible to what Batman would do.
+The Bat Among Us.
+permalinkembedsavegive gold
+[–]itswilliam 59 points 2 years ago
+My choices were solely based on getting in Snow's pants
+permalinkembedsavegive gold
+[–]RainbowApple 8 points 2 years ago
+Despite the fact that it's a video game character and I knew it couldn't happen because of the comics, I still tried.
+permalinkembedsaveparentgive gold
+[–]SomeRandomGuy00 2 points 2 years ago
+Wait what?
+permalinkembedsaveparentgive gold
+[–]RainbowApple 3 points 2 years ago
+I knew they couldn't get together in the game cause in the first like 10 issues Snow rejects Bigby's advances anyways.
+permalinkembedsaveparentgive gold
+[–]BarracudaFeet 12 points 2 years ago
+I was the same way. Also did this for The Walking Dead to get some sweet Carley poon.
+permalinkembedsaveparentgive gold
+[–]indeedwatson 6 points 2 years ago
+Including the hidden option: Reset the chapter to see if you can save her.
+permalinkembedsaveparentgive gold
+[–]ArjenDesign 14 points 2 years ago
+Ah, yeah, that's an interesting thing to think about.
+I played Bigby as trying to make up for his past crimes in the Homelands, so I did everything as kindly and gently as I could (gave Faith the money, gave Colin the drink, didn't burn the tree, didn't kill anyone except Georgie for mercy's sake).
+permalinkembedsavegive gold
+[–]TheTjTerror 10 points 2 years ago
+Same here. I wanted to do the whole "I'm not the big bad wolf, I'm trying to show people I can change. " Which I learned is through exact opposite if you're trying to stay true to comic Bigby.
+permalinkembedsaveparentgive gold
+[–]el_ritardo 6 points 2 years ago
+No mercy.
+permalinkembedsavegive gold
+[–]indeedwatson 20 points 2 years ago
+Killed everyone, hit everyone as soon as they opened their mouths.
+Ehh, okay
+Didn't take TJ's gift for Snow
+YOU FUCKING MONSTER
+permalinkembedsaveparentgive gold
+[–]arachnophobia-kid[S] 3 points 2 years ago
+I like your style
+permalinkembedsaveparentgive gold
+[–]InvigoratingQuestion 8 points 2 years ago*
+I wanted Bigby and Fabletown to do well, and most of the time the "proper", diplomatic options seem the best options.
+Annoyingly enough, the diplomatic choices are always written to work out as the "right" ones, even in situations where they shouldn't - for example
+With the final decision, I think the only conscionable thing to do is to
+permalinkembedsavegive gold
+[–]nosaJay19 3 points 2 years ago
+Yeah, in the comics the Witching Well is only for the dead and
+permalinkembedsaveparentgive gold
+[–]NitroMeta 7 points 2 years ago
+I had like 5 Seconds to decide.
+permalinkembedsavegive gold
+[–]indeedwatson 3 points 2 years ago
+I confess I paused at some of the important ones.
+permalinkembedsaveparentgive gold
+[–]NitroMeta 4 points 2 years ago
+Wait we can pause?
+permalinkembedsaveparentgive gold
+[–]indeedwatson 1 point 2 years ago
+At any time, with the space bar.
+permalinkembedsaveparentgive gold
+[–]arachnophobia-kid[S] 2 points 2 years ago
+Yeah but I'm sure there were some choices that must've meant something to you. Even if you might've made a mistake within the time limit I think that's part of the experience that TellTale is trying to capture.
+permalinkembedsaveparentgive gold
+[–]sitrucneb 5 points 2 years ago
+Up until (and including) the interrogation scene I played Bigby as angry, because I was livid about Faith and Snow "dying". I also rather enjoyed being the Big Bad Wolf a little too much. However, after Snow's return the anger subsided somewhat and I realised I was being a bit of a dick. I didn't rip Glen's arm off, but man I was tempted. I felt guilty enough for considering it, I can't imagine the guilt of seeing him armless in Episode 2 in the scene at the Trip Trap. For the remainder of the game I was more sympathetic to the citizens of Fabletown, but I primarily focused on getting justice for Faith (and Lily, but mostly Faith).
+permalinkembedsavegive gold
+[–]royalslayer 5 points 2 years ago
+The only choice I've regretted in the end was ripping of Gren's arm. That guy was such a douche in the beginning, but turned out to be okay in the end.
+permalinkembedsavegive gold
+[–]kaariainen 5 points 2 years ago
+I tried to be the good guy, but at certain times lost my cool totally, hence the ripped arm, and killing of Dum and ripping the head of The Crooked Man. Im kinda heat of the moment kinda guy irl too.. :D
+permalinkembedsavegive gold
+[–]Gonza116 3 points 2 years ago
+I started played as a good person like in The Walking Dead (which I ended the day before), but then I realized "Hey, I'm the fucking Big Bad Wolf, let's play like that". I couldn't for two reasons: Bigby's Mercy (as it's shown in the Book of Fables) and Snow. I wanted to do the best for the Bigby and Snow relationship (except burning the Greenleaf's tree, that was excessive). Well, I think I have explained myself. And, after reading Fables, I think Bigby would have do what I did.
+permalinkembedsavegive gold
+[–]Dionysus24779 5 points 2 years ago*
+I know I'm late to the party but I still like to answer because I'm bored and it's a neat idea.
+Generally I tried to play as I usually play, I try to be calm and collected, reasonable and logical and giving others a chance, but when others test my patience to an unreasonable degree I did use intimidation.
+But I'll just go through all the "major" choices (the one the games lists).
+In Episode 1 I gave Faith money, because why not? Just trying to be nice and it didn't seem like Bigby is really the person who needs a lot. When it comes to Beauty, I told her that I didn't care about her situation if she doesn't want to explain it but I also didn't tell Beast that I saw her, not because I wanted to do Beauty a favor, but because I didn't want to get into it, so whatever.
+I did go to Toad's apartment first after his call since it sounded much more urgent than Lawrence who looked dead through the mirror. So I couldn't prevent his death.
+When it comes to prime suspects I didn't tell Snow anything since I really wasn't sure at this point and none of the given answers made sense to me. Lawrence killed himself because he hurt Faith, plus it seemed like he was trying to kill himself for like a week or whatever. The Woodsman... I dunno it was just obvious to me that he didn't do it, he may have been an a** when you first meet him but he just wasn't the type. Tweedle Dee/Dum also wouldn't have made sense since they were investigating the murder themselves. Bluebeard would've just been way too obvious because his fable entry said he used to decapitate his wives. I also didn't suspect Georgie since I assumed that her pimp would probably be more protective about "his employee" and I didn't knew anything about him.
+And at the end I decided to go after Tweedle Dee since the Woodsman obviously didn't do anything. Also I didn't rip of Grendels arm since I would never maim someone like that without a damn good reason.
+In Episode 2 I sympathized with Crane, because while he was a jerk I did believe that he really did care about Fabletown and Snow and during the interrogation I was nice to Tweedle Dee and got him to talk with a few well placed questions, it seemed more reasonable to discuss this like Gentlemen without any violence. I also didn't hit Georgie or smashed any of his stuff, though he really really tested my patience and he was lucky Bigby found the floor safe when he did. And I also didn't hit Beast while he was down because I wanted the fight to be over since it was a waste of time.
+In Episode 3 I didn't interrupt Snow because I didn't see any direct urgency in telling her about my findings, though I was worried the "moment of silence" would last forever. Later I investigated Cranes Apartment at first and did make a deal with Jack, also as a side note, I actually appreciated Bluebeards help even if I didn't have the option to express it, though nothing ever came out of it. I also didn't check the office after I was done at the apartment but went to the Trip Trap.
+I did not burn Greenleaf's tree, though it was a tough choice for me, but it just didn't seem right and I didn't like Snow bossing me around.
+When it came to Tweedle Dum... it probably was "out of character" for me and I regretted it a bit, but I did kill him. I was just sick of the Tweedles with their stupid smiles, stupid lines and stupid attitude, they've been a pain since Episode 1 and I felt like the whole situation was a life or death battle (which it was). It just really came natural to me, hesitating only for a second.
+In Episode 4 at the start I was really split about Colin, at first I told him that he should go to the farm since the rules are the rules, but then he told me that that's not true and I bended the rules all the time for others, which reminded me of how I let Jack go for example. Colin actually changed my mind here and I restarted the game to tell him that he can stay. Plus I really appreciated him defending me in front of Snow. And I know this may be kind of cheating since I didn't "live with my choice", but fu** it.
+I didn't attempt to remove Nerissas Ribbon because she was visibly freaked out about it and I didn't see any reason to try to do it. I mean I understood that it was the source of the spell that kept her from talking, but since Nerissa was so adamantly against removing it I suspected something bad would happen and there should be a better way.
+For investigation I went to the Butchers shop, the Lucky Pawn didn't seem to be in any danger to run away. About Toad, I told him that I try to let him stay, though I was a bit confused that I was never given the option to give him money for the glamour, especially since I confistated a huge bundle of money in Cranes apartment earlier (just as a note, this was the only time I ever took money because I assumed Crane wouldn't return anyway.)
+When I met the Crooked Man I agreed to talk to him first, because I consider myself a reasonable person and gladly accept any invitation to talk something through, plus I wanted to give the Crooked Man a genuine chance.
+In Episode 5 I did kill Georgie because he was in such pain and he seemed dead anyway. Plus it was a little bit of statisfaction because he really tested my patience all the time.
+As for the Crooked Man, I did bring him back alive, because as I said I'm a reasonable man and gladly accept any invitation to talk things through and I was genuinly interested in his side of the story and arguments. So I guess I don't have to mention that I gave him a fair trial and the chance to speak.
+As for the Crooked Mans punishment, well it was a tough choice for me. Killing him wasn't really a choice for me, though I did realize that it was kind of unfair for me to kill Dum and let the Crooked Man live, but that was during the heat of a battle and this would've been cold blooded when alternatives exist. I did consider throwing him down the Witching Well because it seemed like the most appropiate thing, but this also really didn't sit well with me. So I had Aunty Greenleaf imprison him and was very statisfied with that result, though I didn't really like that they took out his tounge since he should be given a second chance one day.
+TJs gift to Snow I did accept, because seriously why not? It's such a trivial thing to do anyway.
+And my last words to Nerissa were "I hope I've done some good here" because I really wasn't that sure about it.
+Also I didn't attempt to chase after Nerissa, I just let her go because this was obviously what she wanted, otherwise she would've looked back or not leave with all her bags.
+And while I'm at it I give a very quick rundown on how my relationship with certain characters were in no particular order and only the "major" ones:
+Snow - I actually didn't like her that much, yeah she had some genuine sweet moments but she was often pretty unfair, like whenever she said something like "Try to be nice" I could just tell myself "Fu** you, I've been nothing but nice so far!"...
+Toad - To be honest I didn't really care for him.
+Crane - I wanted to believe that he had a sincere interest in having Fabletown be a good place for everyone, but he disappointed me.
+Georgie - He tested my patience the most out of all characters.
+Crooked Man - I actually really liked him but I was disappointed everytime he send his goons after me. Though it was frustrating to hear his "I just gave the order!" defense and while he presented himself as a benefactor for poor Fables his actions spoke volumes against that. So he was just disappointing in that regard as well, he was no Illusive Man, that was sure...
+Tweedles - I really disliked them, they were a huge pain, constantly interrupting the investigation, having a shi**y attitude and these weird stupid smiles.
+Woodsman - He turned out to be a real bro and kind of a woobie, I like him.
+Colin - After the first encounter I didn't like him at all, but him defending Bigby made me change my mind about him. He's a honest but loyal friend.
+Beauty - While she's kind of cute she's also incredibly annoying, it felt like she constantly tried to push her problems onto me and make it about herself, plus she seems to love playing capting obvious, repeating everything that has already been said during the investigation of room 207.
+Beast - He seemed like a genuinly nice guy, though he has some serious issues.
+Holly - I somehow couldn't bring myself to really care for her at all...
+Grendel - Kind of disliked him at first, but I felt that I kind of earned his respect during the game and that made me respect and appreciate him more.
+Bluebeard - I actually liked Bluebeard, well I didn't like his tendencies for violence, but I did respect him and appreciated his help. I did believe that he sincerely wanted to get this case solved and help out and that he just wanted to "get it done".
+Bufkin - He was kind of annoying, but also helpful, so he was easy to tolerate.
+Nerissa/Vivian/Lily/Faith - Honestly... didn't really care about them at all.
+Bloody Mary - I was really annoyed by her attitude, but I can't deny she has some sort of coolness factor and I respect her power as a fable.
+Greenleaf - Only want to say that her child-disguise was incredibly paper thin... like as soon as the door opened and I saw a child I was like "Yep, that's her, glamouring it up or whatever" and everything she says just sounded kind of fake and her comments while investigating the room made it painfully obvious.
+Oh well, ramble over, 10k limit almost full. Was fun talking about it.
+permalinkembedsavegive gold
+[–]DuctToast 8 points 2 years ago
+I have yet to play through a second time, but when I play Telltale games I try to immerse myself in the character and make it my own. I analyze the circumstances and make choices based on what the real me would to in that position. Whenever I fail an action command sequence or accidentally pick the wrong option, I chalk that kind of thing to "poor reflexes" and "Freudian slip." I never backtrack unless I get a Game Over screen.
+So generally I tried to be good, but there were times when I lost my temper. It may not be much to write home about, but the first playthrough told Bigby's story through my perspective, and that made the story more engaging for me.
+On a side note, I think I'll do what I did with TWD season 1 by playing a second file doing everything completely opposite :P
+permalinkembedsavegive gold
+[–]BlackbeardsSon 3 points 2 years ago
+My policy throughout the game was: "Talk shit, get hit". Worked out well. Moterfucker didn't need his head anyway.
+permalinkembedsavegive gold
+[–]retconk 2 points 2 years ago
+I'm usually pretty lawful-good in video games. When I accidentally went too far with Jorgy when breaking stuff I felt guilty and instant replayed to avoid tearing of Grin's arm. However, I still broke Crane's nose on every play through. And I think it's mostly because he was so bitchy to me in the beginning of the game.
+permalinkembedsavegive gold
+[–]signu1230 2 points 2 years ago
+In games like this, I usually play as a "good" character, but Telltale games are so good I create two saves. Save #1 is my "regular" play through, where I'm always trying to help people. Save #2 is my sociopath save, where I'll reload over and over, purely for the sake of exploration.
+I gave Faith money (really, who didn't?) because no one should have to resort to what she did for money. I gave Colin the drink, considering the debts I owe him from back in the Homelands. I brought the Crooked Man in for a trial for two reasons. Firstly, I wanted Snow's approval, seeing as how she is my boss. Secondly, most of the plot's drama came to be because of the previous administration's corruption. If I cut corners or took shortcuts in the name of "justice," then I wasn't much better than Crane.
+permalinkembedsavegive gold
+[–]indeedwatson 2 points 2 years ago
+I tried to follow on Snow's instructions mostly, but sometimes got out of control. Something that I noticed is that when there's no exact option of what you'd really like to do, instead of letting that ruining immersion I liked to make excuses. Like, I can't "confiscate money and put it in Snow's desk ASAP" (I didn't see that option at least), so I made little excuses in his head: hey, this money shouldn't stay here at the pawn shop in Crane's coat, but of course I'm not gonna use it for myself, it'll go back to Fabletown someday.
+permalinkembedsavegive gold
+[–]mikeburnfire 1 point 2 years ago
+Tried to be good and didn't let things go too far usually. I killed the Tweedle because I can claim self-defense. I destroyed a bit of Georgie's property when pushed. I told the Crooked Man that I would bring him in, and the game didn't give me an option to betray him, so he went to trial. I wasn't sure if I wanted to throw him down the well or not, but when he suddenly attacked right at the end, I decided that imprisoning him would be the better punishment.
+permalinkembedsavegive gold
+[–]TheLadyEve 1 point 2 years ago
+I chose based on my own moral compass, so I ended up killing Georgie and imprisoning the Crooked Man.
+**
+* Tagged Decisions
+- Did you give Faith your money?
+- What are the values at stake? Sympathy. Generosity. Empathy.
+- Did you tell Beast the truth about Beauty?
+- Where did you decide to go first?
+- What happened to Prince Lawrence?
+- Who is your prime suspect?
+  - Woodsman
+  - Twins
+  - Bluebeard
+  - Mary
+  - Pimp
+  - Don't say anything
+- Who did you arrest?
+* Key Decisions
+- Lying to Beast about Beauty
+- Choosing which place to visit (Toads or Lawrence)
+- Woodsman or Tweedle Dee
+- Who is best suspect?
+Values
+
+* TODO Revise objectives and components
+** Goals
+*** What question does my encoding answer?
+- What are all of the possible traversals of the work?
+- How can you determine "related" content for a given choice?
+
+  - Example: Query choice (C7: Colin: Tell you what I told Toad)
+  - "Colin will remember that" -- how many times do these choices
+    actually affect future content selection?
+  - Example: "Name one" -- which one would the player have named?
+    (Given positive/negative opportunities)
+- What significant content is present?
+  - Shots (length, sequence)
+  - Choices ()
+  - Quick Time Events (Choices, Timing, Results)
+  - Expressions (within shot)
+  - Dialogue (language, timing)
+  - Extradeigetic, non-choice-based Text
+*** What is an example experimental design that can be conducted?
+** Strategy
+*** Progressive Refinement
+**** Have final data structure, but don't fill in all the details
+- Example: Just have the full accounting of segments and the dialogue, but not necessarily video captures
+- Use this data to create a proposed SIG++ encoding of the first episode
+
+** Schemata (Editor) -- Instead edit the schemata as JSON with functions
+*** Supports Existing SIG
+*** Enables SIG++ Extensions
+*** Renders Story Intention Graphs
+** Content Encoding
+ - Encoding Data Structure
+ - Analysis of Static Data
+ - Logic -- Capture All Possible Traversals
+
+ - Captures Dialogue Acts
+ - Captures Expressions, Gestures + Actions
+ - Captures all static segments
+ - Captures Representative Interactive Traversals
+   - E.g. move from a location X to a location Y and activate
+   - Variability (Shortest, Longest duration of content)
+ - Captures On Screen UI/Annotations
+   - Structured as Choices, Action Sets, and QT Event Indications
+   - Start/Stop, Type/Color, Screen Position/Attachment
+
+** SIG Annotation
+
+* TODO [#A] Reread and revise Advancement Proposal
+* Efforts
+** Verify the completeness of the proposed content schema
+- How?
+- Demonstrate a set of concrete use cases are fulfilled through the
+  schema but which are difficult or impossible otherwise.
+
+** Create an extensible complete implementation of SIG using JSON graph format compatible with Cytoscape.jsq
+
+** Collect the data about the first episode of the Wolf Among Us in the schema
+* Short term objectives:
+** Finalize set of features necessary to realize SIG Schemata
+1. Logical relationships:
+   1.
+2. Verify the visualization by encoding and rendering SIG Patterns in
+   the "Pattern" schema enforcement, as opposed to strict enforcement.
+** Record all of Episode 1 of The Wolf Among Us using editor
+** What do I do with this data?
+- Calculate the distribution of traversals
+- Map Story Intention Graph ++
+** Represent SIG data structure
+* Patterns
+** Peripeteia
+[[./SIG-Pattern-Peripeteia.png]]
+
+
+
+- mason williams
+- Swapbots
+
+- Had similar conversation.
+- Ben Taylor
+
+
+- Scott
+ ;;; Stefan Monnier <foo at acm.org>. It is the opposite of fill-paragraph
+    (defun unfill-paragraph (&optional region)
+      "Takes a multi-line paragraph and makes it into a single line of text."
+      (interactive (progn (barf-if-buffer-read-only) '(t)))
+      (let ((fill-column (point-max))
+            ;; This would override `fill-column' if it's an integer.
+            (emacs-lisp-docstring-fill-column t))
+        (fill-paragraph nil region)))
+    ;; Handy key definition
+(define-key global-map "\M-Q" 'unfill-paragraph)
+
+
+
+OntoMedia ontology
+Drammar
+Martens, Chris
+Bosser, Anne-Gwenn
+Ferreira, João F.
+Cavazza, Marc (15 September 2013). "Linear Logic Programming for Narrative Generation". Logic Programming and Nonmonotonic Reasoning
+
+Using DiAML and ANVIL for multimodal dialogue annotations

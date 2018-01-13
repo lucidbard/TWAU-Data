@@ -1,0 +1,11 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+# Named toplevel resources (1)
+
+<graph>
+	a rdf:List ;
+	rdf:first <text> ;
+	rdf:rest ( <obligation46>
+		   <the%20mule%20carries%20the%20donkey>
+		   <graph>
+		 ) .

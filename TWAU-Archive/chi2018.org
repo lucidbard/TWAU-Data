@@ -1,0 +1,87 @@
+* Literature Review Addendum
+** CHI 2016
+** CHI 2017
+*** 1028 Is Difficulty Overrated? The Effects of Choice, Novelty and Suspense on Intrinsic Motivation in Educational Games
+J. Derek Lomas, University of California, San Diego
+& Carnegie Mellon University
+Kenneth Koedinger, Nirmal Patel, Sharan Shodhan,
+Nikhil Poonwala, Jodi L. Forlizzi, Carnegie Mellon
+University
+*** 1040 Why is This Happening to Me? How Player Attribution can Broaden our Understanding of Player Experience
+Ansgar E. Depping, Regan L. Mandryk, University of Sakatchewan
+*** 1544 Understanding Gaming Perceptions and Experiences in a Women’s College Community
+Orit Shaer, Lauren Westendorf, Nicholas A. Knouf,
+Wellesley College
+Claudia Pederson, Wichita State University
+*** 1352 Designing Game-Based Myoelectric Prosthesis
+Training
+Aaron Tabor, Scott Bateman, Erik Scheme, University
+of New Brunswick
+David R. Flatla, University of Dundee
+Kathrin Gerling, University of Lincoln
+*** 1530 Don’t Talk Dirty to Me: How Sexist Beliefs Affect Experience in Sexist Games
+Jason T. Bowey, Ansgar E. Depping, Regan L. Mandryk,
+University of Saskatchewan
+*** 1571 Expanding Video Game Live-Streams with Enhanced Communication Channels: A Case Study
+Pascal Lessel, Saarland Informatics Campus
+Alexander Vielhauer, Saarland University
+Antonio Krüger, Saarland Informatics Campus
+*** 2782 We Play We Learn: Exploring the Value of Digital Educational Games in Rural Egypt
+Shaimaa Lazem, Hussein Aly Jad, City for Scientific
+Research and Technological Applications
+*** 4045 Effects of Sharing Physiological States of Players in a Collaborative Virtual Reality Gameplay
+Arindam Dey, Thammathip Piumsomboon, University
+of South Australia
+Youngho Lee, Mokpo National University
+Mark Billinghurst, University of South Australia
+*** 4863 The Game of Performing Play: Understanding Streaming as Cultural Production
+Anthony J. Pellicone, University of Maryland
+June Ahn, New York University
+
+*** 4887 Mastery Learning of Second Language through Asynchronous Modeling of Native Speakers in a Collaborative Mobile Game
+Xiangmin Fan, Wencan Luo, Jingtao Wang, University
+of Pittsburgh
+*** 5109 Testing Incremental Difficulty Design in Platformer Games
+Rina R. Wehbe, Elisa D. Mekler, Mike Schaekermann,
+Edward Lank, Lennart E. Nacke, University of Waterloo
+*** 5087 A Good Reason to Die: How Avatar Death and High Challenges Enable Positive Experiences
+Serge Petralito, Florian Brühlmann, University of Basel
+Glena Iten, Elisa D. Mekler, University of Waterloo
+Klaus Opwis, University of Basel
+*** 5114 EngageMeter: A System for Implicit Audience Engagement Sensing Using Electroencephalography
+Mariam Hassib, LMU Munich & University of Stuttgart
+Stefan Schneegass, University of Stuttgart
+Philipp Eiglsperger, LMU Munich
+Niels Henze, Albrecht Schmidt, University of Stuttgart
+Florian Alt, LMU Munich
+*** 5117 Can I Think of Something Else when Using a BCI? Cognitive Demand of an SSVEP-based BCI
+Andéol Evain, Université de Rennes 1
+Ferran Argelaguet, Nicolas Roussel, Inria
+Géry Casiez, Université de Lille
+Anatole Lécuyer, Inria
+
+*** 5123 “Not another Z piece!” Adaptive Difficulty in TETRIS
+Katharina Spiel, Vienna University of Technology &
+Bauhaus-Universität Weimar
+Sven Bertel, Bauhaus-Universität Weimar
+Fares Kayali, Vienna University of Technology
+
+* Associate Chairs
+** Zachary O. Toups, New Mexico State University
+** Pejman Mirza-Babaei, University of Ontario Institute of Technology (UOIT)
+** Gillian Smith, Worcester Polytechnic Institute
+** Rilla Khaled, Department of Design and Computation Arts, Faculty of Fine Arts, Concordia University
+** Erik Andersen, Cornell University
+** Katharina Spiel, Vienna University of Technology (TU Wien)
+** Elizabeth Bonsignore, College of Information Studies/Human-Computer Interaction Lab, University of Maryland
+** Sebastian Deterding, Digital Creativity Labs, University of York
+** Regina Bernhaupt, Ruwido Austria
+** Carmelo Ardito, Università degli Studi di Bari Aldo Moro
+** Annika Waern, Uppsala University
+** Guenter Wallner, University of Applied Arts Vienna
+** Brian Magerko, Georgia Tech
+** Elizabeth Veinott, Michigan Technological University
+** Scott Bateman, University of New Brunswick
+** Deborah Fels, Ryerson University
+** Robert Teather, Carleton University
+** James Wallace, University of Waterloo

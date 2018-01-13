@@ -1,0 +1,25 @@
+{
+  "name": "moriarty",
+  "version": "0.0.1",
+  "description": "A simple research node app",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "ini": "^1.3.4",
+    "rdflib": "^0.16.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucidbard/TWAU-Data.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucidbard/TWAU-Data/issues"
+  },
+  "homepage": "https://github.com/lucidbard/TWAU-Data#readme"
+}

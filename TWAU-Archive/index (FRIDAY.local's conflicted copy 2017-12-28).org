@@ -1,0 +1,3319 @@
+#+TITLE: The Wolf Among Us Emotional Study
+* Extracting Data from Videos
+#+BEGIN_SRC bash :dir /ssh:homer:/cygdrive/e/StudyData/02/TIFF/ :session homer-img-02
+cd /cygdrive/e/StudyData/02/TIFF/
+echo "$PWD"
+#+END_SRC
+
+#+RESULTS:
+|                                 |
+| $ /cygdrive/e/StudyData/02/TIFF |
+
+#+NAME: entries
+#+BEGIN_SRC bash :dir /ssh:homer:/cygdrive/e/StudyData/02/TIFF/ :session homer-img-02 :results output vector :cache yes
+mynames=`ls -1 *.tif`
+for eachfile in $mynames
+do
+    echo | $eachfile |
+done
+#+END_SRC
+
+#+RESULTS[d5894529aebd9884362c4b87368ea0166f1887ea]: entries
+|2G-HR0000.tif|
+|2G-HR0001.tif|
+|2G-HR0002.tif|
+|2G-HR0003.tif|
+|2G-HR0004.tif|
+|2G-HR0005.tif|
+|2G-HR0006.tif|
+|2G-HR0007.tif|
+|2G-HR0008.tif|
+|2G-HR0009.tif|
+|2G-HR0010.tif|
+|2G-HR0011.tif|
+|2G-HR0012.tif|
+|2G-HR0013.tif|
+|2G-HR0014.tif|
+|2G-HR0015.tif|
+|2G-HR0016.tif|
+|2G-HR0017.tif|
+|2G-HR0018.tif|
+|2G-HR0019.tif|
+|2G-HR0020.tif|
+|2G-HR0021.tif|
+|2G-HR0022.tif|
+|2G-HR0023.tif|
+|2G-HR0024.tif|
+|2G-HR0025.tif|
+|2G-HR0026.tif|
+|2G-HR0027.tif|
+|2G-HR0028.tif|
+|2G-HR0029.tif|
+|2G-HR0030.tif|
+|2G-HR0031.tif|
+|2G-HR0032.tif|
+|2G-HR0033.tif|
+|2G-HR0034.tif|
+|2G-HR0035.tif|
+|2G-HR0036.tif|
+|2G-HR0037.tif|
+|2G-HR0038.tif|
+|2G-HR0039.tif|
+|2G-HR0040.tif|
+|2G-HR0041.tif|
+|2G-HR0042.tif|
+|2G-HR0043.tif|
+|2G-HR0044.tif|
+|2G-HR0045.tif|
+|2G-HR0046.tif|
+|2G-HR0047.tif|
+|2G-HR0048.tif|
+|2G-HR0049.tif|
+|2G-HR0050.tif|
+|2G-HR0051.tif|
+|2G-HR0052.tif|
+|2G-HR0053.tif|
+|2G-HR0054.tif|
+|2G-HR0055.tif|
+|2G-HR0056.tif|
+|2G-HR0057.tif|
+|2G-HR0058.tif|
+|2G-HR0059.tif|
+|2G-HR0060.tif|
+|2G-HR0061.tif|
+|2G-HR0062.tif|
+|2G-HR0063.tif|
+|2G-HR0064.tif|
+|2G-HR0065.tif|
+|2G-HR0066.tif|
+|2G-HR0067.tif|
+|2G-HR0068.tif|
+|2G-HR0069.tif|
+|2G-HR0070.tif|
+|2G-HR0071.tif|
+|2G-HR0072.tif|
+|2G-HR0073.tif|
+|2G-HR0074.tif|
+|2G-HR0075.tif|
+|2G-HR0076.tif|
+|2G-HR0077.tif|
+|2G-HR0078.tif|
+|2G-HR0079.tif|
+|2G-HR0080.tif|
+|2G-HR0081.tif|
+|2G-HR0082.tif|
+|2G-HR0083.tif|
+|2G-HR0084.tif|
+|2G-HR0085.tif|
+|2G-HR0086.tif|
+|2G-HR0087.tif|
+|2G-HR0088.tif|
+|2G-HR0089.tif|
+|2G-HR0090.tif|
+|2G-HR0091.tif|
+|2G-HR0092.tif|
+|2G-HR0093.tif|
+|2G-HR0094.tif|
+|2G-HR0095.tif|
+|2G-HR0096.tif|
+|2G-HR0097.tif|
+|2G-HR0098.tif|
+|2G-HR0099.tif|
+|2G-HR0100.tif|
+|2G-HR0101.tif|
+|2G-HR0102.tif|
+|2G-HR0103.tif|
+|2G-HR0104.tif|
+|2G-HR0105.tif|
+|2G-HR0106.tif|
+|2G-HR0107.tif|
+|2G-HR0108.tif|
+|2G-HR0109.tif|
+|2G-HR0110.tif|
+|2G-HR0111.tif|
+|2G-HR0112.tif|
+|2G-HR0113.tif|
+|2G-HR0114.tif|
+|2G-HR0115.tif|
+|2G-HR0116.tif|
+|2G-HR0117.tif|
+|2G-HR0118.tif|
+|2G-HR0119.tif|
+|2G-HR0120.tif|
+|2G-HR0121.tif|
+|2G-HR0122.tif|
+|2G-HR0123.tif|
+|2G-HR0124.tif|
+|2G-HR0125.tif|
+|2G-HR0126.tif|
+|2G-HR0127.tif|
+|2G-HR0128.tif|
+|2G-HR0129.tif|
+|2G-HR0130.tif|
+|2G-HR0131.tif|
+|2G-HR0132.tif|
+|2G-HR0133.tif|
+|2G-HR0134.tif|
+|2G-HR0135.tif|
+|2G-HR0136.tif|
+|2G-HR0137.tif|
+|2G-HR0138.tif|
+|2G-HR0139.tif|
+|2G-HR0140.tif|
+|2G-HR0141.tif|
+|2G-HR0142.tif|
+|2G-HR0143.tif|
+|2G-HR0144.tif|
+|2G-HR0145.tif|
+|2G-HR0146.tif|
+|2G-HR0147.tif|
+|2G-HR0148.tif|
+|2G-HR0149.tif|
+|2G-HR0150.tif|
+|2G-HR0151.tif|
+|2G-HR0152.tif|
+|2G-HR0153.tif|
+|2G-HR0154.tif|
+|2G-HR0155.tif|
+|2G-HR0156.tif|
+|2G-HR0157.tif|
+|2G-HR0158.tif|
+|2G-HR0159.tif|
+|2G-HR0160.tif|
+|2G-HR0161.tif|
+|2G-HR0162.tif|
+|2G-HR0163.tif|
+|2G-HR0164.tif|
+|2G-HR0165.tif|
+|2G-HR0166.tif|
+|2G-HR0167.tif|
+|2G-HR0168.tif|
+|2G-HR0169.tif|
+|2G-HR0170.tif|
+|2G-HR0171.tif|
+|2G-HR0172.tif|
+|2G-HR0173.tif|
+|2G-HR0174.tif|
+|2G-HR0175.tif|
+|2G-HR0176.tif|
+|2G-HR0177.tif|
+|2G-HR0178.tif|
+|2G-HR0179.tif|
+|2G-HR0180.tif|
+|2G-HR0181.tif|
+|2G-HR0182.tif|
+|2G-HR0183.tif|
+|2G-HR0184.tif|
+|2G-HR0185.tif|
+|2G-HR0186.tif|
+|2G-HR0187.tif|
+|2G-HR0188.tif|
+|2G-HR0189.tif|
+|2G-HR0190.tif|
+|2G-HR0191.tif|
+|2G-HR0192.tif|
+|2G-HR0193.tif|
+|2G-HR0194.tif|
+|2G-HR0195.tif|
+|2G-HR0196.tif|
+|2G-HR0197.tif|
+|2G-HR0198.tif|
+|2G-HR0199.tif|
+|2G-HR0200.tif|
+|2G-HR0201.tif|
+|2G-HR0202.tif|
+|2G-HR0203.tif|
+|2G-HR0204.tif|
+|2G-HR0205.tif|
+|2G-HR0206.tif|
+|2G-HR0207.tif|
+|2G-HR0208.tif|
+|2G-HR0209.tif|
+|2G-HR0210.tif|
+|2G-HR0211.tif|
+|2G-HR0212.tif|
+|2G-HR0213.tif|
+|2G-HR0214.tif|
+|2G-HR0215.tif|
+|2G-HR0216.tif|
+|2G-HR0217.tif|
+|2G-HR0218.tif|
+|2G-HR0219.tif|
+|2G-HR0220.tif|
+|2G-HR0221.tif|
+|2G-HR0222.tif|
+|2G-HR0223.tif|
+|2G-HR0224.tif|
+|2G-HR0225.tif|
+|2G-HR0226.tif|
+|2G-HR0227.tif|
+|2G-HR0228.tif|
+|2G-HR0229.tif|
+|2G-HR0230.tif|
+|2G-HR0231.tif|
+|2G-HR0232.tif|
+|2G-HR0233.tif|
+|2G-HR0234.tif|
+|2G-HR0235.tif|
+|2G-HR0236.tif|
+|2G-HR0237.tif|
+|2G-HR0238.tif|
+|2G-HR0239.tif|
+|2G-HR0240.tif|
+|2G-HR0241.tif|
+|2G-HR0242.tif|
+|2G-HR0243.tif|
+|2G-HR0244.tif|
+|2G-HR0245.tif|
+|2G-HR0246.tif|
+|2G-HR0247.tif|
+|2G-HR0248.tif|
+|2G-HR0249.tif|
+|2G-HR0250.tif|
+|2G-HR0251.tif|
+|2G-HR0252.tif|
+|2G-HR0253.tif|
+|2G-HR0254.tif|
+|2G-HR0255.tif|
+|2G-HR0256.tif|
+|2G-HR0257.tif|
+|2G-HR0258.tif|
+|2G-HR0259.tif|
+|2G-HR0260.tif|
+|2G-HR0261.tif|
+|2G-HR0262.tif|
+|2G-HR0263.tif|
+|2G-HR0264.tif|
+|2G-HR0265.tif|
+|2G-HR0266.tif|
+|2G-HR0267.tif|
+|2G-HR0268.tif|
+|2G-HR0269.tif|
+|2G-HR0270.tif|
+|2G-HR0271.tif|
+|2G-HR0272.tif|
+|2G-HR0273.tif|
+|2G-HR0274.tif|
+|2G-HR0275.tif|
+|2G-HR0276.tif|
+|2G-HR0277.tif|
+|2G-HR0278.tif|
+|2G-HR0279.tif|
+|2G-HR0280.tif|
+|2G-HR0281.tif|
+|2G-HR0282.tif|
+|2G-HR0283.tif|
+|2G-HR0284.tif|
+|2G-HR0285.tif|
+|2G-HR0286.tif|
+|2G-HR0287.tif|
+|2G-HR0288.tif|
+|2G-HR0289.tif|
+|2G-HR0290.tif|
+|2G-HR0291.tif|
+|2G-HR0292.tif|
+|2G-HR0293.tif|
+|2G-HR0294.tif|
+|2G-HR0295.tif|
+|2G-HR0296.tif|
+|2G-HR0297.tif|
+|2G-HR0298.tif|
+|2G-HR0299.tif|
+|2G-HR0300.tif|
+|2G-HR0301.tif|
+|2G-HR0302.tif|
+|2G-HR0303.tif|
+|2G-HR0304.tif|
+|2G-HR0305.tif|
+|2G-HR0306.tif|
+|2G-HR0307.tif|
+|2G-HR0308.tif|
+|2G-HR0309.tif|
+|2G-HR0310.tif|
+|2G-HR0311.tif|
+|2G-HR0312.tif|
+|2G-HR0313.tif|
+|2G-HR0314.tif|
+|2G-HR0315.tif|
+|2G-HR0316.tif|
+|2G-HR0317.tif|
+|2G-HR0318.tif|
+|2G-HR0319.tif|
+|2G-HR0320.tif|
+|2G-HR0321.tif|
+|2G-HR0322.tif|
+|2G-HR0323.tif|
+|2G-HR0324.tif|
+|2G-HR0325.tif|
+|2G-HR0326.tif|
+|2G-HR0327.tif|
+|2G-HR0328.tif|
+|2G-HR0329.tif|
+|2G-HR0330.tif|
+|2G-HR0331.tif|
+|2G-HR0332.tif|
+|2G-HR0333.tif|
+|2G-HR0334.tif|
+|2G-HR0335.tif|
+|2G-HR0336.tif|
+|2G-HR0337.tif|
+|2G-HR0338.tif|
+|2G-HR0339.tif|
+|2G-HR0340.tif|
+|2G-HR0341.tif|
+|2G-HR0342.tif|
+|2G-HR0343.tif|
+|2G-HR0344.tif|
+|2G-HR0345.tif|
+|2G-HR0346.tif|
+|2G-HR0347.tif|
+|2G-HR0348.tif|
+|2G-HR0349.tif|
+|2G-HR0350.tif|
+|2G-HR0351.tif|
+|2G-HR0352.tif|
+|2G-HR0353.tif|
+|2G-HR0354.tif|
+|2G-HR0355.tif|
+|2G-HR0356.tif|
+|2G-HR0357.tif|
+|2G-HR0358.tif|
+|2G-HR0359.tif|
+|2G-HR0360.tif|
+|2G-HR0361.tif|
+|2G-HR0362.tif|
+|2G-HR0363.tif|
+|2G-HR0364.tif|
+|2G-HR0365.tif|
+|2G-HR0366.tif|
+|2G-HR0367.tif|
+|2G-HR0368.tif|
+|2G-HR0369.tif|
+|2G-HR0370.tif|
+|2G-HR0371.tif|
+|2G-HR0372.tif|
+|2G-HR0373.tif|
+|2G-HR0374.tif|
+|2G-HR0375.tif|
+|2G-HR0376.tif|
+|2G-HR0377.tif|
+|2G-HR0378.tif|
+|2G-HR0379.tif|
+|2G-HR0380.tif|
+|2G-HR0381.tif|
+|2G-HR0382.tif|
+|2G-HR0383.tif|
+|2G-HR0384.tif|
+|2G-HR0385.tif|
+|2G-HR0386.tif|
+|2G-HR0387.tif|
+|2G-HR0388.tif|
+|2G-HR0389.tif|
+|2G-HR0390.tif|
+|2G-HR0391.tif|
+|2G-HR0392.tif|
+|2G-HR0393.tif|
+|2G-HR0394.tif|
+|2G-HR0395.tif|
+|2G-HR0396.tif|
+|2G-HR0397.tif|
+|2G-HR0398.tif|
+|2G-HR0399.tif|
+|2G-HR0400.tif|
+|2G-HR0401.tif|
+|2G-HR0402.tif|
+|2G-HR0403.tif|
+|2G-HR0404.tif|
+|2G-HR0405.tif|
+|2G-HR0406.tif|
+|2G-HR0407.tif|
+|2G-HR0408.tif|
+|2G-HR0409.tif|
+|2G-HR0410.tif|
+|2G-HR0411.tif|
+|2G-HR0412.tif|
+|2G-HR0413.tif|
+|2G-HR0414.tif|
+|2G-HR0415.tif|
+|2G-HR0416.tif|
+|2G-HR0417.tif|
+|2G-HR0418.tif|
+|2G-HR0419.tif|
+|2G-HR0420.tif|
+|2G-HR0421.tif|
+|2G-HR0422.tif|
+|2G-HR0423.tif|
+|2G-HR0424.tif|
+|2G-HR0425.tif|
+|2G-HR0426.tif|
+|2G-HR0427.tif|
+|2G-HR0428.tif|
+|2G-HR0429.tif|
+|2G-HR0430.tif|
+|2G-HR0431.tif|
+|2G-HR0432.tif|
+|2G-HR0433.tif|
+|2G-HR0434.tif|
+|2G-HR0435.tif|
+|2G-HR0436.tif|
+|2G-HR0437.tif|
+|2G-HR0438.tif|
+|2G-HR0439.tif|
+|2G-HR0440.tif|
+|2G-HR0441.tif|
+|2G-HR0442.tif|
+|2G-HR0443.tif|
+|2G-HR0444.tif|
+|2G-HR0445.tif|
+|2G-HR0446.tif|
+|2G-HR0447.tif|
+|2G-HR0448.tif|
+|2G-HR0449.tif|
+|2G-HR0450.tif|
+|2G-HR0451.tif|
+|2G-HR0452.tif|
+|2G-HR0453.tif|
+|2G-HR0454.tif|
+|2G-HR0455.tif|
+|2G-HR0456.tif|
+|2G-HR0457.tif|
+|2G-HR0458.tif|
+|2G-HR0459.tif|
+|2G-HR0460.tif|
+|2G-HR0461.tif|
+|2G-HR0462.tif|
+|2G-HR0463.tif|
+|2G-HR0464.tif|
+|2G-HR0465.tif|
+|2G-HR0466.tif|
+|2G-HR0467.tif|
+|2G-HR0468.tif|
+|2G-HR0469.tif|
+|2G-HR0470.tif|
+|2G-HR0471.tif|
+|2G-HR0472.tif|
+|2G-HR0473.tif|
+|2G-HR0474.tif|
+|2G-HR0475.tif|
+|2G-HR0476.tif|
+|2G-HR0477.tif|
+|2G-HR0478.tif|
+|2G-HR0479.tif|
+|2G-HR0480.tif|
+|2G-HR0481.tif|
+|2G-HR0482.tif|
+|2G-HR0483.tif|
+|2G-HR0484.tif|
+|2G-HR0485.tif|
+|2G-HR0486.tif|
+|2G-HR0487.tif|
+|2G-HR0488.tif|
+|2G-HR0489.tif|
+|2G-HR0490.tif|
+|2G-HR0491.tif|
+|2G-HR0492.tif|
+|2G-HR0493.tif|
+|2G-HR0494.tif|
+|2G-HR0495.tif|
+|2G-HR0496.tif|
+|2G-HR0497.tif|
+|2G-HR0498.tif|
+|2G-HR0499.tif|
+|2G-HR0500.tif|
+|2G-HR0501.tif|
+|2G-HR0502.tif|
+|2G-HR0503.tif|
+|2G-HR0504.tif|
+|2G-HR0505.tif|
+|2G-HR0506.tif|
+|2G-HR0507.tif|
+|2G-HR0508.tif|
+|2G-HR0509.tif|
+|2G-HR0510.tif|
+|2G-HR0511.tif|
+|2G-HR0512.tif|
+|2G-HR0513.tif|
+|2G-HR0514.tif|
+|2G-HR0515.tif|
+|2G-HR0516.tif|
+|2G-HR0517.tif|
+|2G-HR0518.tif|
+|2G-HR0519.tif|
+|2G-HR0520.tif|
+|2G-HR0521.tif|
+|2G-HR0522.tif|
+|2G-HR0523.tif|
+|2G-HR0524.tif|
+|2G-HR0525.tif|
+|2G-HR0526.tif|
+|2G-HR0527.tif|
+|2G-HR0528.tif|
+|2G-HR0529.tif|
+|2G-HR0530.tif|
+|2G-HR0531.tif|
+|2G-HR0532.tif|
+|2G-HR0533.tif|
+|2G-HR0534.tif|
+|2G-HR0535.tif|
+|2G-HR0536.tif|
+|2G-HR0537.tif|
+|2G-HR0538.tif|
+|2G-HR0539.tif|
+|2G-HR0540.tif|
+|2G-HR0541.tif|
+|2G-HR0542.tif|
+|2G-HR0543.tif|
+|2G-HR0544.tif|
+|2G-HR0545.tif|
+|2G-HR0546.tif|
+|2G-HR0547.tif|
+|2G-HR0548.tif|
+|2G-HR0549.tif|
+|2G-HR0550.tif|
+|2G-HR0551.tif|
+|2G-HR0552.tif|
+|2G-HR0553.tif|
+|2G-HR0554.tif|
+|2G-HR0555.tif|
+|2G-HR0556.tif|
+|2G-HR0557.tif|
+|2G-HR0558.tif|
+|2G-HR0559.tif|
+|2G-HR0560.tif|
+|2G-HR0561.tif|
+|2G-HR0562.tif|
+|2G-HR0563.tif|
+|2G-HR0564.tif|
+|2G-HR0565.tif|
+|2G-HR0566.tif|
+|2G-HR0567.tif|
+|2G-HR0568.tif|
+|2G-HR0569.tif|
+|2G-HR0570.tif|
+|2G-HR0571.tif|
+|2G-HR0572.tif|
+|2G-HR0573.tif|
+|2G-HR0574.tif|
+|2G-HR0575.tif|
+|2G-HR0576.tif|
+|2G-HR0577.tif|
+|2G-HR0578.tif|
+|2G-HR0579.tif|
+|2G-HR0580.tif|
+|2G-HR0581.tif|
+|2G-HR0582.tif|
+|2G-HR0583.tif|
+|2G-HR0584.tif|
+|2G-HR0585.tif|
+|2G-HR0586.tif|
+|2G-HR0587.tif|
+|2G-HR0588.tif|
+|2G-HR0589.tif|
+|2G-HR0590.tif|
+|2G-HR0591.tif|
+|2G-HR0592.tif|
+|2G-HR0593.tif|
+|2G-HR0594.tif|
+|2G-HR0595.tif|
+|2G-HR0596.tif|
+|2G-HR0597.tif|
+|2G-HR0598.tif|
+|2G-HR0599.tif|
+|2G-HR0600.tif|
+|2G-HR0601.tif|
+|2G-HR0602.tif|
+|2G-HR0603.tif|
+|2G-HR0604.tif|
+|2G-HR0605.tif|
+|2G-HR0606.tif|
+|2G-HR0607.tif|
+|2G-HR0608.tif|
+|2G-HR0609.tif|
+|2G-HR0610.tif|
+|2G-HR0611.tif|
+|2G-HR0612.tif|
+|2G-HR0613.tif|
+|2G-HR0614.tif|
+|2G-HR0615.tif|
+|2G-HR0616.tif|
+|2G-HR0617.tif|
+|2G-HR0618.tif|
+|2G-HR0619.tif|
+|2G-HR0620.tif|
+|2G-HR0621.tif|
+|2G-HR0622.tif|
+|2G-HR0623.tif|
+|2G-HR0624.tif|
+|2G-HR0625.tif|
+|2G-HR0626.tif|
+|2G-HR0627.tif|
+|2G-HR0628.tif|
+|2G-HR0629.tif|
+|2G-HR0630.tif|
+|2G-HR0631.tif|
+|2G-HR0632.tif|
+|2G-HR0633.tif|
+|2G-HR0634.tif|
+|2G-HR0635.tif|
+|2G-HR0636.tif|
+|2G-HR0637.tif|
+|2G-HR0638.tif|
+|2G-HR0639.tif|
+|2G-HR0640.tif|
+|2G-HR0641.tif|
+|2G-HR0642.tif|
+|2G-HR0643.tif|
+|2G-HR0644.tif|
+|2G-HR0645.tif|
+|2G-HR0646.tif|
+|2G-HR0647.tif|
+|2G-HR0648.tif|
+|2G-HR0649.tif|
+|2G-HR0650.tif|
+|2G-HR0651.tif|
+|2G-HR0652.tif|
+|2G-HR0653.tif|
+|2G-HR0654.tif|
+|2G-HR0655.tif|
+|2G-HR0656.tif|
+|2G-HR0657.tif|
+|2G-HR0658.tif|
+|2G-HR0659.tif|
+|2G-HR0660.tif|
+|2G-HR0661.tif|
+|2G-HR0662.tif|
+|2G-HR0663.tif|
+|2G-HR0664.tif|
+|2G-HR0665.tif|
+|2G-HR0666.tif|
+|2G-HR0667.tif|
+|2G-HR0668.tif|
+|2G-HR0669.tif|
+|2G-HR0670.tif|
+|2G-HR0671.tif|
+|2G-HR0672.tif|
+|2G-HR0673.tif|
+|2G-HR0674.tif|
+|2G-HR0675.tif|
+|2G-HR0676.tif|
+|2G-HR0677.tif|
+|2G-HR0678.tif|
+|2G-HR0679.tif|
+|2G-HR0680.tif|
+|2G-HR0681.tif|
+|2G-HR0682.tif|
+|2G-HR0683.tif|
+|2G-HR0684.tif|
+|2G-HR0685.tif|
+|2G-HR0686.tif|
+|2G-HR0687.tif|
+|2G-HR0688.tif|
+|2G-HR0689.tif|
+|2G-HR0690.tif|
+|2G-HR0691.tif|
+|2G-HR0692.tif|
+|2G-HR0693.tif|
+|2G-HR0694.tif|
+|2G-HR0695.tif|
+|2G-HR0696.tif|
+|2G-HR0697.tif|
+|2G-HR0698.tif|
+|2G-HR0699.tif|
+|2G-HR0700.tif|
+|2G-HR0701.tif|
+|2G-HR0702.tif|
+|2G-HR0703.tif|
+|2G-HR0704.tif|
+|2G-HR0705.tif|
+|2G-HR0706.tif|
+|2G-HR0707.tif|
+|2G-HR0708.tif|
+|2G-HR0709.tif|
+|2G-HR0710.tif|
+|2G-HR0711.tif|
+|2G-HR0712.tif|
+|2G-HR0713.tif|
+|2G-HR0714.tif|
+|2G-HR0715.tif|
+|2G-HR0716.tif|
+|2G-HR0717.tif|
+|2G-HR0718.tif|
+|2G-HR0719.tif|
+|2G-HR0720.tif|
+|2G-HR0721.tif|
+|2G-HR0722.tif|
+|2G-HR0723.tif|
+|2G-HR0724.tif|
+|2G-HR0725.tif|
+|2G-HR0726.tif|
+|2G-HR0727.tif|
+|2G-HR0728.tif|
+|2G-HR0729.tif|
+|2G-HR0730.tif|
+|2G-HR0731.tif|
+|2G-HR0732.tif|
+|2G-HR0733.tif|
+|2G-HR0734.tif|
+|2G-HR0735.tif|
+|2G-HR0736.tif|
+|2G-HR0737.tif|
+|2G-HR0738.tif|
+|2G-HR0739.tif|
+|2G-HR0740.tif|
+|2G-HR0741.tif|
+|2G-HR0742.tif|
+|2G-HR0743.tif|
+|2G-HR0744.tif|
+|2G-HR0745.tif|
+|2G-HR0746.tif|
+|2G-HR0747.tif|
+|2G-HR0748.tif|
+|2G-HR0749.tif|
+|2G-HR0750.tif|
+|2G-HR0751.tif|
+|2G-HR0752.tif|
+|2G-HR0753.tif|
+|2G-HR0754.tif|
+|2G-HR0755.tif|
+|2G-HR0756.tif|
+|2G-HR0757.tif|
+|2G-HR0758.tif|
+|2G-HR0759.tif|
+|2G-HR0760.tif|
+|2G-HR0761.tif|
+|2G-HR0762.tif|
+|2G-HR0763.tif|
+|2G-HR0764.tif|
+|2G-HR0765.tif|
+|2G-HR0766.tif|
+|2G-HR0767.tif|
+|2G-HR0768.tif|
+|2G-HR0769.tif|
+|2G-HR0770.tif|
+|2G-HR0771.tif|
+|2G-HR0772.tif|
+|2G-HR0773.tif|
+|2G-HR0774.tif|
+|2G-HR0775.tif|
+|2G-HR0776.tif|
+|2G-HR0777.tif|
+|2G-HR0778.tif|
+|2G-HR0779.tif|
+|2G-HR0780.tif|
+|2G-HR0781.tif|
+|2G-HR0782.tif|
+|2G-HR0783.tif|
+|2G-HR0784.tif|
+|2G-HR0785.tif|
+|2G-HR0786.tif|
+|2G-HR0787.tif|
+|2G-HR0788.tif|
+|2G-HR0789.tif|
+|2G-HR0790.tif|
+|2G-HR0791.tif|
+|2G-HR0792.tif|
+|2G-HR0793.tif|
+|2G-HR0794.tif|
+|2G-HR0795.tif|
+|2G-HR0796.tif|
+|2G-HR0797.tif|
+|2G-HR0798.tif|
+|2G-HR0799.tif|
+|2G-HR0800.tif|
+|2G-HR0801.tif|
+|2G-HR0802.tif|
+|2G-HR0803.tif|
+|2G-HR0804.tif|
+|2G-HR0805.tif|
+|2G-HR0806.tif|
+|2G-HR0807.tif|
+|2G-HR0808.tif|
+|2G-HR0809.tif|
+|2G-HR0810.tif|
+|2G-HR0811.tif|
+|2G-HR0812.tif|
+|2G-HR0813.tif|
+|2G-HR0814.tif|
+|2G-HR0815.tif|
+|2G-HR0816.tif|
+|2G-HR0817.tif|
+|2G-HR0818.tif|
+|2G-HR0819.tif|
+|2G-HR0820.tif|
+|2G-HR0821.tif|
+|2G-HR0822.tif|
+|2G-HR0823.tif|
+|2G-HR0824.tif|
+|2G-HR0825.tif|
+|2G-HR0826.tif|
+|2G-HR0827.tif|
+|2G-HR0828.tif|
+|2G-HR0829.tif|
+|2G-HR0830.tif|
+|2G-HR0831.tif|
+|2G-HR0832.tif|
+|2G-HR0833.tif|
+|2G-HR0834.tif|
+|2G-HR0835.tif|
+|2G-HR0836.tif|
+|2G-HR0837.tif|
+|2G-HR0838.tif|
+|2G-HR0839.tif|
+|2G-HR0840.tif|
+|2G-HR0841.tif|
+|2G-HR0842.tif|
+|2G-HR0843.tif|
+|2G-HR0844.tif|
+|2G-HR0845.tif|
+|2G-HR0846.tif|
+|2G-HR0847.tif|
+|2G-HR0848.tif|
+|2G-HR0849.tif|
+|2G-HR0850.tif|
+|2G-HR0851.tif|
+|2G-HR0852.tif|
+|2G-HR0853.tif|
+|2G-HR0854.tif|
+|2G-HR0855.tif|
+|2G-HR0856.tif|
+|2G-HR0857.tif|
+|2G-HR0858.tif|
+|2G-HR0859.tif|
+|2G-HR0860.tif|
+|2G-HR0861.tif|
+|2G-HR0862.tif|
+|2G-HR0863.tif|
+|2G-HR0864.tif|
+|2G-HR0865.tif|
+|2G-HR0866.tif|
+|2G-HR0867.tif|
+|2G-HR0868.tif|
+|2G-HR0869.tif|
+|2G-HR0870.tif|
+|2G-HR0871.tif|
+|2G-HR0872.tif|
+|2G-HR0873.tif|
+|2G-HR0874.tif|
+|2G-HR0875.tif|
+|2G-HR0876.tif|
+|2G-HR0877.tif|
+|2G-HR0878.tif|
+|2G-HR0879.tif|
+|2G-HR0880.tif|
+|2G-HR0881.tif|
+|2G-HR0882.tif|
+|2G-HR0883.tif|
+|2G-HR0884.tif|
+|2G-HR0885.tif|
+|2G-HR0886.tif|
+|2G-HR0887.tif|
+|2G-HR0888.tif|
+|2G-HR0889.tif|
+|2G-HR0890.tif|
+|2G-HR0891.tif|
+|2G-HR0892.tif|
+|2G-HR0893.tif|
+|2G-HR0894.tif|
+|2G-HR0895.tif|
+|2G-HR0896.tif|
+|2G-HR0897.tif|
+|2G-HR0898.tif|
+|2G-HR0899.tif|
+|2G-HR0900.tif|
+|2G-HR0901.tif|
+|2G-HR0902.tif|
+|2G-HR0903.tif|
+|2G-HR0904.tif|
+|2G-HR0905.tif|
+|2G-HR0906.tif|
+|2G-HR0907.tif|
+|2G-HR0908.tif|
+|2G-HR0909.tif|
+|2G-HR0910.tif|
+|2G-HR0911.tif|
+|2G-HR0912.tif|
+|2G-HR0913.tif|
+|2G-HR0914.tif|
+|2G-HR0915.tif|
+|2G-HR0916.tif|
+|2G-HR0917.tif|
+|2G-HR0918.tif|
+|2G-HR0919.tif|
+|2G-HR0920.tif|
+|2G-HR0921.tif|
+|2G-HR0922.tif|
+|2G-HR0923.tif|
+|2G-HR0924.tif|
+|2G-HR0925.tif|
+|2G-HR0926.tif|
+|2G-HR0927.tif|
+|2G-HR0928.tif|
+|2G-HR0929.tif|
+|2G-HR0930.tif|
+|2G-HR0931.tif|
+|2G-HR0932.tif|
+|2G-HR0933.tif|
+|2G-HR0934.tif|
+|2G-HR0935.tif|
+|2G-HR0936.tif|
+|2G-HR0937.tif|
+|2G-HR0938.tif|
+|2G-HR0939.tif|
+|2G-HR0940.tif|
+|2G-HR0941.tif|
+|2G-HR0942.tif|
+|2G-HR0943.tif|
+|2G-HR0944.tif|
+|2G-HR0945.tif|
+|2G-HR0946.tif|
+|2G-HR0947.tif|
+|2G-HR0948.tif|
+|2G-HR0949.tif|
+|2G-HR0950.tif|
+|2G-HR0951.tif|
+|2G-HR0952.tif|
+|2G-HR0953.tif|
+|2G-HR0954.tif|
+|2G-HR0955.tif|
+|2G-HR0956.tif|
+|2G-HR0957.tif|
+|2G-HR0958.tif|
+|2G-HR0959.tif|
+|2G-HR0960.tif|
+|2G-HR0961.tif|
+|2G-HR0962.tif|
+|2G-HR0963.tif|
+|2G-HR0964.tif|
+|2G-HR0965.tif|
+|2G-HR0966.tif|
+|2G-HR0967.tif|
+|2G-HR0968.tif|
+|2G-HR0969.tif|
+|2G-HR0970.tif|
+|2G-HR0971.tif|
+|2G-HR0972.tif|
+|2G-HR0973.tif|
+|2G-HR0974.tif|
+|2G-HR0975.tif|
+|2G-HR0976.tif|
+|2G-HR0977.tif|
+|2G-HR0978.tif|
+|2G-HR0979.tif|
+|2G-HR0980.tif|
+|2G-HR0981.tif|
+|2G-HR0982.tif|
+|2G-HR0983.tif|
+|2G-HR0984.tif|
+|2G-HR0985.tif|
+|2G-HR0986.tif|
+|2G-HR0987.tif|
+|2G-HR0988.tif|
+|2G-HR0989.tif|
+|2G-HR0990.tif|
+|2G-HR0991.tif|
+|2G-HR0992.tif|
+|2G-HR0993.tif|
+|2G-HR0994.tif|
+|2G-HR0995.tif|
+|2G-HR0996.tif|
+|2G-HR0997.tif|
+|2G-HR0998.tif|
+|2G-HR0999.tif|
+|2G-HR1000.tif|
+|2G-HR1001.tif|
+|2G-HR1002.tif|
+|2G-HR1003.tif|
+|2G-HR1004.tif|
+|2G-HR1005.tif|
+|2G-HR1006.tif|
+|2G-HR1007.tif|
+|2G-HR1008.tif|
+|2G-HR1009.tif|
+|2G-HR1010.tif|
+|2G-HR1011.tif|
+|2G-HR1012.tif|
+|2G-HR1013.tif|
+|2G-HR1014.tif|
+|2G-HR1015.tif|
+|2G-HR1016.tif|
+|2G-HR1017.tif|
+|2G-HR1018.tif|
+|2G-HR1019.tif|
+|2G-HR1020.tif|
+|2G-HR1021.tif|
+|2G-HR1022.tif|
+|2G-HR1023.tif|
+|2G-HR1024.tif|
+|2G-HR1025.tif|
+|2G-HR1026.tif|
+|2G-HR1027.tif|
+|2G-HR1028.tif|
+|2G-HR1029.tif|
+|2G-HR1030.tif|
+|2G-HR1031.tif|
+|2G-HR1032.tif|
+|2G-HR1033.tif|
+|2G-HR1034.tif|
+|2G-HR1035.tif|
+|2G-HR1036.tif|
+|2G-HR1037.tif|
+|2G-HR1038.tif|
+|2G-HR1039.tif|
+|2G-HR1040.tif|
+|2G-HR1041.tif|
+|2G-HR1042.tif|
+|2G-HR1043.tif|
+|2G-HR1044.tif|
+|2G-HR1045.tif|
+|2G-HR1046.tif|
+|2G-HR1047.tif|
+|2G-HR1048.tif|
+|2G-HR1049.tif|
+|2G-HR1050.tif|
+|2G-HR1051.tif|
+|2G-HR1052.tif|
+|2G-HR1053.tif|
+|2G-HR1054.tif|
+|2G-HR1055.tif|
+|2G-HR1056.tif|
+|2G-HR1057.tif|
+|2G-HR1058.tif|
+|2G-HR1059.tif|
+|2G-HR1060.tif|
+|2G-HR1061.tif|
+|2G-HR1062.tif|
+|2G-HR1063.tif|
+|2G-HR1064.tif|
+|2G-HR1065.tif|
+|2G-HR1066.tif|
+|2G-HR1067.tif|
+|2G-HR1068.tif|
+|2G-HR1069.tif|
+|2G-HR1070.tif|
+|2G-HR1071.tif|
+|2G-HR1072.tif|
+|2G-HR1073.tif|
+|2G-HR1074.tif|
+|2G-HR1075.tif|
+|2G-HR1076.tif|
+|2G-HR1077.tif|
+|2G-HR1078.tif|
+|2G-HR1079.tif|
+|2G-HR1080.tif|
+|2G-HR1081.tif|
+|2G-HR1082.tif|
+|2G-HR1083.tif|
+|2G-HR1084.tif|
+|2G-HR1085.tif|
+|2G-HR1086.tif|
+|2G-HR1087.tif|
+|2G-HR1088.tif|
+|2G-HR1089.tif|
+|2G-HR1090.tif|
+|2G-HR1091.tif|
+|2G-HR1092.tif|
+|2G-HR1093.tif|
+|2G-HR1094.tif|
+|2G-HR1095.tif|
+|2G-HR1096.tif|
+|2G-HR1097.tif|
+|2G-HR1098.tif|
+|2G-HR1099.tif|
+|2G-HR1100.tif|
+|2G-HR1101.tif|
+|2G-HR1102.tif|
+|2G-HR1103.tif|
+|2G-HR1104.tif|
+|2G-HR1105.tif|
+|2G-HR1106.tif|
+|2G-HR1107.tif|
+|2G-HR1108.tif|
+|2G-HR1109.tif|
+|2G-HR1110.tif|
+|2G-HR1111.tif|
+|2G-HR1112.tif|
+|2G-HR1113.tif|
+|2G-HR1114.tif|
+|2G-HR1115.tif|
+|2G-HR1116.tif|
+|2G-HR1117.tif|
+|2G-HR1118.tif|
+|2G-HR1119.tif|
+|2G-HR1120.tif|
+|2G-HR1121.tif|
+|2G-HR1122.tif|
+|2G-HR1123.tif|
+|2G-HR1124.tif|
+|2G-HR1125.tif|
+|2G-HR1126.tif|
+|2G-HR1127.tif|
+|2G-HR1128.tif|
+|2G-HR1129.tif|
+|2G-HR1130.tif|
+|2G-HR1131.tif|
+|2G-HR1132.tif|
+|2G-HR1133.tif|
+|2G-HR1134.tif|
+|2G-HR1135.tif|
+|2G-HR1136.tif|
+|2G-HR1137.tif|
+|2G-HR1138.tif|
+|2G-HR1139.tif|
+|2G-HR1140.tif|
+|2G-HR1141.tif|
+|2G-HR1142.tif|
+|2G-HR1143.tif|
+|2G-HR1144.tif|
+|2G-HR1145.tif|
+|2G-HR1146.tif|
+|2G-HR1147.tif|
+|2G-HR1148.tif|
+|2G-HR1149.tif|
+|2G-HR1150.tif|
+|2G-HR1151.tif|
+|2G-HR1152.tif|
+|2G-HR1153.tif|
+|2G-HR1154.tif|
+|2G-HR1155.tif|
+|2G-HR1156.tif|
+|2G-HR1157.tif|
+|2G-HR1158.tif|
+|2G-HR1159.tif|
+|2G-HR1160.tif|
+|2G-HR1161.tif|
+|2G-HR1162.tif|
+|2G-HR1163.tif|
+|2G-HR1164.tif|
+|2G-HR1165.tif|
+|2G-HR1166.tif|
+|2G-HR1167.tif|
+|2G-HR1168.tif|
+|2G-HR1169.tif|
+|2G-HR1170.tif|
+|2G-HR1171.tif|
+|2G-HR1172.tif|
+|2G-HR1173.tif|
+|2G-HR1174.tif|
+|2G-HR1175.tif|
+|2G-HR1176.tif|
+|2G-HR1177.tif|
+|2G-HR1178.tif|
+|2G-HR1179.tif|
+|2G-HR1180.tif|
+|2G-HR1181.tif|
+|2G-HR1182.tif|
+|2G-HR1183.tif|
+|2G-HR1184.tif|
+|2G-HR1185.tif|
+|2G-HR1186.tif|
+|2G-HR1187.tif|
+|2G-HR1188.tif|
+|2G-HR1189.tif|
+|2G-HR1190.tif|
+|2G-HR1191.tif|
+|2G-HR1192.tif|
+|2G-HR1193.tif|
+|2G-HR1194.tif|
+|2G-HR1195.tif|
+|2G-HR1196.tif|
+|2G-HR1197.tif|
+|2G-HR1198.tif|
+|2G-HR1199.tif|
+|2G-HR1200.tif|
+|2G-HR1201.tif|
+|2G-HR1202.tif|
+|2G-HR1203.tif|
+|2G-HR1204.tif|
+|2G-HR1205.tif|
+|2G-HR1206.tif|
+|2G-HR1207.tif|
+|2G-HR1208.tif|
+|2G-HR1209.tif|
+|2G-HR1210.tif|
+|2G-HR1211.tif|
+|2G-HR1212.tif|
+|2G-HR1213.tif|
+|2G-HR1214.tif|
+|2G-HR1215.tif|
+|2G-HR1216.tif|
+|2G-HR1217.tif|
+|2G-HR1218.tif|
+|2G-HR1219.tif|
+|2G-HR1220.tif|
+|2G-HR1221.tif|
+|2G-HR1222.tif|
+|2G-HR1223.tif|
+|2G-HR1224.tif|
+|2G-HR1225.tif|
+|2G-HR1226.tif|
+|2G-HR1227.tif|
+|2G-HR1228.tif|
+|2G-HR1229.tif|
+|2G-HR1230.tif|
+|2G-HR1231.tif|
+|2G-HR1232.tif|
+|2G-HR1233.tif|
+|2G-HR1234.tif|
+|2G-HR1235.tif|
+|2G-HR1236.tif|
+|2G-HR1237.tif|
+|2G-HR1238.tif|
+|2G-HR1239.tif|
+|2G-HR1240.tif|
+|2G-HR1241.tif|
+|2G-HR1242.tif|
+|2G-HR1243.tif|
+|2G-HR1244.tif|
+|2G-HR1245.tif|
+|2G-HR1246.tif|
+|2G-HR1247.tif|
+|2G-HR1248.tif|
+|2G-HR1249.tif|
+|2G-HR1250.tif|
+|2G-HR1251.tif|
+|2G-HR1252.tif|
+|2G-HR1253.tif|
+|2G-HR1254.tif|
+|2G-HR1255.tif|
+|2G-HR1256.tif|
+|2G-HR1257.tif|
+|2G-HR1258.tif|
+|2G-HR1259.tif|
+|2G-HR1260.tif|
+|2G-HR1261.tif|
+|2G-HR1262.tif|
+|2G-HR1263.tif|
+|2G-HR1264.tif|
+|2G-HR1265.tif|
+|2G-HR1266.tif|
+|2G-HR1267.tif|
+|2G-HR1268.tif|
+|2G-HR1269.tif|
+|2G-HR1270.tif|
+|2G-HR1271.tif|
+|2G-HR1272.tif|
+|2G-HR1273.tif|
+|2G-HR1274.tif|
+|2G-HR1275.tif|
+|2G-HR1276.tif|
+|2G-HR1277.tif|
+|2G-HR1278.tif|
+|2G-HR1279.tif|
+|2G-HR1280.tif|
+|2G-HR1281.tif|
+|2G-HR1282.tif|
+|2G-HR1283.tif|
+|2G-HR1284.tif|
+|2G-HR1285.tif|
+|2G-HR1286.tif|
+|2G-HR1287.tif|
+|2G-HR1288.tif|
+|2G-HR1289.tif|
+|2G-HR1290.tif|
+|2G-HR1291.tif|
+|2G-HR1292.tif|
+|2G-HR1293.tif|
+|2G-HR1294.tif|
+|2G-HR1295.tif|
+|2G-HR1296.tif|
+|2G-HR1297.tif|
+|2G-HR1298.tif|
+|2G-HR1299.tif|
+|2G-HR1300.tif|
+|2G-HR1301.tif|
+|2G-HR1302.tif|
+|2G-HR1303.tif|
+|2G-HR1304.tif|
+|2G-HR1305.tif|
+|2G-HR1306.tif|
+|2G-HR1307.tif|
+|2G-HR1308.tif|
+|2G-HR1309.tif|
+|2G-HR1310.tif|
+|2G-HR1311.tif|
+|2G-HR1312.tif|
+|2G-HR1313.tif|
+|2G-HR1314.tif|
+|2G-HR1315.tif|
+|2G-HR1316.tif|
+|2G-HR1317.tif|
+|2G-HR1318.tif|
+|2G-HR1319.tif|
+|2G-HR1320.tif|
+|2G-HR1321.tif|
+|2G-HR1322.tif|
+|2G-HR1323.tif|
+|2G-HR1324.tif|
+|2G-HR1325.tif|
+|2G-HR1326.tif|
+|2G-HR1327.tif|
+|2G-HR1328.tif|
+|2G-HR1329.tif|
+|2G-HR1330.tif|
+|2G-HR1331.tif|
+|2G-HR1332.tif|
+|2G-HR1333.tif|
+|2G-HR1334.tif|
+|2G-HR1335.tif|
+|2G-HR1336.tif|
+|2G-HR1337.tif|
+|2G-HR1338.tif|
+|2G-HR1339.tif|
+|2G-HR1340.tif|
+|2G-HR1341.tif|
+|2G-HR1342.tif|
+|2G-HR1343.tif|
+|2G-HR1344.tif|
+|2G-HR1345.tif|
+|2G-HR1346.tif|
+|2G-HR1347.tif|
+|2G-HR1348.tif|
+|2G-HR1349.tif|
+|2G-HR1350.tif|
+|2G-HR1351.tif|
+|2G-HR1352.tif|
+|2G-HR1353.tif|
+|2G-HR1354.tif|
+|2G-HR1355.tif|
+|2G-HR1356.tif|
+|2G-HR1357.tif|
+|2G-HR1358.tif|
+|2G-HR1359.tif|
+|2G-HR1360.tif|
+|2G-HR1361.tif|
+|2G-HR1362.tif|
+|2G-HR1363.tif|
+|2G-HR1364.tif|
+|2G-HR1365.tif|
+|2G-HR1366.tif|
+|2G-HR1367.tif|
+|2G-HR1368.tif|
+|2G-HR1369.tif|
+|2G-HR1370.tif|
+|2G-HR1371.tif|
+|2G-HR1372.tif|
+|2G-HR1373.tif|
+|2G-HR1374.tif|
+|2G-HR1375.tif|
+|2G-HR1376.tif|
+|2G-HR1377.tif|
+|2G-HR1378.tif|
+|2G-HR1379.tif|
+|2G-HR1380.tif|
+|2G-HR1381.tif|
+|2G-HR1382.tif|
+|2G-HR1383.tif|
+|2G-HR1384.tif|
+|2G-HR1385.tif|
+|2G-HR1386.tif|
+|2G-HR1387.tif|
+|2G-HR1388.tif|
+|2G-HR1389.tif|
+|2G-HR1390.tif|
+|2G-HR1391.tif|
+|2G-HR1392.tif|
+|2G-HR1393.tif|
+|2G-HR1394.tif|
+|2G-HR1395.tif|
+|2G-HR1396.tif|
+|2G-HR1397.tif|
+|2G-HR1398.tif|
+|2G-HR1399.tif|
+|2G-HR1400.tif|
+|2G-HR1401.tif|
+|2G-HR1402.tif|
+|2G-HR1403.tif|
+|2G-HR1404.tif|
+|2G-HR1405.tif|
+|2G-HR1406.tif|
+|2G-HR1407.tif|
+|2G-HR1408.tif|
+|2G-HR1409.tif|
+|2G-HR1410.tif|
+|2G-HR1411.tif|
+|2G-HR1412.tif|
+|2G-HR1413.tif|
+|2G-HR1414.tif|
+|2G-HR1415.tif|
+|2G-HR1416.tif|
+|2G-HR1417.tif|
+|2G-HR1418.tif|
+|2G-HR1419.tif|
+|2G-HR1420.tif|
+|2G-HR1421.tif|
+|2G-HR1422.tif|
+|2G-HR1423.tif|
+|2G-HR1424.tif|
+|2G-HR1425.tif|
+|2G-HR1426.tif|
+|2G-HR1427.tif|
+|2G-HR1428.tif|
+|2G-HR1429.tif|
+|2G-HR1430.tif|
+|2G-HR1431.tif|
+|2G-HR1432.tif|
+|2G-HR1433.tif|
+|2G-HR1434.tif|
+|2G-HR1435.tif|
+|2G-HR1436.tif|
+|2G-HR1437.tif|
+|2G-HR1438.tif|
+|2G-HR1439.tif|
+|2G-HR1440.tif|
+|2G-HR1441.tif|
+|2G-HR1442.tif|
+|2G-HR1443.tif|
+|2G-HR1444.tif|
+|2G-HR1445.tif|
+|2G-HR1446.tif|
+|2G-HR1447.tif|
+|2G-HR1448.tif|
+|2G-HR1449.tif|
+|2G-HR1450.tif|
+|2G-HR1451.tif|
+|2G-HR1452.tif|
+|2G-HR1453.tif|
+|2G-HR1454.tif|
+|2G-HR1455.tif|
+|2G-HR1456.tif|
+|2G-HR1457.tif|
+|2G-HR1458.tif|
+|2G-HR1459.tif|
+|2G-HR1460.tif|
+|2G-HR1461.tif|
+|2G-HR1462.tif|
+|2G-HR1463.tif|
+|2G-HR1464.tif|
+|2G-HR1465.tif|
+|2G-HR1466.tif|
+|2G-HR1467.tif|
+|2G-HR1468.tif|
+|2G-HR1469.tif|
+|2G-HR1470.tif|
+|2G-HR1471.tif|
+|2G-HR1472.tif|
+|2G-HR1473.tif|
+|2G-HR1474.tif|
+|2G-HR1475.tif|
+|2G-HR1476.tif|
+|2G-HR1477.tif|
+|2G-HR1478.tif|
+|2G-HR1479.tif|
+|2G-HR1480.tif|
+|2G-HR1481.tif|
+|2G-HR1482.tif|
+|2G-HR1483.tif|
+|2G-HR1484.tif|
+|2G-HR1485.tif|
+|2G-HR1486.tif|
+|2G-HR1487.tif|
+|2G-HR1488.tif|
+|2G-HR1489.tif|
+|2G-HR1490.tif|
+|2G-HR1491.tif|
+|2G-HR1492.tif|
+|2G-HR1493.tif|
+|2G-HR1494.tif|
+|2G-HR1495.tif|
+|2G-HR1496.tif|
+|2G-HR1497.tif|
+|2G-HR1498.tif|
+|2G-HR1499.tif|
+|2G-HR1500.tif|
+|2G-HR1501.tif|
+|2G-HR1502.tif|
+|2G-HR1503.tif|
+|2G-HR1504.tif|
+|2G-HR1505.tif|
+|2G-HR1506.tif|
+|2G-HR1507.tif|
+|2G-HR1508.tif|
+|2G-HR1509.tif|
+|2G-HR1510.tif|
+|2G-HR1511.tif|
+|2G-HR1512.tif|
+|2G-HR1513.tif|
+|2G-HR1514.tif|
+|2G-HR1515.tif|
+|2G-HR1516.tif|
+|2G-HR1517.tif|
+|2G-HR1518.tif|
+|2G-HR1519.tif|
+|2G-HR1520.tif|
+|2G-HR1521.tif|
+|2G-HR1522.tif|
+|2G-HR1523.tif|
+|2G-HR1524.tif|
+|2G-HR1525.tif|
+|2G-HR1526.tif|
+|2G-HR1527.tif|
+|2G-HR1528.tif|
+|2G-HR1529.tif|
+|2G-HR1530.tif|
+|2G-HR1531.tif|
+|2G-HR1532.tif|
+|2G-HR1533.tif|
+|2G-HR1534.tif|
+|2G-HR1535.tif|
+|2G-HR1536.tif|
+|2G-HR1537.tif|
+|2G-HR1538.tif|
+|2G-HR1539.tif|
+|2G-HR1540.tif|
+|2G-HR1541.tif|
+|2G-HR1542.tif|
+|2G-HR1543.tif|
+|2G-HR1544.tif|
+|2G-HR1545.tif|
+|2G-HR1546.tif|
+|2G-HR1547.tif|
+|2G-HR1548.tif|
+|2G-HR1549.tif|
+|2G-HR1550.tif|
+|2G-HR1551.tif|
+|2G-HR1552.tif|
+|2G-HR1553.tif|
+|2G-HR1554.tif|
+|2G-HR1555.tif|
+|2G-HR1556.tif|
+|2G-HR1557.tif|
+|2G-HR1558.tif|
+|2G-HR1559.tif|
+|2G-HR1560.tif|
+|2G-HR1561.tif|
+|2G-HR1562.tif|
+|2G-HR1563.tif|
+|2G-HR1564.tif|
+|2G-HR1565.tif|
+|2G-HR1566.tif|
+|2G-HR1567.tif|
+|2G-HR1568.tif|
+|2G-HR1569.tif|
+|2G-HR1570.tif|
+|2G-HR1571.tif|
+|2G-HR1572.tif|
+|2G-HR1573.tif|
+|2G-HR1574.tif|
+|2G-HR1575.tif|
+|2G-HR1576.tif|
+|2G-HR1577.tif|
+|2G-HR1578.tif|
+|2G-HR1579.tif|
+|2G-HR1580.tif|
+|2G-HR1581.tif|
+|2G-HR1582.tif|
+|2G-HR1583.tif|
+|2G-HR1584.tif|
+|2G-HR1585.tif|
+|2G-HR1586.tif|
+|2G-HR1587.tif|
+|2G-HR1588.tif|
+|2G-HR1589.tif|
+|2G-HR1590.tif|
+|2G-HR1591.tif|
+|2G-HR1592.tif|
+|2G-HR1593.tif|
+|2G-HR1594.tif|
+|2G-HR1595.tif|
+|2G-HR1596.tif|
+|2G-HR1597.tif|
+|2G-HR1598.tif|
+|2G-HR1599.tif|
+|2G-HR1600.tif|
+|2G-HR1601.tif|
+|2G-HR1602.tif|
+|2G-HR1603.tif|
+|2G-HR1604.tif|
+|2G-HR1605.tif|
+|2G-HR1606.tif|
+|2G-HR1607.tif|
+|2G-HR1608.tif|
+|2G-HR1609.tif|
+|2G-HR1610.tif|
+|2G-HR1611.tif|
+|2G-HR1612.tif|
+|2G-HR1613.tif|
+|2G-HR1614.tif|
+|2G-HR1615.tif|
+|2G-HR1616.tif|
+|2G-HR1617.tif|
+|2G-HR1618.tif|
+|2G-HR1619.tif|
+|2G-HR1620.tif|
+|2G-HR1621.tif|
+|2G-HR1622.tif|
+|2G-HR1623.tif|
+|2G-HR1624.tif|
+|2G-HR1625.tif|
+|2G-HR1626.tif|
+|2G-HR1627.tif|
+|2G-HR1628.tif|
+|2G-HR1629.tif|
+|2G-HR1630.tif|
+|2G-HR1631.tif|
+|2G-HR1632.tif|
+|2G-HR1633.tif|
+|2G-HR1634.tif|
+|2G-HR1635.tif|
+|2G-HR1636.tif|
+|2G-HR1637.tif|
+|2G-HR1638.tif|
+|2G-HR1639.tif|
+|2G-HR1640.tif|
+|2G-HR1641.tif|
+|2G-HR1642.tif|
+|2G-HR1643.tif|
+|2G-HR1644.tif|
+|2G-HR1645.tif|
+|2G-HR1646.tif|
+|2G-HR1647.tif|
+|2G-HR1648.tif|
+|2G-HR1649.tif|
+|2G-HR1650.tif|
+|2G-HR1651.tif|
+|2G-HR1652.tif|
+|2G-HR1653.tif|
+|2G-HR1654.tif|
+|2G-HR1655.tif|
+|2G-HR1656.tif|
+|2G-HR1657.tif|
+|2G-HR1658.tif|
+|2G-HR1659.tif|
+|2G-HR1660.tif|
+|2G-HR1661.tif|
+|2G-HR1662.tif|
+|2G-HR1663.tif|
+|2G-HR1664.tif|
+|2G-HR1665.tif|
+|2G-HR1666.tif|
+|2G-HR1667.tif|
+|2G-HR1668.tif|
+|2G-HR1669.tif|
+|2G-HR1670.tif|
+|2G-HR1671.tif|
+|2G-HR1672.tif|
+|2G-HR1673.tif|
+|2G-HR1674.tif|
+|2G-HR1675.tif|
+|2G-HR1676.tif|
+|2G-HR1677.tif|
+|2G-HR1678.tif|
+|2G-HR1679.tif|
+|2G-HR1680.tif|
+|2G-HR1681.tif|
+|2G-HR1682.tif|
+|2G-HR1683.tif|
+|2G-HR1684.tif|
+|2G-HR1685.tif|
+|2G-HR1686.tif|
+|2G-HR1687.tif|
+|2G-HR1688.tif|
+|2G-HR1689.tif|
+|2G-HR1690.tif|
+|2G-HR1691.tif|
+|2G-HR1692.tif|
+|2G-HR1693.tif|
+|2G-HR1694.tif|
+|2G-HR1695.tif|
+|2G-HR1696.tif|
+|2G-HR1697.tif|
+|2G-HR1698.tif|
+|2G-HR1699.tif|
+|2G-HR1700.tif|
+|2G-HR1701.tif|
+|2G-HR1702.tif|
+|2G-HR1703.tif|
+|2G-HR1704.tif|
+|2G-HR1705.tif|
+|2G-HR1706.tif|
+|2G-HR1707.tif|
+|2G-HR1708.tif|
+|2G-HR1709.tif|
+|2G-HR1710.tif|
+|2G-HR1711.tif|
+|2G-HR1712.tif|
+|2G-HR1713.tif|
+|2G-HR1714.tif|
+|2G-HR1715.tif|
+|2G-HR1716.tif|
+|2G-HR1717.tif|
+|2G-HR1718.tif|
+|2G-HR1719.tif|
+|2G-HR1720.tif|
+|2G-HR1721.tif|
+|2G-HR1722.tif|
+|2G-HR1723.tif|
+|2G-HR1724.tif|
+|2G-HR1725.tif|
+|2G-HR1726.tif|
+|2G-HR1727.tif|
+|2G-HR1728.tif|
+|2G-HR1729.tif|
+|2G-HR1730.tif|
+|2G-HR1731.tif|
+|2G-HR1732.tif|
+|2G-HR1733.tif|
+|2G-HR1734.tif|
+|2G-HR1735.tif|
+|2G-HR1736.tif|
+|2G-HR1737.tif|
+|2G-HR1738.tif|
+|2G-HR1739.tif|
+|2G-HR1740.tif|
+|2G-HR1741.tif|
+|2G-HR1742.tif|
+|2G-HR1743.tif|
+|2G-HR1744.tif|
+|2G-HR1745.tif|
+|2G-HR1746.tif|
+|2G-HR1747.tif|
+|2G-HR1748.tif|
+|2G-HR1749.tif|
+|2G-HR1750.tif|
+|2G-HR1751.tif|
+|2G-HR1752.tif|
+|2G-HR1753.tif|
+|2G-HR1754.tif|
+|2G-HR1755.tif|
+|2G-HR1756.tif|
+|2G-HR1757.tif|
+|2G-HR1758.tif|
+|2G-HR1759.tif|
+|2G-HR1760.tif|
+|2G-HR1761.tif|
+|2G-HR1762.tif|
+|2G-HR1763.tif|
+|2G-HR1764.tif|
+|2G-HR1765.tif|
+|2G-HR1766.tif|
+|2G-HR1767.tif|
+|2G-HR1768.tif|
+|2G-HR1769.tif|
+|2G-HR1770.tif|
+|2G-HR1771.tif|
+|2G-HR1772.tif|
+|2G-HR1773.tif|
+|2G-HR1774.tif|
+|2G-HR1775.tif|
+|2G-HR1776.tif|
+|2G-HR1777.tif|
+|2G-HR1778.tif|
+|2G-HR1779.tif|
+|2G-HR1780.tif|
+|2G-HR1781.tif|
+|2G-HR1782.tif|
+|2G-HR1783.tif|
+|2G-HR1784.tif|
+|2G-HR1785.tif|
+|2G-HR1786.tif|
+|2G-HR1787.tif|
+|2G-HR1788.tif|
+|2G-HR1789.tif|
+|2G-HR1790.tif|
+|2G-HR1791.tif|
+|2G-HR1792.tif|
+|2G-HR1793.tif|
+|2G-HR1794.tif|
+|2G-HR1795.tif|
+|2G-HR1796.tif|
+|2G-HR1797.tif|
+|2G-HR1798.tif|
+|2G-HR1799.tif|
+|2G-HR1800.tif|
+|2G-HR1801.tif|
+|2G-HR1802.tif|
+|2G-HR1803.tif|
+|2G-HR1804.tif|
+|2G-HR1805.tif|
+|2G-HR1806.tif|
+|2G-HR1807.tif|
+|2G-HR1808.tif|
+|2G-HR1809.tif|
+|2G-HR1810.tif|
+|2G-HR1811.tif|
+|2G-HR1812.tif|
+|2G-HR1813.tif|
+|2G-HR1814.tif|
+|2G-HR1815.tif|
+|2G-HR1816.tif|
+|2G-HR1817.tif|
+|2G-HR1818.tif|
+|2G-HR1819.tif|
+|2G-HR1820.tif|
+|2G-HR1821.tif|
+|2G-HR1822.tif|
+|2G-HR1823.tif|
+|2G-HR1824.tif|
+|2G-HR1825.tif|
+|2G-HR1826.tif|
+|2G-HR1827.tif|
+|2G-HR1828.tif|
+|2G-HR1829.tif|
+|2G-HR1830.tif|
+|2G-HR1831.tif|
+|2G-HR1832.tif|
+|2G-HR1833.tif|
+|2G-HR1834.tif|
+|2G-HR1835.tif|
+|2G-HR1836.tif|
+|2G-HR1837.tif|
+|2G-HR1838.tif|
+|2G-HR1839.tif|
+|2G-HR1840.tif|
+|2G-HR1841.tif|
+|2G-HR1842.tif|
+|2G-HR1843.tif|
+|2G-HR1844.tif|
+|2G-HR1845.tif|
+|2G-HR1846.tif|
+|2G-HR1847.tif|
+|2G-HR1848.tif|
+|2G-HR1849.tif|
+|2G-HR1850.tif|
+|2G-HR1851.tif|
+|2G-HR1852.tif|
+|2G-HR1853.tif|
+|2G-HR1854.tif|
+|2G-HR1855.tif|
+|2G-HR1856.tif|
+|2G-HR1857.tif|
+|2G-HR1858.tif|
+|2G-HR1859.tif|
+|2G-HR1860.tif|
+|2G-HR1861.tif|
+|2G-HR1862.tif|
+|2G-HR1863.tif|
+|2G-HR1864.tif|
+|2G-HR1865.tif|
+|2G-HR1866.tif|
+|2G-HR1867.tif|
+|2G-HR1868.tif|
+|2G-HR1869.tif|
+|2G-HR1870.tif|
+|2G-HR1871.tif|
+|2G-HR1872.tif|
+|2G-HR1873.tif|
+|2G-HR1874.tif|
+|2G-HR1875.tif|
+|2G-HR1876.tif|
+|2G-HR1877.tif|
+|2G-HR1878.tif|
+|2G-HR1879.tif|
+|2G-HR1880.tif|
+|2G-HR1881.tif|
+|2G-HR1882.tif|
+|2G-HR1883.tif|
+|2G-HR1884.tif|
+|2G-HR1885.tif|
+|2G-HR1886.tif|
+|2G-HR1887.tif|
+|2G-HR1888.tif|
+|2G-HR1889.tif|
+|2G-HR1890.tif|
+|2G-HR1891.tif|
+|2G-HR1892.tif|
+|2G-HR1893.tif|
+|2G-HR1894.tif|
+|2G-HR1895.tif|
+|2G-HR1896.tif|
+|2G-HR1897.tif|
+|2G-HR1898.tif|
+|2G-HR1899.tif|
+|2G-HR1900.tif|
+|2G-HR1901.tif|
+|2G-HR1902.tif|
+|2G-HR1903.tif|
+|2G-HR1904.tif|
+|2G-HR1905.tif|
+|2G-HR1906.tif|
+|2G-HR1907.tif|
+|2G-HR1908.tif|
+|2G-HR1909.tif|
+|2G-HR1910.tif|
+|2G-HR1911.tif|
+|2G-HR1912.tif|
+|2G-HR1913.tif|
+|2G-HR1914.tif|
+|2G-HR1915.tif|
+|2G-HR1916.tif|
+|2G-HR1917.tif|
+|2G-HR1918.tif|
+|2G-HR1919.tif|
+|2G-HR1920.tif|
+|2G-HR1921.tif|
+|2G-HR1922.tif|
+|2G-HR1923.tif|
+|2G-HR1924.tif|
+|2G-HR1925.tif|
+|2G-HR1926.tif|
+|2G-HR1927.tif|
+|2G-HR1928.tif|
+|2G-HR1929.tif|
+|2G-HR1930.tif|
+|2G-HR1931.tif|
+|2G-HR1932.tif|
+|2G-HR1933.tif|
+|2G-HR1934.tif|
+|2G-HR1935.tif|
+|2G-HR1936.tif|
+|2G-HR1937.tif|
+|2G-HR1938.tif|
+|2G-HR1939.tif|
+|2G-HR1940.tif|
+|2G-HR1941.tif|
+|2G-HR1942.tif|
+|2G-HR1943.tif|
+|2G-HR1944.tif|
+|2G-HR1945.tif|
+|2G-HR1946.tif|
+|2G-HR1947.tif|
+|2G-HR1948.tif|
+|2G-HR1949.tif|
+|2G-HR1950.tif|
+|2G-HR1951.tif|
+|2G-HR1952.tif|
+|2G-HR1953.tif|
+|2G-HR1954.tif|
+|2G-HR1955.tif|
+|2G-HR1956.tif|
+|2G-HR1957.tif|
+|2G-HR1958.tif|
+|2G-HR1959.tif|
+|2G-HR1960.tif|
+|2G-HR1961.tif|
+|2G-HR1962.tif|
+|2G-HR1963.tif|
+|2G-HR1964.tif|
+|2G-HR1965.tif|
+|2G-HR1966.tif|
+|2G-HR1967.tif|
+|2G-HR1968.tif|
+|2G-HR1969.tif|
+|2G-HR1970.tif|
+|2G-HR1971.tif|
+|2G-HR1972.tif|
+|2G-HR1973.tif|
+|2G-HR1974.tif|
+|2G-HR1975.tif|
+|2G-HR1976.tif|
+|2G-HR1977.tif|
+|2G-HR1978.tif|
+|2G-HR1979.tif|
+|2G-HR1980.tif|
+|2G-HR1981.tif|
+|2G-HR1982.tif|
+|2G-HR1983.tif|
+|2G-HR1984.tif|
+|2G-HR1985.tif|
+|2G-HR1986.tif|
+|2G-HR1987.tif|
+|2G-HR1988.tif|
+|2G-HR1989.tif|
+|2G-HR1990.tif|
+|2G-HR1991.tif|
+|2G-HR1992.tif|
+|2G-HR1993.tif|
+|2G-HR1994.tif|
+|2G-HR1995.tif|
+|2G-HR1996.tif|
+|2G-HR1997.tif|
+|2G-HR1998.tif|
+|2G-HR1999.tif|
+|2G-HR2000.tif|
+|2G-HR2001.tif|
+|2G-HR2002.tif|
+|2G-HR2003.tif|
+|2G-HR2004.tif|
+|2G-HR2005.tif|
+|2G-HR2006.tif|
+|2G-HR2007.tif|
+|2G-HR2008.tif|
+|2G-HR2009.tif|
+|2G-HR2010.tif|
+|2G-HR2011.tif|
+|2G-HR2012.tif|
+|2G-HR2013.tif|
+|2G-HR2014.tif|
+|2G-HR2015.tif|
+|2G-HR2016.tif|
+|2G-HR2017.tif|
+|2G-HR2018.tif|
+|2G-HR2019.tif|
+|2G-HR2020.tif|
+|2G-HR2021.tif|
+|2G-HR2022.tif|
+|2G-HR2023.tif|
+|2G-HR2024.tif|
+|2G-HR2025.tif|
+|2G-HR2026.tif|
+|2G-HR2027.tif|
+|2G-HR2028.tif|
+|2G-HR2029.tif|
+|2G-HR2030.tif|
+|2G-HR2031.tif|
+|2G-HR2032.tif|
+|2G-HR2033.tif|
+|2G-HR2034.tif|
+|2G-HR2035.tif|
+|2G-HR2036.tif|
+|2G-HR2037.tif|
+|2G-HR2038.tif|
+|2G-HR2039.tif|
+|2G-HR2040.tif|
+|2G-HR2041.tif|
+|2G-HR2042.tif|
+|2G-HR2043.tif|
+|2G-HR2044.tif|
+|2G-HR2045.tif|
+|2G-HR2046.tif|
+|2G-HR2047.tif|
+|2G-HR2048.tif|
+|2G-HR2049.tif|
+|2G-HR2050.tif|
+|2G-HR2051.tif|
+|2G-HR2052.tif|
+|2G-HR2053.tif|
+|2G-HR2054.tif|
+|2G-HR2055.tif|
+|2G-HR2056.tif|
+|2G-HR2057.tif|
+|2G-HR2058.tif|
+|2G-HR2059.tif|
+|2G-HR2060.tif|
+|2G-HR2061.tif|
+|2G-HR2062.tif|
+|2G-HR2063.tif|
+|2G-HR2064.tif|
+|2G-HR2065.tif|
+|2G-HR2066.tif|
+|2G-HR2067.tif|
+|2G-HR2068.tif|
+|2G-HR2069.tif|
+|2G-HR2070.tif|
+|2G-HR2071.tif|
+|2G-HR2072.tif|
+|2G-HR2073.tif|
+|2G-HR2074.tif|
+|2G-HR2075.tif|
+|2G-HR2076.tif|
+|2G-HR2077.tif|
+|2G-HR2078.tif|
+|2G-HR2079.tif|
+|2G-HR2080.tif|
+|2G-HR2081.tif|
+|2G-HR2082.tif|
+|2G-HR2083.tif|
+|2G-HR2084.tif|
+|2G-HR2085.tif|
+|2G-HR2086.tif|
+|2G-HR2087.tif|
+|2G-HR2088.tif|
+|2G-HR2089.tif|
+|2G-HR2090.tif|
+|2G-HR2091.tif|
+|2G-HR2092.tif|
+|2G-HR2093.tif|
+|2G-HR2094.tif|
+|2G-HR2095.tif|
+|2G-HR2096.tif|
+|2G-HR2097.tif|
+|2G-HR2098.tif|
+|2G-HR2099.tif|
+|2G-HR2100.tif|
+|2G-HR2101.tif|
+|2G-HR2102.tif|
+|2G-HR2103.tif|
+|2G-HR2104.tif|
+|2G-HR2105.tif|
+|2G-HR2106.tif|
+|2G-HR2107.tif|
+|2G-HR2108.tif|
+|2G-HR2109.tif|
+|2G-HR2110.tif|
+|2G-HR2111.tif|
+|2G-HR2112.tif|
+|2G-HR2113.tif|
+|2G-HR2114.tif|
+|2G-HR2115.tif|
+|2G-HR2116.tif|
+|2G-HR2117.tif|
+|2G-HR2118.tif|
+|2G-HR2119.tif|
+|2G-HR2120.tif|
+|2G-HR2121.tif|
+|2G-HR2122.tif|
+|2G-HR2123.tif|
+|2G-HR2124.tif|
+|2G-HR2125.tif|
+|2G-HR2126.tif|
+|2G-HR2127.tif|
+|2G-HR2128.tif|
+|2G-HR2129.tif|
+|2G-HR2130.tif|
+|2G-HR2131.tif|
+|2G-HR2132.tif|
+|2G-HR2133.tif|
+|2G-HR2134.tif|
+|2G-HR2135.tif|
+|2G-HR2136.tif|
+|2G-HR2137.tif|
+|2G-HR2138.tif|
+|2G-HR2139.tif|
+|2G-HR2140.tif|
+|2G-HR2141.tif|
+|2G-HR2142.tif|
+|2G-HR2143.tif|
+|2G-HR2144.tif|
+|2G-HR2145.tif|
+|2G-HR2146.tif|
+|2G-HR2147.tif|
+|2G-HR2148.tif|
+|2G-HR2149.tif|
+|2G-HR2150.tif|
+|2G-HR2151.tif|
+|2G-HR2152.tif|
+|2G-HR2153.tif|
+|2G-HR2154.tif|
+|2G-HR2155.tif|
+|2G-HR2156.tif|
+|2G-HR2157.tif|
+|2G-HR2158.tif|
+|2G-HR2159.tif|
+|2G-HR2160.tif|
+|2G-HR2161.tif|
+|2G-HR2162.tif|
+|2G-HR2163.tif|
+|2G-HR2164.tif|
+|2G-HR2165.tif|
+|2G-HR2166.tif|
+|2G-HR2167.tif|
+|2G-HR2168.tif|
+|2G-HR2169.tif|
+|2G-HR2170.tif|
+|2G-HR2171.tif|
+|2G-HR2172.tif|
+|2G-HR2173.tif|
+|2G-HR2174.tif|
+|2G-HR2175.tif|
+|2G-HR2176.tif|
+|2G-HR2177.tif|
+|2G-HR2178.tif|
+|2G-HR2179.tif|
+|2G-HR2180.tif|
+|2G-HR2181.tif|
+|2G-HR2182.tif|
+|2G-HR2183.tif|
+|2G-HR2184.tif|
+|2G-HR2185.tif|
+|2G-HR2186.tif|
+|2G-HR2187.tif|
+|2G-HR2188.tif|
+|2G-HR2189.tif|
+|2G-HR2190.tif|
+|2G-HR2191.tif|
+|2G-HR2192.tif|
+|2G-HR2193.tif|
+|2G-HR2194.tif|
+|2G-HR2195.tif|
+|2G-HR2196.tif|
+|2G-HR2197.tif|
+|2G-HR2198.tif|
+|2G-HR2199.tif|
+|2G-HR2200.tif|
+|2G-HR2201.tif|
+|2G-HR2202.tif|
+|2G-HR2203.tif|
+|2G-HR2204.tif|
+|2G-HR2205.tif|
+|2G-HR2206.tif|
+|2G-HR2207.tif|
+|2G-HR2208.tif|
+|2G-HR2209.tif|
+|2G-HR2210.tif|
+|2G-HR2211.tif|
+|2G-HR2212.tif|
+|2G-HR2213.tif|
+|2G-HR2214.tif|
+|2G-HR2215.tif|
+|2G-HR2216.tif|
+|2G-HR2217.tif|
+|2G-HR2218.tif|
+|2G-HR2219.tif|
+|2G-HR2220.tif|
+|2G-HR2221.tif|
+|2G-HR2222.tif|
+|2G-HR2223.tif|
+|2G-HR2224.tif|
+|2G-HR2225.tif|
+|2G-HR2226.tif|
+|2G-HR2227.tif|
+|2G-HR2228.tif|
+|2G-HR2229.tif|
+|2G-HR2230.tif|
+|2G-HR2231.tif|
+|2G-HR2232.tif|
+|2G-HR2233.tif|
+|2G-HR2234.tif|
+|2G-HR2235.tif|
+|2G-HR2236.tif|
+|2G-HR2237.tif|
+|2G-HR2238.tif|
+|2G-HR2239.tif|
+|2G-HR2240.tif|
+|2G-HR2241.tif|
+|2G-HR2242.tif|
+|2G-HR2243.tif|
+|2G-HR2244.tif|
+|2G-HR2245.tif|
+|2G-HR2246.tif|
+|2G-HR2247.tif|
+|2G-HR2248.tif|
+|2G-HR2249.tif|
+|2G-HR2250.tif|
+|2G-HR2251.tif|
+|2G-HR2252.tif|
+|2G-HR2253.tif|
+|2G-HR2254.tif|
+|2G-HR2255.tif|
+|2G-HR2256.tif|
+|2G-HR2257.tif|
+|2G-HR2258.tif|
+|2G-HR2259.tif|
+|2G-HR2260.tif|
+|2G-HR2261.tif|
+|2G-HR2262.tif|
+|2G-HR2263.tif|
+|2G-HR2264.tif|
+|2G-HR2265.tif|
+|2G-HR2266.tif|
+|2G-HR2267.tif|
+|2G-HR2268.tif|
+|2G-HR2269.tif|
+|2G-HR2270.tif|
+|2G-HR2271.tif|
+|2G-HR2272.tif|
+|2G-HR2273.tif|
+|2G-HR2274.tif|
+|2G-HR2275.tif|
+|2G-HR2276.tif|
+|2G-HR2277.tif|
+|2G-HR2278.tif|
+|2G-HR2279.tif|
+|2G-HR2280.tif|
+|2G-HR2281.tif|
+|2G-HR2282.tif|
+|2G-HR2283.tif|
+|2G-HR2284.tif|
+|2G-HR2285.tif|
+|2G-HR2286.tif|
+|2G-HR2287.tif|
+|2G-HR2288.tif|
+|2G-HR2289.tif|
+|2G-HR2290.tif|
+|2G-HR2291.tif|
+|2G-HR2292.tif|
+|2G-HR2293.tif|
+|2G-HR2294.tif|
+|2G-HR2295.tif|
+|2G-HR2296.tif|
+|2G-HR2297.tif|
+|2G-HR2298.tif|
+|2G-HR2299.tif|
+|2G-HR2300.tif|
+|2G-HR2301.tif|
+|2G-HR2302.tif|
+|2G-HR2303.tif|
+|2G-HR2304.tif|
+|2G-HR2305.tif|
+|2G-HR2306.tif|
+|2G-HR2307.tif|
+|2G-HR2308.tif|
+|2G-HR2309.tif|
+|2G-HR2310.tif|
+|2G-HR2311.tif|
+|2G-HR2312.tif|
+|2G-HR2313.tif|
+|2G-HR2314.tif|
+|2G-HR2315.tif|
+|2G-HR2316.tif|
+|2G-HR2317.tif|
+|2G-HR2318.tif|
+|2G-HR2319.tif|
+|2G-HR2320.tif|
+|2G-HR2321.tif|
+|2G-HR2322.tif|
+|2G-HR2323.tif|
+|2G-HR2324.tif|
+|2G-HR2325.tif|
+|2G-HR2326.tif|
+|2G-HR2327.tif|
+|2G-HR2328.tif|
+|2G-HR2329.tif|
+|2G-HR2330.tif|
+|2G-HR2331.tif|
+|2G-HR2332.tif|
+|2G-HR2333.tif|
+|2G-HR2334.tif|
+|2G-HR2335.tif|
+|2G-HR2336.tif|
+|2G-HR2337.tif|
+|2G-HR2338.tif|
+|2G-HR2339.tif|
+|2G-HR2340.tif|
+|2G-HR2341.tif|
+|2G-HR2342.tif|
+|2G-HR2343.tif|
+|2G-HR2344.tif|
+|2G-HR2345.tif|
+|2G-HR2346.tif|
+|2G-HR2347.tif|
+|2G-HR2348.tif|
+|2G-HR2349.tif|
+|2G-HR2350.tif|
+|2G-HR2351.tif|
+|2G-HR2352.tif|
+|2G-HR2353.tif|
+|2G-HR2354.tif|
+|2G-HR2355.tif|
+|2G-HR2356.tif|
+|2G-HR2357.tif|
+|2G-HR2358.tif|
+|2G-HR2359.tif|
+|2G-HR2360.tif|
+|2G-HR2361.tif|
+|2G-HR2362.tif|
+|2G-HR2363.tif|
+|2G-HR2364.tif|
+|2G-HR2365.tif|
+|2G-HR2366.tif|
+|2G-HR2367.tif|
+|2G-HR2368.tif|
+|2G-HR2369.tif|
+|2G-HR2370.tif|
+|2G-HR2371.tif|
+|2G-HR2372.tif|
+|2G-HR2373.tif|
+|2G-HR2374.tif|
+|2G-HR2375.tif|
+|2G-HR2376.tif|
+|2G-HR2377.tif|
+|2G-HR2378.tif|
+|2G-HR2379.tif|
+|2G-HR2380.tif|
+|2G-HR2381.tif|
+|2G-HR2382.tif|
+|2G-HR2383.tif|
+|2G-HR2384.tif|
+|2G-HR2385.tif|
+|2G-HR2386.tif|
+|2G-HR2387.tif|
+|2G-HR2388.tif|
+|2G-HR2389.tif|
+|2G-HR2390.tif|
+|2G-HR2391.tif|
+|2G-HR2392.tif|
+|2G-HR2393.tif|
+|2G-HR2394.tif|
+|2G-HR2395.tif|
+|2G-HR2396.tif|
+|2G-HR2397.tif|
+|2G-HR2398.tif|
+
+#+NAME: formatted
+#+BEGIN_SRC emacs-lisp :var ENTRY=entries[0:*] :results output
+(print ENTRY)
+#+END_SRC
+
+#+RESULTS: formatted
+:
+: (("2G-HR0000.tif") ("2G-HR0001.tif") ("2G-HR0002.tif") ("2G-HR0003.tif") ("2G-HR0004.tif") ("2G-HR0005.tif") ("2G-HR0006.tif") ("2G-HR0007.tif") ("2G-HR0008.tif") ("2G-HR0009.tif") ("2G-HR0010.tif") ("2G-HR0011.tif") ("2G-HR0012.tif") ("2G-HR0013.tif") ("2G-HR0014.tif") ("2G-HR0015.tif") ("2G-HR0016.tif") ("2G-HR0017.tif") ("2G-HR0018.tif") ("2G-HR0019.tif") ("2G-HR0020.tif") ("2G-HR0021.tif") ("2G-HR0022.tif") ("2G-HR0023.tif") ("2G-HR0024.tif") ("2G-HR0025.tif") ("2G-HR0026.tif") ("2G-HR0027.tif") ("2G-HR0028.tif") ("2G-HR0029.tif") ("2G-HR0030.tif") ("2G-HR0031.tif") ("2G-HR0032.tif") ("2G-HR0033.tif") ("2G-HR0034.tif") ("2G-HR0035.tif") ("2G-HR0036.tif") ("2G-HR0037.tif") ("2G-HR0038.tif") ("2G-HR0039.tif") ("2G-HR0040.tif") ("2G-HR0041.tif") ("2G-HR0042.tif") ("2G-HR0043.tif") ("2G-HR0044.tif") ("2G-HR0045.tif") ("2G-HR0046.tif") ("2G-HR0047.tif") ("2G-HR0048.tif") ("2G-HR0049.tif") ("2G-HR0050.tif") ("2G-HR0051.tif") ("2G-HR0052.tif") ("2G-HR0053.tif") ("2G-HR0054.tif") ("2G-HR0055.tif") ("2G-HR0056.tif") ("2G-HR0057.tif") ("2G-HR0058.tif") ("2G-HR0059.tif") ("2G-HR0060.tif") ("2G-HR0061.tif") ("2G-HR0062.tif") ("2G-HR0063.tif") ("2G-HR0064.tif") ("2G-HR0065.tif") ("2G-HR0066.tif") ("2G-HR0067.tif") ("2G-HR0068.tif") ("2G-HR0069.tif") ("2G-HR0070.tif") ("2G-HR0071.tif") ("2G-HR0072.tif") ("2G-HR0073.tif") ("2G-HR0074.tif") ("2G-HR0075.tif") ("2G-HR0076.tif") ("2G-HR0077.tif") ("2G-HR0078.tif") ("2G-HR0079.tif") ("2G-HR0080.tif") ("2G-HR0081.tif") ("2G-HR0082.tif") ("2G-HR0083.tif") ("2G-HR0084.tif") ("2G-HR0085.tif") ("2G-HR0086.tif") ("2G-HR0087.tif") ("2G-HR0088.tif") ("2G-HR0089.tif") ("2G-HR0090.tif") ("2G-HR0091.tif") ("2G-HR0092.tif") ("2G-HR0093.tif") ("2G-HR0094.tif") ("2G-HR0095.tif") ("2G-HR0096.tif") ("2G-HR0097.tif") ("2G-HR0098.tif") ("2G-HR0099.tif") ("2G-HR0100.tif") ("2G-HR0101.tif") ("2G-HR0102.tif") ("2G-HR0103.tif") ("2G-HR0104.tif") ("2G-HR0105.tif") ("2G-HR0106.tif") ("2G-HR0107.tif") ("2G-HR0108.tif") ("2G-HR0109.tif") ("2G-HR0110.tif") ("2G-HR0111.tif") ("2G-HR0112.tif") ("2G-HR0113.tif") ("2G-HR0114.tif") ("2G-HR0115.tif") ("2G-HR0116.tif") ("2G-HR0117.tif") ("2G-HR0118.tif") ("2G-HR0119.tif") ("2G-HR0120.tif") ("2G-HR0121.tif") ("2G-HR0122.tif") ("2G-HR0123.tif") ("2G-HR0124.tif") ("2G-HR0125.tif") ("2G-HR0126.tif") ("2G-HR0127.tif") ("2G-HR0128.tif") ("2G-HR0129.tif") ("2G-HR0130.tif") ("2G-HR0131.tif") ("2G-HR0132.tif") ("2G-HR0133.tif") ("2G-HR0134.tif") ("2G-HR0135.tif") ("2G-HR0136.tif") ("2G-HR0137.tif") ("2G-HR0138.tif") ("2G-HR0139.tif") ("2G-HR0140.tif") ("2G-HR0141.tif") ("2G-HR0142.tif") ("2G-HR0143.tif") ("2G-HR0144.tif") ("2G-HR0145.tif") ("2G-HR0146.tif") ("2G-HR0147.tif") ("2G-HR0148.tif") ("2G-HR0149.tif") ("2G-HR0150.tif") ("2G-HR0151.tif") ("2G-HR0152.tif") ("2G-HR0153.tif") ("2G-HR0154.tif") ("2G-HR0155.tif") ("2G-HR0156.tif") ("2G-HR0157.tif") ("2G-HR0158.tif") ("2G-HR0159.tif") ("2G-HR0160.tif") ("2G-HR0161.tif") ("2G-HR0162.tif") ("2G-HR0163.tif") ("2G-HR0164.tif") ("2G-HR0165.tif") ("2G-HR0166.tif") ("2G-HR0167.tif") ("2G-HR0168.tif") ("2G-HR0169.tif") ("2G-HR0170.tif") ("2G-HR0171.tif") ("2G-HR0172.tif") ("2G-HR0173.tif") ("2G-HR0174.tif") ("2G-HR0175.tif") ("2G-HR0176.tif") ("2G-HR0177.tif") ("2G-HR0178.tif") ("2G-HR0179.tif") ("2G-HR0180.tif") ("2G-HR0181.tif") ("2G-HR0182.tif") ("2G-HR0183.tif") ("2G-HR0184.tif") ("2G-HR0185.tif") ("2G-HR0186.tif") ("2G-HR0187.tif") ("2G-HR0188.tif") ("2G-HR0189.tif") ("2G-HR0190.tif") ("2G-HR0191.tif") ("2G-HR0192.tif") ("2G-HR0193.tif") ("2G-HR0194.tif") ("2G-HR0195.tif") ("2G-HR0196.tif") ("2G-HR0197.tif") ("2G-HR0198.tif") ("2G-HR0199.tif") ("2G-HR0200.tif") ("2G-HR0201.tif") ("2G-HR0202.tif") ("2G-HR0203.tif") ("2G-HR0204.tif") ("2G-HR0205.tif") ("2G-HR0206.tif") ("2G-HR0207.tif") ("2G-HR0208.tif") ("2G-HR0209.tif") ("2G-HR0210.tif") ("2G-HR0211.tif") ("2G-HR0212.tif") ("2G-HR0213.tif") ("2G-HR0214.tif") ("2G-HR0215.tif") ("2G-HR0216.tif") ("2G-HR0217.tif") ("2G-HR0218.tif") ("2G-HR0219.tif") ("2G-HR0220.tif") ("2G-HR0221.tif") ("2G-HR0222.tif") ("2G-HR0223.tif") ("2G-HR0224.tif") ("2G-HR0225.tif") ("2G-HR0226.tif") ("2G-HR0227.tif") ("2G-HR0228.tif") ("2G-HR0229.tif") ("2G-HR0230.tif") ("2G-HR0231.tif") ("2G-HR0232.tif") ("2G-HR0233.tif") ("2G-HR0234.tif") ("2G-HR0235.tif") ("2G-HR0236.tif") ("2G-HR0237.tif") ("2G-HR0238.tif") ("2G-HR0239.tif") ("2G-HR0240.tif") ("2G-HR0241.tif") ("2G-HR0242.tif") ("2G-HR0243.tif") ("2G-HR0244.tif") ("2G-HR0245.tif") ("2G-HR0246.tif") ("2G-HR0247.tif") ("2G-HR0248.tif") ("2G-HR0249.tif") ("2G-HR0250.tif") ("2G-HR0251.tif") ("2G-HR0252.tif") ("2G-HR0253.tif") ("2G-HR0254.tif") ("2G-HR0255.tif") ("2G-HR0256.tif") ("2G-HR0257.tif") ("2G-HR0258.tif") ("2G-HR0259.tif") ("2G-HR0260.tif") ("2G-HR0261.tif") ("2G-HR0262.tif") ("2G-HR0263.tif") ("2G-HR0264.tif") ("2G-HR0265.tif") ("2G-HR0266.tif") ("2G-HR0267.tif") ("2G-HR0268.tif") ("2G-HR0269.tif") ("2G-HR0270.tif") ("2G-HR0271.tif") ("2G-HR0272.tif") ("2G-HR0273.tif") ("2G-HR0274.tif") ("2G-HR0275.tif") ("2G-HR0276.tif") ("2G-HR0277.tif") ("2G-HR0278.tif") ("2G-HR0279.tif") ("2G-HR0280.tif") ("2G-HR0281.tif") ("2G-HR0282.tif") ("2G-HR0283.tif") ("2G-HR0284.tif") ("2G-HR0285.tif") ("2G-HR0286.tif") ("2G-HR0287.tif") ("2G-HR0288.tif") ("2G-HR0289.tif") ("2G-HR0290.tif") ("2G-HR0291.tif") ("2G-HR0292.tif") ("2G-HR0293.tif") ("2G-HR0294.tif") ("2G-HR0295.tif") ("2G-HR0296.tif") ("2G-HR0297.tif") ("2G-HR0298.tif") ("2G-HR0299.tif") ("2G-HR0300.tif") ("2G-HR0301.tif") ("2G-HR0302.tif") ("2G-HR0303.tif") ("2G-HR0304.tif") ("2G-HR0305.tif") ("2G-HR0306.tif") ("2G-HR0307.tif") ("2G-HR0308.tif") ("2G-HR0309.tif") ("2G-HR0310.tif") ("2G-HR0311.tif") ("2G-HR0312.tif") ("2G-HR0313.tif") ("2G-HR0314.tif") ("2G-HR0315.tif") ("2G-HR0316.tif") ("2G-HR0317.tif") ("2G-HR0318.tif") ("2G-HR0319.tif") ("2G-HR0320.tif") ("2G-HR0321.tif") ("2G-HR0322.tif") ("2G-HR0323.tif") ("2G-HR0324.tif") ("2G-HR0325.tif") ("2G-HR0326.tif") ("2G-HR0327.tif") ("2G-HR0328.tif") ("2G-HR0329.tif") ("2G-HR0330.tif") ("2G-HR0331.tif") ("2G-HR0332.tif") ("2G-HR0333.tif") ("2G-HR0334.tif") ("2G-HR0335.tif") ("2G-HR0336.tif") ("2G-HR0337.tif") ("2G-HR0338.tif") ("2G-HR0339.tif") ("2G-HR0340.tif") ("2G-HR0341.tif") ("2G-HR0342.tif") ("2G-HR0343.tif") ("2G-HR0344.tif") ("2G-HR0345.tif") ("2G-HR0346.tif") ("2G-HR0347.tif") ("2G-HR0348.tif") ("2G-HR0349.tif") ("2G-HR0350.tif") ("2G-HR0351.tif") ("2G-HR0352.tif") ("2G-HR0353.tif") ("2G-HR0354.tif") ("2G-HR0355.tif") ("2G-HR0356.tif") ("2G-HR0357.tif") ("2G-HR0358.tif") ("2G-HR0359.tif") ("2G-HR0360.tif") ("2G-HR0361.tif") ("2G-HR0362.tif") ("2G-HR0363.tif") ("2G-HR0364.tif") ("2G-HR0365.tif") ("2G-HR0366.tif") ("2G-HR0367.tif") ("2G-HR0368.tif") ("2G-HR0369.tif") ("2G-HR0370.tif") ("2G-HR0371.tif") ("2G-HR0372.tif") ("2G-HR0373.tif") ("2G-HR0374.tif") ("2G-HR0375.tif") ("2G-HR0376.tif") ("2G-HR0377.tif") ("2G-HR0378.tif") ("2G-HR0379.tif") ("2G-HR0380.tif") ("2G-HR0381.tif") ("2G-HR0382.tif") ("2G-HR0383.tif") ("2G-HR0384.tif") ("2G-HR0385.tif") ("2G-HR0386.tif") ("2G-HR0387.tif") ("2G-HR0388.tif") ("2G-HR0389.tif") ("2G-HR0390.tif") ("2G-HR0391.tif") ("2G-HR0392.tif") ("2G-HR0393.tif") ("2G-HR0394.tif") ("2G-HR0395.tif") ("2G-HR0396.tif") ("2G-HR0397.tif") ("2G-HR0398.tif") ("2G-HR0399.tif") ("2G-HR0400.tif") ("2G-HR0401.tif") ("2G-HR0402.tif") ("2G-HR0403.tif") ("2G-HR0404.tif") ("2G-HR0405.tif") ("2G-HR0406.tif") ("2G-HR0407.tif") ("2G-HR0408.tif") ("2G-HR0409.tif") ("2G-HR0410.tif") ("2G-HR0411.tif") ("2G-HR0412.tif") ("2G-HR0413.tif") ("2G-HR0414.tif") ("2G-HR0415.tif") ("2G-HR0416.tif") ("2G-HR0417.tif") ("2G-HR0418.tif") ("2G-HR0419.tif") ("2G-HR0420.tif") ("2G-HR0421.tif") ("2G-HR0422.tif") ("2G-HR0423.tif") ("2G-HR0424.tif") ("2G-HR0425.tif") ("2G-HR0426.tif") ("2G-HR0427.tif") ("2G-HR0428.tif") ("2G-HR0429.tif") ("2G-HR0430.tif") ("2G-HR0431.tif") ("2G-HR0432.tif") ("2G-HR0433.tif") ("2G-HR0434.tif") ("2G-HR0435.tif") ("2G-HR0436.tif") ("2G-HR0437.tif") ("2G-HR0438.tif") ("2G-HR0439.tif") ("2G-HR0440.tif") ("2G-HR0441.tif") ("2G-HR0442.tif") ("2G-HR0443.tif") ("2G-HR0444.tif") ("2G-HR0445.tif") ("2G-HR0446.tif") ("2G-HR0447.tif") ("2G-HR0448.tif") ("2G-HR0449.tif") ("2G-HR0450.tif") ("2G-HR0451.tif") ("2G-HR0452.tif") ("2G-HR0453.tif") ("2G-HR0454.tif") ("2G-HR0455.tif") ("2G-HR0456.tif") ("2G-HR0457.tif") ("2G-HR0458.tif") ("2G-HR0459.tif") ("2G-HR0460.tif") ("2G-HR0461.tif") ("2G-HR0462.tif") ("2G-HR0463.tif") ("2G-HR0464.tif") ("2G-HR0465.tif") ("2G-HR0466.tif") ("2G-HR0467.tif") ("2G-HR0468.tif") ("2G-HR0469.tif") ("2G-HR0470.tif") ("2G-HR0471.tif") ("2G-HR0472.tif") ("2G-HR0473.tif") ("2G-HR0474.tif") ("2G-HR0475.tif") ("2G-HR0476.tif") ("2G-HR0477.tif") ("2G-HR0478.tif") ("2G-HR0479.tif") ("2G-HR0480.tif") ("2G-HR0481.tif") ("2G-HR0482.tif") ("2G-HR0483.tif") ("2G-HR0484.tif") ("2G-HR0485.tif") ("2G-HR0486.tif") ("2G-HR0487.tif") ("2G-HR0488.tif") ("2G-HR0489.tif") ("2G-HR0490.tif") ("2G-HR0491.tif") ("2G-HR0492.tif") ("2G-HR0493.tif") ("2G-HR0494.tif") ("2G-HR0495.tif") ("2G-HR0496.tif") ("2G-HR0497.tif") ("2G-HR0498.tif") ("2G-HR0499.tif") ("2G-HR0500.tif") ("2G-HR0501.tif") ("2G-HR0502.tif") ("2G-HR0503.tif") ("2G-HR0504.tif") ("2G-HR0505.tif") ("2G-HR0506.tif") ("2G-HR0507.tif") ("2G-HR0508.tif") ("2G-HR0509.tif") ("2G-HR0510.tif") ("2G-HR0511.tif") ("2G-HR0512.tif") ("2G-HR0513.tif") ("2G-HR0514.tif") ("2G-HR0515.tif") ("2G-HR0516.tif") ("2G-HR0517.tif") ("2G-HR0518.tif") ("2G-HR0519.tif") ("2G-HR0520.tif") ("2G-HR0521.tif") ("2G-HR0522.tif") ("2G-HR0523.tif") ("2G-HR0524.tif") ("2G-HR0525.tif") ("2G-HR0526.tif") ("2G-HR0527.tif") ("2G-HR0528.tif") ("2G-HR0529.tif") ("2G-HR0530.tif") ("2G-HR0531.tif") ("2G-HR0532.tif") ("2G-HR0533.tif") ("2G-HR0534.tif") ("2G-HR0535.tif") ("2G-HR0536.tif") ("2G-HR0537.tif") ("2G-HR0538.tif") ("2G-HR0539.tif") ("2G-HR0540.tif") ("2G-HR0541.tif") ("2G-HR0542.tif") ("2G-HR0543.tif") ("2G-HR0544.tif") ("2G-HR0545.tif") ("2G-HR0546.tif") ("2G-HR0547.tif") ("2G-HR0548.tif") ("2G-HR0549.tif") ("2G-HR0550.tif") ("2G-HR0551.tif") ("2G-HR0552.tif") ("2G-HR0553.tif") ("2G-HR0554.tif") ("2G-HR0555.tif") ("2G-HR0556.tif") ("2G-HR0557.tif") ("2G-HR0558.tif") ("2G-HR0559.tif") ("2G-HR0560.tif") ("2G-HR0561.tif") ("2G-HR0562.tif") ("2G-HR0563.tif") ("2G-HR0564.tif") ("2G-HR0565.tif") ("2G-HR0566.tif") ("2G-HR0567.tif") ("2G-HR0568.tif") ("2G-HR0569.tif") ("2G-HR0570.tif") ("2G-HR0571.tif") ("2G-HR0572.tif") ("2G-HR0573.tif") ("2G-HR0574.tif") ("2G-HR0575.tif") ("2G-HR0576.tif") ("2G-HR0577.tif") ("2G-HR0578.tif") ("2G-HR0579.tif") ("2G-HR0580.tif") ("2G-HR0581.tif") ("2G-HR0582.tif") ("2G-HR0583.tif") ("2G-HR0584.tif") ("2G-HR0585.tif") ("2G-HR0586.tif") ("2G-HR0587.tif") ("2G-HR0588.tif") ("2G-HR0589.tif") ("2G-HR0590.tif") ("2G-HR0591.tif") ("2G-HR0592.tif") ("2G-HR0593.tif") ("2G-HR0594.tif") ("2G-HR0595.tif") ("2G-HR0596.tif") ("2G-HR0597.tif") ("2G-HR0598.tif") ("2G-HR0599.tif") ("2G-HR0600.tif") ("2G-HR0601.tif") ("2G-HR0602.tif") ("2G-HR0603.tif") ("2G-HR0604.tif") ("2G-HR0605.tif") ("2G-HR0606.tif") ("2G-HR0607.tif") ("2G-HR0608.tif") ("2G-HR0609.tif") ("2G-HR0610.tif") ("2G-HR0611.tif") ("2G-HR0612.tif") ("2G-HR0613.tif") ("2G-HR0614.tif") ("2G-HR0615.tif") ("2G-HR0616.tif") ("2G-HR0617.tif") ("2G-HR0618.tif") ("2G-HR0619.tif") ("2G-HR0620.tif") ("2G-HR0621.tif") ("2G-HR0622.tif") ("2G-HR0623.tif") ("2G-HR0624.tif") ("2G-HR0625.tif") ("2G-HR0626.tif") ("2G-HR0627.tif") ("2G-HR0628.tif") ("2G-HR0629.tif") ("2G-HR0630.tif") ("2G-HR0631.tif") ("2G-HR0632.tif") ("2G-HR0633.tif") ("2G-HR0634.tif") ("2G-HR0635.tif") ("2G-HR0636.tif") ("2G-HR0637.tif") ("2G-HR0638.tif") ("2G-HR0639.tif") ("2G-HR0640.tif") ("2G-HR0641.tif") ("2G-HR0642.tif") ("2G-HR0643.tif") ("2G-HR0644.tif") ("2G-HR0645.tif") ("2G-HR0646.tif") ("2G-HR0647.tif") ("2G-HR0648.tif") ("2G-HR0649.tif") ("2G-HR0650.tif") ("2G-HR0651.tif") ("2G-HR0652.tif") ("2G-HR0653.tif") ("2G-HR0654.tif") ("2G-HR0655.tif") ("2G-HR0656.tif") ("2G-HR0657.tif") ("2G-HR0658.tif") ("2G-HR0659.tif") ("2G-HR0660.tif") ("2G-HR0661.tif") ("2G-HR0662.tif") ("2G-HR0663.tif") ("2G-HR0664.tif") ("2G-HR0665.tif") ("2G-HR0666.tif") ("2G-HR0667.tif") ("2G-HR0668.tif") ("2G-HR0669.tif") ("2G-HR0670.tif") ("2G-HR0671.tif") ("2G-HR0672.tif") ("2G-HR0673.tif") ("2G-HR0674.tif") ("2G-HR0675.tif") ("2G-HR0676.tif") ("2G-HR0677.tif") ("2G-HR0678.tif") ("2G-HR0679.tif") ("2G-HR0680.tif") ("2G-HR0681.tif") ("2G-HR0682.tif") ("2G-HR0683.tif") ("2G-HR0684.tif") ("2G-HR0685.tif") ("2G-HR0686.tif") ("2G-HR0687.tif") ("2G-HR0688.tif") ("2G-HR0689.tif") ("2G-HR0690.tif") ("2G-HR0691.tif") ("2G-HR0692.tif") ("2G-HR0693.tif") ("2G-HR0694.tif") ("2G-HR0695.tif") ("2G-HR0696.tif") ("2G-HR0697.tif") ("2G-HR0698.tif") ("2G-HR0699.tif") ("2G-HR0700.tif") ("2G-HR0701.tif") ("2G-HR0702.tif") ("2G-HR0703.tif") ("2G-HR0704.tif") ("2G-HR0705.tif") ("2G-HR0706.tif") ("2G-HR0707.tif") ("2G-HR0708.tif") ("2G-HR0709.tif") ("2G-HR0710.tif") ("2G-HR0711.tif") ("2G-HR0712.tif") ("2G-HR0713.tif") ("2G-HR0714.tif") ("2G-HR0715.tif") ("2G-HR0716.tif") ("2G-HR0717.tif") ("2G-HR0718.tif") ("2G-HR0719.tif") ("2G-HR0720.tif") ("2G-HR0721.tif") ("2G-HR0722.tif") ("2G-HR0723.tif") ("2G-HR0724.tif") ("2G-HR0725.tif") ("2G-HR0726.tif") ("2G-HR0727.tif") ("2G-HR0728.tif") ("2G-HR0729.tif") ("2G-HR0730.tif") ("2G-HR0731.tif") ("2G-HR0732.tif") ("2G-HR0733.tif") ("2G-HR0734.tif") ("2G-HR0735.tif") ("2G-HR0736.tif") ("2G-HR0737.tif") ("2G-HR0738.tif") ("2G-HR0739.tif") ("2G-HR0740.tif") ("2G-HR0741.tif") ("2G-HR0742.tif") ("2G-HR0743.tif") ("2G-HR0744.tif") ("2G-HR0745.tif") ("2G-HR0746.tif") ("2G-HR0747.tif") ("2G-HR0748.tif") ("2G-HR0749.tif") ("2G-HR0750.tif") ("2G-HR0751.tif") ("2G-HR0752.tif") ("2G-HR0753.tif") ("2G-HR0754.tif") ("2G-HR0755.tif") ("2G-HR0756.tif") ("2G-HR0757.tif") ("2G-HR0758.tif") ("2G-HR0759.tif") ("2G-HR0760.tif") ("2G-HR0761.tif") ("2G-HR0762.tif") ("2G-HR0763.tif") ("2G-HR0764.tif") ("2G-HR0765.tif") ("2G-HR0766.tif") ("2G-HR0767.tif") ("2G-HR0768.tif") ("2G-HR0769.tif") ("2G-HR0770.tif") ("2G-HR0771.tif") ("2G-HR0772.tif") ("2G-HR0773.tif") ("2G-HR0774.tif") ("2G-HR0775.tif") ("2G-HR0776.tif") ("2G-HR0777.tif") ("2G-HR0778.tif") ("2G-HR0779.tif") ("2G-HR0780.tif") ("2G-HR0781.tif") ("2G-HR0782.tif") ("2G-HR0783.tif") ("2G-HR0784.tif") ("2G-HR0785.tif") ("2G-HR0786.tif") ("2G-HR0787.tif") ("2G-HR0788.tif") ("2G-HR0789.tif") ("2G-HR0790.tif") ("2G-HR0791.tif") ("2G-HR0792.tif") ("2G-HR0793.tif") ("2G-HR0794.tif") ("2G-HR0795.tif") ("2G-HR0796.tif") ("2G-HR0797.tif") ("2G-HR0798.tif") ("2G-HR0799.tif") ("2G-HR0800.tif") ("2G-HR0801.tif") ("2G-HR0802.tif") ("2G-HR0803.tif") ("2G-HR0804.tif") ("2G-HR0805.tif") ("2G-HR0806.tif") ("2G-HR0807.tif") ("2G-HR0808.tif") ("2G-HR0809.tif") ("2G-HR0810.tif") ("2G-HR0811.tif") ("2G-HR0812.tif") ("2G-HR0813.tif") ("2G-HR0814.tif") ("2G-HR0815.tif") ("2G-HR0816.tif") ("2G-HR0817.tif") ("2G-HR0818.tif") ("2G-HR0819.tif") ("2G-HR0820.tif") ("2G-HR0821.tif") ("2G-HR0822.tif") ("2G-HR0823.tif") ("2G-HR0824.tif") ("2G-HR0825.tif") ("2G-HR0826.tif") ("2G-HR0827.tif") ("2G-HR0828.tif") ("2G-HR0829.tif") ("2G-HR0830.tif") ("2G-HR0831.tif") ("2G-HR0832.tif") ("2G-HR0833.tif") ("2G-HR0834.tif") ("2G-HR0835.tif") ("2G-HR0836.tif") ("2G-HR0837.tif") ("2G-HR0838.tif") ("2G-HR0839.tif") ("2G-HR0840.tif") ("2G-HR0841.tif") ("2G-HR0842.tif") ("2G-HR0843.tif") ("2G-HR0844.tif") ("2G-HR0845.tif") ("2G-HR0846.tif") ("2G-HR0847.tif") ("2G-HR0848.tif") ("2G-HR0849.tif") ("2G-HR0850.tif") ("2G-HR0851.tif") ("2G-HR0852.tif") ("2G-HR0853.tif") ("2G-HR0854.tif") ("2G-HR0855.tif") ("2G-HR0856.tif") ("2G-HR0857.tif") ("2G-HR0858.tif") ("2G-HR0859.tif") ("2G-HR0860.tif") ("2G-HR0861.tif") ("2G-HR0862.tif") ("2G-HR0863.tif") ("2G-HR0864.tif") ("2G-HR0865.tif") ("2G-HR0866.tif") ("2G-HR0867.tif") ("2G-HR0868.tif") ("2G-HR0869.tif") ("2G-HR0870.tif") ("2G-HR0871.tif") ("2G-HR0872.tif") ("2G-HR0873.tif") ("2G-HR0874.tif") ("2G-HR0875.tif") ("2G-HR0876.tif") ("2G-HR0877.tif") ("2G-HR0878.tif") ("2G-HR0879.tif") ("2G-HR0880.tif") ("2G-HR0881.tif") ("2G-HR0882.tif") ("2G-HR0883.tif") ("2G-HR0884.tif") ("2G-HR0885.tif") ("2G-HR0886.tif") ("2G-HR0887.tif") ("2G-HR0888.tif") ("2G-HR0889.tif") ("2G-HR0890.tif") ("2G-HR0891.tif") ("2G-HR0892.tif") ("2G-HR0893.tif") ("2G-HR0894.tif") ("2G-HR0895.tif") ("2G-HR0896.tif") ("2G-HR0897.tif") ("2G-HR0898.tif") ("2G-HR0899.tif") ("2G-HR0900.tif") ("2G-HR0901.tif") ("2G-HR0902.tif") ("2G-HR0903.tif") ("2G-HR0904.tif") ("2G-HR0905.tif") ("2G-HR0906.tif") ("2G-HR0907.tif") ("2G-HR0908.tif") ("2G-HR0909.tif") ("2G-HR0910.tif") ("2G-HR0911.tif") ("2G-HR0912.tif") ("2G-HR0913.tif") ("2G-HR0914.tif") ("2G-HR0915.tif") ("2G-HR0916.tif") ("2G-HR0917.tif") ("2G-HR0918.tif") ("2G-HR0919.tif") ("2G-HR0920.tif") ("2G-HR0921.tif") ("2G-HR0922.tif") ("2G-HR0923.tif") ("2G-HR0924.tif") ("2G-HR0925.tif") ("2G-HR0926.tif") ("2G-HR0927.tif") ("2G-HR0928.tif") ("2G-HR0929.tif") ("2G-HR0930.tif") ("2G-HR0931.tif") ("2G-HR0932.tif") ("2G-HR0933.tif") ("2G-HR0934.tif") ("2G-HR0935.tif") ("2G-HR0936.tif") ("2G-HR0937.tif") ("2G-HR0938.tif") ("2G-HR0939.tif") ("2G-HR0940.tif") ("2G-HR0941.tif") ("2G-HR0942.tif") ("2G-HR0943.tif") ("2G-HR0944.tif") ("2G-HR0945.tif") ("2G-HR0946.tif") ("2G-HR0947.tif") ("2G-HR0948.tif") ("2G-HR0949.tif") ("2G-HR0950.tif") ("2G-HR0951.tif") ("2G-HR0952.tif") ("2G-HR0953.tif") ("2G-HR0954.tif") ("2G-HR0955.tif") ("2G-HR0956.tif") ("2G-HR0957.tif") ("2G-HR0958.tif") ("2G-HR0959.tif") ("2G-HR0960.tif") ("2G-HR0961.tif") ("2G-HR0962.tif") ("2G-HR0963.tif") ("2G-HR0964.tif") ("2G-HR0965.tif") ("2G-HR0966.tif") ("2G-HR0967.tif") ("2G-HR0968.tif") ("2G-HR0969.tif") ("2G-HR0970.tif") ("2G-HR0971.tif") ("2G-HR0972.tif") ("2G-HR0973.tif") ("2G-HR0974.tif") ("2G-HR0975.tif") ("2G-HR0976.tif") ("2G-HR0977.tif") ("2G-HR0978.tif") ("2G-HR0979.tif") ("2G-HR0980.tif") ("2G-HR0981.tif") ("2G-HR0982.tif") ("2G-HR0983.tif") ("2G-HR0984.tif") ("2G-HR0985.tif") ("2G-HR0986.tif") ("2G-HR0987.tif") ("2G-HR0988.tif") ("2G-HR0989.tif") ("2G-HR0990.tif") ("2G-HR0991.tif") ("2G-HR0992.tif") ("2G-HR0993.tif") ("2G-HR0994.tif") ("2G-HR0995.tif") ("2G-HR0996.tif") ("2G-HR0997.tif") ("2G-HR0998.tif") ("2G-HR0999.tif") ("2G-HR1000.tif") ("2G-HR1001.tif") ("2G-HR1002.tif") ("2G-HR1003.tif") ("2G-HR1004.tif") ("2G-HR1005.tif") ("2G-HR1006.tif") ("2G-HR1007.tif") ("2G-HR1008.tif") ("2G-HR1009.tif") ("2G-HR1010.tif") ("2G-HR1011.tif") ("2G-HR1012.tif") ("2G-HR1013.tif") ("2G-HR1014.tif") ("2G-HR1015.tif") ("2G-HR1016.tif") ("2G-HR1017.tif") ("2G-HR1018.tif") ("2G-HR1019.tif") ("2G-HR1020.tif") ("2G-HR1021.tif") ("2G-HR1022.tif") ("2G-HR1023.tif") ("2G-HR1024.tif") ("2G-HR1025.tif") ("2G-HR1026.tif") ("2G-HR1027.tif") ("2G-HR1028.tif") ("2G-HR1029.tif") ("2G-HR1030.tif") ("2G-HR1031.tif") ("2G-HR1032.tif") ("2G-HR1033.tif") ("2G-HR1034.tif") ("2G-HR1035.tif") ("2G-HR1036.tif") ("2G-HR1037.tif") ("2G-HR1038.tif") ("2G-HR1039.tif") ("2G-HR1040.tif") ("2G-HR1041.tif") ("2G-HR1042.tif") ("2G-HR1043.tif") ("2G-HR1044.tif") ("2G-HR1045.tif") ("2G-HR1046.tif") ("2G-HR1047.tif") ("2G-HR1048.tif") ("2G-HR1049.tif") ("2G-HR1050.tif") ("2G-HR1051.tif") ("2G-HR1052.tif") ("2G-HR1053.tif") ("2G-HR1054.tif") ("2G-HR1055.tif") ("2G-HR1056.tif") ("2G-HR1057.tif") ("2G-HR1058.tif") ("2G-HR1059.tif") ("2G-HR1060.tif") ("2G-HR1061.tif") ("2G-HR1062.tif") ("2G-HR1063.tif") ("2G-HR1064.tif") ("2G-HR1065.tif") ("2G-HR1066.tif") ("2G-HR1067.tif") ("2G-HR1068.tif") ("2G-HR1069.tif") ("2G-HR1070.tif") ("2G-HR1071.tif") ("2G-HR1072.tif") ("2G-HR1073.tif") ("2G-HR1074.tif") ("2G-HR1075.tif") ("2G-HR1076.tif") ("2G-HR1077.tif") ("2G-HR1078.tif") ("2G-HR1079.tif") ("2G-HR1080.tif") ("2G-HR1081.tif") ("2G-HR1082.tif") ("2G-HR1083.tif") ("2G-HR1084.tif") ("2G-HR1085.tif") ("2G-HR1086.tif") ("2G-HR1087.tif") ("2G-HR1088.tif") ("2G-HR1089.tif") ("2G-HR1090.tif") ("2G-HR1091.tif") ("2G-HR1092.tif") ("2G-HR1093.tif") ("2G-HR1094.tif") ("2G-HR1095.tif") ("2G-HR1096.tif") ("2G-HR1097.tif") ("2G-HR1098.tif") ("2G-HR1099.tif") ("2G-HR1100.tif") ("2G-HR1101.tif") ("2G-HR1102.tif") ("2G-HR1103.tif") ("2G-HR1104.tif") ("2G-HR1105.tif") ("2G-HR1106.tif") ("2G-HR1107.tif") ("2G-HR1108.tif") ("2G-HR1109.tif") ("2G-HR1110.tif") ("2G-HR1111.tif") ("2G-HR1112.tif") ("2G-HR1113.tif") ("2G-HR1114.tif") ("2G-HR1115.tif") ("2G-HR1116.tif") ("2G-HR1117.tif") ("2G-HR1118.tif") ("2G-HR1119.tif") ("2G-HR1120.tif") ("2G-HR1121.tif") ("2G-HR1122.tif") ("2G-HR1123.tif") ("2G-HR1124.tif") ("2G-HR1125.tif") ("2G-HR1126.tif") ("2G-HR1127.tif") ("2G-HR1128.tif") ("2G-HR1129.tif") ("2G-HR1130.tif") ("2G-HR1131.tif") ("2G-HR1132.tif") ("2G-HR1133.tif") ("2G-HR1134.tif") ("2G-HR1135.tif") ("2G-HR1136.tif") ("2G-HR1137.tif") ("2G-HR1138.tif") ("2G-HR1139.tif") ("2G-HR1140.tif") ("2G-HR1141.tif") ("2G-HR1142.tif") ("2G-HR1143.tif") ("2G-HR1144.tif") ("2G-HR1145.tif") ("2G-HR1146.tif") ("2G-HR1147.tif") ("2G-HR1148.tif") ("2G-HR1149.tif") ("2G-HR1150.tif") ("2G-HR1151.tif") ("2G-HR1152.tif") ("2G-HR1153.tif") ("2G-HR1154.tif") ("2G-HR1155.tif") ("2G-HR1156.tif") ("2G-HR1157.tif") ("2G-HR1158.tif") ("2G-HR1159.tif") ("2G-HR1160.tif") ("2G-HR1161.tif") ("2G-HR1162.tif") ("2G-HR1163.tif") ("2G-HR1164.tif") ("2G-HR1165.tif") ("2G-HR1166.tif") ("2G-HR1167.tif") ("2G-HR1168.tif") ("2G-HR1169.tif") ("2G-HR1170.tif") ("2G-HR1171.tif") ("2G-HR1172.tif") ("2G-HR1173.tif") ("2G-HR1174.tif") ("2G-HR1175.tif") ("2G-HR1176.tif") ("2G-HR1177.tif") ("2G-HR1178.tif") ("2G-HR1179.tif") ("2G-HR1180.tif") ("2G-HR1181.tif") ("2G-HR1182.tif") ("2G-HR1183.tif") ("2G-HR1184.tif") ("2G-HR1185.tif") ("2G-HR1186.tif") ("2G-HR1187.tif") ("2G-HR1188.tif") ("2G-HR1189.tif") ("2G-HR1190.tif") ("2G-HR1191.tif") ("2G-HR1192.tif") ("2G-HR1193.tif") ("2G-HR1194.tif") ("2G-HR1195.tif") ("2G-HR1196.tif") ("2G-HR1197.tif") ("2G-HR1198.tif") ("2G-HR1199.tif") ("2G-HR1200.tif") ("2G-HR1201.tif") ("2G-HR1202.tif") ("2G-HR1203.tif") ("2G-HR1204.tif") ("2G-HR1205.tif") ("2G-HR1206.tif") ("2G-HR1207.tif") ("2G-HR1208.tif") ("2G-HR1209.tif") ("2G-HR1210.tif") ("2G-HR1211.tif") ("2G-HR1212.tif") ("2G-HR1213.tif") ("2G-HR1214.tif") ("2G-HR1215.tif") ("2G-HR1216.tif") ("2G-HR1217.tif") ("2G-HR1218.tif") ("2G-HR1219.tif") ("2G-HR1220.tif") ("2G-HR1221.tif") ("2G-HR1222.tif") ("2G-HR1223.tif") ("2G-HR1224.tif") ("2G-HR1225.tif") ("2G-HR1226.tif") ("2G-HR1227.tif") ("2G-HR1228.tif") ("2G-HR1229.tif") ("2G-HR1230.tif") ("2G-HR1231.tif") ("2G-HR1232.tif") ("2G-HR1233.tif") ("2G-HR1234.tif") ("2G-HR1235.tif") ("2G-HR1236.tif") ("2G-HR1237.tif") ("2G-HR1238.tif") ("2G-HR1239.tif") ("2G-HR1240.tif") ("2G-HR1241.tif") ("2G-HR1242.tif") ("2G-HR1243.tif") ("2G-HR1244.tif") ("2G-HR1245.tif") ("2G-HR1246.tif") ("2G-HR1247.tif") ("2G-HR1248.tif") ("2G-HR1249.tif") ("2G-HR1250.tif") ("2G-HR1251.tif") ("2G-HR1252.tif") ("2G-HR1253.tif") ("2G-HR1254.tif") ("2G-HR1255.tif") ("2G-HR1256.tif") ("2G-HR1257.tif") ("2G-HR1258.tif") ("2G-HR1259.tif") ("2G-HR1260.tif") ("2G-HR1261.tif") ("2G-HR1262.tif") ("2G-HR1263.tif") ("2G-HR1264.tif") ("2G-HR1265.tif") ("2G-HR1266.tif") ("2G-HR1267.tif") ("2G-HR1268.tif") ("2G-HR1269.tif") ("2G-HR1270.tif") ("2G-HR1271.tif") ("2G-HR1272.tif") ("2G-HR1273.tif") ("2G-HR1274.tif") ("2G-HR1275.tif") ("2G-HR1276.tif") ("2G-HR1277.tif") ("2G-HR1278.tif") ("2G-HR1279.tif") ("2G-HR1280.tif") ("2G-HR1281.tif") ("2G-HR1282.tif") ("2G-HR1283.tif") ("2G-HR1284.tif") ("2G-HR1285.tif") ("2G-HR1286.tif") ("2G-HR1287.tif") ("2G-HR1288.tif") ("2G-HR1289.tif") ("2G-HR1290.tif") ("2G-HR1291.tif") ("2G-HR1292.tif") ("2G-HR1293.tif") ("2G-HR1294.tif") ("2G-HR1295.tif") ("2G-HR1296.tif") ("2G-HR1297.tif") ("2G-HR1298.tif") ("2G-HR1299.tif") ("2G-HR1300.tif") ("2G-HR1301.tif") ("2G-HR1302.tif") ("2G-HR1303.tif") ("2G-HR1304.tif") ("2G-HR1305.tif") ("2G-HR1306.tif") ("2G-HR1307.tif") ("2G-HR1308.tif") ("2G-HR1309.tif") ("2G-HR1310.tif") ("2G-HR1311.tif") ("2G-HR1312.tif") ("2G-HR1313.tif") ("2G-HR1314.tif") ("2G-HR1315.tif") ("2G-HR1316.tif") ("2G-HR1317.tif") ("2G-HR1318.tif") ("2G-HR1319.tif") ("2G-HR1320.tif") ("2G-HR1321.tif") ("2G-HR1322.tif") ("2G-HR1323.tif") ("2G-HR1324.tif") ("2G-HR1325.tif") ("2G-HR1326.tif") ("2G-HR1327.tif") ("2G-HR1328.tif") ("2G-HR1329.tif") ("2G-HR1330.tif") ("2G-HR1331.tif") ("2G-HR1332.tif") ("2G-HR1333.tif") ("2G-HR1334.tif") ("2G-HR1335.tif") ("2G-HR1336.tif") ("2G-HR1337.tif") ("2G-HR1338.tif") ("2G-HR1339.tif") ("2G-HR1340.tif") ("2G-HR1341.tif") ("2G-HR1342.tif") ("2G-HR1343.tif") ("2G-HR1344.tif") ("2G-HR1345.tif") ("2G-HR1346.tif") ("2G-HR1347.tif") ("2G-HR1348.tif") ("2G-HR1349.tif") ("2G-HR1350.tif") ("2G-HR1351.tif") ("2G-HR1352.tif") ("2G-HR1353.tif") ("2G-HR1354.tif") ("2G-HR1355.tif") ("2G-HR1356.tif") ("2G-HR1357.tif") ("2G-HR1358.tif") ("2G-HR1359.tif") ("2G-HR1360.tif") ("2G-HR1361.tif") ("2G-HR1362.tif") ("2G-HR1363.tif") ("2G-HR1364.tif") ("2G-HR1365.tif") ("2G-HR1366.tif") ("2G-HR1367.tif") ("2G-HR1368.tif") ("2G-HR1369.tif") ("2G-HR1370.tif") ("2G-HR1371.tif") ("2G-HR1372.tif") ("2G-HR1373.tif") ("2G-HR1374.tif") ("2G-HR1375.tif") ("2G-HR1376.tif") ("2G-HR1377.tif") ("2G-HR1378.tif") ("2G-HR1379.tif") ("2G-HR1380.tif") ("2G-HR1381.tif") ("2G-HR1382.tif") ("2G-HR1383.tif") ("2G-HR1384.tif") ("2G-HR1385.tif") ("2G-HR1386.tif") ("2G-HR1387.tif") ("2G-HR1388.tif") ("2G-HR1389.tif") ("2G-HR1390.tif") ("2G-HR1391.tif") ("2G-HR1392.tif") ("2G-HR1393.tif") ("2G-HR1394.tif") ("2G-HR1395.tif") ("2G-HR1396.tif") ("2G-HR1397.tif") ("2G-HR1398.tif") ("2G-HR1399.tif") ("2G-HR1400.tif") ("2G-HR1401.tif") ("2G-HR1402.tif") ("2G-HR1403.tif") ("2G-HR1404.tif") ("2G-HR1405.tif") ("2G-HR1406.tif") ("2G-HR1407.tif") ("2G-HR1408.tif") ("2G-HR1409.tif") ("2G-HR1410.tif") ("2G-HR1411.tif") ("2G-HR1412.tif") ("2G-HR1413.tif") ("2G-HR1414.tif") ("2G-HR1415.tif") ("2G-HR1416.tif") ("2G-HR1417.tif") ("2G-HR1418.tif") ("2G-HR1419.tif") ("2G-HR1420.tif") ("2G-HR1421.tif") ("2G-HR1422.tif") ("2G-HR1423.tif") ("2G-HR1424.tif") ("2G-HR1425.tif") ("2G-HR1426.tif") ("2G-HR1427.tif") ("2G-HR1428.tif") ("2G-HR1429.tif") ("2G-HR1430.tif") ("2G-HR1431.tif") ("2G-HR1432.tif") ("2G-HR1433.tif") ("2G-HR1434.tif") ("2G-HR1435.tif") ("2G-HR1436.tif") ("2G-HR1437.tif") ("2G-HR1438.tif") ("2G-HR1439.tif") ("2G-HR1440.tif") ("2G-HR1441.tif") ("2G-HR1442.tif") ("2G-HR1443.tif") ("2G-HR1444.tif") ("2G-HR1445.tif") ("2G-HR1446.tif") ("2G-HR1447.tif") ("2G-HR1448.tif") ("2G-HR1449.tif") ("2G-HR1450.tif") ("2G-HR1451.tif") ("2G-HR1452.tif") ("2G-HR1453.tif") ("2G-HR1454.tif") ("2G-HR1455.tif") ("2G-HR1456.tif") ("2G-HR1457.tif") ("2G-HR1458.tif") ("2G-HR1459.tif") ("2G-HR1460.tif") ("2G-HR1461.tif") ("2G-HR1462.tif") ("2G-HR1463.tif") ("2G-HR1464.tif") ("2G-HR1465.tif") ("2G-HR1466.tif") ("2G-HR1467.tif") ("2G-HR1468.tif") ("2G-HR1469.tif") ("2G-HR1470.tif") ("2G-HR1471.tif") ("2G-HR1472.tif") ("2G-HR1473.tif") ("2G-HR1474.tif") ("2G-HR1475.tif") ("2G-HR1476.tif") ("2G-HR1477.tif") ("2G-HR1478.tif") ("2G-HR1479.tif") ("2G-HR1480.tif") ("2G-HR1481.tif") ("2G-HR1482.tif") ("2G-HR1483.tif") ("2G-HR1484.tif") ("2G-HR1485.tif") ("2G-HR1486.tif") ("2G-HR1487.tif") ("2G-HR1488.tif") ("2G-HR1489.tif") ("2G-HR1490.tif") ("2G-HR1491.tif") ("2G-HR1492.tif") ("2G-HR1493.tif") ("2G-HR1494.tif") ("2G-HR1495.tif") ("2G-HR1496.tif") ("2G-HR1497.tif") ("2G-HR1498.tif") ("2G-HR1499.tif") ("2G-HR1500.tif") ("2G-HR1501.tif") ("2G-HR1502.tif") ("2G-HR1503.tif") ("2G-HR1504.tif") ("2G-HR1505.tif") ("2G-HR1506.tif") ("2G-HR1507.tif") ("2G-HR1508.tif") ("2G-HR1509.tif") ("2G-HR1510.tif") ("2G-HR1511.tif") ("2G-HR1512.tif") ("2G-HR1513.tif") ("2G-HR1514.tif") ("2G-HR1515.tif") ("2G-HR1516.tif") ("2G-HR1517.tif") ("2G-HR1518.tif") ("2G-HR1519.tif") ("2G-HR1520.tif") ("2G-HR1521.tif") ("2G-HR1522.tif") ("2G-HR1523.tif") ("2G-HR1524.tif") ("2G-HR1525.tif") ("2G-HR1526.tif") ("2G-HR1527.tif") ("2G-HR1528.tif") ("2G-HR1529.tif") ("2G-HR1530.tif") ("2G-HR1531.tif") ("2G-HR1532.tif") ("2G-HR1533.tif") ("2G-HR1534.tif") ("2G-HR1535.tif") ("2G-HR1536.tif") ("2G-HR1537.tif") ("2G-HR1538.tif") ("2G-HR1539.tif") ("2G-HR1540.tif") ("2G-HR1541.tif") ("2G-HR1542.tif") ("2G-HR1543.tif") ("2G-HR1544.tif") ("2G-HR1545.tif") ("2G-HR1546.tif") ("2G-HR1547.tif") ("2G-HR1548.tif") ("2G-HR1549.tif") ("2G-HR1550.tif") ("2G-HR1551.tif") ("2G-HR1552.tif") ("2G-HR1553.tif") ("2G-HR1554.tif") ("2G-HR1555.tif") ("2G-HR1556.tif") ("2G-HR1557.tif") ("2G-HR1558.tif") ("2G-HR1559.tif") ("2G-HR1560.tif") ("2G-HR1561.tif") ("2G-HR1562.tif") ("2G-HR1563.tif") ("2G-HR1564.tif") ("2G-HR1565.tif") ("2G-HR1566.tif") ("2G-HR1567.tif") ("2G-HR1568.tif") ("2G-HR1569.tif") ("2G-HR1570.tif") ("2G-HR1571.tif") ("2G-HR1572.tif") ("2G-HR1573.tif") ("2G-HR1574.tif") ("2G-HR1575.tif") ("2G-HR1576.tif") ("2G-HR1577.tif") ("2G-HR1578.tif") ("2G-HR1579.tif") ("2G-HR1580.tif") ("2G-HR1581.tif") ("2G-HR1582.tif") ("2G-HR1583.tif") ("2G-HR1584.tif") ("2G-HR1585.tif") ("2G-HR1586.tif") ("2G-HR1587.tif") ("2G-HR1588.tif") ("2G-HR1589.tif") ("2G-HR1590.tif") ("2G-HR1591.tif") ("2G-HR1592.tif") ("2G-HR1593.tif") ("2G-HR1594.tif") ("2G-HR1595.tif") ("2G-HR1596.tif") ("2G-HR1597.tif") ("2G-HR1598.tif") ("2G-HR1599.tif") ("2G-HR1600.tif") ("2G-HR1601.tif") ("2G-HR1602.tif") ("2G-HR1603.tif") ("2G-HR1604.tif") ("2G-HR1605.tif") ("2G-HR1606.tif") ("2G-HR1607.tif") ("2G-HR1608.tif") ("2G-HR1609.tif") ("2G-HR1610.tif") ("2G-HR1611.tif") ("2G-HR1612.tif") ("2G-HR1613.tif") ("2G-HR1614.tif") ("2G-HR1615.tif") ("2G-HR1616.tif") ("2G-HR1617.tif") ("2G-HR1618.tif") ("2G-HR1619.tif") ("2G-HR1620.tif") ("2G-HR1621.tif") ("2G-HR1622.tif") ("2G-HR1623.tif") ("2G-HR1624.tif") ("2G-HR1625.tif") ("2G-HR1626.tif") ("2G-HR1627.tif") ("2G-HR1628.tif") ("2G-HR1629.tif") ("2G-HR1630.tif") ("2G-HR1631.tif") ("2G-HR1632.tif") ("2G-HR1633.tif") ("2G-HR1634.tif") ("2G-HR1635.tif") ("2G-HR1636.tif") ("2G-HR1637.tif") ("2G-HR1638.tif") ("2G-HR1639.tif") ("2G-HR1640.tif") ("2G-HR1641.tif") ("2G-HR1642.tif") ("2G-HR1643.tif") ("2G-HR1644.tif") ("2G-HR1645.tif") ("2G-HR1646.tif") ("2G-HR1647.tif") ("2G-HR1648.tif") ("2G-HR1649.tif") ("2G-HR1650.tif") ("2G-HR1651.tif") ("2G-HR1652.tif") ("2G-HR1653.tif") ("2G-HR1654.tif") ("2G-HR1655.tif") ("2G-HR1656.tif") ("2G-HR1657.tif") ("2G-HR1658.tif") ("2G-HR1659.tif") ("2G-HR1660.tif") ("2G-HR1661.tif") ("2G-HR1662.tif") ("2G-HR1663.tif") ("2G-HR1664.tif") ("2G-HR1665.tif") ("2G-HR1666.tif") ("2G-HR1667.tif") ("2G-HR1668.tif") ("2G-HR1669.tif") ("2G-HR1670.tif") ("2G-HR1671.tif") ("2G-HR1672.tif") ("2G-HR1673.tif") ("2G-HR1674.tif") ("2G-HR1675.tif") ("2G-HR1676.tif") ("2G-HR1677.tif") ("2G-HR1678.tif") ("2G-HR1679.tif") ("2G-HR1680.tif") ("2G-HR1681.tif") ("2G-HR1682.tif") ("2G-HR1683.tif") ("2G-HR1684.tif") ("2G-HR1685.tif") ("2G-HR1686.tif") ("2G-HR1687.tif") ("2G-HR1688.tif") ("2G-HR1689.tif") ("2G-HR1690.tif") ("2G-HR1691.tif") ("2G-HR1692.tif") ("2G-HR1693.tif") ("2G-HR1694.tif") ("2G-HR1695.tif") ("2G-HR1696.tif") ("2G-HR1697.tif") ("2G-HR1698.tif") ("2G-HR1699.tif") ("2G-HR1700.tif") ("2G-HR1701.tif") ("2G-HR1702.tif") ("2G-HR1703.tif") ("2G-HR1704.tif") ("2G-HR1705.tif") ("2G-HR1706.tif") ("2G-HR1707.tif") ("2G-HR1708.tif") ("2G-HR1709.tif") ("2G-HR1710.tif") ("2G-HR1711.tif") ("2G-HR1712.tif") ("2G-HR1713.tif") ("2G-HR1714.tif") ("2G-HR1715.tif") ("2G-HR1716.tif") ("2G-HR1717.tif") ("2G-HR1718.tif") ("2G-HR1719.tif") ("2G-HR1720.tif") ("2G-HR1721.tif") ("2G-HR1722.tif") ("2G-HR1723.tif") ("2G-HR1724.tif") ("2G-HR1725.tif") ("2G-HR1726.tif") ("2G-HR1727.tif") ("2G-HR1728.tif") ("2G-HR1729.tif") ("2G-HR1730.tif") ("2G-HR1731.tif") ("2G-HR1732.tif") ("2G-HR1733.tif") ("2G-HR1734.tif") ("2G-HR1735.tif") ("2G-HR1736.tif") ("2G-HR1737.tif") ("2G-HR1738.tif") ("2G-HR1739.tif") ("2G-HR1740.tif") ("2G-HR1741.tif") ("2G-HR1742.tif") ("2G-HR1743.tif") ("2G-HR1744.tif") ("2G-HR1745.tif") ("2G-HR1746.tif") ("2G-HR1747.tif") ("2G-HR1748.tif") ("2G-HR1749.tif") ("2G-HR1750.tif") ("2G-HR1751.tif") ("2G-HR1752.tif") ("2G-HR1753.tif") ("2G-HR1754.tif") ("2G-HR1755.tif") ("2G-HR1756.tif") ("2G-HR1757.tif") ("2G-HR1758.tif") ("2G-HR1759.tif") ("2G-HR1760.tif") ("2G-HR1761.tif") ("2G-HR1762.tif") ("2G-HR1763.tif") ("2G-HR1764.tif") ("2G-HR1765.tif") ("2G-HR1766.tif") ("2G-HR1767.tif") ("2G-HR1768.tif") ("2G-HR1769.tif") ("2G-HR1770.tif") ("2G-HR1771.tif") ("2G-HR1772.tif") ("2G-HR1773.tif") ("2G-HR1774.tif") ("2G-HR1775.tif") ("2G-HR1776.tif") ("2G-HR1777.tif") ("2G-HR1778.tif") ("2G-HR1779.tif") ("2G-HR1780.tif") ("2G-HR1781.tif") ("2G-HR1782.tif") ("2G-HR1783.tif") ("2G-HR1784.tif") ("2G-HR1785.tif") ("2G-HR1786.tif") ("2G-HR1787.tif") ("2G-HR1788.tif") ("2G-HR1789.tif") ("2G-HR1790.tif") ("2G-HR1791.tif") ("2G-HR1792.tif") ("2G-HR1793.tif") ("2G-HR1794.tif") ("2G-HR1795.tif") ("2G-HR1796.tif") ("2G-HR1797.tif") ("2G-HR1798.tif") ("2G-HR1799.tif") ("2G-HR1800.tif") ("2G-HR1801.tif") ("2G-HR1802.tif") ("2G-HR1803.tif") ("2G-HR1804.tif") ("2G-HR1805.tif") ("2G-HR1806.tif") ("2G-HR1807.tif") ("2G-HR1808.tif") ("2G-HR1809.tif") ("2G-HR1810.tif") ("2G-HR1811.tif") ("2G-HR1812.tif") ("2G-HR1813.tif") ("2G-HR1814.tif") ("2G-HR1815.tif") ("2G-HR1816.tif") ("2G-HR1817.tif") ("2G-HR1818.tif") ("2G-HR1819.tif") ("2G-HR1820.tif") ("2G-HR1821.tif") ("2G-HR1822.tif") ("2G-HR1823.tif") ("2G-HR1824.tif") ("2G-HR1825.tif") ("2G-HR1826.tif") ("2G-HR1827.tif") ("2G-HR1828.tif") ("2G-HR1829.tif") ("2G-HR1830.tif") ("2G-HR1831.tif") ("2G-HR1832.tif") ("2G-HR1833.tif") ("2G-HR1834.tif") ("2G-HR1835.tif") ("2G-HR1836.tif") ("2G-HR1837.tif") ("2G-HR1838.tif") ("2G-HR1839.tif") ("2G-HR1840.tif") ("2G-HR1841.tif") ("2G-HR1842.tif") ("2G-HR1843.tif") ("2G-HR1844.tif") ("2G-HR1845.tif") ("2G-HR1846.tif") ("2G-HR1847.tif") ("2G-HR1848.tif") ("2G-HR1849.tif") ("2G-HR1850.tif") ("2G-HR1851.tif") ("2G-HR1852.tif") ("2G-HR1853.tif") ("2G-HR1854.tif") ("2G-HR1855.tif") ("2G-HR1856.tif") ("2G-HR1857.tif") ("2G-HR1858.tif") ("2G-HR1859.tif") ("2G-HR1860.tif") ("2G-HR1861.tif") ("2G-HR1862.tif") ("2G-HR1863.tif") ("2G-HR1864.tif") ("2G-HR1865.tif") ("2G-HR1866.tif") ("2G-HR1867.tif") ("2G-HR1868.tif") ("2G-HR1869.tif") ("2G-HR1870.tif") ("2G-HR1871.tif") ("2G-HR1872.tif") ("2G-HR1873.tif") ("2G-HR1874.tif") ("2G-HR1875.tif") ("2G-HR1876.tif") ("2G-HR1877.tif") ("2G-HR1878.tif") ("2G-HR1879.tif") ("2G-HR1880.tif") ("2G-HR1881.tif") ("2G-HR1882.tif") ("2G-HR1883.tif") ("2G-HR1884.tif") ("2G-HR1885.tif") ("2G-HR1886.tif") ("2G-HR1887.tif") ("2G-HR1888.tif") ("2G-HR1889.tif") ("2G-HR1890.tif") ("2G-HR1891.tif") ("2G-HR1892.tif") ("2G-HR1893.tif") ("2G-HR1894.tif") ("2G-HR1895.tif") ("2G-HR1896.tif") ("2G-HR1897.tif") ("2G-HR1898.tif") ("2G-HR1899.tif") ("2G-HR1900.tif") ("2G-HR1901.tif") ("2G-HR1902.tif") ("2G-HR1903.tif") ("2G-HR1904.tif") ("2G-HR1905.tif") ("2G-HR1906.tif") ("2G-HR1907.tif") ("2G-HR1908.tif") ("2G-HR1909.tif") ("2G-HR1910.tif") ("2G-HR1911.tif") ("2G-HR1912.tif") ("2G-HR1913.tif") ("2G-HR1914.tif") ("2G-HR1915.tif") ("2G-HR1916.tif") ("2G-HR1917.tif") ("2G-HR1918.tif") ("2G-HR1919.tif") ("2G-HR1920.tif") ("2G-HR1921.tif") ("2G-HR1922.tif") ("2G-HR1923.tif") ("2G-HR1924.tif") ("2G-HR1925.tif") ("2G-HR1926.tif") ("2G-HR1927.tif") ("2G-HR1928.tif") ("2G-HR1929.tif") ("2G-HR1930.tif") ("2G-HR1931.tif") ("2G-HR1932.tif") ("2G-HR1933.tif") ("2G-HR1934.tif") ("2G-HR1935.tif") ("2G-HR1936.tif") ("2G-HR1937.tif") ("2G-HR1938.tif") ("2G-HR1939.tif") ("2G-HR1940.tif") ("2G-HR1941.tif") ("2G-HR1942.tif") ("2G-HR1943.tif") ("2G-HR1944.tif") ("2G-HR1945.tif") ("2G-HR1946.tif") ("2G-HR1947.tif") ("2G-HR1948.tif") ("2G-HR1949.tif") ("2G-HR1950.tif") ("2G-HR1951.tif") ("2G-HR1952.tif") ("2G-HR1953.tif") ("2G-HR1954.tif") ("2G-HR1955.tif") ("2G-HR1956.tif") ("2G-HR1957.tif") ("2G-HR1958.tif") ("2G-HR1959.tif") ("2G-HR1960.tif") ("2G-HR1961.tif") ("2G-HR1962.tif") ("2G-HR1963.tif") ("2G-HR1964.tif") ("2G-HR1965.tif") ("2G-HR1966.tif") ("2G-HR1967.tif") ("2G-HR1968.tif") ("2G-HR1969.tif") ("2G-HR1970.tif") ("2G-HR1971.tif") ("2G-HR1972.tif") ("2G-HR1973.tif") ("2G-HR1974.tif") ("2G-HR1975.tif") ("2G-HR1976.tif") ("2G-HR1977.tif") ("2G-HR1978.tif") ("2G-HR1979.tif") ("2G-HR1980.tif") ("2G-HR1981.tif") ("2G-HR1982.tif") ("2G-HR1983.tif") ("2G-HR1984.tif") ("2G-HR1985.tif") ("2G-HR1986.tif") ("2G-HR1987.tif") ("2G-HR1988.tif") ("2G-HR1989.tif") ("2G-HR1990.tif") ("2G-HR1991.tif") ("2G-HR1992.tif") ("2G-HR1993.tif") ("2G-HR1994.tif") ("2G-HR1995.tif") ("2G-HR1996.tif") ("2G-HR1997.tif") ("2G-HR1998.tif") ("2G-HR1999.tif") ("2G-HR2000.tif") ("2G-HR2001.tif") ("2G-HR2002.tif") ("2G-HR2003.tif") ("2G-HR2004.tif") ("2G-HR2005.tif") ("2G-HR2006.tif") ("2G-HR2007.tif") ("2G-HR2008.tif") ("2G-HR2009.tif") ("2G-HR2010.tif") ("2G-HR2011.tif") ("2G-HR2012.tif") ("2G-HR2013.tif") ("2G-HR2014.tif") ("2G-HR2015.tif") ("2G-HR2016.tif") ("2G-HR2017.tif") ("2G-HR2018.tif") ("2G-HR2019.tif") ("2G-HR2020.tif") ("2G-HR2021.tif") ("2G-HR2022.tif") ("2G-HR2023.tif") ("2G-HR2024.tif") ("2G-HR2025.tif") ("2G-HR2026.tif") ("2G-HR2027.tif") ("2G-HR2028.tif") ("2G-HR2029.tif") ("2G-HR2030.tif") ("2G-HR2031.tif") ("2G-HR2032.tif") ("2G-HR2033.tif") ("2G-HR2034.tif") ("2G-HR2035.tif") ("2G-HR2036.tif") ("2G-HR2037.tif") ("2G-HR2038.tif") ("2G-HR2039.tif") ("2G-HR2040.tif") ("2G-HR2041.tif") ("2G-HR2042.tif") ("2G-HR2043.tif") ("2G-HR2044.tif") ("2G-HR2045.tif") ("2G-HR2046.tif") ("2G-HR2047.tif") ("2G-HR2048.tif") ("2G-HR2049.tif") ("2G-HR2050.tif") ("2G-HR2051.tif") ("2G-HR2052.tif") ("2G-HR2053.tif") ("2G-HR2054.tif") ("2G-HR2055.tif") ("2G-HR2056.tif") ("2G-HR2057.tif") ("2G-HR2058.tif") ("2G-HR2059.tif") ("2G-HR2060.tif") ("2G-HR2061.tif") ("2G-HR2062.tif") ("2G-HR2063.tif") ("2G-HR2064.tif") ("2G-HR2065.tif") ("2G-HR2066.tif") ("2G-HR2067.tif") ("2G-HR2068.tif") ("2G-HR2069.tif") ("2G-HR2070.tif") ("2G-HR2071.tif") ("2G-HR2072.tif") ("2G-HR2073.tif") ("2G-HR2074.tif") ("2G-HR2075.tif") ("2G-HR2076.tif") ("2G-HR2077.tif") ("2G-HR2078.tif") ("2G-HR2079.tif") ("2G-HR2080.tif") ("2G-HR2081.tif") ("2G-HR2082.tif") ("2G-HR2083.tif") ("2G-HR2084.tif") ("2G-HR2085.tif") ("2G-HR2086.tif") ("2G-HR2087.tif") ("2G-HR2088.tif") ("2G-HR2089.tif") ("2G-HR2090.tif") ("2G-HR2091.tif") ("2G-HR2092.tif") ("2G-HR2093.tif") ("2G-HR2094.tif") ("2G-HR2095.tif") ("2G-HR2096.tif") ("2G-HR2097.tif") ("2G-HR2098.tif") ("2G-HR2099.tif") ("2G-HR2100.tif") ("2G-HR2101.tif") ("2G-HR2102.tif") ("2G-HR2103.tif") ("2G-HR2104.tif") ("2G-HR2105.tif") ("2G-HR2106.tif") ("2G-HR2107.tif") ("2G-HR2108.tif") ("2G-HR2109.tif") ("2G-HR2110.tif") ("2G-HR2111.tif") ("2G-HR2112.tif") ("2G-HR2113.tif") ("2G-HR2114.tif") ("2G-HR2115.tif") ("2G-HR2116.tif") ("2G-HR2117.tif") ("2G-HR2118.tif") ("2G-HR2119.tif") ("2G-HR2120.tif") ("2G-HR2121.tif") ("2G-HR2122.tif") ("2G-HR2123.tif") ("2G-HR2124.tif") ("2G-HR2125.tif") ("2G-HR2126.tif") ("2G-HR2127.tif") ("2G-HR2128.tif") ("2G-HR2129.tif") ("2G-HR2130.tif") ("2G-HR2131.tif") ("2G-HR2132.tif") ("2G-HR2133.tif") ("2G-HR2134.tif") ("2G-HR2135.tif") ("2G-HR2136.tif") ("2G-HR2137.tif") ("2G-HR2138.tif") ("2G-HR2139.tif") ("2G-HR2140.tif") ("2G-HR2141.tif") ("2G-HR2142.tif") ("2G-HR2143.tif") ("2G-HR2144.tif") ("2G-HR2145.tif") ("2G-HR2146.tif") ("2G-HR2147.tif") ("2G-HR2148.tif") ("2G-HR2149.tif") ("2G-HR2150.tif") ("2G-HR2151.tif") ("2G-HR2152.tif") ("2G-HR2153.tif") ("2G-HR2154.tif") ("2G-HR2155.tif") ("2G-HR2156.tif") ("2G-HR2157.tif") ("2G-HR2158.tif") ("2G-HR2159.tif") ("2G-HR2160.tif") ("2G-HR2161.tif") ("2G-HR2162.tif") ("2G-HR2163.tif") ("2G-HR2164.tif") ("2G-HR2165.tif") ("2G-HR2166.tif") ("2G-HR2167.tif") ("2G-HR2168.tif") ("2G-HR2169.tif") ("2G-HR2170.tif") ("2G-HR2171.tif") ("2G-HR2172.tif") ("2G-HR2173.tif") ("2G-HR2174.tif") ("2G-HR2175.tif") ("2G-HR2176.tif") ("2G-HR2177.tif") ("2G-HR2178.tif") ("2G-HR2179.tif") ("2G-HR2180.tif") ("2G-HR2181.tif") ("2G-HR2182.tif") ("2G-HR2183.tif") ("2G-HR2184.tif") ("2G-HR2185.tif") ("2G-HR2186.tif") ("2G-HR2187.tif") ("2G-HR2188.tif") ("2G-HR2189.tif") ("2G-HR2190.tif") ("2G-HR2191.tif") ("2G-HR2192.tif") ("2G-HR2193.tif") ("2G-HR2194.tif") ("2G-HR2195.tif") ("2G-HR2196.tif") ("2G-HR2197.tif") ("2G-HR2198.tif") ("2G-HR2199.tif") ("2G-HR2200.tif") ("2G-HR2201.tif") ("2G-HR2202.tif") ("2G-HR2203.tif") ("2G-HR2204.tif") ("2G-HR2205.tif") ("2G-HR2206.tif") ("2G-HR2207.tif") ("2G-HR2208.tif") ("2G-HR2209.tif") ("2G-HR2210.tif") ("2G-HR2211.tif") ("2G-HR2212.tif") ("2G-HR2213.tif") ("2G-HR2214.tif") ("2G-HR2215.tif") ("2G-HR2216.tif") ("2G-HR2217.tif") ("2G-HR2218.tif") ("2G-HR2219.tif") ("2G-HR2220.tif") ("2G-HR2221.tif") ("2G-HR2222.tif") ("2G-HR2223.tif") ("2G-HR2224.tif") ("2G-HR2225.tif") ("2G-HR2226.tif") ("2G-HR2227.tif") ("2G-HR2228.tif") ("2G-HR2229.tif") ("2G-HR2230.tif") ("2G-HR2231.tif") ("2G-HR2232.tif") ("2G-HR2233.tif") ("2G-HR2234.tif") ("2G-HR2235.tif") ("2G-HR2236.tif") ("2G-HR2237.tif") ("2G-HR2238.tif") ("2G-HR2239.tif") ("2G-HR2240.tif") ("2G-HR2241.tif") ("2G-HR2242.tif") ("2G-HR2243.tif") ("2G-HR2244.tif") ("2G-HR2245.tif") ("2G-HR2246.tif") ("2G-HR2247.tif") ("2G-HR2248.tif") ("2G-HR2249.tif") ("2G-HR2250.tif") ("2G-HR2251.tif") ("2G-HR2252.tif") ("2G-HR2253.tif") ("2G-HR2254.tif") ("2G-HR2255.tif") ("2G-HR2256.tif") ("2G-HR2257.tif") ("2G-HR2258.tif") ("2G-HR2259.tif") ("2G-HR2260.tif") ("2G-HR2261.tif") ("2G-HR2262.tif") ("2G-HR2263.tif") ("2G-HR2264.tif") ("2G-HR2265.tif") ("2G-HR2266.tif") ("2G-HR2267.tif") ("2G-HR2268.tif") ("2G-HR2269.tif") ("2G-HR2270.tif") ("2G-HR2271.tif") ("2G-HR2272.tif") ("2G-HR2273.tif") ("2G-HR2274.tif") ("2G-HR2275.tif") ("2G-HR2276.tif") ("2G-HR2277.tif") ("2G-HR2278.tif") ("2G-HR2279.tif") ("2G-HR2280.tif") ("2G-HR2281.tif") ("2G-HR2282.tif") ("2G-HR2283.tif") ("2G-HR2284.tif") ("2G-HR2285.tif") ("2G-HR2286.tif") ("2G-HR2287.tif") ("2G-HR2288.tif") ("2G-HR2289.tif") ("2G-HR2290.tif") ("2G-HR2291.tif") ("2G-HR2292.tif") ("2G-HR2293.tif") ("2G-HR2294.tif") ("2G-HR2295.tif") ("2G-HR2296.tif") ("2G-HR2297.tif") ("2G-HR2298.tif") ("2G-HR2299.tif") ("2G-HR2300.tif") ("2G-HR2301.tif") ("2G-HR2302.tif") ("2G-HR2303.tif") ("2G-HR2304.tif") ("2G-HR2305.tif") ("2G-HR2306.tif") ("2G-HR2307.tif") ("2G-HR2308.tif") ("2G-HR2309.tif") ("2G-HR2310.tif") ("2G-HR2311.tif") ("2G-HR2312.tif") ("2G-HR2313.tif") ("2G-HR2314.tif") ("2G-HR2315.tif") ("2G-HR2316.tif") ("2G-HR2317.tif") ("2G-HR2318.tif") ("2G-HR2319.tif") ("2G-HR2320.tif") ("2G-HR2321.tif") ("2G-HR2322.tif") ("2G-HR2323.tif") ("2G-HR2324.tif") ("2G-HR2325.tif") ("2G-HR2326.tif") ("2G-HR2327.tif") ("2G-HR2328.tif") ("2G-HR2329.tif") ("2G-HR2330.tif") ("2G-HR2331.tif") ("2G-HR2332.tif") ("2G-HR2333.tif") ("2G-HR2334.tif") ("2G-HR2335.tif") ("2G-HR2336.tif") ("2G-HR2337.tif") ("2G-HR2338.tif") ("2G-HR2339.tif") ("2G-HR2340.tif") ("2G-HR2341.tif") ("2G-HR2342.tif") ("2G-HR2343.tif") ("2G-HR2344.tif") ("2G-HR2345.tif") ("2G-HR2346.tif") ("2G-HR2347.tif") ("2G-HR2348.tif") ("2G-HR2349.tif") ("2G-HR2350.tif") ("2G-HR2351.tif") ("2G-HR2352.tif") ("2G-HR2353.tif") ("2G-HR2354.tif") ("2G-HR2355.tif") ("2G-HR2356.tif") ("2G-HR2357.tif") ("2G-HR2358.tif") ("2G-HR2359.tif") ("2G-HR2360.tif") ("2G-HR2361.tif") ("2G-HR2362.tif") ("2G-HR2363.tif") ("2G-HR2364.tif") ("2G-HR2365.tif") ("2G-HR2366.tif") ("2G-HR2367.tif") ("2G-HR2368.tif") ("2G-HR2369.tif") ("2G-HR2370.tif") ("2G-HR2371.tif") ("2G-HR2372.tif") ("2G-HR2373.tif") ("2G-HR2374.tif") ("2G-HR2375.tif") ("2G-HR2376.tif") ("2G-HR2377.tif") ("2G-HR2378.tif") ("2G-HR2379.tif") ("2G-HR2380.tif") ("2G-HR2381.tif") ("2G-HR2382.tif") ("2G-HR2383.tif") ("2G-HR2384.tif") ("2G-HR2385.tif") ("2G-HR2386.tif") ("2G-HR2387.tif") ("2G-HR2388.tif") ("2G-HR2389.tif") ("2G-HR2390.tif") ("2G-HR2391.tif") ("2G-HR2392.tif") ("2G-HR2393.tif") ("2G-HR2394.tif") ("2G-HR2395.tif") ("2G-HR2396.tif") ("2G-HR2397.tif") ("2G-HR2398.tif"))
+
+
+#+NAME: New
+#+BEGIN_SRC bash  :dir /ssh:homer:/cygdrive/e/StudyData/02/TIFF/ :var ENTRY=entries[0:2] :session homer-img-02
+for one_entry in $ENTRY
+do
+    echo $one_entry
+done
+#+END_SRC
+
+
+*
+
+Variants:
+
+1. Pure Circle/Color Tracking
+2.
+
+
+10.76 dilation
+Value: 175.41/255
+Saturation:
+44.4/255
+Hue: 26.2275/47.92
+Papers:
+* INT
+
+Predicting Reader Response Mani describes a methodology for analyzing
+character evaluations by inter-annotator agreement.
+
+
+* [[file:~/Dropbox/org/papers/fdg2017/fdg_poster.org][FDG Poster]]
+- [[id:zmq4v160wmh0@seebright.com][FDG Poster Feedback]]
+** V1
+*** Abstract
+This paper describes a planned study to use a model of the narrative
+meaning to analyze a contemporary interactive digital narrative. The
+primary research question is whether a model of the underlying story
+can predict player emotional responses to key events within an
+interactive narrative when provided with a player's earlier
+choices. The game /The Wolf Among Us/ by Telltale Games was selected
+due to both its critically acclaimed status and the fact that it has
+both a strong, stable narrative and rich emotional content tied
+directly to the story itself. The combination of sophisticated
+narrative and high production values provides an opportunity to
+understand how choices and branching stories operate within
+contemporary digital narratives. The game uses choice menus with
+natural language labels with simplistic accounting of inventory and
+environments. The games uses bespoke hand authorship of complex
+well-rounded characters and on dramatic voice and animated
+performances, representing highly layered meanings and attracting
+fervent fan communities.  We selected an existing computational model
+of narrative for its ability to represent affective relationship
+between story-values and the character goal networks that pursue them
+(David Elson's Story Intention Graph and its text-focused annotation
+tool, /Scheherazade/ \cite{Elson2012}) and plan to use annotated
+adaptations of traversals to compare player experiences. This paper
+describes the proposed efforts to pursue the aforementioned research
+question: first, developing a repeatable methodology for annotating a
+cinematic choice-based adventure using the selected narrative model
+(SIG) and in particular associating events with story values and
+characters. Second, recording a set of player's emotional experiences
+while playing the game, and using the method developed in the first
+effort to associate these responses with configurations of the story
+content. Third, developing an algorithm whose input is the player's
+traversal and whose output are potential places for emotional
+response. Fourth, a second study validating the algorithm which is
+conducted using episode 2 of /The Wolf Among Us/.
+*** Outline
+**** Introduction
+Interactive storytelling uses the capabilities of computational media
+to dynamically assemble stories based on player input and/or on an
+underlying simulation of a world.
+
+This paper is organized as follows: First, we motivate the research
+question and situated its goals within game studies and the
+computational narratology.
+
+***** Motivation
+Interactive narratives are challenging to study: they present a
+constantly moving target for analysis, as each traversal (a term
+introduced by to describe a specific playthrough) still in their
+infancy.
+
+This work builds on the ongoing efforts within the computational
+narratology community, especially those focused on corpora and formal
+models.
+
+Narrative can be understood as phenomenon that arises from the
+coordination of inherent mental abilities, including the ability to
+understand the interaction of agents, their goals, and beliefs and the
+sequence of causally related events they are involved in
+\citep{Ryan2015b}.
+
+In the field of Computational Narratology, Mark Finlaysen conducted a
+study of the use of corpora that observes that text[fn:3], is prioritized
+given the availability of tools \cite{Finlayson2013}, although the
+only game logs that he cited were those of Orkin in the game EAT & RUN
+\cite{Orkin2010}.
+
+The literature does not, however, provide an example of a corpus of a
+modern interactive narrative game in a format suitable for annotation,
+nor does it detail an effort to map an existing model of computational
+narratives onto a pre-existing long-form interactive digital
+narrative work.
+
+David Elson intended the /Story Intention Graph/ to be a descriptive
+model of meaning, representing the mental simulation that naturally
+takes place of agents, their pursuit of goals and resulting causally
+linked events that make up those pursuits.
+
+In the next section, we'll briefly define the subset of narratives
+that fall in Tanenbaum's /readerly/ pleasure.
+
+
+***** Cinematic choice-based adventure (CCBA) games
+Telltale Game's /The Wolf Among Us/ was released in 2013 for multiple
+platforms.
+
+It is useful to locate the specific space that the subgenre of
+cinematic choice-based adventure games occupies: where story content
+is coded to be presented to the player in a very specific order and
+under very specific conditions and where virtually no unexpected
+sequence of content occurs.[fn:9]
+
+The adventure game genre is often put in opposition to genres which
+promote more player freedom, such as in Massively Multiplayer Role
+Playing Games (MMORPGs) or Open World RPGs which allow players to
+create and develop their own character.
+
+/The Wolf Among Us/ is episodic: future episodes must account for
+selected previous player decisions, although these are usually limited
+to decisions that have an ontological effect on the world (including
+the memories of the characters).
+
+Games in this subgenre conserve content and maximizing narrative
+payoffs among all possible traversals, this subgenre is ideally suited
+to annotation using SIG, as the player's goals and intentions are
+rewarded for small perturbations while the story remains relatively
+consistent.
+**** Story Intention Graphs
+The Story Intention Graph (SIG) schemata were developed by David Elson
+as a set of discourse relations to represent key relationships among
+concepts such as goals, values and agents present in textual
+narratives using concepts from narrative theory.
+
+Elson found that the SIG schemata, even without representing
+individual propositions, was more successful than alternative methods
+at identifying similarities in the stories.
+
+The lack of contemporary narrative games as the source of annotated
+datasets is further exacerbated by the popularity within the fields of
+narrative generation and understanding for using simple stories such
+as Aesop's fables.
+
+The proposed study requires the development of new methodology.
+
+**** Methodology and Study Design
+The proposed study requires the development of new methodology.
+1. Select and adapt narrative model to represent relationships between
+   events and decisions and the gameplay itself.
+2. Use the model to annotate a set of "natural" traversals of users
+   who also report emotional events.
+3. Analyze the emotional content with respect to story structure.
+4. Use these results to iterate on the model, annotation process and
+   to determine if these are predictive or indicative of underlying
+   story-influenced emotional responses.
+
+***** Using a Model to Annotate Narrative Structure
+First, the narrative structure needs to be available for annotation.
+
+1. It be in a text format, given availability of SIG annotation software
+2. Be capable of adding additional traversal content without redoing
+   deleting or altering previous traversal positions. This would allow
+   comparison amongst traversals where if one traversal referred to a
+   piece of content it would be at the same position as a separate
+   one.
+
+We began with the scope of the first episode, using as a source what
+we are calling a "natural traversal."
+***** User Study
+
+***** Iterations on SIG
+***** Second User Study
+**** Conclusion
+** V2
+*** TODO Cut and bolster
+Pick things to cut, add additional detail & discussion to methodology
+section to reproduce results.
+*** Integrate the following literature:
+**** Computational Narrative literature review
+***** Computational Narratology - Mani, Inderjeet
+For computational accounts to be made more relevant to humanities
+narratology, two issues need to be confronted: (a) the challenge of
+interdisciplinary communication across substantial methodological
+divides, especially given the shift in interest of post-classical
+narratology away from the precise analyses that characterized its
+structuralist phase; (b) the fact that computational representations
+and techniques for story generation are not general enough to concoct
+anything other than very short, relatively simple stories (such as
+fairy tales), let alone epics or novels (Gervás et al. 2006).
+***** Finlayson
+*****
+**** Annotation approaches
+- Amsterdam Hypermedia Model
+-
+**** Emotion in Narratives
+*****
+More nuanced models of characters’ emotions have also been
+explored. For example, the interactive storytelling system of Pizzi
+(2011) is driven by plans that exploit an inventory of characters’
+feelings listed in Flaubert’s preliminary studies for Madame
+Bovary; such a framework allows for a variety of sentiment-driven
+interactive retellings of the novel. Another interesting reformulation
+of a narratological construct is that of suspense. Cheong (2007)
+generates stories judged to be suspenseful by modeling the reader’s
+reasoning about limitations and conflicts involving a protagonist’s
+goals (Prince → Reader [7]), based on narratologica
+
+* Inbox
+** Open annotations on multimedia Web resources
+Authors:	Bernhard Haslhofer	Department of Information Science, Cornell University, Ithaca, USA 14850
+Robert Sanderson	Los Alamos National Laboratory, Los Alamos, USA 87544
+Rainer Simon	Austrian Institute of Technology, Vienna, Austria 1220
+Herbert Sompel	Los Alamos National Laboratory, Los Alamos, USA 87544
+Open annotations on multimedia Web resources	2014 Article
+Published in:
+· Journal Multimedia Tools and Applications archive
+Volume 70 Issue 2, May 2014
+** HyperCafe: narrative and aesthetic properties of hypervideo
+Authors:	Nitin Sawhney	The Georgia Institute of Technology, School of Literature, Communication, and Culture, Atlanta, GA
+David Balcom	The Georgia Institute of Technology, School of Literature, Communication, and Culture, Atlanta, GA
+Ian Smith	The Georgia Institute of Technology, College of Computing, Atlanta, GA
+** Surfing the movie space: advanced navigation in movie-only hypermedia
+	Jörg Geißler	GMD (German National Research Center for Information Technology), IPSI (Integrated Publication and Information Systems Institute), Dolivostr. 15, D - 64293 Darmstadt, Germany
+* Literature Search Methodology
+:PROPERTIES:
+:ID:       ixgk2f01umh0@seebright.com
+:END:
+** Collect tables of contents for all of:
+*** ICIDS
+*** ICVS 2003
+**** Stories in Space: The Concept of the Story Map
+*** ICVS 2005
+**** [[https://paperpile.com/view/dc637123-c626-0dae-a1dc-f3f0a8f9c420][Formal Encoding of Drama Ontology]]
+****
+*** CMN
+*** INT
+** Identify relevant papers by title + abstract and add to list
+** Identify conferences/publications in works cited that would be relevant
+
+* INT Outline
+We present a methodology and results of encoding playthroughs of an
+existing interactive narrative in such a way as to be modeled using
+existing models of story. Modeling interaction, engagement, player
+response and story content are increasingly important as AI methods
+improve in using labeled and unlabeled datasets to determine
+underlying models and relationships. The present study focuses on
+emotional engagement and player choices, drawing from theories of
+choice poetics and dramatic situation analysis and discussing the
+results of creating a format amenable to existing models of linear
+narrative, demonstrating the suitability for nonlinear narratives of a
+particular complexity.
+
+
+** Motivations
+1. Contemporary interactive narratives are not currently used as
+   objects of academic study at the level of computational models.
+2. This means that many of the design advances made by authors of such
+   platforms and narratives are out of scope for works that purport to
+   advance the state of the art, leading to a disconnect between where
+   generation of interactive narratives currently is and where the
+   contemporary capabilities are. This gap is evident in the ratio of
+   hand-crafted content vs generative content. See Prom Week, Versu,
+   Facade, etc.
+3. The state of the art in story understanding systems is unable to
+   work with non-linear narratives.
+4. Current models of story are divorced from actual player experiences
+   as measured in empirical experiments or actual readings.
+5. Planning-based approches are unable to account for the non-logical
+   additive and nonlocal effect of cumulative information presented in
+   rich multimedia stories such as those produced by Telltale Games.
+6. Hypermedia approaches do not account for works authored outside of
+   a hypermedia model of authorship.
+7. Text Encoding Initiative and the Amsterdam Hypermedia Model exclude
+   logical relationships and models of the underlying story that
+   define the reception of the content. Also, TEI focuses on textual
+   documents, such as scripts, and not on dynamic works, whereas
+   Amsterdam Hypermedia Model ....
+8. What does a complex workflow offer that a branching storygraph
+   would not? -- a means of comparing player experiences to one
+   another and to identify commonalities and constants in the
+   underlying narrative as compared to variations based on choices.
+- What would serve as a good baseline?
+- What is the current state of the art?
+- Who else is pursuing these goals?
+- Why are these goals important?
+
+** Goals
+1. Describe the relationship amongst an interactive story's underlying
+   model, its choice structure and the player's individual emotionally
+   charged experience.
+2. To chart and visualize player's desires, choices, expectations and
+   exposure and reception of information through an experience of an
+   interactive story.
+
+** Research Questions:
+1. Why do choice-based cinematic narratives trigger strong emotions?
+2. How do you measure and contextualize player response to a
+   storygame?
+3. What are meaningful ways to compare enriched traversal records of a
+   storygame when the content differs?
+4. Does a model of the underlying story increase the value for
+   predicting player responses to narratives, as compared to
+   alternative methods?
+5. How do you measure story understanding for a nonlinear story?
+   1. Which aspects or elements remain constant? Which aspects vary?
+
+** Contribution of present paper (ICIDS)
+*** Describe the methodology for recording, encoding and mapping player experience of interactive narrative
+ - Encoding: To take an existing nontextual interactive story and to
+   reify it in a way amenable to computational methods. In particular,
+   to select a structure and annotate it with layers of meaningful
+   information contained in the artifact as playable.
+** Applications and Future Work
+ - Player modeling for assessment of narrative design could improve
+   the evaluation of generated narratives.
+ - A computational model of interactive narratives would allow
+   researchers to begin addressing new questions about the works that
+   are otherwise impossible.
+ -
+** Related Works
+*** Misc
+- BBC -- Representational work. David Base -- long running show.
+- Archers since the 40s
+- paper a decade ago about modeling secrets
+- Marble Springs
+- Afternoon
+- Lust
+- Ulysses
+- KJane mutiny
+- Early modernist
+  - Lady in the Lake
+  - Raymond Chandler
+  - (Ed) Katmul
+  - Post modernism attack on the narrative line
+- Simple art of murder (Chandler)
+- The best piece on what the mystery is really about.
+- Morningstore
+- Franco Moretti -- Theoretic analysis
+- Paul Sage
+- Dog's in the vineyards
+- Tabletop games that try to remediate Dungeons and Dragons. Get rid
+  of the gamemaster, more interesting stories.
+- Cathy Marshall. Gene Colevinsky
+- Annotation. Early book on reading and writing the electronic
+       book.
+- Manciny. Dissertation on Cinematic Hypertext. Full of
+         formal models. Little predictive value.
+- Nifty dissertation at NYU by James Douglas. On interactive
+       fiction -- hypertext fiction. First reading log of Afternoon.
+- Jill Walker, 2001 -- some writing on Afternoon.
+- Ben Shneiderman
+- Adaptive hypertext. (distinct from Dynamic)
+-
+*** Encoding
+**** Theory
+***** [[https://paperpile.com/view/1ce89591-30f3-09dd-b2c2-265250797d29][From Narrative to Visual Narrative to Audiovisual Narrative: the Multimodal Discourse Theory Connection]]
+*****
+**** Text Encoding Initiative
+**** Content Coding
+**** Annotation Frameworks
+**** Plot Point Graphs, Plans, Petri Nets, Linear Logic,
+**** User(/player) Modeling
+*** Hartmut (Unified Theory)
+*** Modeling
+**** Modeling (What?) Surface vs Deep Structure
+**** Hypermedia (Lens)
+**** Choice Poetics
+**** Operational Logics
+**** Computational Models of Story
+***** Story Intention Graphs
+***** Mark A. Finlayson
+***** Dramatology
+**** (Texton & Scripton) Espen Aarseth
+***** Non-trivial -- negated by the silent option. QTE may be considered non-trivial
+*** ICIDS
+*** INT
+*** FDG
+*** DIGRA
+
+*** Hypertext Theory
+**** Cinematic Hypertext (http://projects.kmi.open.ac.uk/hyperdiscourse/theory.html)
+Cinematic Hypertext: Research led by Clara Mancini has laid
+theoretical and empirical foundations for a paradigm that considers
+hypertext as a cinematic medium, media fragments connected by
+discourse relations derived from Cognitive Coherence Relations
+theory. This work now continues with Donia Scott.
+**** Narrative Storybases:
+Research led by Joanna Kwiat is exploring theories of narrative as the
+basis for a flexible story metadata scheme [Storymaking Project]. This
+is being evaluated in the context of a web story database for
+knowledge sharing and annotation amongst health professionals. more
+**** Narrative Theory and Story Annotation
+Kwiat, J. (2006). Realisation of the Resource Potential of Narrative
+and Narrative Collections via Multi-Perspective Markup. Medical
+Humanities Conference, Kings College London, UK (August 2006)
+[PDF][PPT]
+
+Participatory Hypermedia Construction: Research led by Al Selvin is
+exploring the nature of high performance literacy in the use of
+hypermedia tools such as Compendium in demanding, real time team
+sensemaking contexts. This work seeks to view such hypemedia
+construction through the lenses of aesthetics, ethics and
+improvisation.
+
+Selvin, A. (2005) Aesthetic and Ethical Implications of Participatory
+Hypermedia Practice, Technical Report KMI-05-17, Knowledge Media
+Institute, Open University,
+UK. [http://kmi.open.ac.uk/publications/pdf/kmi-05-17.pdf]
+
+Al Selvin (2004) Building Collaborative Knowledge Representations in
+Real Time: An Analysis of Facilitative Micro-Actions, Webcast Seminar,
+Knowledge Media Institute, Open University, UK, 5 October 2004 [PPT]
+****
+
+*** Reader Response Theory (Literature)
+** Research Questions
+** Evaluation
+** Methodology (Contributions?)
+*** Mapping Content to Model
+
+*** Calibration Steps
+- Coding Guide
+- The videos timecodes become canonical for the purposes of the
+  various layers of information.
+- Events within the game are recorded and mapped to timecodes.
+  - This enables identical content segments to be aligned to one
+    another with the predecessor moments according to the model.
+  - Existing storygraph models do not enable comparison of these
+    dependencies alongside one another.
+- Encode the playthrough into INK
+  - First, document the actual content as layers (e.g. stage directions, shot description, dialogue,
+  - Additionally, document the choices contributed by the player.
+- Choices recorded (+ Time to decision)
+- Usage of SEI (start + end time of video segment during use)
+** Future Work
+*** Use the data collected to evaluate methods of predicting emotional response.
+**** Method 1. Graph patterns.
+**** Method 2. Baseline.
+**** Method 3. Niave storygraph.
+*** Second Study: Take Episode 2 and use the methods to evaluate them on a new dataset.
+**** Use a first episode of a different Telltale game vs second episode of current game?
+**** Discuss limitations of approach and expected sources of error.
+**** Testing propositional knowledge at each point -- whether a player observes a piece of information.
+
+*
+We record every playthrough, every choice everyone makes. Look at
+percentages of people who make one choice verse another.  If you have
+a character that no one is really leaning into, get to guide creative.
+
+10 billion event records.
+
+"People are very very noisy."
+
+When we did Star Wars, strong inclination -- light side dark side.
+
+Build situations that are intentionally noisy.  Everything comes with
+a plus benefit and a negative benefit. Inviting noisy gameplay.
+
+"There are these big decision moments" critical junctures.
+You can't decide people into "Did you or didn't you save this person?"
+
+Bottom-up find out what type of players we had.
+
+* User Replay Reports
+I first completed A Wolf Among Us a month ago. After doing a few other
+things, these past few weeks I've been replaying the game a ton,
+trying different approaches to see if I can find anything new. I don't
+know how many times the average TWAU player plays the game, and since
+the game is almost two years old, it could be that everything I've
+discovered is common knowledge. But I thought it'd be fun to talk
+about what I've found.  During one playthrough, I went through the
+game picking the silence option every chance I could. I call this my
+"Strong, Silent Wolf" playthrough. If you haven't done it, do so. It's
+hilarious. It seems like Bigby randomly decides to troll people by not
+answering him. Or that he has a curse on him that'll makes it so he
+can only say a certain number of words per day, so he has to be
+selective. It's not always as awkward as you might think, because the
+characters already know Bigby, and seem to be able to guess what he's
+thinking, or they realize that they need to keep the conversation
+moving. Normally it doesn't result in new dialogue, but there are
+exceptions. If you don't answer Snow at the beginning of episode 2,
+she eventually gets pissed that you won't confide at her. If you
+refuse to answer Beast when he asks you if you've seen Beauty, you get
+this hilarious bit where he says "Motherfucker...!" as the elevator
+doors close. If you don't answer Beauty while investigating the hotel
+room, she'll get annoyed and ask how Snow puts up with it. If you
+refuse to tell Snow why you interrupted Lily's funeral, she'll tell
+you that she doesn't have time for your "lost boy at the mall"
+routine. If you don't answer Mary at the foundry, she'll ask you if
+you're trying to "eyeball" her to death.  During that playthrough, I
+also failed as many QTEs as I could, and I found a couple of
+interesting things. In episode 3, if you grapple with Dee for his
+shotgun and fail, it'll discharge and the bullets will nick Snow
+across the neck. It's not mentioned in dialogue, but for the next
+couple of episodes she has a bandage across one part of her neck, and
+a stitched up wound below it. If you don't hit Q fast enough when
+Vivian trys to drive you into a wall in episode 5, it knocks Bigby out
+and he wakes up an hour later. When he goes to the club, Vivian has
+killed herself. I was disappointed to find out that this happens if
+you jump on The Crooked Man's car, because I thought I had found a
+variation few other people would be aware of.  The interrogation scene
+is fun to toy around with. You can get two answers from the suspect by
+hitting them. After that, they'll stop talking, and Ichabod and
+Bluebeard will tell you to try a different approach. You can keep
+hitting them, but eventually the option disappears. It's fun to pulp
+their faces as much as you can, even if it's pointless. If you're
+trying to torment them as much as possible, then with Tweedledee
+you'll end with two violent interrogation methods unused, and with the
+Woodsman one, since he doesn't have any money for you to steal.  One
+thing I think is neat about the first episode is that the dialogue you
+hear when examining Toad's apartment varies depending on what order
+you few the objects. I think that every two possible combinations have
+unique dialogue. In a similar vein, the dialogue varies depending on
+what order you view the evidence in Room 207, and where you find the
+envelope depends on what you examine last.  Replaying the game as made
+me realize something about Telltale's choice system. You get those
+"The character will remember that" messages, but sometimes you need to
+pick a particular dialogue option to see any variation. For example,
+with Aunty Greenleaf you only see any effect from your interactions
+with Rachel if you pick the option to ask her why she chose to
+disguise herself as a child. If you pick the most playful dialogue
+options, she'll comment that Bigby was good with her. If you pick the
+aggressive options, she'll say that not many people would be willing
+to strongarm a child. I'm not sure that seeing those messages insures
+that you can find some variation. TJ and Nerissa have several of those
+messages, and I don't think I've noticed any variation in their
+dialogue. Sometimes you get additional dialogue options if you pick a
+certain response. If you tell Snow White that you have no doubt that
+Crane is the killer, you get several options where you can explain why
+you think that. I've also noticed that usually the moments where you
+get a "The character will remember that" are activated by picking any
+of the possible responses, while sometimes you only get that if you
+pick one particular response, like telling Beast "Not now" at the
+start of episode 3 or telling Bluebeard that he's not needed in the
+investigation.  As an aside, if you're looking to make Bigby the
+biggest bastard possible, I'd recommend going to Crane's apartment in
+episode 3 instead of the Tweedle's office, because although you can
+beat up Jack, you can't beat up Flycatcher. In episode 4 I'd recommend
+going to the Pawn Shop first instead of The Butcher's, because The
+Butcher plays out largely the same either way, while visiting the Pawn
+Shop gives you the opportunity to abuse Toad and Jack. You also get
+the option to tell Johann that you nearly killed the Jersey Devil,
+which alters his dialogue in the meatlocker scenes.  On the topic of
+choices. How Telltale handles their choices is a big point of
+contention. Proponents argue that it's not about changing the story,
+it's about shaping the characters. I've seen a few people who said
+they thought TWAU did Telltale's style of choices better than their
+other games, because it really does feel like it's more about shaping
+Bigby than influencing the story. I'd have to agree with that. For the
+most part, the game isn't about big moral choice as it is deciding
+whether you want to be the Big Bad Wolf, or the Great Good Wolf. Also,
+I doubt anyone expects every choice to have big consequences, but
+certain choices really should logically affect the trajectory of the
+story, and it's up to the writers to provide a good explanation for
+why they don't. I feel like TWAU didn't really have many of those kind
+of choices, and I rarely felt pulled out of the story by the game
+going against my choices. You're also given several legitimate options
+on how to approach your investigation, which gives the game some
+replayability. There were a few things I think could've been done
+better.  I was hoping that treating Tweedledee nicely in the
+interrogation would've had some future effect. I know Dee isn't the
+kind of person to go against his boss, but I would've liked having a
+couple of scenes where instead of threatening Bigby, he genuinely
+tries to get him to back off because he doesn't want to hurt him. I
+was annoyed when the game has Crane dispose of Lily's body even if you
+tell her she can have it. Character wise, it makes sense that Crane
+would want to get rid of Lily's body before anyone can examine it
+further, but it's still a bit annoying because allowing Holly to give
+Lily a proper send off wouldn't affect the rest of the story.  I feel
+the trial scene could've been done better. I was looking forward to
+seeing the characters acknowledge my choices, and I hoped they'd take
+my overall attitude into account and not just my big choices. But if
+you make good choices, you don't hear about the things you did right,
+you just don't hear about the decisions you did wrong. One exception
+is Aunty Greenleaf. If you burn her tree, she's pissed at both of
+you. If you just walk away, she'll still be upset that you threatened
+to do it. If you give her a job, she'll be angry at Snow, but grateful
+to Bigby.  How the scene plays out if you kill The Crooked Man is even
+more problematic. It makes sense if you've made the worst choices, but
+not much if you haven't. Gren approves of you killing Crooked Man, but
+complains that you ripped his arm off. Perfectly reasonable. If you
+haven't, he complains that you knocked him around the bar, even though
+in most cases he attacked you first. A certain dialogue option has
+Beast complain that you nearly gouged his eyes out, even though,
+again, he attacked you first. Unlike in the other scenario, Aunty
+Greenleaf is pissed at you even if you offered her a job. Granted, it
+makes sense that the characters wouldn't want to give Bigby much
+leeway when he walks in carrying a dead body, but I think making the
+player feel like their choices mattered is more important. The bright
+side to the characters having selective memory is that it makes the
+option to walk out of the trial so much more satisfying, because Bigby
+basically calls them all ungrateful assholes and tells them to go fuck
+themselves.  Thoughts? Questions? Ever wondered what would happen if
+you picked a certain option? It's possible I've done it.
+** ---
+
+I'm curious about your choices and why you made them. I'm thinking mostly major choices in the game but anything that was meaningful to you I'm interested in as well. Or if you don't think you can narrow it down to single choices, how did you play as Bigby overall, mean-hearted, good-hearted, witty, silent?
+I'm just very curious because I've played through the game a couple times now and I noticed that my perspectives on Bigby (and some of the other charaters) changed based how I chose to play.
+35 commentssharesavehidegive goldreport
+all 35 comments
+sorted by: best
+[–]PopularKid 29 points 2 years ago
+I liked to roleplay Bigby as an angry, cruel guy trying to be good. So he was good, giving Faith money, not burning down Greenleaf's tree etc. but in the heat of the moment he used violence and intimidation because of his instincts, ripping off Gren's arm, killing Dum, slamming the Butcher etc.
+permalinkembedsavegive gold
+[–]ArkAngel7777777 12 points 2 years ago
+That's how I played too. Trying to be a good guy but when he starts to transform he gets less and less control over his actions.
+permalinkembedsaveparentgive gold
+[–]trakmiro 2 points 2 years ago
+I spared Dum because I thought it would give me pull with the twins later on, like they'd come through for me or something when I needed it... but nope. I bet that it isn't any different if you kill him. That feels like it should have been a much bigger decision given how big a role the Tweedles played in the first half of the season.
+permalinkembedsaveparentgive gold
+[–]MonkahBoy 20 points 2 years ago
+I played as Batman-- I tried to make my actions as close as possible to what Batman would do.
+The Bat Among Us.
+permalinkembedsavegive gold
+[–]itswilliam 59 points 2 years ago
+My choices were solely based on getting in Snow's pants
+permalinkembedsavegive gold
+[–]RainbowApple 8 points 2 years ago
+Despite the fact that it's a video game character and I knew it couldn't happen because of the comics, I still tried.
+permalinkembedsaveparentgive gold
+[–]SomeRandomGuy00 2 points 2 years ago
+Wait what?
+permalinkembedsaveparentgive gold
+[–]RainbowApple 3 points 2 years ago
+I knew they couldn't get together in the game cause in the first like 10 issues Snow rejects Bigby's advances anyways.
+permalinkembedsaveparentgive gold
+[–]BarracudaFeet 12 points 2 years ago
+I was the same way. Also did this for The Walking Dead to get some sweet Carley poon.
+permalinkembedsaveparentgive gold
+[–]indeedwatson 6 points 2 years ago
+Including the hidden option: Reset the chapter to see if you can save her.
+permalinkembedsaveparentgive gold
+[–]ArjenDesign 14 points 2 years ago
+Ah, yeah, that's an interesting thing to think about.
+I played Bigby as trying to make up for his past crimes in the Homelands, so I did everything as kindly and gently as I could (gave Faith the money, gave Colin the drink, didn't burn the tree, didn't kill anyone except Georgie for mercy's sake).
+permalinkembedsavegive gold
+[–]TheTjTerror 10 points 2 years ago
+Same here. I wanted to do the whole "I'm not the big bad wolf, I'm trying to show people I can change. " Which I learned is through exact opposite if you're trying to stay true to comic Bigby.
+permalinkembedsaveparentgive gold
+[–]el_ritardo 6 points 2 years ago
+No mercy.
+permalinkembedsavegive gold
+[–]indeedwatson 20 points 2 years ago
+Killed everyone, hit everyone as soon as they opened their mouths.
+Ehh, okay
+Didn't take TJ's gift for Snow
+YOU FUCKING MONSTER
+permalinkembedsaveparentgive gold
+[–]arachnophobia-kid[S] 3 points 2 years ago
+I like your style
+permalinkembedsaveparentgive gold
+[–]InvigoratingQuestion 8 points 2 years ago*
+I wanted Bigby and Fabletown to do well, and most of the time the "proper", diplomatic options seem the best options.
+Annoyingly enough, the diplomatic choices are always written to work out as the "right" ones, even in situations where they shouldn't - for example
+With the final decision, I think the only conscionable thing to do is to
+permalinkembedsavegive gold
+[–]nosaJay19 3 points 2 years ago
+Yeah, in the comics the Witching Well is only for the dead and
+permalinkembedsaveparentgive gold
+[–]NitroMeta 7 points 2 years ago
+I had like 5 Seconds to decide.
+permalinkembedsavegive gold
+[–]indeedwatson 3 points 2 years ago
+I confess I paused at some of the important ones.
+permalinkembedsaveparentgive gold
+[–]NitroMeta 4 points 2 years ago
+Wait we can pause?
+permalinkembedsaveparentgive gold
+[–]indeedwatson 1 point 2 years ago
+At any time, with the space bar.
+permalinkembedsaveparentgive gold
+[–]arachnophobia-kid[S] 2 points 2 years ago
+Yeah but I'm sure there were some choices that must've meant something to you. Even if you might've made a mistake within the time limit I think that's part of the experience that TellTale is trying to capture.
+permalinkembedsaveparentgive gold
+[–]sitrucneb 5 points 2 years ago
+Up until (and including) the interrogation scene I played Bigby as angry, because I was livid about Faith and Snow "dying". I also rather enjoyed being the Big Bad Wolf a little too much. However, after Snow's return the anger subsided somewhat and I realised I was being a bit of a dick. I didn't rip Glen's arm off, but man I was tempted. I felt guilty enough for considering it, I can't imagine the guilt of seeing him armless in Episode 2 in the scene at the Trip Trap. For the remainder of the game I was more sympathetic to the citizens of Fabletown, but I primarily focused on getting justice for Faith (and Lily, but mostly Faith).
+permalinkembedsavegive gold
+[–]royalslayer 5 points 2 years ago
+The only choice I've regretted in the end was ripping of Gren's arm. That guy was such a douche in the beginning, but turned out to be okay in the end.
+permalinkembedsavegive gold
+[–]kaariainen 5 points 2 years ago
+I tried to be the good guy, but at certain times lost my cool totally, hence the ripped arm, and killing of Dum and ripping the head of The Crooked Man. Im kinda heat of the moment kinda guy irl too.. :D
+permalinkembedsavegive gold
+[–]Gonza116 3 points 2 years ago
+I started played as a good person like in The Walking Dead (which I ended the day before), but then I realized "Hey, I'm the fucking Big Bad Wolf, let's play like that". I couldn't for two reasons: Bigby's Mercy (as it's shown in the Book of Fables) and Snow. I wanted to do the best for the Bigby and Snow relationship (except burning the Greenleaf's tree, that was excessive). Well, I think I have explained myself. And, after reading Fables, I think Bigby would have do what I did.
+permalinkembedsavegive gold
+[–]Dionysus24779 5 points 2 years ago*
+I know I'm late to the party but I still like to answer because I'm bored and it's a neat idea.
+Generally I tried to play as I usually play, I try to be calm and collected, reasonable and logical and giving others a chance, but when others test my patience to an unreasonable degree I did use intimidation.
+But I'll just go through all the "major" choices (the one the games lists).
+In Episode 1 I gave Faith money, because why not? Just trying to be nice and it didn't seem like Bigby is really the person who needs a lot. When it comes to Beauty, I told her that I didn't care about her situation if she doesn't want to explain it but I also didn't tell Beast that I saw her, not because I wanted to do Beauty a favor, but because I didn't want to get into it, so whatever.
+I did go to Toad's apartment first after his call since it sounded much more urgent than Lawrence who looked dead through the mirror. So I couldn't prevent his death.
+When it comes to prime suspects I didn't tell Snow anything since I really wasn't sure at this point and none of the given answers made sense to me. Lawrence killed himself because he hurt Faith, plus it seemed like he was trying to kill himself for like a week or whatever. The Woodsman... I dunno it was just obvious to me that he didn't do it, he may have been an a** when you first meet him but he just wasn't the type. Tweedle Dee/Dum also wouldn't have made sense since they were investigating the murder themselves. Bluebeard would've just been way too obvious because his fable entry said he used to decapitate his wives. I also didn't suspect Georgie since I assumed that her pimp would probably be more protective about "his employee" and I didn't knew anything about him.
+And at the end I decided to go after Tweedle Dee since the Woodsman obviously didn't do anything. Also I didn't rip of Grendels arm since I would never maim someone like that without a damn good reason.
+In Episode 2 I sympathized with Crane, because while he was a jerk I did believe that he really did care about Fabletown and Snow and during the interrogation I was nice to Tweedle Dee and got him to talk with a few well placed questions, it seemed more reasonable to discuss this like Gentlemen without any violence. I also didn't hit Georgie or smashed any of his stuff, though he really really tested my patience and he was lucky Bigby found the floor safe when he did. And I also didn't hit Beast while he was down because I wanted the fight to be over since it was a waste of time.
+In Episode 3 I didn't interrupt Snow because I didn't see any direct urgency in telling her about my findings, though I was worried the "moment of silence" would last forever. Later I investigated Cranes Apartment at first and did make a deal with Jack, also as a side note, I actually appreciated Bluebeards help even if I didn't have the option to express it, though nothing ever came out of it. I also didn't check the office after I was done at the apartment but went to the Trip Trap.
+I did not burn Greenleaf's tree, though it was a tough choice for me, but it just didn't seem right and I didn't like Snow bossing me around.
+When it came to Tweedle Dum... it probably was "out of character" for me and I regretted it a bit, but I did kill him. I was just sick of the Tweedles with their stupid smiles, stupid lines and stupid attitude, they've been a pain since Episode 1 and I felt like the whole situation was a life or death battle (which it was). It just really came natural to me, hesitating only for a second.
+In Episode 4 at the start I was really split about Colin, at first I told him that he should go to the farm since the rules are the rules, but then he told me that that's not true and I bended the rules all the time for others, which reminded me of how I let Jack go for example. Colin actually changed my mind here and I restarted the game to tell him that he can stay. Plus I really appreciated him defending me in front of Snow. And I know this may be kind of cheating since I didn't "live with my choice", but fu** it.
+I didn't attempt to remove Nerissas Ribbon because she was visibly freaked out about it and I didn't see any reason to try to do it. I mean I understood that it was the source of the spell that kept her from talking, but since Nerissa was so adamantly against removing it I suspected something bad would happen and there should be a better way.
+For investigation I went to the Butchers shop, the Lucky Pawn didn't seem to be in any danger to run away. About Toad, I told him that I try to let him stay, though I was a bit confused that I was never given the option to give him money for the glamour, especially since I confistated a huge bundle of money in Cranes apartment earlier (just as a note, this was the only time I ever took money because I assumed Crane wouldn't return anyway.)
+When I met the Crooked Man I agreed to talk to him first, because I consider myself a reasonable person and gladly accept any invitation to talk something through, plus I wanted to give the Crooked Man a genuine chance.
+In Episode 5 I did kill Georgie because he was in such pain and he seemed dead anyway. Plus it was a little bit of statisfaction because he really tested my patience all the time.
+As for the Crooked Man, I did bring him back alive, because as I said I'm a reasonable man and gladly accept any invitation to talk things through and I was genuinly interested in his side of the story and arguments. So I guess I don't have to mention that I gave him a fair trial and the chance to speak.
+As for the Crooked Mans punishment, well it was a tough choice for me. Killing him wasn't really a choice for me, though I did realize that it was kind of unfair for me to kill Dum and let the Crooked Man live, but that was during the heat of a battle and this would've been cold blooded when alternatives exist. I did consider throwing him down the Witching Well because it seemed like the most appropiate thing, but this also really didn't sit well with me. So I had Aunty Greenleaf imprison him and was very statisfied with that result, though I didn't really like that they took out his tounge since he should be given a second chance one day.
+TJs gift to Snow I did accept, because seriously why not? It's such a trivial thing to do anyway.
+And my last words to Nerissa were "I hope I've done some good here" because I really wasn't that sure about it.
+Also I didn't attempt to chase after Nerissa, I just let her go because this was obviously what she wanted, otherwise she would've looked back or not leave with all her bags.
+And while I'm at it I give a very quick rundown on how my relationship with certain characters were in no particular order and only the "major" ones:
+Snow - I actually didn't like her that much, yeah she had some genuine sweet moments but she was often pretty unfair, like whenever she said something like "Try to be nice" I could just tell myself "Fu** you, I've been nothing but nice so far!"...
+Toad - To be honest I didn't really care for him.
+Crane - I wanted to believe that he had a sincere interest in having Fabletown be a good place for everyone, but he disappointed me.
+Georgie - He tested my patience the most out of all characters.
+Crooked Man - I actually really liked him but I was disappointed everytime he send his goons after me. Though it was frustrating to hear his "I just gave the order!" defense and while he presented himself as a benefactor for poor Fables his actions spoke volumes against that. So he was just disappointing in that regard as well, he was no Illusive Man, that was sure...
+Tweedles - I really disliked them, they were a huge pain, constantly interrupting the investigation, having a shi**y attitude and these weird stupid smiles.
+Woodsman - He turned out to be a real bro and kind of a woobie, I like him.
+Colin - After the first encounter I didn't like him at all, but him defending Bigby made me change my mind about him. He's a honest but loyal friend.
+Beauty - While she's kind of cute she's also incredibly annoying, it felt like she constantly tried to push her problems onto me and make it about herself, plus she seems to love playing capting obvious, repeating everything that has already been said during the investigation of room 207.
+Beast - He seemed like a genuinly nice guy, though he has some serious issues.
+Holly - I somehow couldn't bring myself to really care for her at all...
+Grendel - Kind of disliked him at first, but I felt that I kind of earned his respect during the game and that made me respect and appreciate him more.
+Bluebeard - I actually liked Bluebeard, well I didn't like his tendencies for violence, but I did respect him and appreciated his help. I did believe that he sincerely wanted to get this case solved and help out and that he just wanted to "get it done".
+Bufkin - He was kind of annoying, but also helpful, so he was easy to tolerate.
+Nerissa/Vivian/Lily/Faith - Honestly... didn't really care about them at all.
+Bloody Mary - I was really annoyed by her attitude, but I can't deny she has some sort of coolness factor and I respect her power as a fable.
+Greenleaf - Only want to say that her child-disguise was incredibly paper thin... like as soon as the door opened and I saw a child I was like "Yep, that's her, glamouring it up or whatever" and everything she says just sounded kind of fake and her comments while investigating the room made it painfully obvious.
+Oh well, ramble over, 10k limit almost full. Was fun talking about it.
+permalinkembedsavegive gold
+[–]DuctToast 8 points 2 years ago
+I have yet to play through a second time, but when I play Telltale games I try to immerse myself in the character and make it my own. I analyze the circumstances and make choices based on what the real me would to in that position. Whenever I fail an action command sequence or accidentally pick the wrong option, I chalk that kind of thing to "poor reflexes" and "Freudian slip." I never backtrack unless I get a Game Over screen.
+So generally I tried to be good, but there were times when I lost my temper. It may not be much to write home about, but the first playthrough told Bigby's story through my perspective, and that made the story more engaging for me.
+On a side note, I think I'll do what I did with TWD season 1 by playing a second file doing everything completely opposite :P
+permalinkembedsavegive gold
+[–]BlackbeardsSon 3 points 2 years ago
+My policy throughout the game was: "Talk shit, get hit". Worked out well. Moterfucker didn't need his head anyway.
+permalinkembedsavegive gold
+[–]retconk 2 points 2 years ago
+I'm usually pretty lawful-good in video games. When I accidentally went too far with Jorgy when breaking stuff I felt guilty and instant replayed to avoid tearing of Grin's arm. However, I still broke Crane's nose on every play through. And I think it's mostly because he was so bitchy to me in the beginning of the game.
+permalinkembedsavegive gold
+[–]signu1230 2 points 2 years ago
+In games like this, I usually play as a "good" character, but Telltale games are so good I create two saves. Save #1 is my "regular" play through, where I'm always trying to help people. Save #2 is my sociopath save, where I'll reload over and over, purely for the sake of exploration.
+I gave Faith money (really, who didn't?) because no one should have to resort to what she did for money. I gave Colin the drink, considering the debts I owe him from back in the Homelands. I brought the Crooked Man in for a trial for two reasons. Firstly, I wanted Snow's approval, seeing as how she is my boss. Secondly, most of the plot's drama came to be because of the previous administration's corruption. If I cut corners or took shortcuts in the name of "justice," then I wasn't much better than Crane.
+permalinkembedsavegive gold
+[–]indeedwatson 2 points 2 years ago
+I tried to follow on Snow's instructions mostly, but sometimes got out of control. Something that I noticed is that when there's no exact option of what you'd really like to do, instead of letting that ruining immersion I liked to make excuses. Like, I can't "confiscate money and put it in Snow's desk ASAP" (I didn't see that option at least), so I made little excuses in his head: hey, this money shouldn't stay here at the pawn shop in Crane's coat, but of course I'm not gonna use it for myself, it'll go back to Fabletown someday.
+permalinkembedsavegive gold
+[–]mikeburnfire 1 point 2 years ago
+Tried to be good and didn't let things go too far usually. I killed the Tweedle because I can claim self-defense. I destroyed a bit of Georgie's property when pushed. I told the Crooked Man that I would bring him in, and the game didn't give me an option to betray him, so he went to trial. I wasn't sure if I wanted to throw him down the well or not, but when he suddenly attacked right at the end, I decided that imprisoning him would be the better punishment.
+permalinkembedsavegive gold
+[–]TheLadyEve 1 point 2 years ago
+I chose based on my own moral compass, so I ended up killing Georgie and imprisoning the Crooked Man.
+**
+* Tagged Decisions
+- Did you give Faith your money?
+- What are the values at stake? Sympathy. Generosity. Empathy.
+- Did you tell Beast the truth about Beauty?
+- Where did you decide to go first?
+- What happened to Prince Lawrence?
+- Who is your prime suspect?
+  - Woodsman
+  - Twins
+  - Bluebeard
+  - Mary
+  - Pimp
+  - Don't say anything
+- Who did you arrest?
+* Key Decisions
+- Lying to Beast about Beauty
+- Choosing which place to visit (Toads or Lawrence)
+- Woodsman or Tweedle Dee
+- Who is best suspect?
+Values
+
+* TODO Define problem
+- Show how Scheherazade is insufficient
+
+* TODO Revise objectives and components
+** Goals
+*** What question does my encoding answer?
+- What are all of the possible traversals of the work?
+- How can you determine "related" content for a given choice?
+
+  - Example: Query choice (C7: Colin: Tell you what I told Toad)
+  - "Colin will remember that" -- how many times do these choices
+    actually affect future content selection?
+  - Example: "Name one" -- which one would the player have named?
+    (Given positive/negative opportunities)
+- What significant content is present?
+  - Shots (length, sequence)
+  - Choices ()
+  - Quick Time Events (Choices, Timing, Results)
+  - Expressions (within shot)
+  - Dialogue (language, timing)
+  - Extradeigetic, non-choice-based Text
+*** What is an example experimental design that can be conducted?
+** Strategy
+*** Progressive Refinement
+**** Have final data structure, but don't fill in all the details
+- Example: Just have the full accounting of segments and the dialogue, but not necessarily video captures
+- Use this data to create a proposed SIG++ encoding of the first episode
+
+** Schemata (Editor) -- Instead edit the schemata as JSON with functions
+*** Supports Existing SIG
+*** Enables SIG++ Extensions
+*** Renders Story Intention Graphs
+** Content Encoding
+ - Encoding Data Structure
+ - Analysis of Static Data
+ - Logic -- Capture All Possible Traversals
+
+ - Captures Dialogue Acts
+ - Captures Expressions, Gestures + Actions
+ - Captures all static segments
+ - Captures Representative Interactive Traversals
+   - E.g. move from a location X to a location Y and activate
+   - Variability (Shortest, Longest duration of content)
+ - Captures On Screen UI/Annotations
+   - Structured as Choices, Action Sets, and QT Event Indications
+   - Start/Stop, Type/Color, Screen Position/Attachment
+
+** SIG Annotation
+
+* TODO [#A] Reread and revise Advancement Proposal
+* Efforts
+** Verify the completeness of the proposed content schema
+- How?
+- Demonstrate a set of concrete use cases are fulfilled through the
+  schema but which are difficult or impossible otherwise.
+
+** Create an extensible complete implementation of SIG using JSON graph format compatible with Cytoscape.jsq
+
+** Collect the data about the first episode of the Wolf Among Us in the schema
+* Short term objectives:
+** Finalize set of features necessary to realize SIG Schemata
+1. Logical relationships:
+   1.
+2. Verify the visualization by encoding and rendering SIG Patterns in
+   the "Pattern" schema enforcement, as opposed to strict enforcement.
+** Record all of Episode 1 of The Wolf Among Us using editor
+** What do I do with this data?
+- Calculate the distribution of traversals
+- Map Story Intention Graph ++
+** Represent SIG data structure
+* Patterns
+** Peripeteia
+[[./SIG-Pattern-Peripeteia.png]]
+
+
+
+- mason williams
+- Swapbots
+
+- Had similar conversation.
+- Ben Taylor
+
+
+- Scott
+ ;;; Stefan Monnier <foo at acm.org>. It is the opposite of fill-paragraph
+    (defun unfill-paragraph (&optional region)
+      "Takes a multi-line paragraph and makes it into a single line of text."
+      (interactive (progn (barf-if-buffer-read-only) '(t)))
+      (let ((fill-column (point-max))
+            ;; This would override `fill-column' if it's an integer.
+            (emacs-lisp-docstring-fill-column t))
+        (fill-paragraph nil region)))
+    ;; Handy key definition
+(define-key global-map "\M-Q" 'unfill-paragraph)
+
+
+
+OntoMedia ontology
+Drammar
+Martens, Chris
+Bosser, Anne-Gwenn
+Ferreira, João F.
+Cavazza, Marc (15 September 2013). "Linear Logic Programming for Narrative Generation". Logic Programming and Nonmonotonic Reasoning
+
+Using DiAML and ANVIL for multimodal dialogue annotations

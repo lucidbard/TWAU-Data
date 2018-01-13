@@ -1,0 +1,253 @@
+* Page Count Goal: 10
+* Word Count Goal: 6000
+* Reference Count Goal: 30
+- Nick Montfort
+- David Elson
+  - Story Intention Graphs
+  - Scheherazade
+- Ink ()
+- Marie-Laure Ryan
+- Robert McKee
+- 
+
+* Primary Contribution:
+- An application of a static narrative model to an existing popular interactive
+narrative.
+* Secondary Contribution:
+- 
+
+* TODO [1/25] FDG Paper
+- Using the story intention graph to model narrative elements of a
+  commercially released choice-based interactive narrative
+** Thesis
+Applying existing computational models of narrative discourse enables
+us to balance the necessarily subjective interpretation of story with
+more objective measures of its meaning and the dynamic of critical
+semantic relationships within interactive fiction. This paper
+describes the application of David Elson's Story Intention Graph to a
+commercially and critically successful interactive narrative, The Wolf
+Among Us. The application revealed several interesting research
+directions and requirements to leveraging the model, as well as
+insights into how interactivity and choice functions in the narrative
+in this particular work.
+
+The Wolf Among Us presents a powerful example of an interactive
+narrative which has what Aarseth calls dynamic kernels. It integrates
+player choices on multiple dimensions into a tale with resonance and a
+strong player community. (Evidence as a significant work). It has an
+adaptation in comic book form.
+
+** Introduction
+Narrative plays an important role in games beyond the the ludic.
+- Eskilenen
+- Ludology vs Narratology debate
+- 
+
+** Related Work
+*** Theory
+
+*** Content Analysis
+*** Narrative Theory
+- Michael Herman
+- Marie-Laure Ryan
+*** Hypertext Structural Analysis
+
+*** Computational Models of Narrative
+Finlaysen observes that text is prioritized given the availability of
+tools.
+*** Scheherazade and Beowulf
+** Critical Analysis of Interactive Narratives 
+Why do we want to use computational models for interactive narratives?
+There are three strands of work in computational narratology: first,
+the generation of narratives, second the assistance in the authoring
+of narratives, and third, the automated understanding of narrative
+content.
+** Methodology
+ - Translated a "natural" selected traversal from the first episode to
+   Ink format, including descriptions of expressions, settings and
+   relevant objects.
+ - Considered ChoiceScript & Twine as both capable of representing the
+   types of narratives Telltale produces.
+   - Representing simple variables (whether a certain choice had been
+     visited/selected and conditionals based on that)
+   - Provide simple metadata such as whether a line is dialogue or
+     description, and which character was involved.
+   - Simplified notation of converging threads and player choices
+ - Easy-to-read text format for using existing SIG modeling tool,
+   Scheherazade.
+ - Classified response options
+ - Divided content into beats
+   - Representable by changing sub-goals of a character in a scene
+     that are in fulfillment of longer term goals.
+   - An example is the Toad imploring Bigby to be lenient, which is in
+     service of the goal (shared with others) of remaining in
+     Fabletown and not being deported to The Farm.
+ - Decided against modeling propositional level of content at a fine
+   grain, instead focusing on the larger goals and values, beliefs and
+   affect.
+   - Based on the results of David Elson's findings on analogy +
+     Beowulf.
+
+** Results
+- Character's voice, attitude, and emotions are difficult to model
+  consistently using propositional logic. Interpretation is necessary,
+  and the ambiguity is difficult to represent.
+- The authorial goals are not highlighted; delivering exposition,
+  revealing facts to the player.
+- Story Intention Graphs map out a particular interpretation. The Wolf
+  Among Us has at least two fundamentally different interpretations of
+  the causal event, which cannot be represented using the format. This
+  ambiguity is not uncommon, with other resonating ambiguity in
+  critically acclaimed literature and film alike. (EXAMPLES).
+- A given section of content may be identical, but its interpretation
+  is colored by previous events in the mind of the player but not in
+  the game.
+- The game tracks certain events and decisions for use in future
+  choices.
+- Number of Choices of each type:
+- 
+- Types of Choices
+  - Significant (Referred to later, degree by how many content
+    referred to)
+  - Binary (Branching)
+  - Relationship
+  - Telltale Key (Chosen by Telltale at the end to show stats)
+  - Satellite (content that is optional)
+- Identity Choices
+  - Asshole
+  - Kind
+  - Concern
+  - Query
+  - Stating Belief (Player)
+  - Stating Belief (Bigby)
+- Noah Expressive Processing Knights of the Old Republic.
+
+** References
+Oatley, K., & JohnsonVLaird, P. N. (1987). Towards a cognitive theory of emotions.
+Cognition-&-Emotion, 1, 29V50.
+Oatley, K. (2008). The mind’s flight simulator. The-Psychologist,-21, 1030V1032. 
+
+- NarrativeML
+  - Inderjit Mani: Computational Modeling of Narrative, 2013
+- Story Workbench Annotation Toolkit 
+  - Mark Finlayson, Learning Narrative Structure from Annotated Folktales, MIT 2012. 
+- Scheherazade
+  - David Elson: Modeling Narrative Discourse, Columbia University, 2012
+** TODO Reread Advancement Document + Select Sections For Inclusion
+** TODO Create requirements for visualization
+:CLOCK:
+CLOCK: [2017-03-11 Sat 15:38]--[2017-03-11 Sat 16:53] =>  1:15
+:END:
+1. Show causal relationships between choices and all antecedents
+2. Show how player agency fits into the narrative flow
+3. Show the main value changes and events
+4. Indicate frequency and distribution of player decisions
+5. Show the semantic spread of player choices
+   - E.g. how different are the choices from one another?
+   - What value is being represented by each choice?
+   - What player desire or preference (information, belief, curiosity)
+     is being indicated through selections?
+
+Questions answerable through a visualization:
+1. What is the totality of constant versus variable content for a
+   particular game?
+3. What role does each content segment play in orienting the player to
+   the key information, including characters, concepts, conflicts and
+   especially the unchanging identity of the protagonist?
+4. What role does extra-diegetic indicators (E.g. Toad will remember
+   that) play in trigger player reactions and perhaps even the eliza
+   effect?
+** Decide on a traversal record format. Possibly PlayTrace?
+- Record each choice and its prerequisite (true/false of a variable).
+- Determine which variables are associated with which choice points.
+  - Document the key variables and their "Payoffs"
+- Record the following dialogue after each choice point.
+- Record each "Recorded Traversal" in a format to make sure that the
+  dialogue/content is associated with the correct decisions.
+** TODO Research the closest relevant corpuses
+Examples of alternate modalities represented in this survey include
+video (Mbengue 2013), image (Lee et al. 2012), speech (Tomai et
+al. 2011), and game logs (Orkin et al. 2010), but many other
+modalities are possible.  5.5
+** TODO Record the rest of choice options and traversal texts of The Wolf Among Us Episode 1.
+** Representing traversals & structure
+*** Some choice-points are skipped or optional, some are unordered
+- Clockwise might be one way to select unordered items, but in the
+  case of the investigation of Lawrence's room, certain options only
+  show up after certain items have been visited.
+- Some "satellite" choices may not be required to visit.
+- Combat sequences generally have few words.
+*** 
+** DONE Send update to Michael & Noah about meeting w/ Katherine
+CLOSED: [2017-03-08 Wed 12:41]
+** Notes
+- Working with Ink presented some practical issues with this large of
+  a project. The time for the program to parse the input increased
+  with the number of choices, and there didn't appear to be any
+  optimizations as any line of code could affect any previous content
+  element.
+- For certain timed decisions, like offering Colin a Drink or giving
+  the money, there is a default if the timer expires.
+- The first scene has few significant choices. Here they are:
+  - Whether to let Toad off or not. This is linked to the choice for
+    how to play out "I'll tell you what I told Toad". Which is
+    nothing, he's a smart guy.
+  - Whether to give Faith money or not.
+  - Whether to let Faith keep on with the axe.
+  - What values are at stake? How do you classify value stakes in
+    choices? (Morality, Ego, Power, Justice)
+- "Affinity Games" as in Facade, the player is forced to choose
+  between Beauty and Beast. 
+- Natural First Traversal -- a player that plays the game from
+  beginning to end without an opportunity to have seen previous choice
+  results and thus knowing anything about the game.
+- Compare usefulness of a "first traversal" with Nick Montfort, Aaron
+  Reed "complete traversal" for this type of experience.
+- Single-game Corpus. A set of natural traversals
+- How long does the player take to read the options? How long does the decision take?
+- What emotional cues are present in the player after key information is delivered?
+- What makes for significant, moving decisions? What aspects of
+  narrative predict these moments and the possible results? What
+  elements affect the intensity of a given response?
+- Removing the emphasis on replayabliity present in Facade.
+- Toad is submissive
+
+- Medium Read Insights:
+  - Inter-frog
+
+- Traversals:
+- Author
+- URL
+  - Enough excuses, Toad
+  - I don't make the rules (pal)
+  - [Head upstairs]
+  - [Matchbook]
+  - [Phone] -- why put it back?
+  - [Knock]
+  - Witness hit. Bigby goes to restrain him
+  - [Why'd you hit her]
+  - [You're drunk]
+
+- How does interactivity affect the modeling of narrative?
+- What layers are missing that would be most informative?
+** Reader response
+- 
+** Social Emotions
+- "Para-social interaction" from Katherine Isbister How Games Move Us:
+  EMotion by Design (Playful Thinking). Donald Horton and Richard
+  R. Wohl "Mass Communication and Para-Social Interaction:
+  Observations on Intimacy at a Distance"
+- "So if we see or hear (or form a mental picture of) a person
+  experiencing feelings in a social setting that we, too, are immersed
+  in, our brains are "tricked" into believing that a real social
+  experience is taking place. loc 406. "Grounded" in experience
+- "This capacity to evoke actual feelings of guilt from a fictional
+  experience is unique to games. A reader or filmgoer may feel many
+  emotions when presented with horrific fictional acts on the page or
+  screen, but responsibility and guilt are generally not among
+  them. At most, they may feel a sense of uneasy
+  collusion. Conversely, a film viewer might feel joyful when the
+  protagonist wins, but is not likely to feel a sense of personal
+  responsibility and pride. Betcause they depend on active player
+  choice, games hav an additional palette of social emotions at their
+  disposal.
